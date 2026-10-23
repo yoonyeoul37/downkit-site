@@ -262,6 +262,10 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
 .pfaq .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
 .paynote { display: flex; gap: 14px; align-items: flex-start; margin-top: 26px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; font-size: 14.5px; color: var(--sub); }
 .paynote svg { width: 22px; height: 22px; color: var(--accent-text); flex: none; margin-top: 1px; }
+.buy-links { margin-top: 22px; display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--sub); font-size: 14px; text-align: center; }
+.buy-links span { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 20px; }
+.buy-links a { color: var(--accent-text); font-weight: 600; text-decoration: none; }
+.buy-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 1180px) {
   .plan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 820px; margin: 16px auto 0; }
 }
@@ -384,6 +388,7 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
         </div>
       </div>
       <div class="paynote"><svg><use href="#i-shield"/></svg><div>결제 기능을 준비하고 있습니다. 출시 후에는 카드와 간편결제로 결제할 수 있으며, 구독은 언제든 해지할 수 있습니다. 현재는 모든 기능을 무료로 이용할 수 있습니다. 가격은 지역에 따라 결제 화면에서 다르게 표시될 수 있습니다.</div></div>
+      <p class="buy-links">구매 전에 확인해 주세요<span><a href="legal.html#terms">이용약관</a><a href="legal.html#privacy">개인정보처리방침</a><a href="legal.html#refund">환불정책</a><a href="support.html#copyright">저작권 정책</a></span></p>
     </div>
   </section>
 
