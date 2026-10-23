@@ -224,6 +224,40 @@ footer .wrap { display: grid; gap: 22px; }
   .prog span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .bar i { animation: none; } * { transition: none !important; } }
+
+nav .nw { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 5px; background: var(--accent-soft); color: var(--accent-text); vertical-align: 2px; margin-left: 2px; }
+.st-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 56px; margin-top: 48px; align-items: start; }
+.st-tools { display: grid; gap: 22px; }
+.sto { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; }
+.sto .ic { width: 40px; height: 40px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); color: var(--ink); display: grid; place-items: center; }
+.sto .ic svg { width: 20px; height: 20px; }
+.sto h3 { font-size: 17px; letter-spacing: -.015em; display: flex; align-items: center; gap: 8px; }
+.sto h3 em { font-style: normal; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 99px; background: var(--accent-soft); color: var(--accent-text); }
+.sto p { color: var(--sub); font-size: 15px; margin-top: 2px; }
+.st-more { font-size: 14px; color: var(--sub); padding-top: 18px; border-top: 1px solid var(--line); }
+.st-more b { color: var(--ink); }
+.st-win { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 30px 60px -30px rgba(10, 30, 20, .25); overflow: hidden; }
+.st-bar { display: flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--sub); }
+.st-bar i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+.st-bar span { margin-left: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.st-body { display: grid; grid-template-columns: minmax(0, 1fr) 250px; }
+.st-prev { position: relative; margin: 16px; border-radius: 12px; min-height: 230px; background: linear-gradient(135deg, #2f6b4f, #9fc7a5 55%, #e8d9a8); display: grid; place-items: center; }
+.st-prev .pl { width: 46px; height: 46px; border-radius: 50%; background: rgba(0, 0, 0, .5); position: relative; }
+.st-prev .pl::after { content: ""; position: absolute; left: 18px; top: 14px; border-left: 14px solid #fff; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.st-prev b { position: absolute; left: 12px; bottom: 10px; font-family: var(--f-mono); font-size: 12px; color: #fff; }
+.st-pan { border-left: 1px solid var(--line); background: var(--bg); padding: 16px; display: grid; gap: 12px; align-content: start; }
+.st-pan .t { font-weight: 700; font-size: 15px; }
+.st-pan .seg { display: flex; flex-wrap: wrap; gap: 5px; }
+.st-pan .seg span { font-size: 11.5px; padding: 5px 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); color: var(--sub); }
+.st-pan .seg .on { border-color: var(--ink); color: var(--ink); font-weight: 600; }
+.st-pan .ba { display: grid; grid-template-columns: 1fr 16px 1fr; gap: 4px; align-items: center; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.st-pan .ba svg { width: 14px; height: 14px; color: var(--sub); }
+.st-pan .ba small { display: block; font-size: 10.5px; color: var(--sub); }
+.st-pan .ba b { display: block; font-size: 14px; }
+.st-pan .ba span { display: block; font-size: 10.5px; color: var(--sub); }
+.st-pan .go { height: 38px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; display: grid; place-items: center; }
+@media (max-width: 900px) { .st-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; } }
+@media (max-width: 560px) { .st-body { grid-template-columns: minmax(0, 1fr); } .st-pan { border-left: 0; border-top: 1px solid var(--line); } }
 </style>
 
 </head>
@@ -254,6 +288,7 @@ footer .wrap { display: grid; gap: 22px; }
     <a class="brand" href="index.html"><svg><use href="#logo"/></svg>DownKit</a>
     <nav aria-label="메뉴">
       <a href="#how">사용 방법</a>
+      <a href="#studio">스튜디오 <em class="nw">NEW</em></a>
       <a href="#features">기능</a>
       <a href="#sites">지원 사이트</a>
       <a href="pricing.html">요금</a>
@@ -269,9 +304,9 @@ footer .wrap { display: grid; gap: 22px; }
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Windows용 동영상·음악 다운로드 프로그램</span>
+        <span class="eyebrow"><span class="dot"></span>Windows용 동영상·음악 다운로드 + 편집 스튜디오</span>
         <h1><span style="white-space:nowrap">복사 한 번으로</span><br><span style="white-space:nowrap">완성되는 <em>가장 쉬운</em></span><br><em style="white-space:nowrap">DownKit 다운로드.</em></h1>
-        <p class="lead">여러 동영상 사이트의 영상과 음악을 내 PC에 간편하게 저장합니다. 광고 없이, 최대 8K 화질과 원본 음질로.</p>
+        <p class="lead">여러 동영상 사이트의 영상과 음악을 내 PC에 간편하게 저장합니다. 광고 없이, 최대 8K 화질과 원본 음질로. 받은 파일은 스튜디오에서 바로 줄이고 자를 수 있습니다.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows용 다운로드</a>
           <div class="cta-meta"><b class="mono js-ver">버전 0.1.4 · 97 MB</b><span>Windows 10 · 11 (64비트)</span></div>
@@ -344,6 +379,37 @@ footer .wrap { display: grid; gap: 22px; }
         <div class="step"><span class="n">1</span><h3>링크 복사</h3><p>보던 영상의 주소를 <kbd>Ctrl</kbd> + <kbd>C</kbd>로 복사하면 DownKit 창이 자동으로 나타납니다.</p></div>
         <div class="step"><span class="n">2</span><h3>형식 선택</h3><p>동영상 또는 MP3 중 원하는 형식을 선택합니다. 화질과 음질은 설정에서 미리 지정해 둘 수 있습니다.</p></div>
         <div class="step"><span class="n">3</span><h3>저장 완료</h3><p>다운로드가 끝나면 알림이 표시됩니다. DownKit에서 바로 재생하거나 저장 폴더를 열 수 있습니다.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="studio" class="studio">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">스튜디오 · NEW</div>
+        <h2>받은 파일, 다른 프로그램 없이<br>바로 편집합니다</h2>
+        <p>메일로 보내기엔 너무 큰 영상, 소리만 필요한 뮤직비디오, 앞뒤를 잘라 내고 싶은 클립. DownKit 안에서 클릭 몇 번이면 끝납니다.</p>
+      </div>
+      <div class="st-grid">
+        <div class="st-tools">
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v5M9 5l3 3 3-3M12 21v-5M9 19l3-3 3 3M5 12h14"/></svg></span><div><h3>용량 줄이기 <em>무료</em></h3><p>목표 용량(예: 메일 첨부용 25 MB)을 정하면 그 크기에 맞춰 화질을 자동으로 조절합니다.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M20 16a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/></svg></span><div><h3>소리만 저장 <em>무료</em></h3><p>영상에서 소리만 뽑아 MP3 · M4A · WAV · FLAC으로 저장합니다.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>필요한 부분만 <em>무료</em></h3><p>시작과 끝 시간을 정해 원하는 구간만 남깁니다.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h12l-3-3M17 17H5l3 3"/></svg></span><div><h3>다른 형식으로 <em>무료</em></h3><p>MP4 · MKV · MOV · WEBM으로 바꿉니다. 가능하면 화질 손실 없이 몇 초 만에 끝납니다.</p></div></div>
+          <p class="st-more">곧 추가: 음량 맞추기 · 재생 속도 · 자르기·회전 · 쇼츠용 세로 · 이어 붙이기 · 글자 넣기 · 자막 편집 등 <b>16가지 도구</b></p>
+        </div>
+        <div class="st-win" aria-hidden="true">
+          <div class="st-bar"><i></i><i></i><i></i><span>스튜디오 / 제주 오름 드론 영상 4K.mp4</span></div>
+          <div class="st-body">
+            <div class="st-prev"><span class="pl"></span><b>6:24</b></div>
+            <div class="st-pan">
+              <div class="t">용량 줄이기</div>
+              <div class="seg"><span class="on">메일 첨부 · 25 MB</span><span>50%</span><span>25%</span></div>
+              <div class="ba"><div><small>지금</small><b>1.2 GB</b><span>4K · MP4</span></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"/></svg><div><small>만들 파일</small><b>약 25 MB</b><span>720p · MP4</span></div></div>
+              <div class="go">압축 시작</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
