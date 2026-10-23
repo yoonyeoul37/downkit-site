@@ -237,18 +237,18 @@ nav .nw { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5p
 .st-more { font-size: 14px; color: var(--sub); padding-top: 18px; border-top: 1px solid var(--line); }
 .st-more b { color: var(--ink); }
 .st-win { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 30px 60px -30px rgba(10, 30, 20, .25); overflow: hidden; }
-.st-bar { display: flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--sub); }
+.st-bar { display: flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; font-size: 12.5px; color: var(--sub); }
 .st-bar i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
 .st-bar span { margin-left: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.st-body { display: grid; grid-template-columns: minmax(0, 1fr) 250px; }
-.st-prev { position: relative; margin: 16px; border-radius: 12px; min-height: 230px; background: linear-gradient(135deg, #2f6b4f, #9fc7a5 55%, #e8d9a8); display: grid; place-items: center; }
+.st-body { display: grid; grid-template-columns: minmax(0, 1fr) 272px; }
+.st-prev { position: relative; margin: 0 16px 16px; border-radius: 12px; min-height: 230px; background: linear-gradient(135deg, #2f6b4f, #9fc7a5 55%, #e8d9a8); display: grid; place-items: center; }
 .st-prev .pl { width: 46px; height: 46px; border-radius: 50%; background: rgba(0, 0, 0, .5); position: relative; }
 .st-prev .pl::after { content: ""; position: absolute; left: 18px; top: 14px; border-left: 14px solid #fff; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
 .st-prev b { position: absolute; left: 12px; bottom: 10px; font-family: var(--f-mono); font-size: 12px; color: #fff; }
-.st-pan { border-left: 1px solid var(--line); background: var(--bg); padding: 16px; display: grid; gap: 12px; align-content: start; }
+.st-pan { margin: 0 16px 16px 0; border-radius: 12px; background: var(--bg); padding: 16px; display: grid; gap: 12px; align-content: start; }
 .st-pan .t { font-weight: 700; font-size: 15px; }
-.st-pan .seg { display: flex; flex-wrap: wrap; gap: 5px; }
-.st-pan .seg span { font-size: 11.5px; padding: 5px 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); color: var(--sub); }
+.st-pan .seg { display: flex; gap: 5px; }
+.st-pan .seg span { white-space: nowrap; font-size: 11.5px; padding: 5px 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); color: var(--sub); }
 .st-pan .seg .on { border-color: var(--ink); color: var(--ink); font-weight: 600; }
 .st-pan .ba { display: grid; grid-template-columns: 1fr 16px 1fr; gap: 4px; align-items: center; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 .st-pan .ba svg { width: 14px; height: 14px; color: var(--sub); }
@@ -257,7 +257,7 @@ nav .nw { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5p
 .st-pan .ba span { display: block; font-size: 10.5px; color: var(--sub); }
 .st-pan .go { height: 38px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; display: grid; place-items: center; }
 @media (max-width: 900px) { .st-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; } }
-@media (max-width: 560px) { .st-body { grid-template-columns: minmax(0, 1fr); } .st-pan { border-left: 0; border-top: 1px solid var(--line); } }
+@media (max-width: 560px) { .st-body { grid-template-columns: minmax(0, 1fr); } .st-pan { margin: 0 16px 16px; } }
 </style>
 
 </head>
