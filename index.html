@@ -200,7 +200,15 @@ footer .wrap { display: grid; gap: 22px; }
 .foot-links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 .foot-links a { text-decoration: none; color: var(--ink); font-weight: 500; }
 .foot-links a.strong { font-weight: 700; }
-.biz { line-height: 1.9; }
+.biz { font-size: 12.5px; line-height: 1.85; color: var(--sub); }
+.biz p { margin: 0; }
+.biz em { font-style: normal; }
+.biz em + em::before { content: ""; display: inline-block; width: 1px; height: 11px; margin: 0 12px; background: var(--line); vertical-align: -1px; }
+.biz span { margin-right: 6px; opacity: .75; }
+.biz a { color: inherit; text-decoration: none; }
+.biz a:hover { text-decoration: underline; }
+.biz .copy { margin-top: 10px; font-size: 12px; opacity: .8; }
+@media (max-width: 640px) { .biz em { display: block; } .biz em + em::before { display: none; } }
 .biz .todo { color: var(--accent-text); }
 
 /* ---------- 휴대폰 화면 ---------- */
@@ -488,18 +496,18 @@ nav .nw { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5p
     <div class="foot-top">
       <a class="brand" href="index.html"><svg><use href="#logo"/></svg>DownKit</a>
       <div class="foot-links">
-        <a href="legal.html#terms">이용약관</a>
+        <a href="legal.html#terms">서비스 이용약관</a>
         <a class="strong" href="legal.html#privacy">개인정보처리방침</a>
-        <a href="legal.html#refund">환불정책</a>
-        <a href="support.html#copyright">저작권 정책</a>
+        <a href="legal.html#refund">환불 및 취소 정책</a>
+        <a href="legal.html#copyright">저작권 정책</a>
         <a href="support.html#news">업데이트 소식</a>
         <a href="support.html#contact">문의하기</a>
       </div>
     </div>
     <div class="biz">
-      상호: 케이넥스엠주식회사 (KNEXM Co., Ltd.) · 대표: 윤여울 · 사업자등록번호: 878-88-03505<br>
-      통신판매업 신고번호: 신고 예정 · 주소: 서울특별시 강남구 일원로 35, 남경빌딩 5층 5830호 · 이메일: info@knexm.com<br>
-      © 2026 KNEXM. All rights reserved.
+      <p><em><span>상호</span>케이넥스엠주식회사 (KNEXM Co., Ltd.)</em><em><span>대표</span>윤여울</em><em><span>사업자등록번호</span>878-88-03505</em></p>
+      <p><em><span>통신판매업 신고번호</span>신고 예정</em><em><span>주소</span>서울특별시 강남구 일원로 35, 남경빌딩 5층 5830호</em><em><span>이메일</span><a href="mailto:info@knexm.com">info@knexm.com</a></em></p>
+      <p class="copy">© 2026 KNEXM Co., Ltd. All rights reserved.</p>
     </div>
   </div>
 </footer>
