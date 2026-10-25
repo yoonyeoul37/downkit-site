@@ -81,7 +81,8 @@ header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; 
 .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 34px; }
 .cta-meta { font-size: 13px; color: var(--sub); display: grid; gap: 2px; }
 .cta-meta b { color: var(--ink); font-weight: 500; }
-.trust { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+.trust { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--sub); }
+.trust span { white-space: nowrap; }
 .trust span { display: inline-flex; align-items: center; gap: 8px; }
 .trust svg { width: 17px; height: 17px; color: var(--accent-text); }
 
@@ -314,17 +315,17 @@ nav .nw { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5p
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Windows용 동영상·음악 다운로드 + 편집 스튜디오</span>
-        <h1><span style="white-space:nowrap">복사 한 번으로</span><br><span style="white-space:nowrap">완성되는 <em>가장 쉬운</em></span><br><em style="white-space:nowrap">DownKit 다운로드.</em></h1>
-        <p class="lead">여러 동영상 사이트의 영상과 음악을 내 PC에 간편하게 저장합니다. 광고 없이, 최대 8K 화질과 원본 음질로. 받은 파일은 스튜디오에서 바로 줄이고 자를 수 있습니다.</p>
+        <span class="eyebrow"><span class="dot"></span>Windows 전용 미디어 다운로드 및 편집 스튜디오</span>
+        <h1><span style="white-space:nowrap">URL 복사 한 번으로</span><br><span style="white-space:nowrap">시작하는 <em>간편한</em></span><br><span style="white-space:nowrap"><em>미디어 다운로드</em>,</span><br>DownKit</h1>
+        <p class="lead">다양한 플랫폼의 영상과 음악을 고화질·고음질로 내 PC에 저장하세요. 광고 없는 쾌적한 환경에서 최대 8K 화질과 원본 오디오를 지원하며, 다운로드한 파일은 스튜디오를 통해 곧바로 편집할 수 있습니다.</p>
         <div class="cta-row">
-          <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows용 다운로드</a>
-          <div class="cta-meta"><b class="mono js-ver">버전 0.1.4 · 97 MB</b><span>Windows 10 · 11 (64비트)</span></div>
+          <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows 버전 다운로드</a>
+          <div class="cta-meta"><b class="mono js-ver">버전 0.1.4 (97 MB)</b><span>지원 OS: Windows 10 / 11 (64비트)</span></div>
         </div>
         <div class="trust">
-          <span><svg><use href="#i-noad"/></svg>광고 없음</span>
-          <span><svg><use href="#i-shield"/></svg>로그인 정보는 내 PC에만 저장</span>
-          <span><svg><use href="#i-refresh"/></svg>자동 업데이트</span>
+          <span><svg><use href="#i-noad"/></svg>광고 없는 클린 환경</span>
+          <span><svg><use href="#i-shield"/></svg>사용자 PC 로컬 보안 저장</span>
+          <span><svg><use href="#i-refresh"/></svg>엔진 자동 최신화</span>
         </div>
       </div>
 
@@ -336,7 +337,7 @@ nav .nw { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5p
           <span class="pill"><i></i>복사 자동 감지 켜짐</span>
         </div>
         <div class="app-body">
-          <div class="app-h">복사 한 번으로 완성되는 <em>가장 쉬운 DownKit 다운로드.</em></div>
+          <div class="app-h">URL 복사 한 번으로 시작하는 <em>간편한 미디어 다운로드</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             <span class="url">https://youtu.be/rT8hB2kW9qE</span>
@@ -485,7 +486,7 @@ nav .nw { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5p
           <h2>지금 바로 시작하세요</h2>
           <p>설치는 1분이면 충분합니다.</p>
         </div>
-        <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows용 다운로드</a>
+        <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows 버전 다운로드</a>
       </div>
     </div>
   </section>
@@ -521,7 +522,7 @@ nav .nw { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5p
       if (!setup) return;
       document.querySelectorAll(".js-dl").forEach(function (a) { a.href = setup.browser_download_url; a.removeAttribute("target"); });
       var ver = (rel.tag_name || "").replace(/^v/i, ""), mb = Math.round(setup.size / 1048576);
-      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "버전 " + ver + " · " + mb + " MB"; });
+      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "버전 " + ver + " (" + mb + " MB)"; });
     }).catch(function () {});
 })();
 </script>
