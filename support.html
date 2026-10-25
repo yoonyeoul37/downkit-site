@@ -367,10 +367,10 @@ footer .wrap { display: grid; gap: 22px; }
       <h1>도움말 및 지원</h1>
       <p>프로그램 설치 방법, 문제 해결 및 이용 가이드를 확인하실 수 있습니다.</p>
       <div class="ltabs" role="tablist">
-        <button type="button" class="on" data-doc="download" role="tab">다운로드 및 설치</button>
-        <button type="button" data-doc="help" role="tab">도움말</button>
-        <button type="button" data-doc="news" role="tab">업데이트 소식</button>
-        <button type="button" data-doc="contact" role="tab">문의하기</button>
+        <button type="button" class="on" data-doc="download" role="tab">설치 가이드</button>
+        <button type="button" data-doc="help" role="tab">FAQ 및 문제 해결</button>
+        <button type="button" data-doc="news" role="tab">공지사항</button>
+        <button type="button" data-doc="contact" role="tab">1:1 문의</button>
       </div>
     </div>
   </section>
@@ -425,45 +425,45 @@ footer .wrap { display: grid; gap: 22px; }
 
       <!-- ============ 도움말 ============ -->
       <article class="doc wide" id="help">
-        <label class="hsearch"><svg><use href="#i-search"/></svg><input type="text" id="hq" placeholder="궁금한 내용을 검색하세요 (예: 4K, 자막, 폴더)"></label>
+        <label class="hsearch"><svg><use href="#i-search"/></svg><input type="text" id="hq" placeholder="궁금한 내용을 검색해 보세요 (예: 4K, 자막, 저장 경로)"></label>
         <div class="hgroups">
           <section class="hgroup">
-            <h3 class="h3">기본 사용법</h3>
+            <h3 class="h3">기본 이용 가이드</h3>
             <div class="qa">
-              <details><summary>다운로드한 파일은 어디에 저장되나요?<svg><use href="#i-plus"/></svg></summary><p>기본 저장 위치는 '다운로드' 폴더입니다. 설정 → 다운로드 → 저장 위치에서 변경할 수 있습니다. 다운로드 목록의 폴더 버튼을 누르면 파일이 저장된 폴더가 열립니다.</p></details>
-              <details><summary>음악(MP3)만 저장하고 싶습니다<svg><use href="#i-plus"/></svg></summary><p>링크를 입력한 뒤 [MP3 추출]을 누르세요. 입력창에서 MP3를 선택해 두면 이후 링크를 복사할 때 MP3가 기본으로 선택됩니다.</p></details>
-              <details><summary>링크를 복사해도 DownKit이 반응하지 않습니다<svg><use href="#i-plus"/></svg></summary><p>설정 → 자동에서 '복사한 링크 자동 감지'가 켜져 있는지, 해당 사이트가 선택되어 있는지 확인해 주세요. 목록에 없는 사이트도 링크를 직접 붙여넣으면 다운로드할 수 있습니다.</p></details>
+              <details><summary>다운로드된 파일은 어디에 저장되나요?<svg><use href="#i-plus"/></svg></summary><p>기본 저장 경로는 '다운로드' 폴더입니다. [설정] &gt; [다운로드] 메뉴에서 경로를 변경할 수 있으며, 목록의 폴더 아이콘을 클릭하여 저장 폴더를 바로 열 수 있습니다.</p></details>
+              <details><summary>오디오(MP3) 파일만 추출하고 싶습니다<svg><use href="#i-plus"/></svg></summary><p>링크 입력 후 [MP3 추출] 형식을 선택해 주세요. 형식을 지정해 두면 다음부터 해당 설정이 기본으로 적용됩니다.</p></details>
+              <details><summary>링크 복사 시 프로그램이 반응하지 않습니다<svg><use href="#i-plus"/></svg></summary><p>[설정] &gt; [자동] 메뉴에서 '복사한 링크 자동 감지' 활성화 여부를 확인해 주세요. 미지원 플랫폼의 경우 직접 URL을 붙여넣어 다운로드할 수 있습니다.</p></details>
             </div>
           </section>
           <section class="hgroup">
-            <h3 class="h3">다운로드 문제 해결</h3>
+            <h3 class="h3">다운로드 오류 대처 방법</h3>
             <div class="qa">
-              <details><summary>다운로드에 실패합니다<svg><use href="#i-plus"/></svg></summary><p>1) 인터넷 연결을 확인한 뒤 [다시 받기]를 누르세요. 2) 설정 → 프로그램 정보에서 [업데이트 확인]을 눌러 다운로드 엔진을 최신 버전으로 업데이트하세요. 사이트가 변경된 경우 엔진 업데이트로 해결될 수 있습니다. 3) 문제가 계속되면 문의하기로 링크를 보내 주세요.</p></details>
-              <details><summary>사이트에서 다운로드를 일시적으로 막았다는 메시지가 표시됩니다<svg><use href="#i-plus"/></svg></summary><p>짧은 시간에 많은 파일을 다운로드하면 사이트에서 일시적으로 차단할 수 있습니다. 몇 분 기다린 뒤 [다시 받기]를 누르세요.</p></details>
-              <details><summary>4K로 다운로드했는데 1080p로 저장되었습니다<svg><use href="#i-plus"/></svg></summary><p>무료 버전은 최대 1080p까지 지원합니다. Pro를 사용하더라도 원본 동영상이 4K를 지원하지 않으면 그보다 낮은 화질로 저장됩니다. 설정 → 다운로드 → 화질도 확인해 주세요.</p></details>
-              <details><summary>연령 제한 또는 로그인이 필요한 동영상을 받고 싶습니다<svg><use href="#i-plus"/></svg></summary><p>Pro에서 설정 → 사이트 로그인으로 해당 사이트에 로그인하면 다운로드할 수 있습니다. 로그인 정보는 내 PC에만 저장됩니다.</p></details>
-              <details><summary>자막 파일이 생성되지 않습니다<svg><use href="#i-plus"/></svg></summary><p>설정 → 다운로드에서 '자막도 받기'를 켜 주세요(Pro 기능). 동영상에 선택한 언어나 영어 자막이 없으면 자막 파일이 생성되지 않습니다.</p></details>
-              <details><summary>'복사 방지(DRM)가 적용된 동영상'이라는 메시지가 표시됩니다<svg><use href="#i-plus"/></svg></summary><p>Netflix 같은 유료 서비스의 동영상이나 DRM이 적용된 콘텐츠는 다운로드할 수 없습니다.</p></details>
-              <details><summary>재생 창에 '재생할 수 없습니다'라는 메시지가 표시됩니다<svg><use href="#i-plus"/></svg></summary><p>일부 4K 동영상은 PC 환경에 따라 DownKit의 재생 창에서 열리지 않을 수 있습니다. [다른 프로그램으로 열기]를 누르면 PC의 기본 동영상 플레이어로 열 수 있습니다.</p></details>
+              <details><summary>다운로드가 진행되지 않습니다<svg><use href="#i-plus"/></svg></summary><p>1) 네트워크 연결 상태를 확인 후 [다시 받기]를 누르세요. 2) [설정] &gt; [프로그램 정보]에서 [업데이트 확인]을 통해 다운로드 엔진을 최신 상태로 유지해 주세요. 3) 현상이 지속될 경우 1:1 문의를 통해 해당 링크를 남겨 주시기 바랍니다.</p></details>
+              <details><summary>사이트 측에서 일시 차단 메시지가 표시됩니다<svg><use href="#i-plus"/></svg></summary><p>단시간 내 대량 다운로드 시 플랫폼 정책에 따라 일시적 제한이 발생할 수 있습니다. 잠시 대기 후 [다시 받기]를 눌러 주세요.</p></details>
+              <details><summary>4K 화질이 1080p로 다운로드됩니다<svg><use href="#i-plus"/></svg></summary><p>무료 버전은 최대 1080p 해상도를 지원합니다. Pro 버전 이용 시에도 원본 소스 자체가 4K를 지원하지 않는 경우 하위 화질로 저장될 수 있습니다.</p></details>
+              <details><summary>성인 인증 또는 로그인이 필요한 영상 다운로드<svg><use href="#i-plus"/></svg></summary><p>Pro 버전의 [설정] &gt; [사이트 로그인] 메뉴를 통해 계정 연동 후 다운로드할 수 있습니다. 인증 정보는 사용자 PC에만 안전하게 보관됩니다.</p></details>
+              <details><summary>자막 파일이 생성되지 않아요<svg><use href="#i-plus"/></svg></summary><p>[설정] &gt; [다운로드] 메뉴에서 '자막 함께 다운로드' 옵션을 활성화해 주세요. 단, 원본 영상에 해당 언어 자막이 존재하지 않을 경우 생성되지 않습니다.</p></details>
+              <details><summary>DRM 보호 콘텐츠 다운로드 제한<svg><use href="#i-plus"/></svg></summary><p>스트리밍 서비스 등 DRM(디지털 저작권 관리)이 적용된 콘텐츠는 기술적 사유로 다운로드를 지원하지 않습니다.</p></details>
+              <details><summary>내장 플레이어 재생 오류 발생<svg><use href="#i-plus"/></svg></summary><p>PC 사양 및 코덱 환경에 따라 내장 재생 창에서 영상 출력이 원활하지 않을 수 있습니다. 이 경우 [다른 프로그램으로 열기]를 눌러 PC의 기본 미디어 플레이어로 감상해 주세요.</p></details>
             </div>
           </section>
           <section class="hgroup">
-            <h3 class="h3">계정 · 결제</h3>
+            <h3 class="h3">계정 및 이용권 안내</h3>
             <div class="qa">
-              <details><summary>무료 다운로드 횟수는 언제 초기화되나요?<svg><use href="#i-plus"/></svg></summary><p>매주 월요일 0시에 다운로드 가능 횟수가 15개로 초기화됩니다. 남은 횟수는 상단 메뉴와 설정 → 계정에서 확인할 수 있습니다.</p></details>
-              <details><summary>컴퓨터를 바꿨습니다<svg><use href="#i-plus"/></svg></summary><p>계정 하나로 PC 최대 2대까지 사용할 수 있습니다. 설정 → 계정 → 등록한 PC에서 기존 PC 등록을 해제한 뒤 새 PC에서 로그인하세요.</p></details>
-              <details><summary>구독을 해지하고 싶습니다<svg><use href="#i-plus"/></svg></summary><p>설정 → 계정에서 언제든 해지할 수 있습니다. 해지 후에도 이미 결제한 기간이 끝날 때까지 Pro를 이용할 수 있습니다. 결제 후 7일 이내에는 전액 환불을 신청할 수 있습니다.</p></details>
+              <details><summary>무료 다운로드 제공 횟수 초기화 시점<svg><use href="#i-plus"/></svg></summary><p>매주 월요일 자정(00:00)을 기준으로 15회가 재충전됩니다. 남은 횟수는 상단 메뉴 및 [설정] &gt; [계정]에서 확인하실 수 있습니다.</p></details>
+              <details><summary>PC 기기 변경 시 이용 방법<svg><use href="#i-plus"/></svg></summary><p>1개 계정당 최대 2대의 PC를 등록하여 사용할 수 있습니다. [설정] &gt; [계정]에서 기존 PC 등록 해제 후 새로운 PC에서 로그인해 주세요.</p></details>
+              <details><summary>구독 해지 및 환불 안내<svg><use href="#i-plus"/></svg></summary><p>[설정] &gt; [계정] 메뉴를 통해 언제든지 구독을 해지하실 수 있습니다. 해지 시에도 잔여 기간 동안은 Pro 혜택이 유지되며, 결제일로부터 7일 이내인 경우 규정에 따라 환불을 요청하실 수 있습니다.</p></details>
             </div>
           </section>
           <section class="hgroup">
-            <h3 class="h3">기타</h3>
+            <h3 class="h3">기타 문의</h3>
             <div class="qa">
-              <details><summary>'Windows의 PC 보호' 창이 나타납니다. 안전한가요?<svg><use href="#i-plus"/></svg></summary><p>새 프로그램은 평판 정보가 충분하지 않아 이 안내가 표시될 수 있습니다. [추가 정보] → [실행]을 누르면 설치를 진행할 수 있습니다. DownKit은 광고나 다른 프로그램을 함께 설치하지 않습니다.</p></details>
-              <details><summary>오류 기록은 어떻게 보내나요?<svg><use href="#i-plus"/></svg></summary><p>설정 → 프로그램 정보 → 오류 기록에서 [폴더 열기]를 누른 뒤, 폴더 안의 <span class="mono">downkit.log</span> 파일을 문의 이메일에 첨부해 주세요.</p></details>
+              <details><summary>스마트스크린(Windows의 PC 보호) 경고창 발생<svg><use href="#i-plus"/></svg></summary><p>신규 배포 프로그램의 인지도 부족으로 인해 발생할 수 있는 정상적인 안내 창입니다. [추가 정보] &gt; [실행]을 통해 안전하게 설치를 진행하실 수 있습니다.</p></details>
+              <details><summary>오류 로그 파일(Log) 전달 방법<svg><use href="#i-plus"/></svg></summary><p>[설정] &gt; [프로그램 정보] &gt; [오류 기록] 항목의 [폴더 열기]를 클릭하여, 폴더 안의 <span class="mono">downkit.log</span> 파일을 1:1 문의 메일에 첨부해 주시면 신속한 분석이 가능합니다.</p></details>
             </div>
           </section>
         </div>
-        <p class="hnone" hidden>원하는 답변을 찾지 못했나요? 문의하기로 질문해 주세요.</p>
+        <p class="hnone" hidden>원하는 답변을 찾지 못했나요? 1:1 문의로 질문해 주세요.</p>
       </article>
 
       <!-- ============ 업데이트 소식 ============ -->
@@ -515,8 +515,8 @@ footer .wrap { display: grid; gap: 22px; }
         <a class="strong" href="legal.html#privacy">개인정보 처리방침</a>
         <a href="legal.html#refund">환불 및 취소 규정</a>
         <a href="legal.html#copyright">저작권 보호 정책</a>
-        <a href="#news" class="jump" data-doc="news">업데이트 소식</a>
-        <a href="#contact" class="jump" data-doc="contact">문의하기</a>
+        <a href="#news" class="jump" data-doc="news">공지사항</a>
+        <a href="#contact" class="jump" data-doc="contact">1:1 문의</a>
       </div>
     </div>
     <div class="biz">
