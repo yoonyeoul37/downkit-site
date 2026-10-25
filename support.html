@@ -384,7 +384,7 @@ footer .wrap { display: grid; gap: 22px; }
             <span class="dl-logo"><svg><use href="#logo"/></svg></span>
             <div>
               <h2>DownKit for Windows</h2>
-              <p class="mono"><span class="js-ver">버전 0.1.4 · 97 MB</span> · Windows 10 · 11 (64비트)</p>
+              <p class="mono"><span class="js-ver">버전 0.1.4 (97 MB)</span> · 지원 OS: Windows 10 / 11 (64비트)</p>
             </div>
           </div>
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows 버전 다운로드</a>
@@ -571,7 +571,7 @@ footer .wrap { display: grid; gap: 22px; }
       if (!setup) return;
       document.querySelectorAll(".js-dl").forEach(function (a) { a.href = setup.browser_download_url; a.removeAttribute("target"); });
       var ver = (rel.tag_name || "").replace(/^v/i, ""), mb = Math.round(setup.size / 1048576);
-      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "버전 " + ver + " · " + mb + " MB"; });
+      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "버전 " + ver + " (" + mb + " MB)"; });
     }).catch(function () {});
 })();
 </script>

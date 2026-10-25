@@ -597,7 +597,7 @@ footer .wrap { display: grid; gap: 22px; }
       if (!setup) return;
       document.querySelectorAll(".js-dl").forEach(function (a) { a.href = setup.browser_download_url; a.removeAttribute("target"); });
       var ver = (rel.tag_name || "").replace(/^v/i, ""), mb = Math.round(setup.size / 1048576);
-      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "버전 " + ver + " · " + mb + " MB"; });
+      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "버전 " + ver + " (" + mb + " MB)"; });
     }).catch(function () {});
 })();
 </script>
