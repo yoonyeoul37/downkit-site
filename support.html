@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="logo.svg">
+<link rel="alternate" hreflang="ko" href="https://downkit.net/support.html">
+<link rel="alternate" hreflang="en" href="https://downkit.net/en/support.html">
+<link rel="alternate" hreflang="x-default" href="https://downkit.net/support.html">
 <title>DownKit 도움말 · 지원</title>
 <meta name="description" content="링크만 복사하면 영상과 음악을 내 PC에 저장하는 Windows 프로그램, DownKit">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -321,6 +324,9 @@ footer .wrap { display: grid; gap: 22px; }
   .two, .hgroups { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .rel { grid-template-columns: minmax(0, 1fr); gap: 10px; }
 }
+.top .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--sub); font-size: 14px; text-decoration: none; white-space: nowrap; }
+.top .lang:hover { color: var(--ink); border-color: var(--sub); }
+.top .lang svg { width: 16px; height: 16px; }
 </style>
 
 </head>
@@ -358,6 +364,7 @@ footer .wrap { display: grid; gap: 22px; }
       <a href="support.html" aria-current="page" style="color:var(--ink);font-weight:600">도움말</a>
     </nav>
     <div class="right">
+      <a class="lang" href="en/support.html" lang="en" hreflang="en"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg>English</a>
       <a class="btn btn-primary btn-sm js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">다운로드</a>
     </div>
   </div>

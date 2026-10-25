@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="logo.svg">
+<link rel="alternate" hreflang="ko" href="https://downkit.net/index.html">
+<link rel="alternate" hreflang="en" href="https://downkit.net/en/index.html">
+<link rel="alternate" hreflang="x-default" href="https://downkit.net/index.html">
 <title>DownKit 홈페이지</title>
 <meta name="description" content="링크만 복사하면 영상과 음악을 내 PC에 저장하는 Windows 프로그램, DownKit">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -269,6 +272,9 @@ nav .nw { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5p
 .st-pan .go { height: 38px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; display: grid; place-items: center; }
 @media (max-width: 900px) { .st-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; } }
 @media (max-width: 560px) { .st-body { grid-template-columns: minmax(0, 1fr); } .st-pan { margin: 0 16px 16px; } }
+.top .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--sub); font-size: 14px; text-decoration: none; white-space: nowrap; }
+.top .lang:hover { color: var(--ink); border-color: var(--sub); }
+.top .lang svg { width: 16px; height: 16px; }
 </style>
 
 </head>
@@ -306,6 +312,7 @@ nav .nw { font-style: normal; font-size: 10px; font-weight: 700; padding: 1px 5p
       <a href="support.html">도움말</a>
     </nav>
     <div class="right">
+      <a class="lang" href="en/index.html" lang="en" hreflang="en"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg>English</a>
       <a class="btn btn-primary btn-sm js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">다운로드</a>
     </div>
   </div>

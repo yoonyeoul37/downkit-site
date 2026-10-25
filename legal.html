@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="logo.svg">
+<link rel="alternate" hreflang="ko" href="https://downkit.net/legal.html">
+<link rel="alternate" hreflang="en" href="https://downkit.net/en/legal.html">
+<link rel="alternate" hreflang="x-default" href="https://downkit.net/legal.html">
 <title>DownKit 서비스 이용약관 및 정책</title>
 <meta name="description" content="링크만 복사하면 영상과 음악을 내 PC에 저장하는 Windows 프로그램, DownKit">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -273,6 +276,9 @@ footer .wrap { display: grid; gap: 22px; }
   .toc b { width: 100%; margin-bottom: 0; }
   .summary, .summary.three { grid-template-columns: minmax(0, 1fr); }
 }
+.top .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--sub); font-size: 14px; text-decoration: none; white-space: nowrap; }
+.top .lang:hover { color: var(--ink); border-color: var(--sub); }
+.top .lang svg { width: 16px; height: 16px; }
 </style>
 
 </head>
@@ -309,6 +315,7 @@ footer .wrap { display: grid; gap: 22px; }
       <a href="support.html">도움말</a>
     </nav>
     <div class="right">
+      <a class="lang" href="en/legal.html" lang="en" hreflang="en"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg>English</a>
       <a class="btn btn-primary btn-sm js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">다운로드</a>
     </div>
   </div>
@@ -361,7 +368,7 @@ footer .wrap { display: grid; gap: 22px; }
           </ol>
           <h2 id="t5">제5조 (계정)</h2>
           <ol>
-            <li>서비스(무료 · Pro)를 이용하기 위해서는 계정을 생성하여야 합니다. 계정은 <span class="todo">[구글 · 네이버 로그인 등]</span>을 통하여 생성할 수 있으며, 무료 이용자는 언제든지 Pro로 전환할 수 있습니다.</li>
+            <li>서비스(무료 · Pro)를 이용하기 위해서는 계정을 생성하여야 합니다. 계정은 Google · 카카오 · 네이버 로그인을 통하여 생성할 수 있으며, 무료 이용자는 언제든지 Pro로 전환할 수 있습니다.</li>
             <li>하나의 계정으로 최대 2대의 PC를 등록할 수 있습니다. 이용자는 설정 메뉴에서 기존에 등록된 PC를 해제한 후 새로운 PC를 등록할 수 있습니다.</li>
             <li>이용자는 계정을 타인과 공유하거나 양도·판매할 수 없습니다. 만 14세 미만인 자는 계정을 생성할 수 없습니다.</li>
           </ol>
@@ -370,7 +377,7 @@ footer .wrap { display: grid; gap: 22px; }
             <li>이용 요금은 요금 안내 페이지에 표시된 금액으로 하며, 해외 이용자의 경우 미국 달러 등 현지 통화로 표시될 수 있습니다.</li>
             <li>월간·연간 구독은 이용자가 해지하기 전까지 동일한 주기로 <b>자동 결제</b>됩니다. 이용자가 다음 결제일 전에 해지하는 경우 다음 결제는 진행되지 않습니다.</li>
             <li>영구 라이선스는 1회 결제로 Pro 기능 및 이후 제공되는 업데이트를 계속 이용할 수 있는 라이선스입니다. 다만, 회사가 서비스를 종료하는 경우에는 제9조에 따릅니다.</li>
-            <li>결제는 회사가 지정한 결제 대행사 <span class="todo">[결제 회사 이름]</span>를 통하여 이루어지며, 회사는 이용자의 카드 번호를 직접 저장하지 않습니다.</li>
+            <li>결제는 회사가 지정한 결제 대행사를 통하여 이루어지며, 회사는 이용자의 카드 번호를 직접 저장하지 않습니다.</li>
           </ol>
           <h2 id="t7">제7조 (구독 해지 및 환불)</h2>
           <p>구독 해지 및 환불에 관한 사항은 별도로 정한 <a href="#refund" class="jump" data-doc="refund">환불 및 취소 규정</a>에 따릅니다. 모든 요금제는 결제일로부터 7일 이내에 전액 환불을 요청할 수 있습니다.</p>
@@ -461,8 +468,8 @@ footer .wrap { display: grid; gap: 22px; }
           <table class="ltbl">
             <thead><tr><th>수탁자</th><th>위탁 업무</th></tr></thead>
             <tbody>
-              <tr><td><span class="todo">[결제 대행사]</span></td><td>결제 처리, 구독 관리, 세금 계산</td></tr>
-              <tr><td><span class="todo">[서버 회사]</span></td><td>계정·결제 정보 보관 서버 운영</td></tr>
+              <tr><td>결제 대행사 (계약 후 회사명 안내 예정)</td><td>결제 처리, 구독 관리, 세금 계산</td></tr>
+              <tr><td>Google LLC (Firebase)</td><td>계정·결제 정보 보관 서버 운영</td></tr>
               <tr><td>GitHub, Inc. (미국)</td><td>프로그램 업데이트 파일 배포</td></tr>
             </tbody>
           </table>
