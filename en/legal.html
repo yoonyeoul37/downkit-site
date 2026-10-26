@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="only light">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../logo.svg">
 <link rel="alternate" hreflang="ko" href="https://downkit.net/legal.html">
@@ -345,7 +346,7 @@ footer .wrap { display: grid; gap: 22px; }
         </nav>
         <div class="prose">
           <h2 id="t1">Article 1 (Purpose)</h2>
-          <p>The purpose of these Terms is to set out the rights, obligations and responsibilities of KNEXM Co., Ltd. (the "Company") and users in connection with the use of DownKit, a program for Windows, and the related website, account and payment services (the "Service") provided by the Company.</p>
+          <p>The purpose of these Terms is to set out the rights, obligations and responsibilities of KNEXM Co., Ltd. (the "Company") and users in connection with the use of DownKit, a program for Windows and an app for Android, and the related website, account and payment services (the "Service") provided by the Company.</p>
           <h2 id="t2">Article 2 (Definitions)</h2>
           <p>The terms used in these Terms are defined as follows.</p>
           <ol>
@@ -356,20 +357,20 @@ footer .wrap { display: grid; gap: 22px; }
           </ol>
           <h2 id="t3">Article 3 (Effect and Amendment of Terms)</h2>
           <ol>
-            <li>These Terms are posted on the Service website and take effect when a user agrees to them while installing the program or creating an account.</li>
+            <li>These Terms are posted on the Service website and take effect when a user agrees to them while installing the program or app or creating an account.</li>
             <li>The Company may amend these Terms to the extent that doing so does not violate applicable laws. When amending them, the Company will give notice on the website and within the program starting 7 days before the effective date. However, for changes that are unfavorable to users, notice will be given starting 30 days before the effective date.</li>
             <li>If a user does not agree to the amended Terms, the user may stop using the Service and delete their account.</li>
           </ol>
           <h2 id="t4">Article 4 (Description of Service)</h2>
           <ol>
-            <li>The Company provides a feature that saves the video or music at a link entered by the user to the user's computer, along with additional features such as playback, GIF creation and saving subtitles.</li>
+            <li>The Company provides a feature that saves the video or music at a link entered by the user to the user's computer or phone, along with additional features such as playback, GIF creation, saving subtitles, file editing (trim, compress, extract audio, convert format) and live stream recording. Additional features may differ between the Windows program and the Android app.</li>
             <li>Free users may download up to 15 times per week, and videos may be downloaded at up to 1080p quality. Subtitles can be saved together with downloads. Paid users (Monthly subscription, Pro 1 Year, Lifetime License) may use 4K/8K quality, playlists, GIF, automatic download and site login features with no limit on the number of downloads.</li>
             <li>Because the Service works based on the structure of external sites (such as YouTube), downloading from some sites or of some content may be temporarily restricted if an external site changes.</li>
           </ol>
           <h2 id="t5">Article 5 (Accounts)</h2>
           <ol>
-            <li>An account must be created in order to use the Service (Free or Pro). An account can be created through Google, Kakao, or Naver login, and Free users may switch to Pro at any time.</li>
-            <li>Up to 2 PCs can be registered to one account. A user may register a new PC after removing a previously registered PC in the Settings menu.</li>
+            <li>An account must be created in order to use the Service (Free or Pro). An account can be created through Google, Kakao, or Naver login, and Free users may switch to Pro at any time. Users may also use the Service without logging in by entering a promotion code issued by the Company, in which case access is granted based on the code and the device.</li>
+            <li>Up to 3 devices in total (PCs and phones) can be registered to one account. A user may register a new device after removing a previously registered device in the Settings menu.</li>
             <li>Users may not share their account with others, or transfer or sell it. Persons under the age of 14 may not create an account.</li>
           </ol>
           <h2 id="t6">Article 6 (Paid Services and Payment)</h2>
@@ -423,8 +424,8 @@ footer .wrap { display: grid; gap: 22px; }
         <div class="prose">
           <h2 id="p1">Key summary</h2>
           <div class="summary">
-            <div><b>Site login information</b><span>Stored only on the user's PC and never sent to the Company</span></div>
-            <div><b>Download history · Clipboard</b><span>Processed only on the user's PC and never transmitted</span></div>
+            <div><b>Site login information</b><span>Stored only on the user's device (PC or phone) and never sent to the Company</span></div>
+            <div><b>Download history · Clipboard</b><span>Processed only on the user's device (PC or phone) and never transmitted</span></div>
             <div><b>Card numbers</b><span>Handled by the payment provider; the Company does not store them</span></div>
             <div><b>Ads · Tracking</b><span>No advertising and no behavioral tracking</span></div>
           </div>
@@ -433,22 +434,24 @@ footer .wrap { display: grid; gap: 22px; }
             <thead><tr><th>When collected</th><th>Items collected</th></tr></thead>
             <tbody>
               <tr><td>When signing up (Free · Pro)</td><td>Login method and the member identifier provided by the login provider<br>· Google login: email, name, profile photo<br>· Kakao login: nickname (required), profile photo · Kakao Account email (optional)<br>· Naver login: nickname (required), email · profile photo (optional), and an authentication token used to disconnect Naver when the account is deleted (stored encrypted)<br>You can sign up without agreeing to the optional items.</td></tr>
+              <tr><td>When starting with a promotion code (no login)</td><td>The promotion code entered, and a user identifier created from the code and the device identifier</td></tr>
               <tr><td>When paying</td><td>Payment details (plan, amount paid, payment date, order number). Card information is processed directly by the payment provider.</td></tr>
-              <tr><td>When registering a PC</td><td>Device identifier (randomly generated value), PC name</td></tr>
+              <tr><td>When registering a device (PC or phone)</td><td>Device identifier (randomly generated value), device name (PC name or phone model), operating system information (e.g. Android version)</td></tr>
               <tr><td>When checking free usage count</td><td>Weekly download count (information about downloaded content is not collected)</td></tr>
-              <tr><td>When checking for updates</td><td>The program connects to GitHub servers to check for the latest version, and the IP address may be passed to GitHub in this process.</td></tr>
-              <tr><td>When contacting us</td><td>Email address, inquiry details, and error log files attached by the user</td></tr>
+              <tr><td>When checking for updates</td><td>The program and app connect to GitHub servers and the Company website (downkit.net) to check for the latest version, and the IP address may be passed to those servers in this process.</td></tr>
+              <tr><td>When contacting us</td><td>Email address, inquiry details, error log files attached by the user, and the app version and device information automatically included when contacting us from the app</td></tr>
             </tbody>
           </table>
           <h2 id="p3">2. Information we do not collect</h2>
           <ul>
-            <li><b>Site login information</b>: Information used to log in to YouTube and other sites in DownKit is stored only on the user's PC and is not sent to the Company.</li>
-            <li><b>Download history and downloaded files</b>: Download history and file information are stored only on the user's PC.</li>
-            <li><b>Clipboard</b>: The clipboard is checked only on the user's PC in order to detect copied links, and its contents are not sent outside the PC.</li>
+            <li><b>Site login information</b>: Information used to log in to YouTube and other sites in DownKit is stored only on the user's device and is not sent to the Company.</li>
+            <li><b>Download history and downloaded files</b>: Download history and file information are stored only on the user's device (PC or phone).</li>
+            <li><b>Edited and recorded files</b>: Files edited with the Android app's tools or recorded from live streams are processed and stored only on the phone and are not sent to the Company.</li>
+            <li><b>Clipboard</b>: The clipboard is checked only on the user's device in order to detect copied links, and its contents are not sent outside the device.</li>
           </ul>
           <h2 id="p4">3. Purposes of use of personal information</h2>
           <ul>
-            <li>Account management and identity verification, provision of Free and Pro features, management of PC registration</li>
+            <li>Account management and identity verification, provision of Free and Pro features, management of device registration</li>
             <li>Payment, subscription renewal notices, refund processing</li>
             <li>Checking the weekly usage count of Free users</li>
             <li>Responding to inquiries and resolving errors</li>
@@ -470,7 +473,7 @@ footer .wrap { display: grid; gap: 22px; }
             <tbody>
               <tr><td>Payment provider (name to be announced once contracted)</td><td>Payment processing, subscription management, tax calculation</td></tr>
               <tr><td>Google LLC (Firebase)</td><td>Operation of servers storing account and payment information</td></tr>
-              <tr><td>GitHub, Inc. (USA)</td><td>Distribution of program update files</td></tr>
+              <tr><td>GitHub, Inc. (USA)</td><td>Distribution of program and app update files</td></tr>
             </tbody>
           </table>
           <p class="small">If personal information is transferred overseas, the Company will promptly state in this Policy the destination country, the items transferred, the date, time and method of transfer, and the retention and use period.</p>

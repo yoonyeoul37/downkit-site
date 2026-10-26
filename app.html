@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="robots" content="noindex, nofollow">
+<title>DownKit 안드로이드 앱</title>
+<meta name="description" content="유튜브 영상과 음악을 휴대폰에 바로 저장하세요. 공유 한 번으로 저장, 광고 없음.">
+<!-- 카톡 · 문자로 링크를 보냈을 때 보이는 그림과 글 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DownKit">
+<meta property="og:url" content="https://downkit.net/app.html">
+<meta property="og:title" content="DownKit 안드로이드 앱">
+<meta property="og:description" content="유튜브 영상과 음악을 휴대폰에 바로 저장하세요. 공유 한 번으로 저장, 광고 없음.">
+<meta property="og:image" content="https://downkit.net/app-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+:root { --bg: #f5f7f6; --surface: #fff; --ink: #111614; --sub: #58615c; --faint: #8b948f; --line: #dde3e0;
+        --accent: #058b4f; --accent-soft: #e3f3eb; --accent-text: #057a46; color-scheme: only light; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: "IBM Plex Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+       font-size: 16px; line-height: 1.6; word-break: keep-all; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 480px; margin: 0 auto; padding: 40px max(16px, env(safe-area-inset-left)) 48px; }
+.hero { text-align: center; }
+.logo { width: 84px; height: 84px; display: block; margin: 0 auto 20px; filter: drop-shadow(0 14px 20px rgba(17, 40, 28, .22)); }
+.badge { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: var(--accent-text); background: var(--accent-soft); padding: 4px 12px; border-radius: 999px; }
+.badge i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+h1 { margin: 14px 0 0; font-size: 30px; letter-spacing: -.03em; line-height: 1.25; }
+.lead { margin: 10px 0 0; color: var(--sub); font-size: 16px; }
+.dl { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 28px 0 0; height: 58px; border-radius: 14px;
+      background: var(--accent); color: #fff; font-size: 18px; font-weight: 700; text-decoration: none; box-shadow: 0 14px 30px -14px rgba(5, 139, 79, .7); }
+.dl:active { transform: translateY(1px); }
+.dl svg { width: 22px; height: 22px; }
+.meta { margin: 10px 0 0; text-align: center; color: var(--faint); font-size: 13px; }
+.card { margin: 28px 0 0; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px 20px 8px; }
+.card h2 { margin: 0 0 6px; font-size: 17px; letter-spacing: -.02em; }
+ol { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+li { counter-increment: s; display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; padding: 13px 0; border-top: 1px solid var(--line); font-size: 15px; color: var(--sub); }
+li:first-child { border-top: 0; }
+li::before { content: counter(s); width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-text); font-size: 13px; font-weight: 700; display: grid; place-items: center; }
+li b { color: var(--ink); font-weight: 600; }
+.feat { margin: 16px 0 0; display: grid; gap: 10px; }
+.feat div { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; font-size: 15px; color: var(--sub); }
+.feat svg { width: 20px; height: 20px; color: var(--accent-text); margin-top: 2px; }
+.feat b { color: var(--ink); font-weight: 600; }
+footer { margin: 32px 0 0; text-align: center; color: var(--faint); font-size: 12.5px; line-height: 1.8; }
+footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="hero">
+    <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lgg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#363636"/><stop offset="1" stop-color="#050505"/></linearGradient></defs><rect x=".5" y=".5" width="31" height="31" rx="6" fill="url(#lgg)" stroke="rgba(255,255,255,.16)"/><rect x="14.47" y="7.32" width="3.06" height="8.6" rx="1.53" fill="#fff"/><path d="M12.4 15.3h7.2l-3.6 3.9z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 19.05v2.6a1.6 1.6 0 0 0 1.6 1.6h11.2a1.6 1.6 0 0 0 1.6-1.6v-2.6" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="badge"><i></i>Android 앱</span>
+    <h1>DownKit</h1>
+    <p class="lead">유튜브 영상과 음악을 휴대폰에 바로 저장하세요.</p>
+  </div>
+
+  <a class="dl" href="https://drive.google.com/uc?export=download&amp;id=1s_7dQDwvkAa9vWyNQO0TaaZCh3G031Xs" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    앱 다운로드
+  </a>
+  <p class="meta">안드로이드 휴대폰용 · 약 60MB</p>
+
+  <div class="feat">
+    <div><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>공유 한 번으로 저장</b> — 유튜브에서 공유 → DownKit</span></div>
+    <div><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>노래 모음에서 원하는 곡만</b> 따로 저장</span></div>
+    <div><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>생방송 녹화 · 녹음</b>, 자르기 · 용량 줄이기</span></div>
+    <div><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>광고 없음</b></span></div>
+  </div>
+
+  <section class="card">
+    <h2>설치 방법</h2>
+    <ol>
+      <li><span>위 <b>[앱 다운로드]</b>를 누릅니다. 구글 드라이브 화면이 나오면 <b>다운로드</b>를 한 번 더 누릅니다.</span></li>
+      <li><span>다 받으면 알림창이나 <b>내 파일 → 다운로드</b>에서 받은 파일을 누릅니다.</span></li>
+      <li><span><b>"출처를 알 수 없는 앱"</b> 안내가 나오면 <b>설정 → 이 출처 허용</b>을 켭니다.</span></li>
+      <li><span><b>Play 프로텍트</b> 경고가 나오면 <b>세부정보 더보기 → 그래도 설치</b>를 누릅니다. 플레이 스토어에 없는 앱이라 나오는 안내입니다.</span></li>
+      <li><span>앱을 열고 <b>Google로 시작하기</b> 또는 <b>받은 코드로 시작하기</b>를 누릅니다.</span></li>
+    </ol>
+  </section>
+
+  <footer>
+    케이넥스엠주식회사 (KNEXM Co., Ltd.) · <a href="mailto:info@knexm.com">info@knexm.com</a><br>
+    <a href="legal.html#terms">이용약관</a> · <a href="legal.html#privacy">개인정보 처리방침</a>
+  </footer>
+</main>
+</body>
+</html>
