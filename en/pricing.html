@@ -6,9 +6,30 @@
 <link rel="icon" href="../logo.svg">
 <link rel="alternate" hreflang="ko" href="https://downkit.net/pricing.html">
 <link rel="alternate" hreflang="en" href="https://downkit.net/en/pricing.html">
+<link rel="alternate" hreflang="ja" href="https://downkit.net/ja/pricing.html">
+<link rel="alternate" hreflang="zh-TW" href="https://downkit.net/zh-tw/pricing.html">
+<link rel="alternate" hreflang="zh-CN" href="https://downkit.net/zh-cn/pricing.html">
+<link rel="alternate" hreflang="vi" href="https://downkit.net/vi/pricing.html">
+<link rel="alternate" hreflang="id" href="https://downkit.net/id/pricing.html">
+<link rel="alternate" hreflang="th" href="https://downkit.net/th/pricing.html">
+<link rel="alternate" hreflang="es" href="https://downkit.net/es/pricing.html">
+<link rel="alternate" hreflang="pt" href="https://downkit.net/pt/pricing.html">
+<link rel="alternate" hreflang="de" href="https://downkit.net/de/pricing.html">
+<link rel="alternate" hreflang="fr" href="https://downkit.net/fr/pricing.html">
+<link rel="alternate" hreflang="it" href="https://downkit.net/it/pricing.html">
+<link rel="alternate" hreflang="ru" href="https://downkit.net/ru/pricing.html">
+<link rel="alternate" hreflang="uk" href="https://downkit.net/uk/pricing.html">
+<link rel="alternate" hreflang="pl" href="https://downkit.net/pl/pricing.html">
+<link rel="alternate" hreflang="cs" href="https://downkit.net/cs/pricing.html">
+<link rel="alternate" hreflang="hu" href="https://downkit.net/hu/pricing.html">
+<link rel="alternate" hreflang="ro" href="https://downkit.net/ro/pricing.html">
+<link rel="alternate" hreflang="tr" href="https://downkit.net/tr/pricing.html">
+<link rel="alternate" hreflang="hi" href="https://downkit.net/hi/pricing.html">
+<link rel="alternate" hreflang="ar" href="https://downkit.net/ar/pricing.html">
+<link rel="alternate" hreflang="ur" href="https://downkit.net/ur/pricing.html">
 <link rel="alternate" hreflang="x-default" href="https://downkit.net/pricing.html">
 <title>DownKit Pricing</title>
-<meta name="description" content="DownKit is a Windows app that saves videos and music to your PC — just copy a link.">
+<meta name="description" content="DownKit: a Windows and Android app that saves videos and music to your PC and phone—just copy the link">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
@@ -287,6 +308,23 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
 .top .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--sub); font-size: 14px; text-decoration: none; white-space: nowrap; }
 .top .lang:hover { color: var(--ink); border-color: var(--sub); }
 .top .lang svg { width: 16px; height: 16px; }
+.top nav a { white-space: nowrap; }
+.top .wrap { gap: 20px; }
+.top nav { gap: 16px; margin-left: 0; }
+.top nav a { font-size: 14px; }
+.top nav .nw { display: none; }
+@media (max-width: 1180px) { .top nav { display: none; } }
+.lang-dd { position: relative; }
+button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer; }
+.top .lang .cv { width: 14px; height: 14px; margin-inline-start: -2px; }
+.lang-menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 30; width: 300px; max-width: calc(100vw - 32px); max-height: 70vh; overflow: auto; padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.lang-menu[hidden] { display: none; }
+.lang-menu a { padding: 8px 10px; border-radius: 8px; font-size: 14px; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lang-menu a:hover { background: var(--field); }
+.lang-menu a[aria-current] { color: var(--accent-text); font-weight: 700; background: var(--accent-soft); }
+[dir="rtl"] .lang-menu { right: auto; left: 0; }
+.lang-foot { margin-top: 10px; }
+.lang-foot select { font: inherit; font-size: 13px; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
 </style>
 
 </head>
@@ -323,7 +361,7 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
       <a href="support.html">Help</a>
     </nav>
     <div class="right">
-      <a class="lang" href="../pricing.html" lang="ko" hreflang="ko"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg>한국어</a>
+      <div class="lang-dd"><button class="lang" type="button" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg><span>English</span><svg class="cv" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="lang-menu" role="menu" hidden><a href="../pricing.html" hreflang="ko" lang="ko">한국어</a><a href="../en/pricing.html" hreflang="en" lang="en" aria-current="true">English</a><a href="../ja/pricing.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-tw/pricing.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a><a href="../zh-cn/pricing.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../vi/pricing.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../id/pricing.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../th/pricing.html" hreflang="th" lang="th">ไทย</a><a href="../es/pricing.html" hreflang="es" lang="es">Español</a><a href="../pt/pricing.html" hreflang="pt" lang="pt">Português</a><a href="../de/pricing.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/pricing.html" hreflang="fr" lang="fr">Français</a><a href="../it/pricing.html" hreflang="it" lang="it">Italiano</a><a href="../ru/pricing.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/pricing.html" hreflang="uk" lang="uk">Українська</a><a href="../pl/pricing.html" hreflang="pl" lang="pl">Polski</a><a href="../cs/pricing.html" hreflang="cs" lang="cs">Čeština</a><a href="../hu/pricing.html" hreflang="hu" lang="hu">Magyar</a><a href="../ro/pricing.html" hreflang="ro" lang="ro">Română</a><a href="../tr/pricing.html" hreflang="tr" lang="tr">Türkçe</a><a href="../hi/pricing.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/pricing.html" hreflang="ar" lang="ar">العربية</a><a href="../ur/pricing.html" hreflang="ur" lang="ur">اردو</a></div></div>
       <a class="btn btn-primary btn-sm js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Download</a>
     </div>
   </div>
@@ -331,8 +369,8 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
 <main id="top">
   <section class="p-hero">
     <div class="wrap">
-      <h1>Select the plan that fits you</h1>
-      <p>For occasional use, Free is all you need. If you want 4K quality, playlists, or GIFs, select a plan for as long as you need it.</p>
+      <h1>Choose the plan that's right for you</h1>
+      <p>If you only use it occasionally, Free is plenty. If you need 4K quality, playlists, GIFs, and more, choose a plan for as long as you need it.</p>
     </div>
   </section>
 
@@ -346,24 +384,24 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
           <p class="price-note">No card required</p>
           <a class="btn btn-ghost btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Download for free</a>
           <ul>
-            <li><svg><use href="#i-check"/></svg><span>Up to <b>15 downloads</b> per week</span></li>
+            <li><svg><use href="#i-check"/></svg><span>Download <b>up to 15 times</b> per week</span></li>
             <li><svg><use href="#i-check"/></svg>Video up to 1080p</li>
             <li><svg><use href="#i-check"/></svg>MP3 · Original audio quality</li>
             <li><svg><use href="#i-check"/></svg>Save subtitles too (.srt)</li>
-            <li><svg><use href="#i-check"/></svg>Auto-detects copied links · No ads</li>
-            <li><svg><use href="#i-check"/></svg>Play in the app · Auto-filled track info</li>
+            <li><svg><use href="#i-check"/></svg>Automatic clipboard link detection · No ads</li>
+            <li><svg><use href="#i-check"/></svg>In-app playback · Automatic song info</li>
           </ul>
         </div>
 
         <div class="plan">
           <h2>Monthly</h2>
-          <p class="for">For short-term use, only in the months you need it</p>
+          <p class="for">For short-term use or just the months you need it</p>
           <div class="price"><b>$4.99</b><span>/ month</span></div>
           <p class="price-note">Cancel anytime</p>
           <span class="btn btn-soon btn-lg" aria-disabled="true">Coming soon</span>
           <ul>
-            <li class="inherit"><svg><use href="#i-check"/></svg>Everything in Pro</li>
-            <li><svg><use href="#i-check"/></svg><span><b>Unlimited</b> downloads</span></li>
+            <li class="inherit"><svg><use href="#i-check"/></svg>All Pro features</li>
+            <li><svg><use href="#i-check"/></svg><span><b>Downloads</b> without limits</span></li>
             <li><svg><use href="#i-check"/></svg>Billed monthly (cancel anytime)</li>
           </ul>
         </div>
@@ -371,38 +409,38 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
         <div class="plan best">
           <span class="tag">Recommended</span>
           <h2>Pro 1 Year</h2>
-          <p class="for">Our recommended plan, with every feature unlocked</p>
+          <p class="for">Our recommended plan for using every feature without limits</p>
           <div class="price"><b>$17.99</b><span>/ year</span></div>
-          <p class="price-note">Save 70% · about $1.50 / month</p>
+          <p class="price-note">70% off · about $1.50 per month</p>
           <span class="btn btn-soon btn-lg" aria-disabled="true">Coming soon</span>
           <ul>
             <li class="inherit"><svg><use href="#i-check"/></svg>Everything in Free</li>
-            <li><svg><use href="#i-check"/></svg><span><b>Unlimited</b> downloads</span></li>
-            <li><svg><use href="#i-check"/></svg><span><b>4K · 8K</b> high-quality downloads</span></li>
-            <li><svg><use href="#i-check"/></svg>Download playlists and multiple links at once</li>
+            <li><svg><use href="#i-check"/></svg><span><b>Downloads</b> without limits</span></li>
+            <li><svg><use href="#i-check"/></svg><span><b>4K · 8K</b> High-quality downloads</span></li>
+            <li><svg><use href="#i-check"/></svg>Playlists and batch downloads of multiple links</li>
             <li><svg><use href="#i-check"/></svg>Make GIFs</li>
             <li><svg><use href="#i-check"/></svg>Auto-download when you copy a link</li>
-            <li><svg><use href="#i-check"/></svg>Site login · Download age-restricted videos</li>
-            <li><svg><use href="#i-check"/></svg>Android app: unlimited song picks and live recording</li>
-            <li><svg><use href="#i-check"/></svg>Use on up to 3 devices (PCs and phones) per account</li>
+            <li><svg><use href="#i-check"/></svg>Site sign-in · Age-restricted video downloads</li>
+            <li><svg><use href="#i-check"/></svg>Unlimited song selection and live recording in the Android app</li>
+            <li><svg><use href="#i-check"/></svg>Use on up to 3 PCs and phones with one account</li>
           </ul>
         </div>
 
         <div class="plan">
           <h2>Lifetime License</h2>
-          <p class="for">For users who want to pay once and use it forever</p>
+          <p class="for">For users who want lifetime access with no further payments</p>
           <div class="price"><b>$34.99</b><span>/ lifetime</span></div>
           <p class="price-note">One-time payment · Updates included</p>
           <span class="btn btn-soon btn-lg" aria-disabled="true">Coming soon</span>
           <ul>
-            <li class="inherit"><svg><use href="#i-check"/></svg>Everything in Pro</li>
-            <li><svg><use href="#i-check"/></svg>No recurring charges</li>
+            <li class="inherit"><svg><use href="#i-check"/></svg>All Pro features</li>
+            <li><svg><use href="#i-check"/></svg>No automatic billing</li>
             <li><svg><use href="#i-check"/></svg>Free future updates</li>
           </ul>
         </div>
       </div>
-      <div class="paynote"><svg><use href="#i-shield"/></svg><div>Payments are coming soon. Once available, you can pay by card or other popular payment methods, and you can cancel a subscription at any time. For now, all features are free to use. Prices shown at checkout may vary by region.</div></div>
-      <p class="buy-links">Please review before purchasing<span><a href="legal.html#terms">Terms of Service</a><a href="legal.html#privacy">Privacy Policy</a><a href="legal.html#refund">Refund &amp; Cancellation Policy</a><a href="legal.html#copyright">Copyright Policy</a></span></p>
+      <div class="paynote"><svg><use href="#i-shield"/></svg><div>Payments are in preparation. After launch, you'll be able to pay by card or with easy payment services, and you can cancel a subscription anytime. For now, all features are free to use. Prices shown at checkout may vary by region.</div></div>
+      <p class="buy-links">Please review before purchasing<span><a href="legal.html#terms">Terms of Service</a><a href="legal.html#privacy">Privacy Policy</a><a href="legal.html#refund">Refund & Cancellation Policy</a><a href="legal.html#copyright">Copyright Policy</a></span></p>
     </div>
   </section>
 
@@ -410,29 +448,29 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
     <div class="wrap">
       <div class="sec-head">
         <div class="label">Compare features</div>
-        <h2>Free vs. Pro</h2>
+        <h2>Free vs. Pro features</h2>
       </div>
       <div class="tbl-wrap">
         <table class="cmp">
-          <thead><tr><th>Feature</th><th>Free</th><th class="pro">Monthly · Pro 1 Year · Lifetime</th></tr></thead>
+          <thead><tr><th>Features</th><th>Free</th><th class="pro">Monthly · Pro 1 Year · Lifetime</th></tr></thead>
           <tbody>
-            <tr class="grp"><td colspan="3">Downloads</td></tr>
-            <tr><td>Number of downloads</td><td>15 per week</td><td class="pro"><b>Unlimited</b></td></tr>
+            <tr class="grp"><td colspan="3">per week</td></tr>
+            <tr><td>Downloads</td><td>15 per week</td><td class="pro"><b>Unlimited</b></td></tr>
             <tr><td>Max video quality</td><td class="mono">1080p</td><td class="pro mono">8K</td></tr>
-            <tr><td>MP3 · Original audio (M4A)</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>MP3 · Original audio quality (M4A)</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
             <tr><td>Playlist downloads · Multiple links at once</td><td class="no">—</td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
-            <tr><td>Save subtitles</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
-            <tr><td>Site login · Age-restricted video downloads</td><td class="no">—</td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>Save subtitles too</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>Site sign-in · Age-restricted video downloads</td><td class="no">—</td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
             <tr class="grp"><td colspan="3">Convenience</td></tr>
             <tr><td>Auto-detect copied links</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
             <tr><td>Auto-download copied links</td><td class="no">—</td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
-            <tr><td>Play inside the app</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>In-app playback</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
             <tr><td>Make GIFs</td><td class="no">—</td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
-            <tr><td>No ads · 23 languages · Auto updates</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
-            <tr class="grp"><td colspan="3">Phone app (Android)</td></tr>
-            <tr><td>Save only the songs you want from a compilation</td><td>3 at a time</td><td class="pro"><b>Unlimited</b></td></tr>
-            <tr><td>Live stream video &amp; audio recording</td><td>Up to 10 min</td><td class="pro"><b>Unlimited</b></td></tr>
-            <tr><td>Trim · Compress · Convert</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>No ads · 23 languages · Automatic updates</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr class="grp"><td colspan="3">Mobile app (Android)</td></tr>
+            <tr><td>Save just the songs you want from a compilation</td><td>3 songs at a time</td><td class="pro"><b>Unlimited</b></td></tr>
+            <tr><td>Live stream recording (video · audio)</td><td>Up to 10 minutes</td><td class="pro"><b>Unlimited</b></td></tr>
+            <tr><td>Trim · Reduce size · Convert</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
           </tbody>
         </table>
       </div>
@@ -442,16 +480,16 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
   <section id="faq" class="pfaq">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">Billing questions</div>
-        <h2>Frequently asked questions</h2>
+        <div class="label">Billing FAQ</div>
+        <h2>FAQ</h2>
       </div>
       <div class="qa">
-        <details open><summary>Does the free version expire?<svg><use href="#i-plus"/></svg></summary><p>No. You can keep using it with no time limit. You get up to 15 downloads per week, and the count resets every Monday at midnight (00:00, Korea time).</p></details>
-        <details><summary>Do I need an account for the free version?<svg><use href="#i-plus"/></svg></summary><p>Yes. An account is needed to track your remaining downloads and to upgrade to Pro. You can sign up in seconds with your Google account.</p></details>
-        <details><summary>Can I cancel my subscription anytime?<svg><use href="#i-plus"/></svg></summary><p>Yes. You can cancel anytime from [Settings] &gt; [Account], and you keep Pro benefits until the end of your paid period.</p></details>
-        <details><summary>Does the Lifetime License include updates?<svg><use href="#i-plus"/></svg></summary><p>Yes. When new versions are released, you can update at no extra cost.</p></details>
-        <details><summary>How do I request a refund?<svg><use href="#i-plus"/></svg></summary><p>For all paid plans (Monthly · Pro 1 Year · Lifetime License), contact us within 7 days of payment for a full refund. After 7 days, you can cancel your subscription and keep using it until the end of the paid period. See the Refund &amp; Cancellation Policy for details.</p></details>
-        <details><summary>What if I get a new PC or phone?<svg><use href="#i-plus"/></svg></summary><p>Each account can be used on up to 3 devices, PCs and phones combined. Remove your old device in [Settings] &gt; [Account] in the Windows app, then sign in on the new one.</p></details>
+        <details open><summary>Does the free version have a time limit?<svg><use href="#i-plus"/></svg></summary><p>No. You can keep using it with no time limit. You can download up to 15 times per week, and the count resets every Monday at midnight (00:00).</p></details>
+        <details><summary>Do I need to sign up for the free version?<svg><use href="#i-plus"/></svg></summary><p>Yes. An account is required to track your remaining downloads and to upgrade to Pro. You can sign up easily with a Google or Naver account.</p></details>
+        <details><summary>Can I cancel my subscription anytime?<svg><use href="#i-plus"/></svg></summary><p>Yes. You can cancel anytime from [Settings] &gt; [Account], and you keep Pro benefits for the rest of your billing period after canceling.</p></details>
+        <details><summary>Does the lifetime license include updates?<svg><use href="#i-plus"/></svg></summary><p>Yes. You get new versions at no extra cost as they are released.</p></details>
+        <details><summary>How do I request a refund?<svg><use href="#i-plus"/></svg></summary><p>All paid plans (Monthly · Pro 1 Year · Lifetime License) are fully refunded if you contact us within 7 days of payment. After 7 days, you can only cancel your subscription, and you can keep using it until the end of the period you paid for. For details, please see the Refund & Cancellation Policy.</p></details>
+        <details><summary>What should I do if I change my PC or phone?<svg><use href="#i-plus"/></svg></summary><p>Each account can register up to 3 devices in total, including PCs and phones. In the Windows app, go to [Settings] &gt; [Account] to unregister an existing device, then sign in on your new device.</p></details>
       </div>
     </div>
   </section>
@@ -463,10 +501,10 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
       <div class="foot-links">
         <a href="legal.html#terms">Terms of Service</a>
         <a class="strong" href="legal.html#privacy">Privacy Policy</a>
-        <a href="legal.html#refund">Refund &amp; Cancellation Policy</a>
+        <a href="legal.html#refund">Refund & Cancellation Policy</a>
         <a href="legal.html#copyright">Copyright Policy</a>
-        <a href="support.html#news">Notices</a>
-        <a href="support.html#contact">Contact us</a>
+        <a href="support.html#news">Announcements</a>
+        <a href="support.html#contact">1:1 Support</a>
       </div>
     </div>
     <div class="biz">
@@ -486,8 +524,18 @@ table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size:
       if (!setup) return;
       document.querySelectorAll(".js-dl").forEach(function (a) { a.href = setup.browser_download_url; a.removeAttribute("target"); });
       var ver = (rel.tag_name || "").replace(/^v/i, ""), mb = Math.round(setup.size / 1048576);
-      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "Version " + ver + " (" + mb + " MB)"; });
+      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "Version" + ver + " (" + mb + " MB)"; });
     }).catch(function () {});
+})();
+</script>
+<script>
+(function () {
+  var d = document.querySelector(".lang-dd"); if (!d) return;
+  var b = d.querySelector("button"), m = d.querySelector(".lang-menu");
+  function s(o) { m.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); }
+  b.addEventListener("click", function (e) { e.stopPropagation(); s(m.hidden); });
+  document.addEventListener("click", function (e) { if (!d.contains(e.target)) s(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") s(false); });
 })();
 </script>
 </body>

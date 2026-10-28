@@ -7,9 +7,30 @@
 <link rel="icon" href="../logo.svg">
 <link rel="alternate" hreflang="ko" href="https://downkit.net/legal.html">
 <link rel="alternate" hreflang="en" href="https://downkit.net/en/legal.html">
+<link rel="alternate" hreflang="ja" href="https://downkit.net/ja/legal.html">
+<link rel="alternate" hreflang="zh-TW" href="https://downkit.net/zh-tw/legal.html">
+<link rel="alternate" hreflang="zh-CN" href="https://downkit.net/zh-cn/legal.html">
+<link rel="alternate" hreflang="vi" href="https://downkit.net/vi/legal.html">
+<link rel="alternate" hreflang="id" href="https://downkit.net/id/legal.html">
+<link rel="alternate" hreflang="th" href="https://downkit.net/th/legal.html">
+<link rel="alternate" hreflang="es" href="https://downkit.net/es/legal.html">
+<link rel="alternate" hreflang="pt" href="https://downkit.net/pt/legal.html">
+<link rel="alternate" hreflang="de" href="https://downkit.net/de/legal.html">
+<link rel="alternate" hreflang="fr" href="https://downkit.net/fr/legal.html">
+<link rel="alternate" hreflang="it" href="https://downkit.net/it/legal.html">
+<link rel="alternate" hreflang="ru" href="https://downkit.net/ru/legal.html">
+<link rel="alternate" hreflang="uk" href="https://downkit.net/uk/legal.html">
+<link rel="alternate" hreflang="pl" href="https://downkit.net/pl/legal.html">
+<link rel="alternate" hreflang="cs" href="https://downkit.net/cs/legal.html">
+<link rel="alternate" hreflang="hu" href="https://downkit.net/hu/legal.html">
+<link rel="alternate" hreflang="ro" href="https://downkit.net/ro/legal.html">
+<link rel="alternate" hreflang="tr" href="https://downkit.net/tr/legal.html">
+<link rel="alternate" hreflang="hi" href="https://downkit.net/hi/legal.html">
+<link rel="alternate" hreflang="ar" href="https://downkit.net/ar/legal.html">
+<link rel="alternate" hreflang="ur" href="https://downkit.net/ur/legal.html">
 <link rel="alternate" hreflang="x-default" href="https://downkit.net/legal.html">
-<title>DownKit Terms and Policies</title>
-<meta name="description" content="DownKit is a Windows program that saves videos and music to your PC just by copying a link.">
+<title>DownKit Terms of Service and Policies</title>
+<meta name="description" content="DownKit: a Windows program that saves videos and music to your PC—just copy the link">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
@@ -280,6 +301,23 @@ footer .wrap { display: grid; gap: 22px; }
 .top .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--sub); font-size: 14px; text-decoration: none; white-space: nowrap; }
 .top .lang:hover { color: var(--ink); border-color: var(--sub); }
 .top .lang svg { width: 16px; height: 16px; }
+.top nav a { white-space: nowrap; }
+.top .wrap { gap: 20px; }
+.top nav { gap: 16px; margin-left: 0; }
+.top nav a { font-size: 14px; }
+.top nav .nw { display: none; }
+@media (max-width: 1180px) { .top nav { display: none; } }
+.lang-dd { position: relative; }
+button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer; }
+.top .lang .cv { width: 14px; height: 14px; margin-inline-start: -2px; }
+.lang-menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 30; width: 300px; max-width: calc(100vw - 32px); max-height: 70vh; overflow: auto; padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.lang-menu[hidden] { display: none; }
+.lang-menu a { padding: 8px 10px; border-radius: 8px; font-size: 14px; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lang-menu a:hover { background: var(--field); }
+.lang-menu a[aria-current] { color: var(--accent-text); font-weight: 700; background: var(--accent-soft); }
+[dir="rtl"] .lang-menu { right: auto; left: 0; }
+.lang-foot { margin-top: 10px; }
+.lang-foot select { font: inherit; font-size: 13px; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
 </style>
 
 </head>
@@ -316,19 +354,19 @@ footer .wrap { display: grid; gap: 22px; }
       <a href="support.html">Help</a>
     </nav>
     <div class="right">
-      <a class="lang" href="../legal.html" lang="ko" hreflang="ko"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg>한국어</a>
+      <div class="lang-dd"><button class="lang" type="button" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg><span>English</span><svg class="cv" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="lang-menu" role="menu" hidden><a href="../legal.html" hreflang="ko" lang="ko">한국어</a><a href="../en/legal.html" hreflang="en" lang="en" aria-current="true">English</a><a href="../ja/legal.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-tw/legal.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a><a href="../zh-cn/legal.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../vi/legal.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../id/legal.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../th/legal.html" hreflang="th" lang="th">ไทย</a><a href="../es/legal.html" hreflang="es" lang="es">Español</a><a href="../pt/legal.html" hreflang="pt" lang="pt">Português</a><a href="../de/legal.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/legal.html" hreflang="fr" lang="fr">Français</a><a href="../it/legal.html" hreflang="it" lang="it">Italiano</a><a href="../ru/legal.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/legal.html" hreflang="uk" lang="uk">Українська</a><a href="../pl/legal.html" hreflang="pl" lang="pl">Polski</a><a href="../cs/legal.html" hreflang="cs" lang="cs">Čeština</a><a href="../hu/legal.html" hreflang="hu" lang="hu">Magyar</a><a href="../ro/legal.html" hreflang="ro" lang="ro">Română</a><a href="../tr/legal.html" hreflang="tr" lang="tr">Türkçe</a><a href="../hi/legal.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/legal.html" hreflang="ar" lang="ar">العربية</a><a href="../ur/legal.html" hreflang="ur" lang="ur">اردو</a></div></div>
       <a class="btn btn-primary btn-sm js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Download</a>
     </div>
   </div>
 </header><main id="top">
   <section class="l-hero">
     <div class="wrap">
-      <h1>Terms and Policies</h1>
-      <p>These are the terms of service and operating policies for the DownKit service provided by KNEXM Co., Ltd. (Effective date: October 24, 2026)<br>This English version is provided for convenience. If it differs from the Korean version, the Korean version prevails.</p>
+      <h1>Terms of Service and Policies</h1>
+      <p>These are the Terms of Service and operating policies for the DownKit service provided by KNEXM Co., Ltd. (Effective date: October 24, 2026)<br>This English version is provided for convenience. If it differs from the Korean version, the Korean version prevails.</p>
       <div class="ltabs" role="tablist">
         <button type="button" class="on" data-doc="terms" role="tab">Terms of Service</button>
         <button type="button" data-doc="privacy" role="tab">Privacy Policy</button>
-        <button type="button" data-doc="refund" role="tab">Refund &amp; Cancellation Policy</button>
+        <button type="button" data-doc="refund" role="tab">Refund & Cancellation Policy</button>
         <button type="button" data-doc="copyright" role="tab">Copyright Policy</button>
       </div>
     </div>
@@ -336,226 +374,222 @@ footer .wrap { display: grid; gap: 22px; }
 
   <section class="l-body">
     <div class="wrap">
-      <!-- ============ Terms of Service ============ -->
-      <article class="doc on" id="terms">
+            <article class="doc on" id="terms">
         <nav class="toc" aria-label="Contents">
           <b>Terms of Service</b>
-          <a href="#t1">1. Purpose</a><a href="#t2">2. Definitions</a><a href="#t3">3. Effect and Amendment of Terms</a><a href="#t4">4. Description of Service</a>
+          <a href="#t1">1. Purpose</a><a href="#t2">2. Definitions</a><a href="#t3">3. Effect and Amendment of the Terms</a><a href="#t4">4. Description of the Service</a>
           <a href="#t5">5. Accounts</a><a href="#t6">6. Paid Services and Payment</a><a href="#t7">7. Cancellation and Refunds</a><a href="#t8">8. User Obligations (Copyright)</a>
-          <a href="#t9">9. Changes to and Suspension of Service</a><a href="#t10">10. Limitation of Liability</a><a href="#t11">11. Intellectual Property</a><a href="#t12">12. Restriction of Use and Termination</a><a href="#t13">13. Governing Law and Dispute Resolution</a>
+          <a href="#t9">9. Changes to and Suspension of the Service</a><a href="#t10">10. Limitation of Liability</a><a href="#t11">11. Intellectual Property</a><a href="#t12">12. Restriction of Use and Termination</a><a href="#t13">13. Governing Law and Dispute Resolution</a>
         </nav>
         <div class="prose">
           <h2 id="t1">Article 1 (Purpose)</h2>
-          <p>The purpose of these Terms is to set out the rights, obligations and responsibilities of KNEXM Co., Ltd. (the "Company") and users in connection with the use of DownKit, a program for Windows and an app for Android, and the related website, account and payment services (the "Service") provided by the Company.</p>
+          <p>The purpose of these Terms is to set forth the rights, obligations, and responsibilities between KNEXM Co., Ltd. (hereinafter the "Company") and users in connection with the use of DownKit, the Company's program for Windows and app for Android, and the related website, account, and payment services (hereinafter the "Service").</p>
           <h2 id="t2">Article 2 (Definitions)</h2>
           <p>The terms used in these Terms are defined as follows.</p>
           <ol>
-            <li><b>User</b>: a person who uses the Service provided by the Company in accordance with these Terms</li>
-            <li><b>Free user</b>: a user who uses the free features without making any payment</li>
-            <li><b>Pro user</b>: a user who has paid for a monthly or annual subscription or a Lifetime License</li>
-            <li><b>Account</b>: the DownKit member information created by a user in order to use the Service (common to Free and Pro)</li>
+            <li><b>User</b>: any person who uses the Service provided by the Company under these Terms</li>
+            <li><b>Free User</b>: a User who uses the free features without making a separate payment</li>
+            <li><b>Pro User</b>: a User who has paid for a monthly or annual subscription or a lifetime license</li>
+            <li><b>Account</b>: the DownKit membership information created by a User to use the Service (common to Free and Pro)</li>
           </ol>
-          <h2 id="t3">Article 3 (Effect and Amendment of Terms)</h2>
+          <h2 id="t3">Article 3 (Effect and Amendment of the Terms)</h2>
           <ol>
-            <li>These Terms are posted on the Service website and take effect when a user agrees to them while installing the program or app or creating an account.</li>
-            <li>The Company may amend these Terms to the extent that doing so does not violate applicable laws. When amending them, the Company will give notice on the website and within the program starting 7 days before the effective date. However, for changes that are unfavorable to users, notice will be given starting 30 days before the effective date.</li>
-            <li>If a user does not agree to the amended Terms, the user may stop using the Service and delete their account.</li>
+            <li>These Terms are posted on the Service website and take effect when a User agrees to them while installing the program or app or creating an account.</li>
+            <li>The Company may amend these Terms to the extent permitted by applicable laws and will give notice on the website and within the program at least 7 days before the effective date. However, for amendments unfavorable to Users, notice will be given at least 30 days before the effective date.</li>
+            <li>A User who does not agree to the amended Terms may stop using the Service and delete their account.</li>
           </ol>
-          <h2 id="t4">Article 4 (Description of Service)</h2>
+          <h2 id="t4">Article 4 (Description of the Service)</h2>
           <ol>
-            <li>The Company provides a feature that saves the video or music at a link entered by the user to the user's computer or phone, along with additional features such as playback, GIF creation, saving subtitles, file editing (trim, compress, extract audio, convert format) and live stream recording. Additional features may differ between the Windows program and the Android app.</li>
-            <li>Free users may download up to 15 times per week, and videos may be downloaded at up to 1080p quality. Subtitles can be saved together with downloads. Paid users (Monthly subscription, Pro 1 Year, Lifetime License) may use 4K/8K quality, playlists, GIF, automatic download and site login features with no limit on the number of downloads.</li>
-            <li>Because the Service works based on the structure of external sites (such as YouTube), downloading from some sites or of some content may be temporarily restricted if an external site changes.</li>
+            <li>The Company provides a feature that saves videos and music from links entered by the User to the User's computer or phone, as well as additional features such as playback, GIF creation, subtitle saving, file editing (trimming, size reduction, audio extraction, and format conversion), and live stream recording. Additional features may differ between the Windows program and the Android app.</li>
+            <li>Free Users may download up to 15 times per week, with video quality up to 1080p. Subtitles may be saved together with downloads. Paid Users (Monthly Subscription · Pro 1 Year · Lifetime License) may download without limits on the number of downloads and may use 4K and 8K quality, playlists, GIFs, auto-download, and site sign-in.</li>
+            <li>Because the Service operates according to the structure of external sites (such as YouTube), downloading from some sites or of some content may be temporarily restricted when those external sites change.</li>
           </ol>
           <h2 id="t5">Article 5 (Accounts)</h2>
           <ol>
-            <li>An account must be created in order to use the Service (Free or Pro). An account can be created through Google, Kakao, or Naver login, and Free users may switch to Pro at any time. Users may also use the Service without logging in by entering a promotion code issued by the Company, in which case access is granted based on the code and the device.</li>
-            <li>Up to 3 devices in total (PCs and phones) can be registered to one account. A user may register a new device after removing a previously registered device in the Settings menu.</li>
-            <li>Users may not share their account with others, or transfer or sell it. Persons under the age of 14 may not create an account.</li>
+            <li>To use the Service (Free or Pro), a User must create an account. Accounts may be created through Google, Kakao, or Naver sign-in, and Free Users may upgrade to Pro at any time. Users may also use the Service without signing in by entering a promotional code issued by the Company, in which case usage rights are granted based on the code and the device.</li>
+            <li>Up to 3 devices in total, including PCs and phones, may be registered to one account. Users may unregister a previously registered device in the settings menu and then register a new device.</li>
+            <li>Users may not share their account with others or transfer or sell it. Persons under the age of 14 may not create an account.</li>
           </ol>
           <h2 id="t6">Article 6 (Paid Services and Payment)</h2>
           <ol>
-            <li>The fees are the amounts shown on the pricing page. For users outside Korea, prices may be shown in a local currency such as US dollars.</li>
-            <li>Monthly and annual subscriptions are <b>charged automatically</b> on the same cycle until the user cancels. If the user cancels before the next payment date, the next payment will not be made.</li>
-            <li>A Lifetime License is a license that, with a one-time payment, allows continued use of the Pro features and of updates provided thereafter. However, if the Company terminates the Service, Article 9 applies.</li>
-            <li>Payments are made through the payment provider designated by the Company, and the Company does not directly store users' card numbers.</li>
+            <li>Fees are the amounts displayed on the pricing page; for users outside Korea, fees may be displayed in local currency such as US dollars.</li>
+            <li>Monthly and annual subscriptions are <b>automatically billed</b> on the same cycle until the User cancels. If the User cancels before the next billing date, the next payment will not be made.</li>
+            <li>A lifetime license is a license that, with a one-time payment, allows continued use of Pro features and subsequent updates. However, if the Company terminates the Service, Article 9 applies.</li>
+            <li>Payments are processed through a payment service provider designated by the Company, and the Company does not directly store Users' card numbers.</li>
           </ol>
           <h2 id="t7">Article 7 (Cancellation and Refunds)</h2>
-          <p>Matters regarding subscription cancellation and refunds are governed by the separate <a href="#refund" class="jump" data-doc="refund">Refund &amp; Cancellation Policy</a>. A full refund may be requested for any plan within 7 days of the payment date.</p>
+          <p>Matters regarding subscription cancellation and refunds are governed by the separately established <a href="#refund" class="jump" data-doc="refund">Refund & Cancellation Policy</a>. A full refund may be requested for any plan within 7 days of the payment date.</p>
           <h2 id="t8">Article 8 (User Obligations — Copyright)</h2>
           <ol>
             <li>Users must download only <b>content to which they hold the rights</b> or <b>content whose rights holder has permitted downloading</b>.</li>
-            <li>Users must not post, distribute or sell downloaded files without the permission of the rights holder.</li>
-            <li>Users must not use the Service for the purpose of removing or circumventing copy protection technologies such as DRM.</li>
-            <li>Users must comply with the terms of use of external sites.</li>
-            <li>The user is responsible for any problems arising from the user's violation of this Article.</li>
+            <li>Users must not post, distribute, or sell downloaded files without the rights holder's permission.</li>
+            <li>Users must not use the Service for the purpose of removing or circumventing DRM or other copy protection technologies.</li>
+            <li>Users must comply with the terms of service of external sites.</li>
+            <li>Users are responsible for any problems arising from their violation of this Article.</li>
           </ol>
-          <h2 id="t9">Article 9 (Changes to and Suspension of Service)</h2>
+          <h2 id="t9">Article 9 (Changes to and Suspension of the Service)</h2>
           <ol>
             <li>The Company may change or add features to improve the Service.</li>
-            <li>The Company may temporarily suspend the Service due to maintenance, failures, changes to external sites, natural disasters or similar reasons.</li>
+            <li>The Company may temporarily suspend the Service due to maintenance, outages, changes to external sites, natural disasters, or similar reasons.</li>
             <li>If the Company terminates the Service, it will give notice at least 30 days before the termination date and will take appropriate measures, such as refunds, for any remaining subscription period.</li>
           </ol>
           <h2 id="t10">Article 10 (Limitation of Liability)</h2>
           <ol>
-            <li>The Company is not liable if certain content cannot be downloaded due to changes in the policies or structure of external sites.</li>
-            <li>The user is responsible for the content they download and for any problems arising from its use.</li>
+            <li>The Company is not liable if specific content cannot be downloaded due to changes in the policies or structure of external sites.</li>
+            <li>Users are responsible for the content they download and for any problems arising from its use.</li>
             <li>The Company is liable, in accordance with applicable laws, for damages caused by its intentional misconduct or gross negligence.</li>
           </ol>
           <h2 id="t11">Article 11 (Intellectual Property)</h2>
-          <p>All rights to the DownKit program, its design and trademarks belong to the Company. Users must not copy, modify or redistribute the program, or circumvent paid features by reverse engineering or other means. Open-source software included in DownKit (yt-dlp, FFmpeg, etc.) is subject to its respective licenses.</p>
+          <p>All rights to the DownKit program, its design, and its trademarks belong to the Company. Users may not copy, modify, or redistribute the program, or circumvent paid features through reverse engineering or other means. Open-source software included in DownKit (such as yt-dlp and FFmpeg) is subject to its respective licenses.</p>
           <h2 id="t12">Article 12 (Restriction of Use and Termination)</h2>
           <ol>
-            <li>Users may delete their account at any time through the Settings menu or by email request.</li>
-            <li>If a user materially violates these Terms (in particular Articles 5, 8 and 11), the Company may, after prior notice, restrict the user's use of the Service or terminate the agreement.</li>
+            <li>Users may delete their account at any time through the settings menu or by email request.</li>
+            <li>If a User materially violates these Terms (in particular Articles 5, 8, and 11), the Company may, after prior notice, restrict the User's use of the Service or terminate the agreement.</li>
           </ol>
           <h2 id="t13">Article 13 (Governing Law and Dispute Resolution)</h2>
-          <p>These Terms are governed by and construed in accordance with the laws of the Republic of Korea. If a dispute arises between the Company and a user in connection with the use of the Service, both parties will make good-faith efforts to resolve it through consultation by email (info@knexm.com) or other means. If no agreement is reached and a lawsuit is filed, the competent court shall be determined in accordance with the Civil Procedure Act of Korea.</p>
+          <p>These Terms are governed by and construed in accordance with the laws of the Republic of Korea. If a dispute arises between the Company and a User in connection with the use of the Service, both parties will endeavor to resolve it through good-faith consultation, such as by email (info@knexm.com). If no agreement is reached and a lawsuit is filed, the competent court will be determined in accordance with the Civil Procedure Act.</p>
         </div>
       </article>
 
-      <!-- ============ Privacy Policy ============ -->
-      <article class="doc" id="privacy">
+            <article class="doc" id="privacy">
         <nav class="toc" aria-label="Contents">
           <b>Privacy Policy</b>
-          <a href="#p1">Key summary</a><a href="#p2">1. Personal information we collect</a><a href="#p3">2. Information we do not collect</a><a href="#p4">3. Purposes of use</a>
-          <a href="#p5">4. Retention period</a><a href="#p6">5. Outsourcing and overseas transfer</a><a href="#p7">6. Rights of data subjects</a><a href="#p8">7. Security measures</a><a href="#p9">8. Chief Privacy Officer</a>
+          <a href="#p1">Key summary</a><a href="#p2">1. Personal Information We Collect</a><a href="#p3">2. Information We Do Not Collect</a><a href="#p4">3. Purposes of Use</a>
+          <a href="#p5">4. Retention and Use Period</a><a href="#p6">5. Outsourcing and Overseas Transfer</a><a href="#p7">6. Rights of Data Subjects</a><a href="#p8">7. Security Measures</a><a href="#p9">8. Chief Privacy Officer</a>
         </nav>
         <div class="prose">
           <h2 id="p1">Key summary</h2>
           <div class="summary">
-            <div><b>Site login information</b><span>Stored only on the user's device (PC or phone) and never sent to the Company</span></div>
-            <div><b>Download history · Clipboard</b><span>Processed only on the user's device (PC or phone) and never transmitted</span></div>
-            <div><b>Card numbers</b><span>Handled by the payment provider; the Company does not store them</span></div>
-            <div><b>Ads · Tracking</b><span>No advertising and no behavioral tracking</span></div>
+            <div><b>Site sign-in information</b><span>Stored only on your device (PC or phone) and never sent to the Company</span></div>
+            <div><b>Download history · Clipboard</b><span>Processed only on your device (PC or phone) and never transmitted</span></div>
+            <div><b>Card numbers</b><span>Handled by the payment service provider; the Company does not store them</span></div>
+            <div><b>Ads · Tracking</b><span>We do not serve ads or track behavioral information</span></div>
           </div>
-          <h2 id="p2">1. Personal information we collect</h2>
+          <h2 id="p2">1. Personal Information We Collect</h2>
           <table class="ltbl">
             <thead><tr><th>When collected</th><th>Items collected</th></tr></thead>
             <tbody>
-              <tr><td>When signing up (Free · Pro)</td><td>Login method and the member identifier provided by the login provider<br>· Google login: email, name, profile photo<br>· Kakao login: nickname (required), profile photo · Kakao Account email (optional)<br>· Naver login: nickname (required), email · profile photo (optional), and an authentication token used to disconnect Naver when the account is deleted (stored encrypted)<br>You can sign up without agreeing to the optional items.</td></tr>
-              <tr><td>When starting with a promotion code (no login)</td><td>The promotion code entered, and a user identifier created from the code and the device identifier</td></tr>
-              <tr><td>When paying</td><td>Payment details (plan, amount paid, payment date, order number). Card information is processed directly by the payment provider.</td></tr>
-              <tr><td>When registering a device (PC or phone)</td><td>Device identifier (randomly generated value), device name (PC name or phone model), operating system information (e.g. Android version)</td></tr>
-              <tr><td>When checking free usage count</td><td>Weekly download count (information about downloaded content is not collected)</td></tr>
-              <tr><td>When checking for updates</td><td>The program and app connect to GitHub servers and the Company website (downkit.net) to check for the latest version, and the IP address may be passed to those servers in this process.</td></tr>
-              <tr><td>When contacting us</td><td>Email address, inquiry details, error log files attached by the user, and the app version and device information automatically included when contacting us from the app</td></tr>
+              <tr><td>At sign-up (Free · Pro)</td><td>Sign-in method and the member identifier provided by the sign-in provider<br>· Google sign-in: email, name, profile photo<br>· Kakao sign-in: nickname (required), profile photo · Kakao Account email (optional)<br>· Naver sign-in: nickname (required), email · profile photo (optional), and an authentication token used to disconnect Naver upon account deletion (stored encrypted)<br>You can sign up without consenting to the optional items.</td></tr>
+              <tr><td>When starting with a promotional code (without signing in)</td><td>The promotional code entered and a user identifier generated from the code and the device identifier</td></tr>
+              <tr><td>At payment</td><td>Payment history (plan, amount paid, payment date, order number). Card information is processed directly by the payment service provider.</td></tr>
+              <tr><td>When registering a device (PC or phone)</td><td>Device identifier (randomly generated value), device name (PC name or phone model), operating system information (e.g., Android version)</td></tr>
+              <tr><td>When checking free usage counts</td><td>Weekly download count (information about downloaded content is not collected)</td></tr>
+              <tr><td>When checking for updates</td><td>The program connects to GitHub servers and the Company website (downkit.net) to check for the latest version, and your IP address may be transmitted to those servers in the process.</td></tr>
+              <tr><td>When contacting us</td><td>Email address, inquiry details, error log files attached by the User, and the app version · device information automatically included in the email when contacting us from the app</td></tr>
             </tbody>
           </table>
-          <h2 id="p3">2. Information we do not collect</h2>
+          <h2 id="p3">2. Information We Do Not Collect</h2>
           <ul>
-            <li><b>Site login information</b>: Information used to log in to YouTube and other sites in DownKit is stored only on the user's device and is not sent to the Company.</li>
-            <li><b>Download history and downloaded files</b>: Download history and file information are stored only on the user's device (PC or phone).</li>
-            <li><b>Edited and recorded files</b>: Files edited with the Android app's tools or recorded from live streams are processed and stored only on the phone and are not sent to the Company.</li>
-            <li><b>Clipboard</b>: The clipboard is checked only on the user's device in order to detect copied links, and its contents are not sent outside the device.</li>
+            <li><b>Site sign-in information</b>: Information used to sign in to YouTube and other sites within DownKit is stored only on the User's device and is not sent to the Company.</li>
+            <li><b>Download history and downloaded files</b>: Download history and file information are stored only on the User's device (PC or phone).</li>
+            <li><b>Edited or recorded files</b>: Files edited with the Android app's tools or live streams recorded with it are processed and stored only on the phone and are not sent to the Company.</li>
+            <li><b>Clipboard</b>: The clipboard is checked only on the User's device (PC or phone) to recognize copied links, and its contents are not transmitted externally.</li>
           </ul>
-          <h2 id="p4">3. Purposes of use of personal information</h2>
+          <h2 id="p4">3. Purposes of Use of Personal Information</h2>
           <ul>
-            <li>Account management and identity verification, provision of Free and Pro features, management of device registration</li>
-            <li>Payment, subscription renewal notices, refund processing</li>
-            <li>Checking the weekly usage count of Free users</li>
-            <li>Responding to inquiries and resolving errors</li>
+            <li>Account management and identity verification, provision of Free · Pro features, and device registration management</li>
+            <li>Payments, subscription renewal notices, and refund processing</li>
+            <li>Checking weekly usage counts for Free Users</li>
+            <li>Responding to inquiries and handling errors</li>
             <li>Notices of important matters such as changes to the Service or Terms</li>
           </ul>
-          <h2 id="p5">4. Retention and use period of personal information</h2>
-          <p>The Company destroys account information without delay when a member deletes their account. However, information that must be retained under applicable laws is stored separately for the periods below.</p>
+          <h2 id="p5">4. Retention and Use Period of Personal Information</h2>
+          <p>The Company destroys account information without delay when a member deletes their account. However, information that must be retained under applicable laws is kept separately for the periods below.</p>
           <table class="ltbl">
-            <thead><tr><th>Item retained</th><th>Retention period</th><th>Legal basis</th></tr></thead>
+            <thead><tr><th>Retained items</th><th>Retention period</th><th>Legal basis</th></tr></thead>
             <tbody>
-              <tr><td>Records of contracts, withdrawal of orders and payments</td><td>5 years</td><td>Act on the Consumer Protection in Electronic Commerce</td></tr>
+              <tr><td>Records of contracts, withdrawal of offers, and payments</td><td>5 years</td><td>Act on the Consumer Protection in Electronic Commerce</td></tr>
               <tr><td>Records of consumer complaints and dispute resolution</td><td>3 years</td><td>Act on the Consumer Protection in Electronic Commerce</td></tr>
               <tr><td>Access logs</td><td>3 months</td><td>Protection of Communications Secrets Act</td></tr>
             </tbody>
           </table>
-          <h2 id="p6">5. Outsourcing of processing and overseas transfer</h2>
+          <h2 id="p6">5. Outsourcing of Personal Information Processing and Overseas Transfer</h2>
           <table class="ltbl">
-            <thead><tr><th>Processor</th><th>Outsourced tasks</th></tr></thead>
+            <thead><tr><th>Contractor</th><th>Outsourced tasks</th></tr></thead>
             <tbody>
-              <tr><td>Payment provider (name to be announced once contracted)</td><td>Payment processing, subscription management, tax calculation</td></tr>
+              <tr><td>Payment service provider (name to be announced after contract)</td><td>Payment processing, subscription management, tax calculation</td></tr>
               <tr><td>Google LLC (Firebase)</td><td>Operation of servers storing account and payment information</td></tr>
               <tr><td>GitHub, Inc. (USA)</td><td>Distribution of program and app update files</td></tr>
             </tbody>
           </table>
-          <p class="small">If personal information is transferred overseas, the Company will promptly state in this Policy the destination country, the items transferred, the date, time and method of transfer, and the retention and use period.</p>
-          <h2 id="p7">6. Rights of data subjects and how to exercise them</h2>
-          <p>Users may at any time request access to, correction of, deletion of, or suspension of processing of their personal information. Users may do this themselves in the Settings menu or send a request to info@knexm.com, and the Company will take action within 10 days of the request.</p>
-          <h2 id="p8">7. Measures to ensure the security of personal information</h2>
+          <p class="small">If personal information is transferred overseas, the Company will promptly state in this Policy the destination country, the items transferred, the date, time, and method of transfer, and the retention and use period.</p>
+          <h2 id="p7">6. Rights of Data Subjects and How to Exercise Them</h2>
+          <p>Users may at any time request access to, correction or deletion of, or suspension of processing of their personal information. Users may do so directly in the settings menu or by request to info@knexm.com, and the Company will take action within 10 days of the request.</p>
+          <h2 id="p8">7. Measures to Ensure the Security of Personal Information</h2>
           <ul>
             <li>Encrypted communication (HTTPS) is used when transmitting personal information.</li>
-            <li>Where passwords are used, they are stored encrypted in a way that cannot be decrypted.</li>
+            <li>Where passwords are used, they are encrypted and stored using a method that cannot be decrypted.</li>
             <li>Access to personal information is limited to the minimum number of personnel, and access records are kept.</li>
           </ul>
           <h2 id="p9">8. Chief Privacy Officer</h2>
           <p>Chief Privacy Officer: Yeoul Yoon (CEO) · Email: info@knexm.com</p>
-          <p class="small">For reports or consultation regarding infringement of personal information, you may contact the following organizations: Personal Information Infringement Report Center (privacy.kisa.or.kr, 118 in Korea), Personal Information Dispute Mediation Committee (kopico.go.kr, 1833-6972).</p>
+          <p class="small">To report or seek advice on personal information infringement, you may contact the following organizations: Personal Information Infringement Report Center (privacy.kisa.or.kr, 118 in Korea, no area code) and Personal Information Dispute Mediation Committee (kopico.go.kr, 1833-6972).</p>
         </div>
       </article>
 
-      <!-- ============ Refund & Cancellation Policy ============ -->
-      <article class="doc" id="refund">
+            <article class="doc" id="refund">
         <nav class="toc" aria-label="Contents">
-          <b>Refund &amp; Cancellation Policy</b>
-          <a href="#r1">Key summary</a><a href="#r2">1. Full refund within 7 days</a><a href="#r3">2. After 7 days</a><a href="#r4">3. If the service could not be used due to the Company</a><a href="#r5">4. How to request a refund</a><a href="#r6">5. When refunds are restricted</a>
+          <b>Refund & Cancellation Policy</b>
+          <a href="#r1">Key summary</a><a href="#r2">1. Full Refund Within 7 Days</a><a href="#r3">2. After 7 Days</a><a href="#r4">3. If You Could Not Use the Service Due to the Company's Fault</a><a href="#r5">4. How to Request a Refund</a><a href="#r6">5. When Refunds Are Restricted</a>
         </nav>
         <div class="prose">
           <h2 id="r1">Key summary</h2>
           <div class="summary three">
-            <div><b>Within 7 days</b><span>Full refund for Monthly, Annual and Lifetime License</span></div>
-            <div><b>After 7 days (subscriptions)</b><span>Cancellation only; you keep access for the remaining period</span></div>
+            <div><b>Within 7 days</b><span>Full refund for Monthly, Annual, and Lifetime License</span></div>
+            <div><b>After 7 days (subscriptions)</b><span>Cancellation only; you can keep using the remaining period</span></div>
             <div><b>Processing time</b><span>Within 3 business days of the request</span></div>
           </div>
-          <h2 id="r2">1. Full refund within 7 days of payment</h2>
-          <p>For monthly subscriptions, annual subscriptions and Lifetime Licenses, if you request a refund <b>within 7 days of the payment date</b>, we will give a full refund regardless of the reason. Paid access ends as soon as the refund is completed, and you become a Free user.</p>
-          <h2 id="r3">2. More than 7 days after payment</h2>
+          <h2 id="r2">1. Full Refund Within 7 Days of Payment</h2>
+          <p>For monthly subscriptions, annual subscriptions, and lifetime licenses, a full refund will be made regardless of the reason if requested <b>within 7 days of the payment date</b>. Paid usage rights end as soon as the refund is completed, and the User is switched to a Free User.</p>
+          <h2 id="r3">2. More Than 7 Days After Payment</h2>
           <ul>
-            <li><b>Monthly · Annual subscriptions</b>: You may cancel your subscription at any time. When you cancel, the next payment will not be made, and you can keep using Pro features until the end of the period you have already paid for. Partial refunds for the remaining period are not provided.</li>
-            <li><b>Lifetime License</b>: Not refundable once 7 days have passed since the payment date.</li>
-            <li><b>Automatic renewal payments</b>: If you request a refund within 7 days of the date your subscription was automatically renewed, we will refund that renewal payment.</li>
+            <li><b>Monthly · Annual subscriptions</b>: Users may cancel their subscription at any time. Upon cancellation, the next payment will not be made, and Pro features remain available until the end of the period already paid for. Partial refunds for the remaining period are not provided.</li>
+            <li><b>Lifetime license</b>: No refund is given once 7 days have passed since the payment date.</li>
+            <li><b>Automatic renewal payments</b>: If requested within 7 days of the date the subscription was automatically renewed, the amount of that renewal payment will be refunded.</li>
           </ul>
-          <h2 id="r4">3. If the service could not be used due to the Company</h2>
-          <p>If a user was unable to use Pro features for an extended period due to reasons attributable to the Company or a service failure, the Company will refund the amount corresponding to the period that could not be used, or extend the usage period, even if more than 7 days have passed since the payment date.</p>
-          <h2 id="r5">4. How to request a refund</h2>
+          <h2 id="r4">3. If You Could Not Use the Service Due to the Company's Fault</h2>
+          <p>If a User was unable to use Pro features for an extended period due to reasons attributable to the Company or a service outage, the Company will refund the amount corresponding to the period of non-use or extend the usage period, even if 7 days have passed since the payment date.</p>
+          <h2 id="r5">4. How to Request a Refund</h2>
           <ol>
-            <li>To request a refund, please send your <b>account email</b> and <b>order number</b> (shown in the payment confirmation email) to info@knexm.com.</li>
-            <li>After verification, the Company will process the refund within 3 business days to the payment method used (card, etc.).</li>
-            <li>Depending on the payment method and the card issuer's processing schedule, it may take additional time for the refunded amount to actually arrive.</li>
+            <li>To request a refund, please send your <b>account email</b> and <b>order number</b> (shown in your payment confirmation email) to info@knexm.com.</li>
+            <li>After verification, the Company will process the request within 3 business days and issue the refund to the original payment method (card, etc.).</li>
+            <li>Depending on the payment method and the card issuer's processing schedule, it may take additional time for the refund to actually arrive.</li>
           </ol>
-          <h2 id="r6">5. When refunds are restricted</h2>
+          <h2 id="r6">5. When Refunds Are Restricted</h2>
           <ul>
-            <li>When use has been restricted due to a material violation of the Terms of Service (in particular, copyright and the prohibition on account sharing)</li>
-            <li>When the refund system is judged to be abused, such as the same person repeatedly requesting refunds and paying again</li>
+            <li>When use has been restricted due to a material violation of the Terms of Service (in particular, copyright or the prohibition on account sharing)</li>
+            <li>When the refund system is deemed to be abused, such as by the same person repeatedly requesting refunds and paying again</li>
           </ul>
-          <p class="small">This Policy will not be applied less favorably to users than the standards set by the Act on the Consumer Protection in Electronic Commerce and other applicable laws.</p>
+          <p class="small">This Policy will not be applied in a manner less favorable to Users than the standards set forth in applicable laws, including the Act on the Consumer Protection in Electronic Commerce.</p>
         </div>
       </article>
 
-      <!-- ============ Copyright Policy ============ -->
-      <article class="doc" id="copyright">
+            <article class="doc" id="copyright">
         <nav class="toc" aria-label="Contents">
           <b>Copyright Policy</b>
-          <a href="#c1">1. Basic principles</a><a href="#c2">2. User responsibilities</a><a href="#c3">3. How to report copyright infringement</a><a href="#c4">4. Report handling procedure</a><a href="#c5">5. Measures against repeat infringement</a>
+          <a href="#c1">1. Basic Principles</a><a href="#c2">2. User Responsibilities</a><a href="#c3">3. How to Report Copyright Infringement</a><a href="#c4">4. Report Handling Procedure</a><a href="#c5">5. Measures Against Repeat Infringement</a>
         </nav>
         <div class="prose">
-          <h2 id="c1">1. Basic principles</h2>
-          <p>KNEXM Co., Ltd. (the "Company") respects the rights and interests of creators. DownKit is a tool that supports downloading only of content to which the user <b>holds legitimate rights</b> or <b>has been granted permission to use</b>, and the Company does not keep or store video or audio files on its servers.</p>
-          <h2 id="c2">2. User responsibilities</h2>
+          <h2 id="c1">1. Basic Principles</h2>
+          <p>KNEXM Co., Ltd. (hereinafter the "Company") respects the rights and interests of creators. DownKit is a tool that supports downloading only content for which the User <b>holds legitimate rights</b> or <b>has obtained permission to use</b>, and the Company does not host or store any video or audio files on its servers.</p>
+          <h2 id="c2">2. User Responsibilities</h2>
           <ul>
-            <li>Unauthorized downloading, distribution or sale of content without the copyright holder's permission, or to which you have no rights, is prohibited.</li>
-            <li>The Service may not be used for the purpose of circumventing or disabling copy protection technologies such as DRM (Digital Rights Management).</li>
-            <li>The user alone is fully responsible for complying with the terms of use and policies of the target platform.</li>
+            <li>Unauthorized downloading, distribution, or sale of content without the copyright holder's permission or without the necessary rights is prohibited.</li>
+            <li>This Service may not be used for the purpose of circumventing or disabling DRM (digital rights management) or other copy protection technologies.</li>
+            <li>Users are solely responsible for complying with the terms of service and policies of the target platforms.</li>
           </ul>
-          <h2 id="c3">3. How to report copyright infringement</h2>
-          <p>If you find copyright infringement in the Service, please report it by email (<b>info@knexm.com</b>) with the supporting materials below.</p>
+          <h2 id="c3">3. How to Report Copyright Infringement</h2>
+          <p>If you find copyright-infringing elements in the Service, please report them by email (<b>info@knexm.com</b>) with the following supporting materials.</p>
           <ol>
             <li>Name and contact information of the rights holder (or their agent)</li>
-            <li>A description of the work you believe has been infringed</li>
+            <li>Description of the work you believe has been infringed</li>
             <li>Links or materials related to the infringement</li>
-            <li>Materials that verify you are the rights holder</li>
+            <li>Materials verifying that you are the rights holder</li>
             <li>A statement confirming that the information in the report is true</li>
           </ol>
-          <h2 id="c4">4. Report handling procedure</h2>
-          <p>Reports received are reviewed and the result is sent back within 7 business days. Depending on the case, measures such as discontinuing support for a platform or restricting account use may be taken.</p>
-          <h2 id="c5">5. Measures against repeat infringement</h2>
+          <h2 id="c4">4. Report Handling Procedure</h2>
+          <p>Reports received will be reviewed, and the results will be communicated within 7 business days. Depending on the case, measures such as discontinuing support for a platform or restricting account use may be taken.</p>
+          <h2 id="c5">5. Measures Against Repeat Infringement</h2>
           <p>If repeated copyright infringement is confirmed, the account may be suspended or forcibly terminated in accordance with the Terms of Service.</p>
         </div>
       </article>
@@ -569,10 +603,10 @@ footer .wrap { display: grid; gap: 22px; }
       <div class="foot-links">
         <a href="#terms" class="jump" data-doc="terms">Terms of Service</a>
         <a class="strong jump" href="#privacy" data-doc="privacy">Privacy Policy</a>
-        <a href="#refund" class="jump" data-doc="refund">Refund &amp; Cancellation Policy</a>
+        <a href="#refund" class="jump" data-doc="refund">Refund & Cancellation Policy</a>
         <a href="#copyright" class="jump" data-doc="copyright">Copyright Policy</a>
-        <a href="support.html#news">Notices</a>
-        <a href="support.html#contact">Contact us</a>
+        <a href="support.html#news">Announcements</a>
+        <a href="support.html#contact">1:1 Support</a>
       </div>
     </div>
     <div class="biz">
@@ -607,8 +641,18 @@ footer .wrap { display: grid; gap: 22px; }
       if (!setup) return;
       document.querySelectorAll(".js-dl").forEach(function (a) { a.href = setup.browser_download_url; a.removeAttribute("target"); });
       var ver = (rel.tag_name || "").replace(/^v/i, ""), mb = Math.round(setup.size / 1048576);
-      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "Version " + ver + " (" + mb + " MB)"; });
+      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "Version" + ver + " (" + mb + " MB)"; });
     }).catch(function () {});
+})();
+</script>
+<script>
+(function () {
+  var d = document.querySelector(".lang-dd"); if (!d) return;
+  var b = d.querySelector("button"), m = d.querySelector(".lang-menu");
+  function s(o) { m.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); }
+  b.addEventListener("click", function (e) { e.stopPropagation(); s(m.hidden); });
+  document.addEventListener("click", function (e) { if (!d.contains(e.target)) s(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") s(false); });
 })();
 </script>
 </body>

@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../logo.svg">
+<link rel="alternate" hreflang="ko" href="https://downkit.net/pricing.html">
+<link rel="alternate" hreflang="en" href="https://downkit.net/en/pricing.html">
+<link rel="alternate" hreflang="ja" href="https://downkit.net/ja/pricing.html">
+<link rel="alternate" hreflang="zh-TW" href="https://downkit.net/zh-tw/pricing.html">
+<link rel="alternate" hreflang="zh-CN" href="https://downkit.net/zh-cn/pricing.html">
+<link rel="alternate" hreflang="vi" href="https://downkit.net/vi/pricing.html">
+<link rel="alternate" hreflang="id" href="https://downkit.net/id/pricing.html">
+<link rel="alternate" hreflang="th" href="https://downkit.net/th/pricing.html">
+<link rel="alternate" hreflang="es" href="https://downkit.net/es/pricing.html">
+<link rel="alternate" hreflang="pt" href="https://downkit.net/pt/pricing.html">
+<link rel="alternate" hreflang="de" href="https://downkit.net/de/pricing.html">
+<link rel="alternate" hreflang="fr" href="https://downkit.net/fr/pricing.html">
+<link rel="alternate" hreflang="it" href="https://downkit.net/it/pricing.html">
+<link rel="alternate" hreflang="ru" href="https://downkit.net/ru/pricing.html">
+<link rel="alternate" hreflang="uk" href="https://downkit.net/uk/pricing.html">
+<link rel="alternate" hreflang="pl" href="https://downkit.net/pl/pricing.html">
+<link rel="alternate" hreflang="cs" href="https://downkit.net/cs/pricing.html">
+<link rel="alternate" hreflang="hu" href="https://downkit.net/hu/pricing.html">
+<link rel="alternate" hreflang="ro" href="https://downkit.net/ro/pricing.html">
+<link rel="alternate" hreflang="tr" href="https://downkit.net/tr/pricing.html">
+<link rel="alternate" hreflang="hi" href="https://downkit.net/hi/pricing.html">
+<link rel="alternate" hreflang="ar" href="https://downkit.net/ar/pricing.html">
+<link rel="alternate" hreflang="ur" href="https://downkit.net/ur/pricing.html">
+<link rel="alternate" hreflang="x-default" href="https://downkit.net/pricing.html">
+<title>Prețuri DownKit</title>
+<meta name="description" content="DownKit, aplicația pentru Windows · Android care salvează videoclipuri și muzică pe PC și telefon doar prin copierea unui link">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+/* 레이아웃: 왼쪽 정렬 히어로 + 오른쪽 실제 앱 화면, 아래로 갈수록 조용해지는 한 줄 흐름 */
+:root {
+  --bg: #f5f7f6;
+  --surface: #ffffff;
+  --ink: #111614;
+  --sub: #58615c;
+  --line: #dde3e0;
+  --field: #edf1ef;
+  --accent: #058b4f;
+  --accent-ink: #ffffff;
+  --accent-soft: #e3f3eb;
+  --accent-text: #057a46;
+  --shadow: 0 24px 60px -24px rgba(17, 40, 28, .28);
+  --f-sans: "IBM Plex Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "Consolas", monospace;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1110; --surface: #161a18; --ink: #e8ece9; --sub: #98a29c; --line: #29302c;
+    --field: #1e2321; --accent: #0a9a59; --accent-ink: #ffffff; --accent-soft: #14271d;
+    --accent-text: #3fc285; --shadow: 0 24px 60px -24px rgba(0, 0, 0, .7); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1110; --surface: #161a18; --ink: #e8ece9; --sub: #98a29c; --line: #29302c;
+  --field: #1e2321; --accent: #0a9a59; --accent-ink: #ffffff; --accent-soft: #14271d;
+  --accent-text: #3fc285; --shadow: 0 24px 60px -24px rgba(0, 0, 0, .7); color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-wrap: break-word; }
+a { color: inherit; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+/* ---------- 위 메뉴 ---------- */
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 28px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; text-decoration: none; letter-spacing: -.01em; }
+.brand svg { width: 28px; height: 28px; flex: none; }
+.top nav { display: flex; gap: 24px; margin-left: 8px; }
+.top nav a { text-decoration: none; color: var(--sub); font-size: 15px; }
+.top nav a:hover { color: var(--ink); }
+.top .right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.lang { position: relative; display: flex; align-items: center; gap: 6px; color: var(--sub); font-size: 14px; }
+.lang svg { width: 17px; height: 17px; }
+.lang select { appearance: none; border: 0; background: transparent; color: var(--sub); font: inherit; padding: 6px 4px; cursor: pointer; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 12px; font-weight: 600; text-decoration: none; white-space: nowrap; transition: background .15s, transform .15s; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--accent) 86%, #000); }
+.btn-sm { padding: 9px 16px; font-size: 14px; border-radius: 10px; }
+.btn-lg { padding: 16px 26px; font-size: 17px; }
+.btn-ghost { border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--sub); }
+
+/* ---------- 히어로 ---------- */
+.hero { padding-block: 72px 88px; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); gap: 56px; align-items: center; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--accent-text); background: var(--accent-soft); padding: 5px 12px; border-radius: 999px; letter-spacing: .02em; }
+.eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.hero h1 { font-size: clamp(34px, 4.4vw, 52px); line-height: 1.16; letter-spacing: -.035em; font-weight: 700; margin-top: 22px; }
+.hero h1 em { font-style: normal; color: var(--accent-text); }
+.hero .lead { margin-top: 22px; font-size: 18px; color: var(--sub); max-width: 30em; }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 34px; }
+.cta-meta { font-size: 13px; color: var(--sub); display: grid; gap: 2px; }
+.cta-meta b { color: var(--ink); font-weight: 500; }
+.trust { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+.trust span { display: inline-flex; align-items: center; gap: 8px; }
+.trust svg { width: 17px; height: 17px; color: var(--accent-text); }
+
+/* ---------- 앱 화면 (실제 DownKit 새 화면과 같은 디자인, 예시 내용) ---------- */
+.app { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; font-size: 12px; line-height: 1.5; }
+.app svg { flex: none; }
+.app-title { display: flex; align-items: center; gap: 6px; height: 26px; padding-left: 10px; background: var(--surface); color: var(--sub); font-size: 10.5px; }
+.app-title svg { width: 12px; height: 12px; }
+.app-title .win { margin-left: auto; display: flex; }
+.app-title .win span { width: 32px; text-align: center; font-size: 10px; }
+.app-top { display: flex; align-items: center; gap: 18px; height: 40px; padding: 0 16px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.app-top .b { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 13px; }
+.app-top .b svg { width: 18px; height: 18px; }
+.app-top nav { display: flex; gap: 14px; height: 100%; font-size: 11.5px; color: var(--sub); }
+.app-top nav span { display: flex; align-items: center; border-bottom: 2px solid transparent; }
+.app-top nav span.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+.app-top .pill { margin-left: auto; display: inline-flex; align-items: center; gap: 5px; height: 20px; padding: 0 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-size: 9.5px; font-weight: 600; }
+.app-top .pill i { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.app-body { padding: 18px 20px 20px; display: grid; gap: 13px; }
+.app-h { font-size: 17px; font-weight: 700; letter-spacing: -.03em; line-height: 1.25; }
+.app-h em { font-style: normal; color: var(--accent-text); }
+.app-in { display: flex; align-items: center; gap: 7px; height: 40px; padding: 0 5px 0 12px; background: var(--surface); border: 1.5px solid var(--accent); border-radius: 11px; box-shadow: 0 0 0 3px var(--accent-soft); }
+.app-in .lk { width: 13px; height: 13px; color: var(--sub); }
+.app-in .url { flex: 1; min-width: 0; font-family: var(--f-mono); font-size: 10.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-in .fmt { display: flex; padding: 3px; gap: 1px; background: var(--field); border-radius: 8px; }
+.app-in .fmt span { height: 22px; display: flex; align-items: center; padding: 0 8px; border-radius: 6px; font-size: 9.5px; color: var(--sub); white-space: nowrap; }
+.app-in .fmt span.on { background: var(--surface); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.app-in .go { height: 30px; display: flex; align-items: center; padding: 0 12px; border-radius: 8px; background: var(--accent); color: #fff; font-weight: 600; font-size: 10.5px; white-space: nowrap; }
+.app-lh { display: flex; align-items: flex-end; gap: 14px; border-bottom: 1px solid var(--line); margin-top: 4px; }
+.app-lh b { font-size: 13.5px; letter-spacing: -.02em; padding-bottom: 7px; }
+.app-lh b small { font-family: var(--f-mono); font-weight: 500; color: var(--sub); font-size: 10.5px; margin-left: 4px; }
+.app-lh span { font-size: 11px; color: var(--sub); padding-bottom: 8px; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.app-lh span.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--ink); }
+.list { display: grid; gap: 7px; }
+.item { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; gap: 11px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 11px; padding: 9px 11px; }
+.thumb { width: 76px; height: 43px; border-radius: 7px; position: relative; overflow: hidden; }
+.thumb.sq { width: 43px; justify-self: center; }
+.thumb b { position: absolute; right: 4px; bottom: 4px; font-family: var(--f-mono); font-size: 8.5px; font-weight: 500; padding: 0 4px; border-radius: 4px; background: rgba(0,0,0,.72); color: #fff; }
+.th1 { background: linear-gradient(135deg, #1d4f3a, #6fb391 60%, #e6d39a); }
+.th2 { background: linear-gradient(160deg, #2b3a55, #5d7aa8 55%, #c8d3e6); }
+.th3 { background: radial-gradient(circle at 30% 30%, #f0c27a, #b4572e 70%); }
+.item .name { font-weight: 600; font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.item .who { font-size: 10px; color: var(--sub); }
+.item .meta { display: flex; gap: 4px; align-items: center; margin-top: 3px; font-family: var(--f-mono); font-size: 9.5px; color: var(--sub); white-space: nowrap; overflow: hidden; }
+.item .meta i { font-style: normal; padding: 0 5px; border-radius: 4px; background: var(--field); color: var(--ink); }
+.prog { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.bar { flex: 1; height: 4px; border-radius: 4px; background: var(--field); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 64%; background: var(--accent); border-radius: 4px; animation: grow 6s ease-in-out infinite alternate; }
+@keyframes grow { from { width: 38%; } to { width: 86%; } }
+.prog span { font-family: var(--f-mono); font-size: 9px; color: var(--sub); white-space: nowrap; }
+.right { display: flex; align-items: center; gap: 5px; }
+.st { display: inline-flex; align-items: center; gap: 3px; height: 19px; padding: 0 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-size: 9.5px; font-weight: 600; white-space: nowrap; }
+.st svg { width: 10px; height: 10px; }
+.pct { font-family: var(--f-mono); font-size: 12px; font-weight: 500; }
+.ib { width: 24px; height: 24px; border-radius: 7px; display: grid; place-items: center; color: var(--sub); }
+.ib svg { width: 12px; height: 12px; }
+.ib.play { background: var(--accent); color: #fff; }
+.ib.play svg { width: 10px; height: 10px; margin-left: 1px; }
+.ib.x { border: 1px solid var(--line); color: #d64545; }
+
+/* ---------- 3단계 ---------- */
+section { padding-block: 88px; }
+.sec-head { max-width: 640px; }
+.sec-head .label { font-size: 13px; font-weight: 600; color: var(--accent-text); letter-spacing: .06em; }
+.sec-head h2 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.25; letter-spacing: -.03em; margin-top: 10px; }
+.sec-head p { margin-top: 14px; color: var(--sub); font-size: 17px; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 48px; border-top: 1px solid var(--line); }
+.step { padding: 28px 28px 0 0; display: grid; gap: 10px; align-content: start; }
+.step + .step { padding-left: 28px; border-left: 1px solid var(--line); }
+.step .n { font-family: var(--f-mono); font-size: 13px; color: var(--accent-text); }
+.step h3 { font-size: 20px; letter-spacing: -.02em; }
+.step p { color: var(--sub); font-size: 15px; }
+.step kbd { font-family: var(--f-mono); font-size: 12px; padding: 1px 6px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; background: var(--surface); color: var(--ink); }
+
+/* ---------- 기능 ---------- */
+.features { background: var(--surface); border-block: 1px solid var(--line); }
+.feat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px 40px; margin-top: 52px; }
+.feat { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 4px 16px; align-content: start; }
+.feat .ic { grid-row: span 2; width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); color: var(--accent-text); display: grid; place-items: center; }
+.feat .ic svg { width: 21px; height: 21px; }
+.feat h3 { font-size: 17px; letter-spacing: -.015em; padding-top: 1px; }
+.feat p { color: var(--sub); font-size: 15px; }
+.feat .spec { font-family: var(--f-mono); font-size: 12.5px; color: var(--ink); }
+
+/* ---------- 지원 사이트 ---------- */
+.sites .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.site-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.site-list span { padding: 10px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 15px; font-weight: 500; }
+.site-list span.more { border-style: dashed; color: var(--sub); font-weight: 400; }
+.note { margin-top: 18px; font-size: 14px; color: var(--sub); }
+
+/* ---------- 자주 묻는 질문 ---------- */
+.faq .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.qa { border-top: 1px solid var(--line); }
+details { border-bottom: 1px solid var(--line); }
+summary { list-style: none; cursor: pointer; padding: 20px 0; font-weight: 600; font-size: 17px; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+summary::-webkit-details-marker { display: none; }
+summary svg { width: 20px; height: 20px; color: var(--sub); flex: none; transition: transform .2s; }
+details[open] summary svg { transform: rotate(45deg); }
+details p { padding: 0 36px 22px 0; color: var(--sub); font-size: 15px; }
+
+/* ---------- 마지막 다운로드 ---------- */
+.final { padding-block: 0 96px; }
+.final-box { background: var(--accent); color: #fff; border-radius: 24px; padding: 56px 48px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
+.final-box h2 { font-size: clamp(26px, 3vw, 34px); letter-spacing: -.03em; line-height: 1.3; }
+.final-box p { margin-top: 8px; opacity: .85; }
+.btn-white { background: #fff; color: #05663a; }
+.btn-white:hover { background: #eef7f2; }
+
+/* ---------- 아래 정보 ---------- */
+footer { border-top: 1px solid var(--line); padding-block: 40px 56px; font-size: 13px; color: var(--sub); }
+footer .wrap { display: grid; gap: 22px; }
+.foot-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.foot-links a { text-decoration: none; color: var(--ink); font-weight: 500; }
+.foot-links a.strong { font-weight: 700; }
+.biz { font-size: 12.5px; line-height: 1.85; color: var(--sub); }
+.biz p { margin: 0; }
+.biz em { font-style: normal; }
+.biz em + em::before { content: ""; display: inline-block; width: 1px; height: 11px; margin: 0 12px; background: var(--line); vertical-align: -1px; }
+.biz span { margin-right: 6px; opacity: .75; }
+.biz a { color: inherit; text-decoration: none; }
+.biz a:hover { text-decoration: underline; }
+.biz .copy { margin-top: 10px; font-size: 12px; opacity: .8; }
+@media (max-width: 640px) { .biz em { display: block; } .biz em + em::before { display: none; } }
+.biz .todo { color: var(--accent-text); }
+
+/* ---------- 휴대폰 화면 ---------- */
+@media (max-width: 900px) {
+  .hero .wrap, .sites .wrap, .faq .wrap { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .hero { padding-block: 44px 64px; }
+  .feat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .top nav { display: none; }
+}
+@media (max-width: 620px) {
+  section { padding-block: 64px; }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .step, .step + .step { padding: 24px 0; border-left: 0; }
+  .step + .step { border-top: 1px solid var(--line); }
+  .feat-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .final-box { padding: 40px 24px; }
+  .btn-lg { width: 100%; }
+  .top .btn-sm { display: none; }
+  .app-in .fmt, .app-top .pill { display: none; }
+  .item { grid-template-columns: 60px minmax(0, 1fr) auto; }
+  .thumb { width: 60px; height: 34px; }
+  .thumb.sq { width: 34px; }
+  .prog span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .bar i { animation: none; } * { transition: none !important; } }
+
+/* ---------- 요금 페이지 ---------- */
+.p-hero { padding-block: 64px 32px; text-align: center; }
+.p-hero h1 { font-size: clamp(32px, 4.2vw, 46px); line-height: 1.2; letter-spacing: -.035em; font-weight: 700; }
+.p-hero p { margin: 14px auto 0; color: var(--sub); font-size: 17px; max-width: 34em; }
+.plans { padding-block: 16px 72px; }
+.plan-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; align-items: stretch; margin-top: 16px; }
+.plan { position: relative; display: flex; flex-direction: column; gap: 18px; padding: 30px 24px 26px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; }
+.plan.best { border: 2px solid var(--accent); box-shadow: 0 24px 60px -30px rgba(5, 139, 79, .45); }
+.plan .tag { position: absolute; top: -13px; left: 28px; font-size: 12.5px; font-weight: 700; color: #fff; background: var(--accent); padding: 4px 12px; border-radius: 999px; }
+.plan h2 { font-size: 20px; letter-spacing: -.02em; }
+.plan .for { color: var(--sub); font-size: 14.5px; margin-top: -10px; min-height: 3.4em; }
+.price { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.price b { font-size: 36px; letter-spacing: -.03em; font-weight: 700; font-variant-numeric: tabular-nums; }
+.price span { color: var(--sub); font-size: 15px; }
+.price-note { font-size: 13.5px; color: var(--sub); margin-top: -12px; min-height: 5em; }
+.price-note s { color: var(--faint, #8b948f); }
+.plan .btn { width: 100%; }
+.btn-soon { background: var(--field); color: var(--sub); cursor: default; }
+.plan ul { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: grid; gap: 11px; font-size: 14.5px; }
+.plan li { display: flex; gap: 10px; align-items: flex-start; }
+.plan li svg { width: 18px; height: 18px; color: var(--accent-text); margin-top: 3px; flex: none; }
+.plan li.inherit { color: var(--sub); }
+.compare { padding-block: 72px; background: var(--surface); border-block: 1px solid var(--line); }
+.tbl-wrap { overflow-x: auto; margin-top: 36px; }
+table.cmp { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 15px; }
+.cmp th, .cmp td { padding: 15px 16px; border-bottom: 1px solid var(--line); text-align: center; }
+.cmp th:first-child, .cmp td:first-child { text-align: left; }
+.cmp thead th { font-size: 14px; color: var(--sub); font-weight: 600; }
+.cmp thead th.pro { color: var(--accent-text); }
+.cmp td.pro { background: color-mix(in srgb, var(--accent-soft) 45%, transparent); }
+.cmp svg { width: 20px; height: 20px; color: var(--accent-text); vertical-align: middle; }
+.cmp .no { color: var(--faint, #8b948f); }
+.cmp .grp td { font-size: 13px; font-weight: 700; color: var(--sub); letter-spacing: .03em; background: var(--bg); text-align: left; }
+.pfaq { padding-block: 72px; }
+.pfaq .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.paynote { display: flex; gap: 14px; align-items: flex-start; margin-top: 26px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; font-size: 14.5px; color: var(--sub); }
+.paynote svg { width: 22px; height: 22px; color: var(--accent-text); flex: none; margin-top: 1px; }
+.buy-links { margin-top: 22px; display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--sub); font-size: 14px; text-align: center; }
+.buy-links span { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 20px; }
+.buy-links a { color: var(--accent-text); font-weight: 600; text-decoration: none; }
+.buy-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 1180px) {
+  .plan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 820px; margin: 16px auto 0; }
+}
+@media (max-width: 900px) {
+  .plan-grid { grid-template-columns: minmax(0, 1fr); max-width: 460px; margin: 16px auto 0; }
+  .pfaq .wrap { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
+.top .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--sub); font-size: 14px; text-decoration: none; white-space: nowrap; }
+.top .lang:hover { color: var(--ink); border-color: var(--sub); }
+.top .lang svg { width: 16px; height: 16px; }
+.top nav a { white-space: nowrap; }
+.top .wrap { gap: 20px; }
+.top nav { gap: 16px; margin-left: 0; }
+.top nav a { font-size: 14px; }
+.top nav .nw { display: none; }
+@media (max-width: 1180px) { .top nav { display: none; } }
+.lang-dd { position: relative; }
+button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer; }
+.top .lang .cv { width: 14px; height: 14px; margin-inline-start: -2px; }
+.lang-menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 30; width: 300px; max-width: calc(100vw - 32px); max-height: 70vh; overflow: auto; padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.lang-menu[hidden] { display: none; }
+.lang-menu a { padding: 8px 10px; border-radius: 8px; font-size: 14px; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lang-menu a:hover { background: var(--field); }
+.lang-menu a[aria-current] { color: var(--accent-text); font-weight: 700; background: var(--accent-soft); }
+[dir="rtl"] .lang-menu { right: auto; left: 0; }
+.lang-foot { margin-top: 10px; }
+.lang-foot select { font: inherit; font-size: 13px; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 32 32"><defs><linearGradient id="lgg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#363636"/><stop offset="1" stop-color="#050505"/></linearGradient></defs><rect x=".5" y=".5" width="31" height="31" rx="6" fill="url(#lgg)" stroke="rgba(255,255,255,.16)"/><rect x="14.47" y="7.32" width="3.06" height="8.6" rx="1.53" fill="#fff"/><path d="M12.4 15.3h7.2l-3.6 3.9z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 19.05v2.6a1.6 1.6 0 0 0 1.6 1.6h11.2a1.6 1.6 0 0 0 1.6-1.6v-2.6" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.3 3 7.9 7 9.5 4-1.6 7-5.2 7-9.5V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-noad" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 20 20 4"/></g></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.3-4.5M4 4v3.5h3.5M4 13a8 8 0 0 0 14.3 4.5M20 20v-3.5h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-hd" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M7 9.5v5M10 9.5v5M7 12h3M13.5 9.5v5h1.5a2.5 2.5 0 0 0 0-5h-1.5Z"/></g></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></g></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3h6v1M9.5 12h5M9.5 15.5h3"/></g></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 6 1.2 1.2L6.5 5M3.5 12l1.2 1.2L6.5 11M3.5 18l1.2 1.2L6.5 17"/></g></symbol>
+    <symbol id="i-cc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M10.5 10.2a2.2 2.2 0 1 0 0 3.6M17 10.2a2.2 2.2 0 1 0 0 3.6"/></g></symbol>
+    <symbol id="i-gif" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M9.5 10H8a1.5 1.5 0 0 0-1.5 1.5v1A1.5 1.5 0 0 0 8 14h1.5v-2M12.5 10v4M15.5 14v-4h2.5M15.5 12h2"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l5.5-3.5L10 8.5Z"/></g></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg><use href="#logo"/></svg>DownKit</a>
+    <nav aria-label="Meniu">
+      <a href="index.html#how">Cum funcționează</a>
+      <a href="index.html#features">Funcții</a>
+      <a href="index.html#sites">Site-uri acceptate</a>
+      <a href="pricing.html" aria-current="page" style="color:var(--ink);font-weight:600">Prețuri</a>
+      <a href="support.html">Ajutor</a>
+    </nav>
+    <div class="right">
+      <div class="lang-dd"><button class="lang" type="button" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg><span>Română</span><svg class="cv" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="lang-menu" role="menu" hidden><a href="../pricing.html" hreflang="ko" lang="ko">한국어</a><a href="../en/pricing.html" hreflang="en" lang="en">English</a><a href="../ja/pricing.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-tw/pricing.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a><a href="../zh-cn/pricing.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../vi/pricing.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../id/pricing.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../th/pricing.html" hreflang="th" lang="th">ไทย</a><a href="../es/pricing.html" hreflang="es" lang="es">Español</a><a href="../pt/pricing.html" hreflang="pt" lang="pt">Português</a><a href="../de/pricing.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/pricing.html" hreflang="fr" lang="fr">Français</a><a href="../it/pricing.html" hreflang="it" lang="it">Italiano</a><a href="../ru/pricing.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/pricing.html" hreflang="uk" lang="uk">Українська</a><a href="../pl/pricing.html" hreflang="pl" lang="pl">Polski</a><a href="../cs/pricing.html" hreflang="cs" lang="cs">Čeština</a><a href="../hu/pricing.html" hreflang="hu" lang="hu">Magyar</a><a href="../ro/pricing.html" hreflang="ro" lang="ro" aria-current="true">Română</a><a href="../tr/pricing.html" hreflang="tr" lang="tr">Türkçe</a><a href="../hi/pricing.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/pricing.html" hreflang="ar" lang="ar">العربية</a><a href="../ur/pricing.html" hreflang="ur" lang="ur">اردو</a></div></div>
+      <a class="btn btn-primary btn-sm js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Descarcă</a>
+    </div>
+  </div>
+</header>
+<main id="top">
+  <section class="p-hero">
+    <div class="wrap">
+      <h1>Selectează planul potrivit pentru tine</h1>
+      <p>Dacă îl folosești ocazional, varianta gratuită este suficientă. Dacă ai nevoie de funcții precum 4K, playlisturi sau GIF, selectează în funcție de perioada de care ai nevoie.</p>
+    </div>
+  </section>
+
+  <section class="plans">
+    <div class="wrap">
+      <div class="plan-grid">
+        <div class="plan">
+          <h2>Gratuit</h2>
+          <p class="for">Recomandat utilizatorilor care folosesc în principal funcțiile de bază</p>
+          <div class="price"><b>0 $</b><span>Gratuit pentru totdeauna</span></div>
+          <p class="price-note">Fără card</p>
+          <a class="btn btn-ghost btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Descarcă gratuit</a>
+          <ul>
+            <li><svg><use href="#i-check"/></svg><span>Pe săptămână <b>Până la 15</b> descărcări</span></li>
+            <li><svg><use href="#i-check"/></svg>Video până la 1080p</li>
+            <li><svg><use href="#i-check"/></svg>MP3 · Calitate audio originală</li>
+            <li><svg><use href="#i-check"/></svg>Subtitrări salvate împreună (.srt)</li>
+            <li><svg><use href="#i-check"/></svg>Detectare automată a linkurilor din clipboard · Fără reclame</li>
+            <li><svg><use href="#i-check"/></svg>Redare în aplicație · Informații automate despre piesă</li>
+          </ul>
+        </div>
+
+        <div class="plan">
+          <h2>Abonament lunar</h2>
+          <p class="for">Recomandat pentru utilizare pe termen scurt sau doar în lunile în care ai nevoie</p>
+          <div class="price"><b>4,99 $</b><span>/ lună</span></div>
+          <p class="price-note">Poți anula oricând</p>
+          <span class="btn btn-soon btn-lg" aria-disabled="true">În curând</span>
+          <ul>
+            <li class="inherit"><svg><use href="#i-check"/></svg>Toate funcțiile Pro</li>
+            <li><svg><use href="#i-check"/></svg><span><b>Număr de descărcări</b> Nelimitat</span></li>
+            <li><svg><use href="#i-check"/></svg>Plată lunară recurentă (anulare oricând)</li>
+          </ul>
+        </div>
+
+        <div class="plan best">
+          <span class="tag">Recomandat</span>
+          <h2>Pro 1 an</h2>
+          <p class="for">Planul recomandat pentru a folosi toate funcțiile fără restricții</p>
+          <div class="price"><b>17,99 $</b><span>/ an</span></div>
+          <p class="price-note">Reducere de 70% · aprox. 1,50 $ pe lună</p>
+          <span class="btn btn-soon btn-lg" aria-disabled="true">În curând</span>
+          <ul>
+            <li class="inherit"><svg><use href="#i-check"/></svg>Include toate funcțiile planului gratuit</li>
+            <li><svg><use href="#i-check"/></svg><span><b>Număr de descărcări</b> Nelimitat</span></li>
+            <li><svg><use href="#i-check"/></svg><span><b>4K · 8K</b> Descărcare la calitate înaltă</span></li>
+            <li><svg><use href="#i-check"/></svg>Descărcare de playlisturi și a mai multor linkuri deodată</li>
+            <li><svg><use href="#i-check"/></svg>Creare GIF</li>
+            <li><svg><use href="#i-check"/></svg>Descărcare automată la copiere</li>
+            <li><svg><use href="#i-check"/></svg>Autentificare pe site-uri · Descărcarea videoclipurilor cu restricție de vârstă</li>
+            <li><svg><use href="#i-check"/></svg>Aplicația Android: selectare piese · înregistrare live fără limite</li>
+            <li><svg><use href="#i-check"/></svg>Un cont pentru până la 3 dispozitive (PC și telefon)</li>
+          </ul>
+        </div>
+
+        <div class="plan">
+          <h2>Licență pe viață</h2>
+          <p class="for">Recomandat celor care vor să îl folosească pentru totdeauna, fără plăți suplimentare</p>
+          <div class="price"><b>34,99 $</b><span>/ pe viață</span></div>
+          <p class="price-note">Plată unică · Actualizări incluse</p>
+          <span class="btn btn-soon btn-lg" aria-disabled="true">În curând</span>
+          <ul>
+            <li class="inherit"><svg><use href="#i-check"/></svg>Toate funcțiile Pro</li>
+            <li><svg><use href="#i-check"/></svg>Fără plată automată</li>
+            <li><svg><use href="#i-check"/></svg>Actualizări viitoare gratuite</li>
+          </ul>
+        </div>
+      </div>
+      <div class="paynote"><svg><use href="#i-shield"/></svg><div>Pregătim funcția de plată. După lansare vei putea plăti cu cardul și prin metode de plată rapide, iar abonamentul poate fi anulat oricând. Momentan toate funcțiile pot fi folosite gratuit. Prețurile afișate pe ecranul de plată pot varia în funcție de regiune.</div></div>
+      <p class="buy-links">Te rugăm să citești înainte de cumpărare<span><a href="legal.html#terms">Termeni și condiții</a><a href="legal.html#privacy">Politica de confidențialitate</a><a href="legal.html#refund">Politica de rambursare și anulare</a><a href="legal.html#copyright">Politica privind drepturile de autor</a></span></p>
+    </div>
+  </section>
+
+  <section class="compare">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Comparație funcții</div>
+        <h2>Comparație între Gratuit și Pro</h2>
+      </div>
+      <div class="tbl-wrap">
+        <table class="cmp">
+          <thead><tr><th>Funcții</th><th>Gratuit</th><th class="pro">Lunar · Pro 1 an · Pe viață</th></tr></thead>
+          <tbody>
+            <tr class="grp"><td colspan="3">descărcări</td></tr>
+            <tr><td>Descărcări disponibile</td><td>15 pe săptămână</td><td class="pro"><b>Nelimitat</b></td></tr>
+            <tr><td>Calitate maximă</td><td class="mono">1080p</td><td class="pro mono">8K</td></tr>
+            <tr><td>MP3 · Calitate audio originală (M4A)</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>Descărcare de playlisturi · Mai multe linkuri deodată</td><td class="no">—</td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>Subtitrări salvate împreună</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>Autentificare pe site-uri · Descărcarea videoclipurilor cu restricție de vârstă</td><td class="no">—</td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr class="grp"><td colspan="3">Confort</td></tr>
+            <tr><td>Detectare automată la copierea linkului</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>Descărcare automată la copierea linkului</td><td class="no">—</td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>Redare direct în aplicație</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>Creare GIF</td><td class="no">—</td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr><td>Fără reclame · 23 de limbi · Actualizări automate</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+            <tr class="grp"><td colspan="3">Aplicația pentru telefon (Android)</td></tr>
+            <tr><td>Salvarea doar a pieselor dorite dintr-o compilație</td><td>3 piese odată</td><td class="pro"><b>Fără limită</b></td></tr>
+            <tr><td>Înregistrare video · audio a transmisiunilor live</td><td>Până la 10 minute</td><td class="pro"><b>Fără limită</b></td></tr>
+            <tr><td>Decupare · Reducere dimensiune · Conversie</td><td><svg><use href="#i-check"/></svg></td><td class="pro"><svg><use href="#i-check"/></svg></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="pfaq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Întrebări despre plăți</div>
+        <h2>Întrebări frecvente</h2>
+      </div>
+      <div class="qa">
+        <details open><summary>Versiunea gratuită are o perioadă de utilizare limitată?<svg><use href="#i-plus"/></svg></summary><p>Nu. O poți folosi fără limită de timp. Poți efectua până la 15 descărcări pe săptămână, iar numărul se resetează în fiecare luni la miezul nopții (00:00).</p></details>
+        <details><summary>Trebuie să mă înregistrez și pentru versiunea gratuită?<svg><use href="#i-plus"/></svg></summary><p>Da. Contul este necesar pentru gestionarea descărcărilor rămase și pentru trecerea la Pro. Te poți înregistra ușor cu un cont Google sau Naver.</p></details>
+        <details><summary>Pot anula abonamentul oricând?<svg><use href="#i-plus"/></svg></summary><p>Da. Poți anula oricând din meniul [Setări] &gt; [Cont], iar după anulare beneficiile Pro rămân active pe perioada rămasă.</p></details>
+        <details><summary>Licența pe viață include și actualizările?<svg><use href="#i-plus"/></svg></summary><p>Da. Chiar și când apar versiuni noi, poți actualiza fără costuri suplimentare.</p></details>
+        <details><summary>Cum solicit o rambursare?<svg><use href="#i-plus"/></svg></summary><p>Pentru toate planurile plătite (abonament lunar · Pro 1 an · licență pe viață) primești rambursarea integrală dacă ne contactezi în termen de 7 zile de la plată. După 7 zile este posibilă doar anularea abonamentului, pe care îl poți folosi în continuare până la sfârșitul perioadei plătite. Pentru detalii, consultă Politica de rambursare și anulare.</p></details>
+        <details><summary>Ce trebuie să fac dacă schimb PC-ul sau telefonul?<svg><use href="#i-plus"/></svg></summary><p>Fiecare cont poate înregistra cel mult 3 dispozitive în total (PC și telefon). Anulează înregistrarea dispozitivului vechi din [Setări] &gt; [Cont] în programul pentru Windows, apoi conectează-te pe dispozitivul nou.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="index.html"><svg><use href="#logo"/></svg>DownKit</a>
+      <div class="foot-links">
+        <a href="legal.html#terms">Termeni și condiții</a>
+        <a class="strong" href="legal.html#privacy">Politica de confidențialitate</a>
+        <a href="legal.html#refund">Politica de rambursare și anulare</a>
+        <a href="legal.html#copyright">Politica privind drepturile de autor</a>
+        <a href="support.html#news">Anunțuri</a>
+        <a href="support.html#contact">Contact direct</a>
+      </div>
+    </div>
+    <div class="biz">
+      <p><em><span>Denumire</span>KNEXM Co., Ltd.</em><em><span>CEO</span>Yeoul Yoon</em><em><span>Nr. de înregistrare a companiei</span>878-88-03505</em></p>
+      <p><em><span>Nr. de înregistrare pentru vânzări la distanță</span>În curs</em><em><span>Adresă</span>5F #5830, Namgyeong Bldg., 35 Irwon-ro, Gangnam-gu, Seoul, Republica Coreea</em><em><span>E-mail</span><a href="mailto:info@knexm.com">info@knexm.com</a></em></p>
+      <p class="copy">© 2026 KNEXM Co., Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  fetch("https://api.github.com/repos/yoonyeoul37/downkit-releases/releases/latest", { headers: { Accept: "application/vnd.github+json" } })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (rel) {
+      if (!rel || !rel.assets) return;
+      var setup = rel.assets.filter(function (a) { return /^downkit-setup.*\.exe$/i.test(a.name); })[0];
+      if (!setup) return;
+      document.querySelectorAll(".js-dl").forEach(function (a) { a.href = setup.browser_download_url; a.removeAttribute("target"); });
+      var ver = (rel.tag_name || "").replace(/^v/i, ""), mb = Math.round(setup.size / 1048576);
+      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "Versiunea " + ver + " (" + mb + " MB)"; });
+    }).catch(function () {});
+})();
+</script>
+<script>
+(function () {
+  var d = document.querySelector(".lang-dd"); if (!d) return;
+  var b = d.querySelector("button"), m = d.querySelector(".lang-menu");
+  function s(o) { m.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); }
+  b.addEventListener("click", function (e) { e.stopPropagation(); s(m.hidden); });
+  document.addEventListener("click", function (e) { if (!d.contains(e.target)) s(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") s(false); });
+})();
+</script>
+</body>
+</html>

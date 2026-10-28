@@ -6,9 +6,30 @@
 <link rel="icon" href="../logo.svg">
 <link rel="alternate" hreflang="ko" href="https://downkit.net/support.html">
 <link rel="alternate" hreflang="en" href="https://downkit.net/en/support.html">
+<link rel="alternate" hreflang="ja" href="https://downkit.net/ja/support.html">
+<link rel="alternate" hreflang="zh-TW" href="https://downkit.net/zh-tw/support.html">
+<link rel="alternate" hreflang="zh-CN" href="https://downkit.net/zh-cn/support.html">
+<link rel="alternate" hreflang="vi" href="https://downkit.net/vi/support.html">
+<link rel="alternate" hreflang="id" href="https://downkit.net/id/support.html">
+<link rel="alternate" hreflang="th" href="https://downkit.net/th/support.html">
+<link rel="alternate" hreflang="es" href="https://downkit.net/es/support.html">
+<link rel="alternate" hreflang="pt" href="https://downkit.net/pt/support.html">
+<link rel="alternate" hreflang="de" href="https://downkit.net/de/support.html">
+<link rel="alternate" hreflang="fr" href="https://downkit.net/fr/support.html">
+<link rel="alternate" hreflang="it" href="https://downkit.net/it/support.html">
+<link rel="alternate" hreflang="ru" href="https://downkit.net/ru/support.html">
+<link rel="alternate" hreflang="uk" href="https://downkit.net/uk/support.html">
+<link rel="alternate" hreflang="pl" href="https://downkit.net/pl/support.html">
+<link rel="alternate" hreflang="cs" href="https://downkit.net/cs/support.html">
+<link rel="alternate" hreflang="hu" href="https://downkit.net/hu/support.html">
+<link rel="alternate" hreflang="ro" href="https://downkit.net/ro/support.html">
+<link rel="alternate" hreflang="tr" href="https://downkit.net/tr/support.html">
+<link rel="alternate" hreflang="hi" href="https://downkit.net/hi/support.html">
+<link rel="alternate" hreflang="ar" href="https://downkit.net/ar/support.html">
+<link rel="alternate" hreflang="ur" href="https://downkit.net/ur/support.html">
 <link rel="alternate" hreflang="x-default" href="https://downkit.net/support.html">
-<title>DownKit Help &amp; Support</title>
-<meta name="description" content="DownKit is a Windows app that saves videos and music to your PC — just copy a link.">
+<title>DownKit Help · Support</title>
+<meta name="description" content="DownKit: a Windows program that saves videos and music to your PC—just copy the link">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
@@ -327,6 +348,23 @@ footer .wrap { display: grid; gap: 22px; }
 .top .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--sub); font-size: 14px; text-decoration: none; white-space: nowrap; }
 .top .lang:hover { color: var(--ink); border-color: var(--sub); }
 .top .lang svg { width: 16px; height: 16px; }
+.top nav a { white-space: nowrap; }
+.top .wrap { gap: 20px; }
+.top nav { gap: 16px; margin-left: 0; }
+.top nav a { font-size: 14px; }
+.top nav .nw { display: none; }
+@media (max-width: 1180px) { .top nav { display: none; } }
+.lang-dd { position: relative; }
+button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer; }
+.top .lang .cv { width: 14px; height: 14px; margin-inline-start: -2px; }
+.lang-menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 30; width: 300px; max-width: calc(100vw - 32px); max-height: 70vh; overflow: auto; padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.lang-menu[hidden] { display: none; }
+.lang-menu a { padding: 8px 10px; border-radius: 8px; font-size: 14px; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lang-menu a:hover { background: var(--field); }
+.lang-menu a[aria-current] { color: var(--accent-text); font-weight: 700; background: var(--accent-soft); }
+[dir="rtl"] .lang-menu { right: auto; left: 0; }
+.lang-foot { margin-top: 10px; }
+.lang-foot select { font: inherit; font-size: 13px; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
 </style>
 
 </head>
@@ -364,28 +402,27 @@ footer .wrap { display: grid; gap: 22px; }
       <a href="support.html" aria-current="page" style="color:var(--ink);font-weight:600">Help</a>
     </nav>
     <div class="right">
-      <a class="lang" href="../support.html" lang="ko" hreflang="ko"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg>한국어</a>
+      <div class="lang-dd"><button class="lang" type="button" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg><span>English</span><svg class="cv" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="lang-menu" role="menu" hidden><a href="../support.html" hreflang="ko" lang="ko">한국어</a><a href="../en/support.html" hreflang="en" lang="en" aria-current="true">English</a><a href="../ja/support.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-tw/support.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a><a href="../zh-cn/support.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../vi/support.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../id/support.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../th/support.html" hreflang="th" lang="th">ไทย</a><a href="../es/support.html" hreflang="es" lang="es">Español</a><a href="../pt/support.html" hreflang="pt" lang="pt">Português</a><a href="../de/support.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/support.html" hreflang="fr" lang="fr">Français</a><a href="../it/support.html" hreflang="it" lang="it">Italiano</a><a href="../ru/support.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/support.html" hreflang="uk" lang="uk">Українська</a><a href="../pl/support.html" hreflang="pl" lang="pl">Polski</a><a href="../cs/support.html" hreflang="cs" lang="cs">Čeština</a><a href="../hu/support.html" hreflang="hu" lang="hu">Magyar</a><a href="../ro/support.html" hreflang="ro" lang="ro">Română</a><a href="../tr/support.html" hreflang="tr" lang="tr">Türkçe</a><a href="../hi/support.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/support.html" hreflang="ar" lang="ar">العربية</a><a href="../ur/support.html" hreflang="ur" lang="ur">اردو</a></div></div>
       <a class="btn btn-primary btn-sm js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Download</a>
     </div>
   </div>
 </header><main id="top">
   <section class="l-hero">
     <div class="wrap">
-      <h1>Help &amp; Support</h1>
-      <p>Find installation steps, troubleshooting tips, and guides for using DownKit.</p>
+      <h1>Help and Support</h1>
+      <p>Find installation instructions, troubleshooting tips, and usage guides.</p>
       <div class="ltabs" role="tablist">
-        <button type="button" class="on" data-doc="download" role="tab">Install guide</button>
-        <button type="button" data-doc="help" role="tab">FAQ &amp; troubleshooting</button>
-        <button type="button" data-doc="news" role="tab">Notices</button>
-        <button type="button" data-doc="contact" role="tab">Contact us</button>
+        <button type="button" class="on" data-doc="download" role="tab">Installation guide</button>
+        <button type="button" data-doc="help" role="tab">FAQ and troubleshooting</button>
+        <button type="button" data-doc="news" role="tab">Announcements</button>
+        <button type="button" data-doc="contact" role="tab">1:1 Support</button>
       </div>
     </div>
   </section>
 
   <section class="l-body">
     <div class="wrap">
-      <!-- ============ Download · Install ============ -->
-      <article class="doc on wide" id="download">
+            <article class="doc on wide" id="download">
         <div class="dl-card">
           <div class="dl-left">
             <span class="dl-logo"><svg><use href="#logo"/></svg></span>
@@ -398,115 +435,112 @@ footer .wrap { display: grid; gap: 22px; }
         </div>
 
         <div class="sec-head" style="margin-top:56px">
-          <div class="label">Installation</div>
+          <div class="label">How to install</div>
           <h2>Install in 4 easy steps</h2>
         </div>
         <ol class="install">
           <li><span class="n">1</span><div><h3>Download the installer</h3><p>Click the [Download for Windows] button above to download the installer.</p></div></li>
           <li><span class="n">2</span><div><h3>Run the installer</h3><p>Open the downloaded file. If a SmartScreen warning (<b>'Windows protected your PC'</b>) appears, click <b>[More info]</b> → <b>[Run anyway]</b>.</p>
-            <div class="smart"><b>Why does this window appear?</b><span>New programs may not yet have enough reputation with Microsoft, so this notice can appear. DownKit never installs ads or other programs. Once code signing is completed, this notice may no longer appear.</span></div></div></li>
-          <li><span class="n">3</span><div><h3>Complete the setup</h3><p>Follow the setup wizard to finish installing. You can choose whether to create a desktop shortcut.</p></div></li>
-          <li><span class="n">4</span><div><h3>Sign in and get started</h3><p>Launch DownKit and sign in with a social account (Google, Naver, etc.) to start using it right away.</p></div></li>
+            <div class="smart"><b>Why does this window appear?</b><span>This notice may appear for new programs because Microsoft does not yet have enough reputation data for them. DownKit does not install ads or other programs. Once code signing is complete, this notice may no longer appear.</span></div></div></li>
+          <li><span class="n">3</span><div><h3>Complete the installation</h3><p>Follow the wizard to finish installing. You can choose whether to create a desktop shortcut.</p></div></li>
+          <li><span class="n">4</span><div><h3>Sign in and get started</h3><p>After launching the program, sign in with a social account (Google, Naver, etc.) to start using the service right away.</p></div></li>
         </ol>
 
         <div class="two">
           <div>
-            <h3 class="h3">Recommended system requirements</h3>
+            <h3 class="h3">Recommended PC specs</h3>
             <table class="ltbl">
               <tbody>
                 <tr><td>Operating system</td><td>Windows 10, Windows 11 (64-bit)</td></tr>
-                <tr><td>Storage</td><td>At least 1 GB of free space recommended (downloaded files not included)</td></tr>
+                <tr><td>Storage</td><td>At least 1 GB of free space recommended (plus space for downloaded files)</td></tr>
                 <tr><td>Internet</td><td>Internet connection required</td></tr>
-                <tr><td>Required components</td><td>Microsoft Edge WebView2 (included with Windows 11 and already installed on most Windows 10 PCs)</td></tr>
+                <tr><td>Required components</td><td>Microsoft Edge WebView2 (included with Windows 11 and already installed on most Windows 10 PCs.)</td></tr>
               </tbody>
             </table>
           </div>
           <div>
             <h3 class="h3">Uninstalling</h3>
-            <p class="muted">Find DownKit under <b>[Apps &amp; features]</b> in Windows Settings and uninstall it. (Your downloaded and edited files are kept.)</p>
+            <p class="muted">You can find and uninstall DownKit under <b>[Apps & features]</b> in Windows Settings. (Your downloaded and edited files are kept.)</p>
             <h3 class="h3" style="margin-top:24px">Software updates</h3>
-            <p class="muted">You'll be notified when a new version is released. Click [Update now] to update automatically.</p>
+            <p class="muted">You'll be notified when a new version is released, and [Update now] updates it automatically.</p>
           </div>
         </div>
       </article>
 
-      <!-- ============ Help ============ -->
-      <article class="doc wide" id="help">
-        <label class="hsearch"><svg><use href="#i-search"/></svg><input type="text" id="hq" placeholder="Search for answers (e.g. 4K, subtitles, save location)"></label>
+            <article class="doc wide" id="help">
+        <label class="hsearch"><svg><use href="#i-search"/></svg><input type="text" id="hq" placeholder="Search for answers (e.g., 4K, subtitles, save location)"></label>
         <div class="hgroups">
           <section class="hgroup">
-            <h3 class="h3">Getting started</h3>
+            <h3 class="h3">Basics</h3>
             <div class="qa">
-              <details><summary>Where are downloaded files saved?<svg><use href="#i-plus"/></svg></summary><p>By default, files are saved to your 'Downloads' folder. You can change the location in [Settings] &gt; [Download], and click the folder icon in the list to open the save folder directly.</p></details>
-              <details><summary>I only want the audio (MP3)<svg><use href="#i-plus"/></svg></summary><p>After entering a link, select the [Extract MP3] format. Once you set a format, it will be used by default from then on.</p></details>
-              <details><summary>DownKit doesn't respond when I copy a link<svg><use href="#i-plus"/></svg></summary><p>Check that 'Auto-detect copied links' is turned on in [Settings] &gt; [Auto]. For unsupported platforms, you can paste the URL manually to download.</p></details>
+              <details><summary>Where are downloaded files saved?<svg><use href="#i-plus"/></svg></summary><p>By default, files are saved to your Downloads folder. You can change the location in [Settings] &gt; [Downloads], and click the folder icon in the list to open the save folder directly.</p></details>
+              <details><summary>I only want to extract the audio (MP3)<svg><use href="#i-plus"/></svg></summary><p>After entering the link, select the [Extract MP3] format. Once you set a format, it's used as the default from then on.</p></details>
+              <details><summary>The program doesn't respond when I copy a link<svg><use href="#i-plus"/></svg></summary><p>Check that 'Auto-detect copied links' is turned on in [Settings] &gt; [Automation]. For unsupported platforms, you can paste the URL manually to download.</p></details>
             </div>
           </section>
           <section class="hgroup">
-            <h3 class="h3">Fixing download errors</h3>
+            <h3 class="h3">Troubleshooting download errors</h3>
             <div class="qa">
-              <details><summary>My download won't start<svg><use href="#i-plus"/></svg></summary><p>1) Check your network connection, then click [Retry]. 2) Keep the download engine up to date with [Check for updates] in [Settings] &gt; [About]. 3) If the problem continues, send us the link via Contact us.</p></details>
-              <details><summary>The site shows a temporary block message<svg><use href="#i-plus"/></svg></summary><p>Downloading a lot in a short time may trigger temporary limits under the platform's policy. Wait a moment, then click [Retry].</p></details>
-              <details><summary>4K videos download in 1080p<svg><use href="#i-plus"/></svg></summary><p>The Free version supports up to 1080p. Even with Pro, videos are saved in lower quality if the original source isn't available in 4K.</p></details>
-              <details><summary>Downloading videos that require age verification or sign-in<svg><use href="#i-plus"/></svg></summary><p>With Pro, link your account in [Settings] &gt; [Site login] and then download. Your sign-in data is stored securely on your PC only.</p></details>
-              <details><summary>No subtitle file is created<svg><use href="#i-plus"/></svg></summary><p>Turn on 'Download subtitles too' in [Settings] &gt; [Download]. Subtitles can't be saved if the original video has none in that language.</p></details>
-              <details><summary>DRM-protected content can't be downloaded<svg><use href="#i-plus"/></svg></summary><p>Content protected by DRM (Digital Rights Management), such as on streaming services, can't be downloaded for technical reasons.</p></details>
-              <details><summary>The built-in player won't play a video<svg><use href="#i-plus"/></svg></summary><p>Depending on your PC and codecs, videos may not play smoothly in the built-in player. In that case, click [Open with another app] to watch in your PC's default media player.</p></details>
+              <details><summary>My download won't start<svg><use href="#i-plus"/></svg></summary><p>1) Check your network connection, then click [Retry]. 2) Keep the download engine up to date by clicking [Check for updates] in [Settings] &gt; [About]. 3) If the problem continues, please send us the link through 1:1 Support.</p></details>
+              <details><summary>The site shows a temporary block message<svg><use href="#i-plus"/></svg></summary><p>Downloading a large number of files in a short time may trigger temporary restrictions under the platform's policy. Please wait a moment, then click [Retry].</p></details>
+              <details><summary>4K videos download in 1080p<svg><use href="#i-plus"/></svg></summary><p>The free version supports up to 1080p resolution. Even with Pro, videos may be saved in a lower quality if the original source doesn't offer 4K.</p></details>
+              <details><summary>Downloading videos that require age verification or sign-in<svg><use href="#i-plus"/></svg></summary><p>With Pro, connect your account in [Settings] &gt; [Site sign-in] and then download. Your credentials are stored securely only on your PC.</p></details>
+              <details><summary>Subtitle files aren't created<svg><use href="#i-plus"/></svg></summary><p>Turn on the 'Download subtitles too' option in [Settings] &gt; [Downloads]. Note that subtitles won't be created if the original video doesn't have subtitles in that language.</p></details>
+              <details><summary>DRM-protected content can't be downloaded<svg><use href="#i-plus"/></svg></summary><p>Content protected by DRM (digital rights management), such as on streaming services, can't be downloaded for technical reasons.</p></details>
+              <details><summary>Playback errors in the built-in player<svg><use href="#i-plus"/></svg></summary><p>Depending on your PC's specs and codecs, video may not play smoothly in the built-in player. In that case, click [Open with another program] to watch it in your PC's default media player.</p></details>
             </div>
           </section>
           <section class="hgroup">
-            <h3 class="h3">Account &amp; plans</h3>
+            <h3 class="h3">Account and plans</h3>
             <div class="qa">
-              <details><summary>When do free downloads reset?<svg><use href="#i-plus"/></svg></summary><p>You get 15 downloads again every Monday at midnight (00:00, Korea time). Check how many you have left in the top bar or in [Settings] &gt; [Account].</p></details>
-              <details><summary>Switching to a new PC or phone<svg><use href="#i-plus"/></svg></summary><p>Each account can register up to 3 devices in total (PCs and phones). Remove the old PC in [Settings] &gt; [Account], then sign in on the new PC.</p></details>
-              <details><summary>Canceling and refunds<svg><use href="#i-plus"/></svg></summary><p>You can cancel your subscription anytime in [Settings] &gt; [Account]. Pro benefits stay active for the rest of the paid period, and you can request a refund within 7 days of payment under our refund policy.</p></details>
+              <details><summary>When the free download count resets<svg><use href="#i-plus"/></svg></summary><p>Your 15 downloads are refilled every Monday at midnight (00:00). You can check your remaining count at the top of the window and in [Settings] &gt; [Account].</p></details>
+              <details><summary>Changing your PC or phone<svg><use href="#i-plus"/></svg></summary><p>Each account can register and use up to 3 devices in total, including PCs and phones. Unregister your old PC in [Settings] &gt; [Account], then sign in on your new PC.</p></details>
+              <details><summary>Canceling and refunds<svg><use href="#i-plus"/></svg></summary><p>You can cancel your subscription anytime in [Settings] &gt; [Account]. You keep Pro benefits for the rest of your billing period after canceling, and if it's within 7 days of payment, you can request a refund under our policy.</p></details>
             </div>
           </section>
           <section class="hgroup">
             <h3 class="h3">Other questions</h3>
             <div class="qa">
-              <details><summary>A SmartScreen ("Windows protected your PC") warning appears<svg><use href="#i-plus"/></svg></summary><p>This is a normal notice for newly released programs that aren't widely known yet. Click [More info] &gt; [Run anyway] to install safely.</p></details>
-              <details><summary>How to send the error log<svg><use href="#i-plus"/></svg></summary><p>Click [Open folder] under [Settings] &gt; [About] &gt; [Error log], then attach the <span class="mono">downkit.log</span> file in that folder to your support email so we can look into it quickly.</p></details>
+              <details><summary>SmartScreen (Windows protected your PC) warning<svg><use href="#i-plus"/></svg></summary><p>This is a normal notice that can appear for newly released programs that aren't widely known yet. You can safely continue the installation by clicking [More info] &gt; [Run anyway].</p></details>
+              <details><summary>How to send the error log file<svg><use href="#i-plus"/></svg></summary><p>Click [Open folder] under [Settings] &gt; [About] &gt; [Error log], then attach the <span class="mono">downkit.log</span> file in that folder to your 1:1 Support email so we can analyze the issue quickly.</p></details>
             </div>
           </section>
         </div>
-        <p class="hnone" hidden>Didn't find what you need? Ask us via Contact us.</p>
+        <p class="hnone" hidden>Didn't find the answer you need? Ask us through 1:1 Support.</p>
       </article>
 
-      <!-- ============ Release notes ============ -->
-      <article class="doc wide" id="news">
+            <article class="doc wide" id="news">
         <div class="timeline">
-          <div class="rel"><div class="rv"><b class="mono">0.1.9</b><span>Oct 28, 2026</span><i class="newtag">Latest</i></div>
-            <div class="rbody"><h3>Studio · 23 languages · Easy sign-in</h3><ul><li>Use 16 editing tools in Studio, including shrink file size, trim, text overlay and subtitle editing.</li><li>Sign in with Google (plus Kakao and Naver in Korea), and delete your account from Settings.</li><li>Now available in 23 languages.</li><li>A soft sound plays when you hover over lists and tools (turn it off in Settings &gt; Display).</li></ul></div></div>
-          <div class="rel"><div class="rv"><b class="mono">0.1.4</b><span>Oct 15, 2026</span></div>
-            <div class="rbody"><h3>New design</h3><ul><li>Redesigned the Home and Settings screens.</li><li>Select Video or MP3 right in the input bar.</li><li>A compact input bar stays pinned at the top as you scroll the list.</li><li>Drag a link onto the window to see a preview instantly.</li></ul></div></div>
-          <div class="rel"><div class="rv"><b class="mono">0.1.3</b><span>Oct 15, 2026</span></div>
-            <div class="rbody"><h3>GIF · Instant playback · Site login</h3><ul><li>Create GIFs up to 15 seconds long from downloaded videos.</li><li>Play videos right inside DownKit.</li><li>Sign in to a site to download age-restricted videos.</li><li>Select multiple items to delete them or move them to the Recycle Bin at once.</li></ul></div></div>
-          <div class="rel"><div class="rv"><b class="mono">0.1.2</b><span>Oct 14, 2026</span></div>
-            <div class="rbody"><h3>Improved auto-update</h3><ul><li>New versions are downloaded and installed automatically, then DownKit restarts.</li></ul></div></div>
-          <div class="rel"><div class="rv"><b class="mono">0.1.1</b><span>Oct 14, 2026</span></div>
+          <div class="rel"><div class="rv"><b class="mono">0.1.9</b><span>2026.10.28</span><i class="newtag">Latest</i></div>
+            <div class="rbody"><h3>Studio · 23 languages · Easy sign-in</h3><ul><li>The Studio offers 16 editing tools, including reduce file size, trim, add text, and subtitle editing.</li><li>Get started with a Google, Kakao, or Naver account, and delete your account anytime in Settings.</li><li>Now available in 23 languages.</li><li>Hovering over a list item or tool plays a subtle sound effect. (You can turn it off in Settings &gt; Display.)</li></ul></div></div>
+          <div class="rel"><div class="rv"><b class="mono">0.1.4</b><span>2026.10.15</span></div>
+            <div class="rbody"><h3>New design</h3><ul><li>The Home and Settings screens have a new design.</li><li>You can choose between video and MP3 in the input box.</li><li>A compact input box stays pinned to the top as you scroll down the list.</li><li>Drag a link onto the window to see a preview right away.</li></ul></div></div>
+          <div class="rel"><div class="rv"><b class="mono">0.1.3</b><span>2026.10.15</span></div>
+            <div class="rbody"><h3>GIF · Instant playback · Site sign-in</h3><ul><li>Create GIFs up to 15 seconds long from your downloaded videos.</li><li>Play videos right in DownKit.</li><li>Sign in to a site to download age-restricted videos too.</li><li>Select multiple items to delete them or move them to the Recycle Bin at once.</li></ul></div></div>
+          <div class="rel"><div class="rv"><b class="mono">0.1.2</b><span>2026.10.14</span></div>
+            <div class="rbody"><h3>Improved automatic updates</h3><ul><li>New versions are downloaded and installed automatically, and the app restarts.</li></ul></div></div>
+          <div class="rel"><div class="rv"><b class="mono">0.1.1</b><span>2026.10.14</span></div>
             <div class="rbody"><h3>Update notifications</h3><ul><li>Added notifications when a new version is released.</li></ul></div></div>
           <div class="rel"><div class="rv"><b class="mono">0.1.0</b></div>
-            <div class="rbody"><h3>First release</h3><ul><li>Video and MP3 downloads, playlists, subtitles, link auto-detection, 10 languages</li></ul></div></div>
+            <div class="rbody"><h3>First release</h3><ul><li>Video and MP3 downloads, playlists, subtitles, automatic link detection, 10 languages</li></ul></div></div>
         </div>
       </article>
 
-      <!-- ============ Contact ============ -->
-      <article class="doc wide" id="contact">
+            <article class="doc wide" id="contact">
         <div class="two">
           <div class="mail-card">
             <h2>Email support</h2>
-            <p class="muted">For questions, technical issues, or billing and refund requests, email us and we'll reply within 1–2 business days.</p>
+            <p class="muted">Send us your questions, system errors, or billing and refund matters by email, and we'll respond promptly within 1–2 business days.</p>
             <div class="mailbox"><span class="mono" id="mail">info@knexm.com</span><button type="button" class="btn btn-primary btn-sm" id="copy">Copy address</button></div>
           </div>
           <div>
-            <h3 class="h3">Please include the following so we can help faster</h3>
+            <h3 class="h3">Please include the following so we can help you quickly</h3>
             <ul class="checks">
-              <li><svg><use href="#i-check"/></svg>Your DownKit version (see [Settings] &gt; [About])</li>
+              <li><svg><use href="#i-check"/></svg>The DownKit version you're using (see [Settings] &gt; [About])</li>
               <li><svg><use href="#i-check"/></svg>The platform and video URL where the error occurred</li>
-              <li><svg><use href="#i-check"/></svg>The error message you saw (a screenshot is recommended)</li>
-              <li><svg><use href="#i-check"/></svg>The error log file (<span class="mono">downkit.log</span>, exported from [Settings])</li>
-              <li><svg><use href="#i-check"/></svg>For billing or subscription questions: your account email and order (payment) number</li>
+              <li><svg><use href="#i-check"/></svg>The error message you received (a screenshot is recommended)</li>
+              <li><svg><use href="#i-check"/></svg>The system error log (the <span class="mono">downkit.log</span> file exported from [Settings])</li>
+              <li><svg><use href="#i-check"/></svg>For billing or subscription inquiries, your account email and order (payment) number</li>
             </ul>
           </div>
         </div>
@@ -522,10 +556,10 @@ footer .wrap { display: grid; gap: 22px; }
       <div class="foot-links">
         <a href="legal.html#terms">Terms of Service</a>
         <a class="strong" href="legal.html#privacy">Privacy Policy</a>
-        <a href="legal.html#refund">Refund &amp; Cancellation Policy</a>
+        <a href="legal.html#refund">Refund & Cancellation Policy</a>
         <a href="legal.html#copyright">Copyright Policy</a>
-        <a href="#news" class="jump" data-doc="news">Notices</a>
-        <a href="#contact" class="jump" data-doc="contact">Contact us</a>
+        <a href="#news" class="jump" data-doc="news">Announcements</a>
+        <a href="#contact" class="jump" data-doc="contact">1:1 Support</a>
       </div>
     </div>
     <div class="biz">
@@ -537,7 +571,7 @@ footer .wrap { display: grid; gap: 22px; }
 </footer>
 <script>
 (function () {
-  if (location.hash === "#copyright") { location.replace("legal.html#copyright"); return; }   // Copyright policy moved to the legal page
+  if (location.hash === "#copyright") { location.replace("legal.html#copyright"); return; }
   var ids = ["download", "help", "news", "contact"];
   function show(id) {
     document.querySelectorAll(".doc").forEach(function (d) { d.classList.toggle("on", d.id === id); });
@@ -580,8 +614,18 @@ footer .wrap { display: grid; gap: 22px; }
       if (!setup) return;
       document.querySelectorAll(".js-dl").forEach(function (a) { a.href = setup.browser_download_url; a.removeAttribute("target"); });
       var ver = (rel.tag_name || "").replace(/^v/i, ""), mb = Math.round(setup.size / 1048576);
-      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "Version " + ver + " (" + mb + " MB)"; });
+      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "Version" + ver + " (" + mb + " MB)"; });
     }).catch(function () {});
+})();
+</script>
+<script>
+(function () {
+  var d = document.querySelector(".lang-dd"); if (!d) return;
+  var b = d.querySelector("button"), m = d.querySelector(".lang-menu");
+  function s(o) { m.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); }
+  b.addEventListener("click", function (e) { e.stopPropagation(); s(m.hidden); });
+  document.addEventListener("click", function (e) { if (!d.contains(e.target)) s(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") s(false); });
 })();
 </script>
 </body>

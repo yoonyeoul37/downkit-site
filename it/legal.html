@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="only light">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../logo.svg">
+<link rel="alternate" hreflang="ko" href="https://downkit.net/legal.html">
+<link rel="alternate" hreflang="en" href="https://downkit.net/en/legal.html">
+<link rel="alternate" hreflang="ja" href="https://downkit.net/ja/legal.html">
+<link rel="alternate" hreflang="zh-TW" href="https://downkit.net/zh-tw/legal.html">
+<link rel="alternate" hreflang="zh-CN" href="https://downkit.net/zh-cn/legal.html">
+<link rel="alternate" hreflang="vi" href="https://downkit.net/vi/legal.html">
+<link rel="alternate" hreflang="id" href="https://downkit.net/id/legal.html">
+<link rel="alternate" hreflang="th" href="https://downkit.net/th/legal.html">
+<link rel="alternate" hreflang="es" href="https://downkit.net/es/legal.html">
+<link rel="alternate" hreflang="pt" href="https://downkit.net/pt/legal.html">
+<link rel="alternate" hreflang="de" href="https://downkit.net/de/legal.html">
+<link rel="alternate" hreflang="fr" href="https://downkit.net/fr/legal.html">
+<link rel="alternate" hreflang="it" href="https://downkit.net/it/legal.html">
+<link rel="alternate" hreflang="ru" href="https://downkit.net/ru/legal.html">
+<link rel="alternate" hreflang="uk" href="https://downkit.net/uk/legal.html">
+<link rel="alternate" hreflang="pl" href="https://downkit.net/pl/legal.html">
+<link rel="alternate" hreflang="cs" href="https://downkit.net/cs/legal.html">
+<link rel="alternate" hreflang="hu" href="https://downkit.net/hu/legal.html">
+<link rel="alternate" hreflang="ro" href="https://downkit.net/ro/legal.html">
+<link rel="alternate" hreflang="tr" href="https://downkit.net/tr/legal.html">
+<link rel="alternate" hreflang="hi" href="https://downkit.net/hi/legal.html">
+<link rel="alternate" hreflang="ar" href="https://downkit.net/ar/legal.html">
+<link rel="alternate" hreflang="ur" href="https://downkit.net/ur/legal.html">
+<link rel="alternate" hreflang="x-default" href="https://downkit.net/legal.html">
+<title>Termini di servizio e politiche di DownKit</title>
+<meta name="description" content="DownKit, il programma per Windows che salva video e musica sul tuo PC semplicemente copiando un link">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+/* 레이아웃: 왼쪽 정렬 히어로 + 오른쪽 실제 앱 화면, 아래로 갈수록 조용해지는 한 줄 흐름 */
+:root {
+  --bg: #f5f7f6;
+  --surface: #ffffff;
+  --ink: #111614;
+  --sub: #58615c;
+  --line: #dde3e0;
+  --field: #edf1ef;
+  --accent: #058b4f;
+  --accent-ink: #ffffff;
+  --accent-soft: #e3f3eb;
+  --accent-text: #057a46;
+  --shadow: 0 24px 60px -24px rgba(17, 40, 28, .28);
+  --f-sans: "IBM Plex Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "Consolas", monospace;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1110; --surface: #161a18; --ink: #e8ece9; --sub: #98a29c; --line: #29302c;
+    --field: #1e2321; --accent: #0a9a59; --accent-ink: #ffffff; --accent-soft: #14271d;
+    --accent-text: #3fc285; --shadow: 0 24px 60px -24px rgba(0, 0, 0, .7); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1110; --surface: #161a18; --ink: #e8ece9; --sub: #98a29c; --line: #29302c;
+  --field: #1e2321; --accent: #0a9a59; --accent-ink: #ffffff; --accent-soft: #14271d;
+  --accent-text: #3fc285; --shadow: 0 24px 60px -24px rgba(0, 0, 0, .7); color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-wrap: break-word; }
+a { color: inherit; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+/* ---------- 위 메뉴 ---------- */
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 28px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; text-decoration: none; letter-spacing: -.01em; }
+.brand svg { width: 28px; height: 28px; flex: none; }
+.top nav { display: flex; gap: 24px; margin-left: 8px; }
+.top nav a { text-decoration: none; color: var(--sub); font-size: 15px; }
+.top nav a:hover { color: var(--ink); }
+.top .right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.lang { position: relative; display: flex; align-items: center; gap: 6px; color: var(--sub); font-size: 14px; }
+.lang svg { width: 17px; height: 17px; }
+.lang select { appearance: none; border: 0; background: transparent; color: var(--sub); font: inherit; padding: 6px 4px; cursor: pointer; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 12px; font-weight: 600; text-decoration: none; white-space: nowrap; transition: background .15s, transform .15s; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--accent) 86%, #000); }
+.btn-sm { padding: 9px 16px; font-size: 14px; border-radius: 10px; }
+.btn-lg { padding: 16px 26px; font-size: 17px; }
+.btn-ghost { border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--sub); }
+
+/* ---------- 히어로 ---------- */
+.hero { padding-block: 72px 88px; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); gap: 56px; align-items: center; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--accent-text); background: var(--accent-soft); padding: 5px 12px; border-radius: 999px; letter-spacing: .02em; }
+.eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.hero h1 { font-size: clamp(34px, 4.4vw, 52px); line-height: 1.16; letter-spacing: -.035em; font-weight: 700; margin-top: 22px; }
+.hero h1 em { font-style: normal; color: var(--accent-text); }
+.hero .lead { margin-top: 22px; font-size: 18px; color: var(--sub); max-width: 30em; }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 34px; }
+.cta-meta { font-size: 13px; color: var(--sub); display: grid; gap: 2px; }
+.cta-meta b { color: var(--ink); font-weight: 500; }
+.trust { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+.trust span { display: inline-flex; align-items: center; gap: 8px; }
+.trust svg { width: 17px; height: 17px; color: var(--accent-text); }
+
+/* ---------- 앱 화면 (실제 DownKit 새 화면과 같은 디자인, 예시 내용) ---------- */
+.app { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; font-size: 12px; line-height: 1.5; }
+.app svg { flex: none; }
+.app-title { display: flex; align-items: center; gap: 6px; height: 26px; padding-left: 10px; background: var(--surface); color: var(--sub); font-size: 10.5px; }
+.app-title svg { width: 12px; height: 12px; }
+.app-title .win { margin-left: auto; display: flex; }
+.app-title .win span { width: 32px; text-align: center; font-size: 10px; }
+.app-top { display: flex; align-items: center; gap: 18px; height: 40px; padding: 0 16px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.app-top .b { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 13px; }
+.app-top .b svg { width: 18px; height: 18px; }
+.app-top nav { display: flex; gap: 14px; height: 100%; font-size: 11.5px; color: var(--sub); }
+.app-top nav span { display: flex; align-items: center; border-bottom: 2px solid transparent; }
+.app-top nav span.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+.app-top .pill { margin-left: auto; display: inline-flex; align-items: center; gap: 5px; height: 20px; padding: 0 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-size: 9.5px; font-weight: 600; }
+.app-top .pill i { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.app-body { padding: 18px 20px 20px; display: grid; gap: 13px; }
+.app-h { font-size: 17px; font-weight: 700; letter-spacing: -.03em; line-height: 1.25; }
+.app-h em { font-style: normal; color: var(--accent-text); }
+.app-in { display: flex; align-items: center; gap: 7px; height: 40px; padding: 0 5px 0 12px; background: var(--surface); border: 1.5px solid var(--accent); border-radius: 11px; box-shadow: 0 0 0 3px var(--accent-soft); }
+.app-in .lk { width: 13px; height: 13px; color: var(--sub); }
+.app-in .url { flex: 1; min-width: 0; font-family: var(--f-mono); font-size: 10.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-in .fmt { display: flex; padding: 3px; gap: 1px; background: var(--field); border-radius: 8px; }
+.app-in .fmt span { height: 22px; display: flex; align-items: center; padding: 0 8px; border-radius: 6px; font-size: 9.5px; color: var(--sub); white-space: nowrap; }
+.app-in .fmt span.on { background: var(--surface); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.app-in .go { height: 30px; display: flex; align-items: center; padding: 0 12px; border-radius: 8px; background: var(--accent); color: #fff; font-weight: 600; font-size: 10.5px; white-space: nowrap; }
+.app-lh { display: flex; align-items: flex-end; gap: 14px; border-bottom: 1px solid var(--line); margin-top: 4px; }
+.app-lh b { font-size: 13.5px; letter-spacing: -.02em; padding-bottom: 7px; }
+.app-lh b small { font-family: var(--f-mono); font-weight: 500; color: var(--sub); font-size: 10.5px; margin-left: 4px; }
+.app-lh span { font-size: 11px; color: var(--sub); padding-bottom: 8px; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.app-lh span.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--ink); }
+.list { display: grid; gap: 7px; }
+.item { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; gap: 11px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 11px; padding: 9px 11px; }
+.thumb { width: 76px; height: 43px; border-radius: 7px; position: relative; overflow: hidden; }
+.thumb.sq { width: 43px; justify-self: center; }
+.thumb b { position: absolute; right: 4px; bottom: 4px; font-family: var(--f-mono); font-size: 8.5px; font-weight: 500; padding: 0 4px; border-radius: 4px; background: rgba(0,0,0,.72); color: #fff; }
+.th1 { background: linear-gradient(135deg, #1d4f3a, #6fb391 60%, #e6d39a); }
+.th2 { background: linear-gradient(160deg, #2b3a55, #5d7aa8 55%, #c8d3e6); }
+.th3 { background: radial-gradient(circle at 30% 30%, #f0c27a, #b4572e 70%); }
+.item .name { font-weight: 600; font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.item .who { font-size: 10px; color: var(--sub); }
+.item .meta { display: flex; gap: 4px; align-items: center; margin-top: 3px; font-family: var(--f-mono); font-size: 9.5px; color: var(--sub); white-space: nowrap; overflow: hidden; }
+.item .meta i { font-style: normal; padding: 0 5px; border-radius: 4px; background: var(--field); color: var(--ink); }
+.prog { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.bar { flex: 1; height: 4px; border-radius: 4px; background: var(--field); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 64%; background: var(--accent); border-radius: 4px; animation: grow 6s ease-in-out infinite alternate; }
+@keyframes grow { from { width: 38%; } to { width: 86%; } }
+.prog span { font-family: var(--f-mono); font-size: 9px; color: var(--sub); white-space: nowrap; }
+.right { display: flex; align-items: center; gap: 5px; }
+.st { display: inline-flex; align-items: center; gap: 3px; height: 19px; padding: 0 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-size: 9.5px; font-weight: 600; white-space: nowrap; }
+.st svg { width: 10px; height: 10px; }
+.pct { font-family: var(--f-mono); font-size: 12px; font-weight: 500; }
+.ib { width: 24px; height: 24px; border-radius: 7px; display: grid; place-items: center; color: var(--sub); }
+.ib svg { width: 12px; height: 12px; }
+.ib.play { background: var(--accent); color: #fff; }
+.ib.play svg { width: 10px; height: 10px; margin-left: 1px; }
+.ib.x { border: 1px solid var(--line); color: #d64545; }
+
+/* ---------- 3단계 ---------- */
+section { padding-block: 88px; }
+.sec-head { max-width: 640px; }
+.sec-head .label { font-size: 13px; font-weight: 600; color: var(--accent-text); letter-spacing: .06em; }
+.sec-head h2 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.25; letter-spacing: -.03em; margin-top: 10px; }
+.sec-head p { margin-top: 14px; color: var(--sub); font-size: 17px; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 48px; border-top: 1px solid var(--line); }
+.step { padding: 28px 28px 0 0; display: grid; gap: 10px; align-content: start; }
+.step + .step { padding-left: 28px; border-left: 1px solid var(--line); }
+.step .n { font-family: var(--f-mono); font-size: 13px; color: var(--accent-text); }
+.step h3 { font-size: 20px; letter-spacing: -.02em; }
+.step p { color: var(--sub); font-size: 15px; }
+.step kbd { font-family: var(--f-mono); font-size: 12px; padding: 1px 6px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; background: var(--surface); color: var(--ink); }
+
+/* ---------- 기능 ---------- */
+.features { background: var(--surface); border-block: 1px solid var(--line); }
+.feat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px 40px; margin-top: 52px; }
+.feat { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 4px 16px; align-content: start; }
+.feat .ic { grid-row: span 2; width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); color: var(--accent-text); display: grid; place-items: center; }
+.feat .ic svg { width: 21px; height: 21px; }
+.feat h3 { font-size: 17px; letter-spacing: -.015em; padding-top: 1px; }
+.feat p { color: var(--sub); font-size: 15px; }
+.feat .spec { font-family: var(--f-mono); font-size: 12.5px; color: var(--ink); }
+
+/* ---------- 지원 사이트 ---------- */
+.sites .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.site-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.site-list span { padding: 10px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 15px; font-weight: 500; }
+.site-list span.more { border-style: dashed; color: var(--sub); font-weight: 400; }
+.note { margin-top: 18px; font-size: 14px; color: var(--sub); }
+
+/* ---------- 자주 묻는 질문 ---------- */
+.faq .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.qa { border-top: 1px solid var(--line); }
+details { border-bottom: 1px solid var(--line); }
+summary { list-style: none; cursor: pointer; padding: 20px 0; font-weight: 600; font-size: 17px; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+summary::-webkit-details-marker { display: none; }
+summary svg { width: 20px; height: 20px; color: var(--sub); flex: none; transition: transform .2s; }
+details[open] summary svg { transform: rotate(45deg); }
+details p { padding: 0 36px 22px 0; color: var(--sub); font-size: 15px; }
+
+/* ---------- 마지막 다운로드 ---------- */
+.final { padding-block: 0 96px; }
+.final-box { background: var(--accent); color: #fff; border-radius: 24px; padding: 56px 48px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
+.final-box h2 { font-size: clamp(26px, 3vw, 34px); letter-spacing: -.03em; line-height: 1.3; }
+.final-box p { margin-top: 8px; opacity: .85; }
+.btn-white { background: #fff; color: #05663a; }
+.btn-white:hover { background: #eef7f2; }
+
+/* ---------- 아래 정보 ---------- */
+footer { border-top: 1px solid var(--line); padding-block: 40px 56px; font-size: 13px; color: var(--sub); }
+footer .wrap { display: grid; gap: 22px; }
+.foot-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.foot-links a { text-decoration: none; color: var(--ink); font-weight: 500; }
+.foot-links a.strong { font-weight: 700; }
+.biz { font-size: 12.5px; line-height: 1.85; color: var(--sub); }
+.biz p { margin: 0; }
+.biz em { font-style: normal; }
+.biz em + em::before { content: ""; display: inline-block; width: 1px; height: 11px; margin: 0 12px; background: var(--line); vertical-align: -1px; }
+.biz span { margin-right: 6px; opacity: .75; }
+.biz a { color: inherit; text-decoration: none; }
+.biz a:hover { text-decoration: underline; }
+.biz .copy { margin-top: 10px; font-size: 12px; opacity: .8; }
+@media (max-width: 640px) { .biz em { display: block; } .biz em + em::before { display: none; } }
+.biz .todo { color: var(--accent-text); }
+
+/* ---------- 휴대폰 화면 ---------- */
+@media (max-width: 900px) {
+  .hero .wrap, .sites .wrap, .faq .wrap { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .hero { padding-block: 44px 64px; }
+  .feat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .top nav { display: none; }
+}
+@media (max-width: 620px) {
+  section { padding-block: 64px; }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .step, .step + .step { padding: 24px 0; border-left: 0; }
+  .step + .step { border-top: 1px solid var(--line); }
+  .feat-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .final-box { padding: 40px 24px; }
+  .btn-lg { width: 100%; }
+  .top .btn-sm { display: none; }
+  .app-in .fmt, .app-top .pill { display: none; }
+  .item { grid-template-columns: 60px minmax(0, 1fr) auto; }
+  .thumb { width: 60px; height: 34px; }
+  .thumb.sq { width: 34px; }
+  .prog span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .bar i { animation: none; } * { transition: none !important; } }
+
+/* ---------- 약관 페이지 ---------- */
+.l-hero { padding-block: 56px 0; }
+.l-hero h1 { font-size: clamp(30px, 4vw, 42px); letter-spacing: -.035em; margin-top: 22px; }
+.l-hero p { color: var(--sub); margin-top: 10px; }
+.todo { color: var(--accent-text); font-weight: 600; }
+.draft { display: flex; gap: 10px; align-items: flex-start; padding: 12px 16px; border-radius: 12px; background: var(--accent-soft); color: var(--accent-text); font-size: 14px; font-weight: 500; }
+.draft svg { width: 18px; height: 18px; flex: none; margin-top: 3px; }
+.ltabs { display: flex; gap: 28px; margin-top: 32px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.ltabs button { border: 0; background: none; font: inherit; font-size: 16px; color: var(--sub); padding: 0 2px 14px; margin-bottom: -1px; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; }
+.ltabs button.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+.l-body { padding-block: 40px 88px; }
+.doc { display: none; grid-template-columns: 230px minmax(0, 1fr); gap: 56px; align-items: start; }
+.doc.on { display: grid; }
+.toc { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 2px; font-size: 14px; }
+.toc b { font-size: 13px; color: var(--sub); margin-bottom: 8px; letter-spacing: .03em; }
+.toc a { text-decoration: none; color: var(--sub); padding: 5px 10px; border-radius: 8px; border-left: 2px solid transparent; }
+.toc a:hover { color: var(--ink); background: var(--field); }
+.prose { max-width: 720px; font-size: 16px; }
+.prose h2 { font-size: 20px; letter-spacing: -.02em; margin: 40px 0 12px; scroll-margin-top: 88px; }
+.prose h2:first-child { margin-top: 0; }
+.prose p { color: var(--ink); margin: 0 0 12px; }
+.prose ol, .prose ul { margin: 0 0 12px; padding-left: 22px; display: grid; gap: 8px; }
+.prose li::marker { color: var(--sub); }
+.prose a { color: var(--accent-text); }
+.prose .small { font-size: 14px; color: var(--sub); }
+.summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 8px; }
+.summary.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.summary div { display: grid; gap: 4px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.summary b { font-size: 15px; }
+.summary span { font-size: 14px; color: var(--sub); }
+.ltbl { width: 100%; border-collapse: collapse; font-size: 15px; margin: 4px 0 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.ltbl th, .ltbl td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.ltbl th { font-size: 13px; color: var(--sub); background: var(--bg); font-weight: 600; }
+.ltbl tr:last-child td { border-bottom: 0; }
+@media (max-width: 900px) {
+  .doc.on { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .toc { position: static; flex-direction: row; flex-wrap: wrap; gap: 4px 8px; }
+  .toc b { width: 100%; margin-bottom: 0; }
+  .summary, .summary.three { grid-template-columns: minmax(0, 1fr); }
+}
+.top .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--sub); font-size: 14px; text-decoration: none; white-space: nowrap; }
+.top .lang:hover { color: var(--ink); border-color: var(--sub); }
+.top .lang svg { width: 16px; height: 16px; }
+.top nav a { white-space: nowrap; }
+.top .wrap { gap: 20px; }
+.top nav { gap: 16px; margin-left: 0; }
+.top nav a { font-size: 14px; }
+.top nav .nw { display: none; }
+@media (max-width: 1180px) { .top nav { display: none; } }
+.lang-dd { position: relative; }
+button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer; }
+.top .lang .cv { width: 14px; height: 14px; margin-inline-start: -2px; }
+.lang-menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 30; width: 300px; max-width: calc(100vw - 32px); max-height: 70vh; overflow: auto; padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.lang-menu[hidden] { display: none; }
+.lang-menu a { padding: 8px 10px; border-radius: 8px; font-size: 14px; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lang-menu a:hover { background: var(--field); }
+.lang-menu a[aria-current] { color: var(--accent-text); font-weight: 700; background: var(--accent-soft); }
+[dir="rtl"] .lang-menu { right: auto; left: 0; }
+.lang-foot { margin-top: 10px; }
+.lang-foot select { font: inherit; font-size: 13px; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 32 32"><defs><linearGradient id="lgg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#363636"/><stop offset="1" stop-color="#050505"/></linearGradient></defs><rect x=".5" y=".5" width="31" height="31" rx="6" fill="url(#lgg)" stroke="rgba(255,255,255,.16)"/><rect x="14.47" y="7.32" width="3.06" height="8.6" rx="1.53" fill="#fff"/><path d="M12.4 15.3h7.2l-3.6 3.9z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 19.05v2.6a1.6 1.6 0 0 0 1.6 1.6h11.2a1.6 1.6 0 0 0 1.6-1.6v-2.6" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.3 3 7.9 7 9.5 4-1.6 7-5.2 7-9.5V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-noad" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 20 20 4"/></g></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.3-4.5M4 4v3.5h3.5M4 13a8 8 0 0 0 14.3 4.5M20 20v-3.5h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-hd" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M7 9.5v5M10 9.5v5M7 12h3M13.5 9.5v5h1.5a2.5 2.5 0 0 0 0-5h-1.5Z"/></g></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></g></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3h6v1M9.5 12h5M9.5 15.5h3"/></g></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 6 1.2 1.2L6.5 5M3.5 12l1.2 1.2L6.5 11M3.5 18l1.2 1.2L6.5 17"/></g></symbol>
+    <symbol id="i-cc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M10.5 10.2a2.2 2.2 0 1 0 0 3.6M17 10.2a2.2 2.2 0 1 0 0 3.6"/></g></symbol>
+    <symbol id="i-gif" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M9.5 10H8a1.5 1.5 0 0 0-1.5 1.5v1A1.5 1.5 0 0 0 8 14h1.5v-2M12.5 10v4M15.5 14v-4h2.5M15.5 12h2"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l5.5-3.5L10 8.5Z"/></g></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg><use href="#logo"/></svg>DownKit</a>
+    <nav aria-label="Menu">
+      <a href="index.html#how">Come funziona</a>
+      <a href="index.html#features">Funzionalità</a>
+      <a href="index.html#sites">Siti supportati</a>
+      <a href="pricing.html">Prezzi</a>
+      <a href="support.html">Assistenza</a>
+    </nav>
+    <div class="right">
+      <div class="lang-dd"><button class="lang" type="button" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg><span>Italiano</span><svg class="cv" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="lang-menu" role="menu" hidden><a href="../legal.html" hreflang="ko" lang="ko">한국어</a><a href="../en/legal.html" hreflang="en" lang="en">English</a><a href="../ja/legal.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-tw/legal.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a><a href="../zh-cn/legal.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="../vi/legal.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../id/legal.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../th/legal.html" hreflang="th" lang="th">ไทย</a><a href="../es/legal.html" hreflang="es" lang="es">Español</a><a href="../pt/legal.html" hreflang="pt" lang="pt">Português</a><a href="../de/legal.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/legal.html" hreflang="fr" lang="fr">Français</a><a href="../it/legal.html" hreflang="it" lang="it" aria-current="true">Italiano</a><a href="../ru/legal.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/legal.html" hreflang="uk" lang="uk">Українська</a><a href="../pl/legal.html" hreflang="pl" lang="pl">Polski</a><a href="../cs/legal.html" hreflang="cs" lang="cs">Čeština</a><a href="../hu/legal.html" hreflang="hu" lang="hu">Magyar</a><a href="../ro/legal.html" hreflang="ro" lang="ro">Română</a><a href="../tr/legal.html" hreflang="tr" lang="tr">Türkçe</a><a href="../hi/legal.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/legal.html" hreflang="ar" lang="ar">العربية</a><a href="../ur/legal.html" hreflang="ur" lang="ur">اردو</a></div></div>
+      <a class="btn btn-primary btn-sm js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Scarica</a>
+    </div>
+  </div>
+</header><main id="top">
+  <section class="l-hero">
+    <div class="wrap">
+      <h1>Termini di servizio e politiche</h1>
+      <p>Termini di servizio e politiche operative del servizio DownKit fornito da KNEXM Co., Ltd. (in vigore dal 24 ottobre 2026)<br>La presente versione in italiano è fornita solo per comodità; in caso di discrepanze con la versione coreana, prevale la versione coreana.</p>
+      <div class="ltabs" role="tablist">
+        <button type="button" class="on" data-doc="terms" role="tab">Termini di servizio</button>
+        <button type="button" data-doc="privacy" role="tab">Informativa sulla privacy</button>
+        <button type="button" data-doc="refund" role="tab">Politica di rimborso e cancellazione</button>
+        <button type="button" data-doc="copyright" role="tab">Politica sul diritto d'autore</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="l-body">
+    <div class="wrap">
+            <article class="doc on" id="terms">
+        <nav class="toc" aria-label="Indice">
+          <b>Termini di servizio</b>
+          <a href="#t1">1. Finalità</a><a href="#t2">2. Definizioni</a><a href="#t3">3. Efficacia e modifica dei Termini</a><a href="#t4">4. Contenuto del Servizio</a>
+          <a href="#t5">5. Account</a><a href="#t6">6. Servizi a pagamento e pagamenti</a><a href="#t7">7. Disdetta e rimborsi</a><a href="#t8">8. Obblighi dell'utente (diritto d'autore)</a>
+          <a href="#t9">9. Modifica e sospensione del Servizio</a><a href="#t10">10. Limitazione di responsabilità</a><a href="#t11">11. Proprietà intellettuale</a><a href="#t12">12. Limitazioni d'uso e risoluzione del contratto</a><a href="#t13">13. Legge applicabile e risoluzione delle controversie</a>
+        </nav>
+        <div class="prose">
+          <h2 id="t1">Articolo 1 (Finalità)</h2>
+          <p>I presenti Termini hanno lo scopo di disciplinare i diritti, gli obblighi e le responsabilità tra KNEXM Co., Ltd. (di seguito la "Società") e l'utente in relazione all'uso di DownKit, programma per Windows e app per Android, e dei relativi sito web, account e servizi di pagamento (di seguito il "Servizio") forniti dalla Società.</p>
+          <h2 id="t2">Articolo 2 (Definizioni)</h2>
+          <p>I termini utilizzati nei presenti Termini hanno il seguente significato.</p>
+          <ol>
+            <li><b>Utente</b>: chiunque utilizzi il Servizio fornito dalla Società ai sensi dei presenti Termini</li>
+            <li><b>Utente gratuito</b>: l'utente che utilizza le funzioni gratuite senza effettuare alcun pagamento</li>
+            <li><b>Utente Pro</b>: l'utente che ha pagato un abbonamento mensile o annuale o una licenza a vita</li>
+            <li><b>Account</b>: le informazioni di iscrizione a DownKit create dall'utente per utilizzare il Servizio (comuni a Gratis e Pro)</li>
+          </ol>
+          <h2 id="t3">Articolo 3 (Efficacia e modifica dei Termini)</h2>
+          <ol>
+            <li>I presenti Termini sono pubblicati sul sito web del Servizio e acquistano efficacia con l'accettazione da parte dell'utente durante l'installazione del programma o dell'app o la creazione dell'account.</li>
+            <li>La Società può modificare i presenti Termini nei limiti consentiti dalla legge applicabile e, in caso di modifica, ne dà avviso sul sito web e all'interno del programma a partire da 7 giorni prima della data di applicazione. Per le modifiche sfavorevoli all'utente, tuttavia, l'avviso è dato a partire da 30 giorni prima della data di applicazione.</li>
+            <li>L'utente che non accetta i Termini modificati può interrompere l'uso del Servizio e cancellare il proprio account.</li>
+          </ol>
+          <h2 id="t4">Articolo 4 (Contenuto del Servizio)</h2>
+          <ol>
+            <li>La Società fornisce la funzione di salvataggio sul computer o sullo smartphone dell'utente di video e musica dai link inseriti dall'utente, nonché funzioni aggiuntive quali riproduzione, creazione di GIF, salvataggio dei sottotitoli, modifica dei file (taglio di segmenti, riduzione delle dimensioni, estrazione dell'audio, conversione di formato) e registrazione di dirette. Le funzioni aggiuntive possono variare tra il programma Windows e l'app Android.</li>
+            <li>Gli utenti gratuiti possono effettuare fino a 15 download a settimana e scaricare video fino alla qualità 1080p. I sottotitoli possono essere salvati insieme ai video. Gli utenti a pagamento (abbonamento mensile · Pro 1 anno · licenza a vita) possono utilizzare, senza limiti al numero di download, la qualità 4K·8K, le playlist, le GIF, il download automatico e l'accesso ai siti.</li>
+            <li>Il Servizio funziona in base alla struttura dei siti esterni (YouTube ecc.); pertanto, in caso di modifiche ai siti esterni, il download da alcuni siti o di alcuni contenuti può essere temporaneamente limitato.</li>
+          </ol>
+          <h2 id="t5">Articolo 5 (Account)</h2>
+          <ol>
+            <li>Per utilizzare il Servizio (Gratis · Pro) è necessario creare un account. L'account può essere creato tramite accesso con Google · Kakao · Naver e l'utente gratuito può passare a Pro in qualsiasi momento. È inoltre possibile utilizzare il Servizio senza accesso inserendo un codice promozionale emesso dalla Società; in tal caso il diritto d'uso è attribuito in base al codice e al dispositivo.</li>
+            <li>Con un unico account è possibile registrare fino a 3 dispositivi in totale tra PC e smartphone. L'utente può registrare un nuovo dispositivo dopo aver rimosso dal menu delle impostazioni un dispositivo registrato in precedenza.</li>
+            <li>L'utente non può condividere l'account con terzi, né cederlo o venderlo. I minori di 14 anni non possono creare un account.</li>
+          </ol>
+          <h2 id="t6">Articolo 6 (Servizi a pagamento e pagamenti)</h2>
+          <ol>
+            <li>Le tariffe sono quelle indicate nella pagina dei prezzi; per gli utenti all'estero possono essere indicate in valuta locale, ad esempio in dollari statunitensi.</li>
+            <li>Gli abbonamenti mensili e annuali sono soggetti a <b>pagamento automatico</b> con la stessa periodicità fino alla disdetta da parte dell'utente. Se l'utente disdice prima della successiva data di pagamento, il pagamento successivo non viene effettuato.</li>
+            <li>La licenza a vita consente, con un pagamento unico, di continuare a utilizzare le funzioni Pro e gli aggiornamenti forniti successivamente. In caso di cessazione del Servizio da parte della Società, tuttavia, si applica l'Articolo 9.</li>
+            <li>I pagamenti sono effettuati tramite il fornitore di servizi di pagamento designato dalla Società, e la Società non memorizza direttamente il numero di carta dell'utente.</li>
+          </ol>
+          <h2 id="t7">Articolo 7 (Disdetta e rimborsi)</h2>
+          <p>La disdetta degli abbonamenti e i rimborsi sono disciplinati dalla <a href="#refund" class="jump" data-doc="refund">Politica di rimborso e cancellazione</a>, definita separatamente. Per tutti i piani è possibile richiedere il rimborso completo entro 7 giorni dalla data di pagamento.</p>
+          <h2 id="t8">Articolo 8 (Obblighi dell'utente — diritto d'autore)</h2>
+          <ol>
+            <li>L'utente deve scaricare esclusivamente <b>contenuti di cui detiene i diritti</b> o <b>contenuti di cui il titolare dei diritti ha autorizzato il download</b>.</li>
+            <li>L'utente non deve pubblicare, distribuire o vendere i file scaricati senza l'autorizzazione del titolare dei diritti.</li>
+            <li>L'utente non deve utilizzare il Servizio allo scopo di rimuovere o aggirare tecnologie di protezione dalla copia come i DRM.</li>
+            <li>L'utente deve rispettare i termini di utilizzo dei siti esterni.</li>
+            <li>La responsabilità per i problemi derivanti dalla violazione del presente articolo da parte dell'utente ricade sull'utente stesso.</li>
+          </ol>
+          <h2 id="t9">Articolo 9 (Modifica e sospensione del Servizio)</h2>
+          <ol>
+            <li>La Società può modificare o aggiungere funzioni per migliorare il Servizio.</li>
+            <li>La Società può sospendere temporaneamente il Servizio per manutenzione, guasti, modifiche dei siti esterni, cause di forza maggiore e simili.</li>
+            <li>In caso di cessazione del Servizio, la Società ne dà avviso almeno 30 giorni prima della data di cessazione e adotta misure adeguate, come il rimborso, per il periodo di abbonamento residuo.</li>
+          </ol>
+          <h2 id="t10">Articolo 10 (Limitazione di responsabilità)</h2>
+          <ol>
+            <li>La Società non è responsabile qualora non sia possibile scaricare determinati contenuti a causa di modifiche alle politiche o alla struttura dei siti esterni.</li>
+            <li>La responsabilità per i contenuti scaricati dall'utente e per i problemi derivanti dal loro utilizzo ricade sull'utente.</li>
+            <li>La Società risponde, ai sensi della legge applicabile, dei danni causati da dolo o colpa grave della Società stessa.</li>
+          </ol>
+          <h2 id="t11">Articolo 11 (Proprietà intellettuale)</h2>
+          <p>I diritti sul programma DownKit, sul suo design e sui suoi marchi appartengono alla Società. L'utente non deve copiare, modificare o ridistribuire il programma, né aggirare le funzioni a pagamento mediante reverse engineering o metodi analoghi. Il software open source incluso in DownKit (yt-dlp, FFmpeg ecc.) è soggetto alle rispettive licenze.</p>
+          <h2 id="t12">Articolo 12 (Limitazioni d'uso e risoluzione del contratto)</h2>
+          <ol>
+            <li>L'utente può cancellare il proprio account in qualsiasi momento dal menu delle impostazioni o con una richiesta via e-mail.</li>
+            <li>Qualora l'utente violi gravemente i presenti Termini (in particolare gli Articoli 5, 8 e 11), la Società può, previa notifica, limitare l'uso del Servizio o risolvere il contratto.</li>
+          </ol>
+          <h2 id="t13">Articolo 13 (Legge applicabile e risoluzione delle controversie)</h2>
+          <p>I presenti Termini sono disciplinati e interpretati secondo le leggi della Repubblica di Corea. In caso di controversia tra la Società e l'utente in relazione all'uso del Servizio, le parti si impegnano a risolverla in buona fede tramite consultazione, ad esempio via e-mail (info@knexm.com); qualora non si raggiunga un accordo e venga promossa un'azione giudiziaria, il foro competente è determinato secondo il Codice di procedura civile coreano.</p>
+        </div>
+      </article>
+
+            <article class="doc" id="privacy">
+        <nav class="toc" aria-label="Indice">
+          <b>Informativa sulla privacy</b>
+          <a href="#p1">Sintesi</a><a href="#p2">1. Dati personali raccolti</a><a href="#p3">2. Dati non raccolti</a><a href="#p4">3. Finalità del trattamento</a>
+          <a href="#p5">4. Periodo di conservazione</a><a href="#p6">5. Affidamento del trattamento e trasferimento all'estero</a><a href="#p7">6. Diritti dell'interessato</a><a href="#p8">7. Misure di sicurezza</a><a href="#p9">8. Responsabile della protezione dei dati</a>
+        </nav>
+        <div class="prose">
+          <h2 id="p1">Sintesi</h2>
+          <div class="summary">
+            <div><b>Dati di accesso ai siti</b><span>Salvati solo sul dispositivo dell'utente (PC·smartphone) e mai inviati alla Società</span></div>
+            <div><b>Cronologia download · Appunti</b><span>Elaborati solo sul dispositivo dell'utente (PC·smartphone) e mai trasmessi</span></div>
+            <div><b>Numero di carta</b><span>Gestito dal fornitore dei pagamenti; la Società non lo memorizza</span></div>
+            <div><b>Pubblicità · Tracciamento</b><span>Nessuna pubblicità né tracciamento comportamentale</span></div>
+          </div>
+          <h2 id="p2">1. Dati personali raccolti</h2>
+          <table class="ltbl">
+            <thead><tr><th>Momento della raccolta</th><th>Dati raccolti</th></tr></thead>
+            <tbody>
+              <tr><td>All'iscrizione (Gratis · Pro)</td><td>Metodo di accesso e identificativo utente fornito dal servizio di accesso<br>· Accesso con Google: e-mail, nome, foto del profilo<br>· Accesso con Kakao: nickname (obbligatorio), foto del profilo · e-mail dell'account Kakao (facoltativi)<br>· Accesso con Naver: nickname (obbligatorio), e-mail · foto del profilo (facoltativi), token di autenticazione usato per scollegare Naver alla cancellazione dell'account (conservato in forma cifrata)<br>È possibile iscriversi anche senza acconsentire ai dati facoltativi.</td></tr>
+              <tr><td>Avvio con codice promozionale (senza accesso)</td><td>Codice promozionale inserito e identificativo utente generato a partire dal codice e dall'identificativo del dispositivo</td></tr>
+              <tr><td>Al pagamento</td><td>Dati del pagamento (piano, importo, data di pagamento, numero d'ordine). I dati della carta sono trattati direttamente dal fornitore dei pagamenti.</td></tr>
+              <tr><td>Alla registrazione di un dispositivo (PC·smartphone)</td><td>Identificativo del dispositivo (valore generato casualmente), nome del dispositivo (nome del PC o modello dello smartphone), informazioni sul sistema operativo (ad es. versione di Android)</td></tr>
+              <tr><td>Alla verifica degli utilizzi gratuiti</td><td>Numero di download settimanali (non vengono raccolte informazioni sui contenuti scaricati)</td></tr>
+              <tr><td>Alla verifica degli aggiornamenti</td><td>Per verificare la versione più recente, il programma si collega ai server di GitHub e al sito web della Società (downkit.net); in questo processo l'indirizzo IP può essere trasmesso a tali server.</td></tr>
+              <tr><td>In caso di richiesta di assistenza</td><td>Indirizzo e-mail, contenuto della richiesta, file di log degli errori allegati dall'utente, versione dell'app · informazioni sul dispositivo inserite automaticamente nell'e-mail quando si contatta l'assistenza dall'app</td></tr>
+            </tbody>
+          </table>
+          <h2 id="p3">2. Dati non raccolti</h2>
+          <ul>
+            <li><b>Dati di accesso ai siti</b>: i dati degli accessi a YouTube e ad altri siti effettuati tramite DownKit sono salvati solo sul dispositivo dell'utente e non vengono inviati alla Società.</li>
+            <li><b>Cronologia dei download e file scaricati</b>: la cronologia dei download e le informazioni sui file sono salvate solo sul dispositivo dell'utente (PC·smartphone).</li>
+            <li><b>File modificati · registrati</b>: i file modificati con gli strumenti dell'app Android e le dirette registrate vengono elaborati · salvati solo sullo smartphone e non vengono inviati alla Società.</li>
+            <li><b>Appunti</b>: per riconoscere i link copiati, gli appunti vengono controllati solo all'interno del dispositivo dell'utente (PC·smartphone) e il loro contenuto non viene trasmesso all'esterno.</li>
+          </ul>
+          <h2 id="p4">3. Finalità del trattamento dei dati personali</h2>
+          <ul>
+            <li>Gestione dell'account e verifica dell'identità, fornitura delle funzioni Gratis · Pro, gestione della registrazione dei dispositivi</li>
+            <li>Pagamenti, avvisi di rinnovo dell'abbonamento, gestione dei rimborsi</li>
+            <li>Verifica del numero di utilizzi settimanali degli utenti gratuiti</li>
+            <li>Risposta alle richieste di assistenza e gestione degli errori</li>
+            <li>Comunicazioni importanti, come le modifiche al Servizio e ai Termini</li>
+          </ul>
+          <h2 id="p5">4. Periodo di conservazione e utilizzo dei dati personali</h2>
+          <p>In caso di cancellazione dell'account, la Società distrugge senza indugio i dati dell'account. Tuttavia, i dati che devono essere conservati ai sensi della legge applicabile sono conservati separatamente per i periodi indicati di seguito.</p>
+          <table class="ltbl">
+            <thead><tr><th>Dati conservati</th><th>Periodo di conservazione</th><th>Base normativa</th></tr></thead>
+            <tbody>
+              <tr><td>Registri di contratti, recessi e pagamenti</td><td>5 anni</td><td>Legge sulla tutela dei consumatori nel commercio elettronico</td></tr>
+              <tr><td>Registri di reclami e controversie dei consumatori</td><td>3 anni</td><td>Legge sulla tutela dei consumatori nel commercio elettronico</td></tr>
+              <tr><td>Registri di accesso</td><td>3 mesi</td><td>Legge sulla protezione della segretezza delle comunicazioni</td></tr>
+            </tbody>
+          </table>
+          <h2 id="p6">5. Affidamento del trattamento e trasferimento dei dati personali all'estero</h2>
+          <table class="ltbl">
+            <thead><tr><th>Soggetto incaricato</th><th>Attività affidata</th></tr></thead>
+            <tbody>
+              <tr><td>Fornitore dei servizi di pagamento (denominazione comunicata dopo la stipula del contratto)</td><td>Elaborazione dei pagamenti, gestione degli abbonamenti, calcolo delle imposte</td></tr>
+              <tr><td>Google LLC (Firebase)</td><td>Gestione dei server per la conservazione dei dati di account e pagamento</td></tr>
+              <tr><td>GitHub, Inc. (Stati Uniti)</td><td>Distribuzione dei file di aggiornamento del programma · dell'app</td></tr>
+            </tbody>
+          </table>
+          <p class="small">In caso di trasferimento di dati personali all'estero, la Società indica senza indugio nella presente informativa il paese di destinazione, i dati trasferiti, la data, l'ora e le modalità del trasferimento, nonché il periodo di conservazione e utilizzo.</p>
+          <h2 id="p7">6. Diritti dell'interessato e modalità di esercizio</h2>
+          <p>L'utente può in qualsiasi momento richiedere l'accesso, la rettifica, la cancellazione o la sospensione del trattamento dei propri dati personali, provvedendo direttamente dal menu delle impostazioni o inviando una richiesta a info@knexm.com; la Società provvede entro 10 giorni dalla data della richiesta.</p>
+          <h2 id="p8">7. Misure per garantire la sicurezza dei dati personali</h2>
+          <ul>
+            <li>Per la trasmissione dei dati personali viene utilizzata una comunicazione cifrata (HTTPS).</li>
+            <li>Le eventuali password sono memorizzate cifrate con un metodo non reversibile.</li>
+            <li>L'accesso ai dati personali è limitato al numero minimo di persone e i registri di accesso vengono conservati.</li>
+          </ul>
+          <h2 id="p9">8. Responsabile della protezione dei dati personali</h2>
+          <p>Responsabile della protezione dei dati personali: Yeoul Yoon (CEO) · E-mail: info@knexm.com</p>
+          <p class="small">Per segnalazioni e consulenze in materia di violazione dei dati personali è possibile rivolgersi ai seguenti enti: Centro segnalazioni violazioni dei dati personali (privacy.kisa.or.kr, numero 118 dalla Corea), Comitato di mediazione delle controversie sui dati personali (kopico.go.kr, 1833-6972)</p>
+        </div>
+      </article>
+
+            <article class="doc" id="refund">
+        <nav class="toc" aria-label="Indice">
+          <b>Politica di rimborso e cancellazione</b>
+          <a href="#r1">Sintesi</a><a href="#r2">1. Rimborso completo entro 7 giorni</a><a href="#r3">2. Dopo 7 giorni</a><a href="#r4">3. Mancato utilizzo per cause imputabili alla Società</a><a href="#r5">4. Come richiedere il rimborso</a><a href="#r6">5. Casi di esclusione del rimborso</a>
+        </nav>
+        <div class="prose">
+          <h2 id="r1">Sintesi</h2>
+          <div class="summary three">
+            <div><b>Entro 7 giorni</b><span>Rimborso completo per abbonamenti mensili · annuali e licenza a vita</span></div>
+            <div><b>Dopo 7 giorni (abbonamenti)</b><span>Solo disdetta, con utilizzo fino alla fine del periodo residuo</span></div>
+            <div><b>Tempi di elaborazione</b><span>Entro 3 giorni lavorativi dalla richiesta</span></div>
+          </div>
+          <h2 id="r2">1. Rimborso completo entro 7 giorni dal pagamento</h2>
+          <p>Per abbonamenti mensili, abbonamenti annuali e licenze a vita, se la richiesta è presentata <b>entro 7 giorni dalla data di pagamento</b>, il rimborso è completo indipendentemente dal motivo. Al completamento del rimborso, il diritto d'uso a pagamento cessa immediatamente e l'utente passa al piano gratuito.</p>
+          <h2 id="r3">2. Trascorsi 7 giorni dal pagamento</h2>
+          <ul>
+            <li><b>Abbonamenti mensili · annuali</b>: l'utente può disdire l'abbonamento in qualsiasi momento. Con la disdetta il pagamento successivo non viene effettuato e le funzioni Pro restano utilizzabili fino alla fine del periodo già pagato. Non sono previsti rimborsi parziali per il periodo residuo.</li>
+            <li><b>Licenza a vita</b>: trascorsi 7 giorni dalla data di pagamento non è previsto alcun rimborso.</li>
+            <li><b>Pagamenti di rinnovo automatico</b>: se la richiesta è presentata entro 7 giorni dalla data di rinnovo automatico dell'abbonamento, viene rimborsato l'importo di tale rinnovo.</li>
+          </ul>
+          <h2 id="r4">3. Mancato utilizzo per cause imputabili alla Società</h2>
+          <p>Se, per cause imputabili alla Società o per malfunzionamenti del Servizio, l'utente non ha potuto utilizzare le funzioni Pro per un periodo prolungato, la Società rimborsa l'importo corrispondente al periodo di mancato utilizzo o prolunga il periodo d'uso, anche se sono trascorsi più di 7 giorni dalla data di pagamento.</p>
+          <h2 id="r5">4. Come richiedere il rimborso</h2>
+          <ol>
+            <li>Per richiedere il rimborso, invia l'<b>e-mail dell'account</b> e il <b>numero d'ordine</b> (indicato nell'e-mail di conferma del pagamento) a info@knexm.com.</li>
+            <li>Dopo la verifica, la Società elabora la richiesta entro 3 giorni lavorativi ed effettua il rimborso tramite il metodo di pagamento utilizzato (carta ecc.).</li>
+            <li>A seconda del metodo di pagamento e dei tempi di elaborazione dell'emittente della carta, l'accredito effettivo dell'importo rimborsato può richiedere ulteriore tempo.</li>
+          </ol>
+          <h2 id="r6">5. Casi di esclusione del rimborso</h2>
+          <ul>
+            <li>Se l'uso è stato limitato a causa di una grave violazione dei Termini di servizio (in particolare in materia di diritto d'autore e di divieto di condivisione dell'account)</li>
+            <li>Se si ritiene che il sistema di rimborso venga utilizzato in modo abusivo, ad esempio quando la stessa persona richiede ripetutamente rimborsi ed effettua nuovi pagamenti</li>
+          </ul>
+          <p class="small">La presente politica non si applica in modo meno favorevole all'utente rispetto ai criteri stabiliti dalla legge applicabile, tra cui la Legge sulla tutela dei consumatori nel commercio elettronico della Repubblica di Corea.</p>
+        </div>
+      </article>
+
+            <article class="doc" id="copyright">
+        <nav class="toc" aria-label="Indice">
+          <b>Politica sul diritto d'autore</b>
+          <a href="#c1">1. Principi generali</a><a href="#c2">2. Responsabilità dell'utente</a><a href="#c3">3. Come segnalare una violazione</a><a href="#c4">4. Gestione delle segnalazioni</a><a href="#c5">5. Misure in caso di violazioni ripetute</a>
+        </nav>
+        <div class="prose">
+          <h2 id="c1">1. Principi generali</h2>
+          <p>KNEXM Co., Ltd. (di seguito la "Società") rispetta i diritti e gli interessi dei creatori. DownKit è uno strumento che supporta il download esclusivamente di contenuti di cui l'utente <b>detiene legittimamente i diritti</b> o per i quali <b>ha ottenuto l'autorizzazione all'uso</b>, e non conserva né memorizza file video o audio sui propri server.</p>
+          <h2 id="c2">2. Responsabilità dell'utente</h2>
+          <ul>
+            <li>È vietato scaricare, distribuire o vendere senza autorizzazione contenuti per i quali non si dispone del permesso del titolare del diritto d'autore o dei relativi diritti.</li>
+            <li>Non è consentito utilizzare il Servizio allo scopo di aggirare o neutralizzare tecnologie di protezione dalla copia come i DRM (gestione dei diritti digitali).</li>
+            <li>La responsabilità del rispetto dei termini e delle politiche delle piattaforme interessate ricade interamente sull'utente.</li>
+          </ul>
+          <h2 id="c3">3. Come segnalare una violazione del diritto d'autore</h2>
+          <p>Se riscontri una violazione del diritto d'autore nel Servizio, invia una segnalazione via e-mail (<b>info@knexm.com</b>) corredata della documentazione indicata di seguito.</p>
+          <ol>
+            <li>Nome e recapiti del titolare dei diritti (o del suo rappresentante)</li>
+            <li>Descrizione dell'opera che si ritiene violata</li>
+            <li>Link o materiali relativi alla violazione</li>
+            <li>Documentazione che attesti la titolarità dei diritti</li>
+            <li>Dichiarazione che attesti la veridicità della segnalazione</li>
+          </ol>
+          <h2 id="c4">4. Gestione delle segnalazioni</h2>
+          <p>Le segnalazioni ricevute vengono esaminate e l'esito viene comunicato entro 7 giorni lavorativi; a seconda del caso, possono essere adottate misure come l'interruzione del supporto per la piattaforma o la limitazione dell'uso dell'account.</p>
+          <h2 id="c5">5. Misure in caso di violazioni ripetute</h2>
+          <p>Qualora vengano accertate violazioni ripetute del diritto d'autore, possono essere adottate, ai sensi dei Termini di servizio, misure di sospensione dell'account o di cancellazione forzata.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="index.html"><svg><use href="#logo"/></svg>DownKit</a>
+      <div class="foot-links">
+        <a href="#terms" class="jump" data-doc="terms">Termini di servizio</a>
+        <a class="strong jump" href="#privacy" data-doc="privacy">Informativa sulla privacy</a>
+        <a href="#refund" class="jump" data-doc="refund">Politica di rimborso e cancellazione</a>
+        <a href="#copyright" class="jump" data-doc="copyright">Politica sul diritto d'autore</a>
+        <a href="support.html#news">Avvisi</a>
+        <a href="support.html#contact">Contatto diretto</a>
+      </div>
+    </div>
+    <div class="biz">
+      <p><em><span>Ragione sociale</span>KNEXM Co., Ltd.</em><em><span>CEO</span>Yeoul Yoon</em><em><span>N. di registrazione dell'impresa</span>878-88-03505</em></p>
+      <p><em><span>N. di registrazione per la vendita a distanza</span>In attesa</em><em><span>Indirizzo</span>5F #5830, Namgyeong Bldg., 35 Irwon-ro, Gangnam-gu, Seoul, Repubblica di Corea</em><em><span>E-mail</span><a href="mailto:info@knexm.com">info@knexm.com</a></em></p>
+      <p class="copy">© 2026 KNEXM Co., Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  function show(id) {
+    document.querySelectorAll(".doc").forEach(function (d) { d.classList.toggle("on", d.id === id); });
+    document.querySelectorAll(".ltabs button").forEach(function (b) { b.classList.toggle("on", b.dataset.doc === id); });
+  }
+  document.querySelectorAll(".ltabs button").forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.doc); }); });
+  document.querySelectorAll(".jump").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); show(a.dataset.doc); document.querySelector(".l-hero").scrollIntoView({ behavior: "smooth" }); });
+  });
+  var h = (location.hash || "").replace("#", "");
+  if (["terms", "privacy", "refund", "copyright"].indexOf(h) >= 0) show(h);
+})();
+</script>
+
+<script>
+(function () {
+  fetch("https://api.github.com/repos/yoonyeoul37/downkit-releases/releases/latest", { headers: { Accept: "application/vnd.github+json" } })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (rel) {
+      if (!rel || !rel.assets) return;
+      var setup = rel.assets.filter(function (a) { return /^downkit-setup.*\.exe$/i.test(a.name); })[0];
+      if (!setup) return;
+      document.querySelectorAll(".js-dl").forEach(function (a) { a.href = setup.browser_download_url; a.removeAttribute("target"); });
+      var ver = (rel.tag_name || "").replace(/^v/i, ""), mb = Math.round(setup.size / 1048576);
+      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "Versione " + ver + " (" + mb + " MB)"; });
+    }).catch(function () {});
+})();
+</script>
+<script>
+(function () {
+  var d = document.querySelector(".lang-dd"); if (!d) return;
+  var b = d.querySelector("button"), m = d.querySelector(".lang-menu");
+  function s(o) { m.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); }
+  b.addEventListener("click", function (e) { e.stopPropagation(); s(m.hidden); });
+  document.addEventListener("click", function (e) { if (!d.contains(e.target)) s(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") s(false); });
+})();
+</script>
+</body>
+</html>

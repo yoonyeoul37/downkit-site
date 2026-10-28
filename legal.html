@@ -7,6 +7,27 @@
 <link rel="icon" href="logo.svg">
 <link rel="alternate" hreflang="ko" href="https://downkit.net/legal.html">
 <link rel="alternate" hreflang="en" href="https://downkit.net/en/legal.html">
+<link rel="alternate" hreflang="ja" href="https://downkit.net/ja/legal.html">
+<link rel="alternate" hreflang="zh-TW" href="https://downkit.net/zh-tw/legal.html">
+<link rel="alternate" hreflang="zh-CN" href="https://downkit.net/zh-cn/legal.html">
+<link rel="alternate" hreflang="vi" href="https://downkit.net/vi/legal.html">
+<link rel="alternate" hreflang="id" href="https://downkit.net/id/legal.html">
+<link rel="alternate" hreflang="th" href="https://downkit.net/th/legal.html">
+<link rel="alternate" hreflang="es" href="https://downkit.net/es/legal.html">
+<link rel="alternate" hreflang="pt" href="https://downkit.net/pt/legal.html">
+<link rel="alternate" hreflang="de" href="https://downkit.net/de/legal.html">
+<link rel="alternate" hreflang="fr" href="https://downkit.net/fr/legal.html">
+<link rel="alternate" hreflang="it" href="https://downkit.net/it/legal.html">
+<link rel="alternate" hreflang="ru" href="https://downkit.net/ru/legal.html">
+<link rel="alternate" hreflang="uk" href="https://downkit.net/uk/legal.html">
+<link rel="alternate" hreflang="pl" href="https://downkit.net/pl/legal.html">
+<link rel="alternate" hreflang="cs" href="https://downkit.net/cs/legal.html">
+<link rel="alternate" hreflang="hu" href="https://downkit.net/hu/legal.html">
+<link rel="alternate" hreflang="ro" href="https://downkit.net/ro/legal.html">
+<link rel="alternate" hreflang="tr" href="https://downkit.net/tr/legal.html">
+<link rel="alternate" hreflang="hi" href="https://downkit.net/hi/legal.html">
+<link rel="alternate" hreflang="ar" href="https://downkit.net/ar/legal.html">
+<link rel="alternate" hreflang="ur" href="https://downkit.net/ur/legal.html">
 <link rel="alternate" hreflang="x-default" href="https://downkit.net/legal.html">
 <title>DownKit 서비스 이용약관 및 정책</title>
 <meta name="description" content="링크만 복사하면 영상과 음악을 내 PC에 저장하는 Windows 프로그램, DownKit">
@@ -280,6 +301,17 @@ footer .wrap { display: grid; gap: 22px; }
 .top .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--sub); font-size: 14px; text-decoration: none; white-space: nowrap; }
 .top .lang:hover { color: var(--ink); border-color: var(--sub); }
 .top .lang svg { width: 16px; height: 16px; }
+.lang-dd { position: relative; }
+button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer; }
+.top .lang .cv { width: 14px; height: 14px; margin-inline-start: -2px; }
+.lang-menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 30; width: 300px; max-width: calc(100vw - 32px); max-height: 70vh; overflow: auto; padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.lang-menu[hidden] { display: none; }
+.lang-menu a { padding: 8px 10px; border-radius: 8px; font-size: 14px; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lang-menu a:hover { background: var(--field); }
+.lang-menu a[aria-current] { color: var(--accent-text); font-weight: 700; background: var(--accent-soft); }
+[dir="rtl"] .lang-menu { right: auto; left: 0; }
+.lang-foot { margin-top: 10px; }
+.lang-foot select { font: inherit; font-size: 13px; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
 </style>
 
 </head>
@@ -316,7 +348,7 @@ footer .wrap { display: grid; gap: 22px; }
       <a href="support.html">도움말</a>
     </nav>
     <div class="right">
-      <a class="lang" href="en/legal.html" lang="en" hreflang="en"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg>English</a>
+      <div class="lang-dd"><button class="lang" type="button" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg><span>한국어</span><svg class="cv" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="lang-menu" role="menu" hidden><a href="legal.html" hreflang="ko" lang="ko" aria-current="true">한국어</a><a href="en/legal.html" hreflang="en" lang="en">English</a><a href="ja/legal.html" hreflang="ja" lang="ja">日本語</a><a href="zh-tw/legal.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a><a href="zh-cn/legal.html" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="vi/legal.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="id/legal.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="th/legal.html" hreflang="th" lang="th">ไทย</a><a href="es/legal.html" hreflang="es" lang="es">Español</a><a href="pt/legal.html" hreflang="pt" lang="pt">Português</a><a href="de/legal.html" hreflang="de" lang="de">Deutsch</a><a href="fr/legal.html" hreflang="fr" lang="fr">Français</a><a href="it/legal.html" hreflang="it" lang="it">Italiano</a><a href="ru/legal.html" hreflang="ru" lang="ru">Русский</a><a href="uk/legal.html" hreflang="uk" lang="uk">Українська</a><a href="pl/legal.html" hreflang="pl" lang="pl">Polski</a><a href="cs/legal.html" hreflang="cs" lang="cs">Čeština</a><a href="hu/legal.html" hreflang="hu" lang="hu">Magyar</a><a href="ro/legal.html" hreflang="ro" lang="ro">Română</a><a href="tr/legal.html" hreflang="tr" lang="tr">Türkçe</a><a href="hi/legal.html" hreflang="hi" lang="hi">हिन्दी</a><a href="ar/legal.html" hreflang="ar" lang="ar">العربية</a><a href="ur/legal.html" hreflang="ur" lang="ur">اردو</a></div></div>
       <a class="btn btn-primary btn-sm js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">다운로드</a>
     </div>
   </div>
@@ -609,6 +641,16 @@ footer .wrap { display: grid; gap: 22px; }
       var ver = (rel.tag_name || "").replace(/^v/i, ""), mb = Math.round(setup.size / 1048576);
       document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "버전 " + ver + " (" + mb + " MB)"; });
     }).catch(function () {});
+})();
+</script>
+<script>
+(function () {
+  var d = document.querySelector(".lang-dd"); if (!d) return;
+  var b = d.querySelector("button"), m = d.querySelector(".lang-menu");
+  function s(o) { m.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); }
+  b.addEventListener("click", function (e) { e.stopPropagation(); s(m.hidden); });
+  document.addEventListener("click", function (e) { if (!d.contains(e.target)) s(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") s(false); });
 })();
 </script>
 </body>

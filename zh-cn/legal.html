@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="only light">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../logo.svg">
+<link rel="alternate" hreflang="ko" href="https://downkit.net/legal.html">
+<link rel="alternate" hreflang="en" href="https://downkit.net/en/legal.html">
+<link rel="alternate" hreflang="ja" href="https://downkit.net/ja/legal.html">
+<link rel="alternate" hreflang="zh-TW" href="https://downkit.net/zh-tw/legal.html">
+<link rel="alternate" hreflang="zh-CN" href="https://downkit.net/zh-cn/legal.html">
+<link rel="alternate" hreflang="vi" href="https://downkit.net/vi/legal.html">
+<link rel="alternate" hreflang="id" href="https://downkit.net/id/legal.html">
+<link rel="alternate" hreflang="th" href="https://downkit.net/th/legal.html">
+<link rel="alternate" hreflang="es" href="https://downkit.net/es/legal.html">
+<link rel="alternate" hreflang="pt" href="https://downkit.net/pt/legal.html">
+<link rel="alternate" hreflang="de" href="https://downkit.net/de/legal.html">
+<link rel="alternate" hreflang="fr" href="https://downkit.net/fr/legal.html">
+<link rel="alternate" hreflang="it" href="https://downkit.net/it/legal.html">
+<link rel="alternate" hreflang="ru" href="https://downkit.net/ru/legal.html">
+<link rel="alternate" hreflang="uk" href="https://downkit.net/uk/legal.html">
+<link rel="alternate" hreflang="pl" href="https://downkit.net/pl/legal.html">
+<link rel="alternate" hreflang="cs" href="https://downkit.net/cs/legal.html">
+<link rel="alternate" hreflang="hu" href="https://downkit.net/hu/legal.html">
+<link rel="alternate" hreflang="ro" href="https://downkit.net/ro/legal.html">
+<link rel="alternate" hreflang="tr" href="https://downkit.net/tr/legal.html">
+<link rel="alternate" hreflang="hi" href="https://downkit.net/hi/legal.html">
+<link rel="alternate" hreflang="ar" href="https://downkit.net/ar/legal.html">
+<link rel="alternate" hreflang="ur" href="https://downkit.net/ur/legal.html">
+<link rel="alternate" hreflang="x-default" href="https://downkit.net/legal.html">
+<title>DownKit 服务条款及政策</title>
+<meta name="description" content="只需复制链接，即可将视频和音乐保存到电脑的 Windows 程序 —— DownKit">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+/* 레이아웃: 왼쪽 정렬 히어로 + 오른쪽 실제 앱 화면, 아래로 갈수록 조용해지는 한 줄 흐름 */
+:root {
+  --bg: #f5f7f6;
+  --surface: #ffffff;
+  --ink: #111614;
+  --sub: #58615c;
+  --line: #dde3e0;
+  --field: #edf1ef;
+  --accent: #058b4f;
+  --accent-ink: #ffffff;
+  --accent-soft: #e3f3eb;
+  --accent-text: #057a46;
+  --shadow: 0 24px 60px -24px rgba(17, 40, 28, .28);
+  --f-sans: "IBM Plex Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "Consolas", monospace;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1110; --surface: #161a18; --ink: #e8ece9; --sub: #98a29c; --line: #29302c;
+    --field: #1e2321; --accent: #0a9a59; --accent-ink: #ffffff; --accent-soft: #14271d;
+    --accent-text: #3fc285; --shadow: 0 24px 60px -24px rgba(0, 0, 0, .7); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1110; --surface: #161a18; --ink: #e8ece9; --sub: #98a29c; --line: #29302c;
+  --field: #1e2321; --accent: #0a9a59; --accent-ink: #ffffff; --accent-soft: #14271d;
+  --accent-text: #3fc285; --shadow: 0 24px 60px -24px rgba(0, 0, 0, .7); color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-wrap: break-word; }
+a { color: inherit; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+/* ---------- 위 메뉴 ---------- */
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 28px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; text-decoration: none; letter-spacing: -.01em; }
+.brand svg { width: 28px; height: 28px; flex: none; }
+.top nav { display: flex; gap: 24px; margin-left: 8px; }
+.top nav a { text-decoration: none; color: var(--sub); font-size: 15px; }
+.top nav a:hover { color: var(--ink); }
+.top .right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.lang { position: relative; display: flex; align-items: center; gap: 6px; color: var(--sub); font-size: 14px; }
+.lang svg { width: 17px; height: 17px; }
+.lang select { appearance: none; border: 0; background: transparent; color: var(--sub); font: inherit; padding: 6px 4px; cursor: pointer; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 12px; font-weight: 600; text-decoration: none; white-space: nowrap; transition: background .15s, transform .15s; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--accent) 86%, #000); }
+.btn-sm { padding: 9px 16px; font-size: 14px; border-radius: 10px; }
+.btn-lg { padding: 16px 26px; font-size: 17px; }
+.btn-ghost { border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--sub); }
+
+/* ---------- 히어로 ---------- */
+.hero { padding-block: 72px 88px; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); gap: 56px; align-items: center; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--accent-text); background: var(--accent-soft); padding: 5px 12px; border-radius: 999px; letter-spacing: .02em; }
+.eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.hero h1 { font-size: clamp(34px, 4.4vw, 52px); line-height: 1.16; letter-spacing: -.035em; font-weight: 700; margin-top: 22px; }
+.hero h1 em { font-style: normal; color: var(--accent-text); }
+.hero .lead { margin-top: 22px; font-size: 18px; color: var(--sub); max-width: 30em; }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 34px; }
+.cta-meta { font-size: 13px; color: var(--sub); display: grid; gap: 2px; }
+.cta-meta b { color: var(--ink); font-weight: 500; }
+.trust { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+.trust span { display: inline-flex; align-items: center; gap: 8px; }
+.trust svg { width: 17px; height: 17px; color: var(--accent-text); }
+
+/* ---------- 앱 화면 (실제 DownKit 새 화면과 같은 디자인, 예시 내용) ---------- */
+.app { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; font-size: 12px; line-height: 1.5; }
+.app svg { flex: none; }
+.app-title { display: flex; align-items: center; gap: 6px; height: 26px; padding-left: 10px; background: var(--surface); color: var(--sub); font-size: 10.5px; }
+.app-title svg { width: 12px; height: 12px; }
+.app-title .win { margin-left: auto; display: flex; }
+.app-title .win span { width: 32px; text-align: center; font-size: 10px; }
+.app-top { display: flex; align-items: center; gap: 18px; height: 40px; padding: 0 16px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.app-top .b { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 13px; }
+.app-top .b svg { width: 18px; height: 18px; }
+.app-top nav { display: flex; gap: 14px; height: 100%; font-size: 11.5px; color: var(--sub); }
+.app-top nav span { display: flex; align-items: center; border-bottom: 2px solid transparent; }
+.app-top nav span.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+.app-top .pill { margin-left: auto; display: inline-flex; align-items: center; gap: 5px; height: 20px; padding: 0 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-size: 9.5px; font-weight: 600; }
+.app-top .pill i { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.app-body { padding: 18px 20px 20px; display: grid; gap: 13px; }
+.app-h { font-size: 17px; font-weight: 700; letter-spacing: -.03em; line-height: 1.25; }
+.app-h em { font-style: normal; color: var(--accent-text); }
+.app-in { display: flex; align-items: center; gap: 7px; height: 40px; padding: 0 5px 0 12px; background: var(--surface); border: 1.5px solid var(--accent); border-radius: 11px; box-shadow: 0 0 0 3px var(--accent-soft); }
+.app-in .lk { width: 13px; height: 13px; color: var(--sub); }
+.app-in .url { flex: 1; min-width: 0; font-family: var(--f-mono); font-size: 10.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-in .fmt { display: flex; padding: 3px; gap: 1px; background: var(--field); border-radius: 8px; }
+.app-in .fmt span { height: 22px; display: flex; align-items: center; padding: 0 8px; border-radius: 6px; font-size: 9.5px; color: var(--sub); white-space: nowrap; }
+.app-in .fmt span.on { background: var(--surface); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.app-in .go { height: 30px; display: flex; align-items: center; padding: 0 12px; border-radius: 8px; background: var(--accent); color: #fff; font-weight: 600; font-size: 10.5px; white-space: nowrap; }
+.app-lh { display: flex; align-items: flex-end; gap: 14px; border-bottom: 1px solid var(--line); margin-top: 4px; }
+.app-lh b { font-size: 13.5px; letter-spacing: -.02em; padding-bottom: 7px; }
+.app-lh b small { font-family: var(--f-mono); font-weight: 500; color: var(--sub); font-size: 10.5px; margin-left: 4px; }
+.app-lh span { font-size: 11px; color: var(--sub); padding-bottom: 8px; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.app-lh span.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--ink); }
+.list { display: grid; gap: 7px; }
+.item { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; gap: 11px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 11px; padding: 9px 11px; }
+.thumb { width: 76px; height: 43px; border-radius: 7px; position: relative; overflow: hidden; }
+.thumb.sq { width: 43px; justify-self: center; }
+.thumb b { position: absolute; right: 4px; bottom: 4px; font-family: var(--f-mono); font-size: 8.5px; font-weight: 500; padding: 0 4px; border-radius: 4px; background: rgba(0,0,0,.72); color: #fff; }
+.th1 { background: linear-gradient(135deg, #1d4f3a, #6fb391 60%, #e6d39a); }
+.th2 { background: linear-gradient(160deg, #2b3a55, #5d7aa8 55%, #c8d3e6); }
+.th3 { background: radial-gradient(circle at 30% 30%, #f0c27a, #b4572e 70%); }
+.item .name { font-weight: 600; font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.item .who { font-size: 10px; color: var(--sub); }
+.item .meta { display: flex; gap: 4px; align-items: center; margin-top: 3px; font-family: var(--f-mono); font-size: 9.5px; color: var(--sub); white-space: nowrap; overflow: hidden; }
+.item .meta i { font-style: normal; padding: 0 5px; border-radius: 4px; background: var(--field); color: var(--ink); }
+.prog { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.bar { flex: 1; height: 4px; border-radius: 4px; background: var(--field); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 64%; background: var(--accent); border-radius: 4px; animation: grow 6s ease-in-out infinite alternate; }
+@keyframes grow { from { width: 38%; } to { width: 86%; } }
+.prog span { font-family: var(--f-mono); font-size: 9px; color: var(--sub); white-space: nowrap; }
+.right { display: flex; align-items: center; gap: 5px; }
+.st { display: inline-flex; align-items: center; gap: 3px; height: 19px; padding: 0 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-size: 9.5px; font-weight: 600; white-space: nowrap; }
+.st svg { width: 10px; height: 10px; }
+.pct { font-family: var(--f-mono); font-size: 12px; font-weight: 500; }
+.ib { width: 24px; height: 24px; border-radius: 7px; display: grid; place-items: center; color: var(--sub); }
+.ib svg { width: 12px; height: 12px; }
+.ib.play { background: var(--accent); color: #fff; }
+.ib.play svg { width: 10px; height: 10px; margin-left: 1px; }
+.ib.x { border: 1px solid var(--line); color: #d64545; }
+
+/* ---------- 3단계 ---------- */
+section { padding-block: 88px; }
+.sec-head { max-width: 640px; }
+.sec-head .label { font-size: 13px; font-weight: 600; color: var(--accent-text); letter-spacing: .06em; }
+.sec-head h2 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.25; letter-spacing: -.03em; margin-top: 10px; }
+.sec-head p { margin-top: 14px; color: var(--sub); font-size: 17px; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 48px; border-top: 1px solid var(--line); }
+.step { padding: 28px 28px 0 0; display: grid; gap: 10px; align-content: start; }
+.step + .step { padding-left: 28px; border-left: 1px solid var(--line); }
+.step .n { font-family: var(--f-mono); font-size: 13px; color: var(--accent-text); }
+.step h3 { font-size: 20px; letter-spacing: -.02em; }
+.step p { color: var(--sub); font-size: 15px; }
+.step kbd { font-family: var(--f-mono); font-size: 12px; padding: 1px 6px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; background: var(--surface); color: var(--ink); }
+
+/* ---------- 기능 ---------- */
+.features { background: var(--surface); border-block: 1px solid var(--line); }
+.feat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px 40px; margin-top: 52px; }
+.feat { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 4px 16px; align-content: start; }
+.feat .ic { grid-row: span 2; width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); color: var(--accent-text); display: grid; place-items: center; }
+.feat .ic svg { width: 21px; height: 21px; }
+.feat h3 { font-size: 17px; letter-spacing: -.015em; padding-top: 1px; }
+.feat p { color: var(--sub); font-size: 15px; }
+.feat .spec { font-family: var(--f-mono); font-size: 12.5px; color: var(--ink); }
+
+/* ---------- 지원 사이트 ---------- */
+.sites .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.site-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.site-list span { padding: 10px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 15px; font-weight: 500; }
+.site-list span.more { border-style: dashed; color: var(--sub); font-weight: 400; }
+.note { margin-top: 18px; font-size: 14px; color: var(--sub); }
+
+/* ---------- 자주 묻는 질문 ---------- */
+.faq .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.qa { border-top: 1px solid var(--line); }
+details { border-bottom: 1px solid var(--line); }
+summary { list-style: none; cursor: pointer; padding: 20px 0; font-weight: 600; font-size: 17px; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+summary::-webkit-details-marker { display: none; }
+summary svg { width: 20px; height: 20px; color: var(--sub); flex: none; transition: transform .2s; }
+details[open] summary svg { transform: rotate(45deg); }
+details p { padding: 0 36px 22px 0; color: var(--sub); font-size: 15px; }
+
+/* ---------- 마지막 다운로드 ---------- */
+.final { padding-block: 0 96px; }
+.final-box { background: var(--accent); color: #fff; border-radius: 24px; padding: 56px 48px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
+.final-box h2 { font-size: clamp(26px, 3vw, 34px); letter-spacing: -.03em; line-height: 1.3; }
+.final-box p { margin-top: 8px; opacity: .85; }
+.btn-white { background: #fff; color: #05663a; }
+.btn-white:hover { background: #eef7f2; }
+
+/* ---------- 아래 정보 ---------- */
+footer { border-top: 1px solid var(--line); padding-block: 40px 56px; font-size: 13px; color: var(--sub); }
+footer .wrap { display: grid; gap: 22px; }
+.foot-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.foot-links a { text-decoration: none; color: var(--ink); font-weight: 500; }
+.foot-links a.strong { font-weight: 700; }
+.biz { font-size: 12.5px; line-height: 1.85; color: var(--sub); }
+.biz p { margin: 0; }
+.biz em { font-style: normal; }
+.biz em + em::before { content: ""; display: inline-block; width: 1px; height: 11px; margin: 0 12px; background: var(--line); vertical-align: -1px; }
+.biz span { margin-right: 6px; opacity: .75; }
+.biz a { color: inherit; text-decoration: none; }
+.biz a:hover { text-decoration: underline; }
+.biz .copy { margin-top: 10px; font-size: 12px; opacity: .8; }
+@media (max-width: 640px) { .biz em { display: block; } .biz em + em::before { display: none; } }
+.biz .todo { color: var(--accent-text); }
+
+/* ---------- 휴대폰 화면 ---------- */
+@media (max-width: 900px) {
+  .hero .wrap, .sites .wrap, .faq .wrap { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .hero { padding-block: 44px 64px; }
+  .feat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .top nav { display: none; }
+}
+@media (max-width: 620px) {
+  section { padding-block: 64px; }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .step, .step + .step { padding: 24px 0; border-left: 0; }
+  .step + .step { border-top: 1px solid var(--line); }
+  .feat-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .final-box { padding: 40px 24px; }
+  .btn-lg { width: 100%; }
+  .top .btn-sm { display: none; }
+  .app-in .fmt, .app-top .pill { display: none; }
+  .item { grid-template-columns: 60px minmax(0, 1fr) auto; }
+  .thumb { width: 60px; height: 34px; }
+  .thumb.sq { width: 34px; }
+  .prog span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .bar i { animation: none; } * { transition: none !important; } }
+
+/* ---------- 약관 페이지 ---------- */
+.l-hero { padding-block: 56px 0; }
+.l-hero h1 { font-size: clamp(30px, 4vw, 42px); letter-spacing: -.035em; margin-top: 22px; }
+.l-hero p { color: var(--sub); margin-top: 10px; }
+.todo { color: var(--accent-text); font-weight: 600; }
+.draft { display: flex; gap: 10px; align-items: flex-start; padding: 12px 16px; border-radius: 12px; background: var(--accent-soft); color: var(--accent-text); font-size: 14px; font-weight: 500; }
+.draft svg { width: 18px; height: 18px; flex: none; margin-top: 3px; }
+.ltabs { display: flex; gap: 28px; margin-top: 32px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.ltabs button { border: 0; background: none; font: inherit; font-size: 16px; color: var(--sub); padding: 0 2px 14px; margin-bottom: -1px; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; }
+.ltabs button.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+.l-body { padding-block: 40px 88px; }
+.doc { display: none; grid-template-columns: 230px minmax(0, 1fr); gap: 56px; align-items: start; }
+.doc.on { display: grid; }
+.toc { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 2px; font-size: 14px; }
+.toc b { font-size: 13px; color: var(--sub); margin-bottom: 8px; letter-spacing: .03em; }
+.toc a { text-decoration: none; color: var(--sub); padding: 5px 10px; border-radius: 8px; border-left: 2px solid transparent; }
+.toc a:hover { color: var(--ink); background: var(--field); }
+.prose { max-width: 720px; font-size: 16px; }
+.prose h2 { font-size: 20px; letter-spacing: -.02em; margin: 40px 0 12px; scroll-margin-top: 88px; }
+.prose h2:first-child { margin-top: 0; }
+.prose p { color: var(--ink); margin: 0 0 12px; }
+.prose ol, .prose ul { margin: 0 0 12px; padding-left: 22px; display: grid; gap: 8px; }
+.prose li::marker { color: var(--sub); }
+.prose a { color: var(--accent-text); }
+.prose .small { font-size: 14px; color: var(--sub); }
+.summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 8px; }
+.summary.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.summary div { display: grid; gap: 4px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.summary b { font-size: 15px; }
+.summary span { font-size: 14px; color: var(--sub); }
+.ltbl { width: 100%; border-collapse: collapse; font-size: 15px; margin: 4px 0 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.ltbl th, .ltbl td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.ltbl th { font-size: 13px; color: var(--sub); background: var(--bg); font-weight: 600; }
+.ltbl tr:last-child td { border-bottom: 0; }
+@media (max-width: 900px) {
+  .doc.on { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .toc { position: static; flex-direction: row; flex-wrap: wrap; gap: 4px 8px; }
+  .toc b { width: 100%; margin-bottom: 0; }
+  .summary, .summary.three { grid-template-columns: minmax(0, 1fr); }
+}
+.top .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--sub); font-size: 14px; text-decoration: none; white-space: nowrap; }
+.top .lang:hover { color: var(--ink); border-color: var(--sub); }
+.top .lang svg { width: 16px; height: 16px; }
+.top nav a { white-space: nowrap; }
+.top .wrap { gap: 20px; }
+.top nav { gap: 16px; margin-left: 0; }
+.top nav a { font-size: 14px; }
+.top nav .nw { display: none; }
+@media (max-width: 1180px) { .top nav { display: none; } }
+.lang-dd { position: relative; }
+button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer; }
+.top .lang .cv { width: 14px; height: 14px; margin-inline-start: -2px; }
+.lang-menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 30; width: 300px; max-width: calc(100vw - 32px); max-height: 70vh; overflow: auto; padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.lang-menu[hidden] { display: none; }
+.lang-menu a { padding: 8px 10px; border-radius: 8px; font-size: 14px; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lang-menu a:hover { background: var(--field); }
+.lang-menu a[aria-current] { color: var(--accent-text); font-weight: 700; background: var(--accent-soft); }
+[dir="rtl"] .lang-menu { right: auto; left: 0; }
+.lang-foot { margin-top: 10px; }
+.lang-foot select { font: inherit; font-size: 13px; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 32 32"><defs><linearGradient id="lgg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#363636"/><stop offset="1" stop-color="#050505"/></linearGradient></defs><rect x=".5" y=".5" width="31" height="31" rx="6" fill="url(#lgg)" stroke="rgba(255,255,255,.16)"/><rect x="14.47" y="7.32" width="3.06" height="8.6" rx="1.53" fill="#fff"/><path d="M12.4 15.3h7.2l-3.6 3.9z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 19.05v2.6a1.6 1.6 0 0 0 1.6 1.6h11.2a1.6 1.6 0 0 0 1.6-1.6v-2.6" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.3 3 7.9 7 9.5 4-1.6 7-5.2 7-9.5V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-noad" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 20 20 4"/></g></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.3-4.5M4 4v3.5h3.5M4 13a8 8 0 0 0 14.3 4.5M20 20v-3.5h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-hd" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M7 9.5v5M10 9.5v5M7 12h3M13.5 9.5v5h1.5a2.5 2.5 0 0 0 0-5h-1.5Z"/></g></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></g></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3h6v1M9.5 12h5M9.5 15.5h3"/></g></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 6 1.2 1.2L6.5 5M3.5 12l1.2 1.2L6.5 11M3.5 18l1.2 1.2L6.5 17"/></g></symbol>
+    <symbol id="i-cc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M10.5 10.2a2.2 2.2 0 1 0 0 3.6M17 10.2a2.2 2.2 0 1 0 0 3.6"/></g></symbol>
+    <symbol id="i-gif" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M9.5 10H8a1.5 1.5 0 0 0-1.5 1.5v1A1.5 1.5 0 0 0 8 14h1.5v-2M12.5 10v4M15.5 14v-4h2.5M15.5 12h2"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l5.5-3.5L10 8.5Z"/></g></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg><use href="#logo"/></svg>DownKit</a>
+    <nav aria-label="菜单">
+      <a href="index.html#how">使用方法</a>
+      <a href="index.html#features">功能</a>
+      <a href="index.html#sites">支持的网站</a>
+      <a href="pricing.html">价格</a>
+      <a href="support.html">帮助</a>
+    </nav>
+    <div class="right">
+      <div class="lang-dd"><button class="lang" type="button" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.8 5.5 3.8 9s-1.2 6.5-3.8 9c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z"/></g></svg><span>简体中文</span><svg class="cv" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="lang-menu" role="menu" hidden><a href="../legal.html" hreflang="ko" lang="ko">한국어</a><a href="../en/legal.html" hreflang="en" lang="en">English</a><a href="../ja/legal.html" hreflang="ja" lang="ja">日本語</a><a href="../zh-tw/legal.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a><a href="../zh-cn/legal.html" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文</a><a href="../vi/legal.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../id/legal.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../th/legal.html" hreflang="th" lang="th">ไทย</a><a href="../es/legal.html" hreflang="es" lang="es">Español</a><a href="../pt/legal.html" hreflang="pt" lang="pt">Português</a><a href="../de/legal.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/legal.html" hreflang="fr" lang="fr">Français</a><a href="../it/legal.html" hreflang="it" lang="it">Italiano</a><a href="../ru/legal.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/legal.html" hreflang="uk" lang="uk">Українська</a><a href="../pl/legal.html" hreflang="pl" lang="pl">Polski</a><a href="../cs/legal.html" hreflang="cs" lang="cs">Čeština</a><a href="../hu/legal.html" hreflang="hu" lang="hu">Magyar</a><a href="../ro/legal.html" hreflang="ro" lang="ro">Română</a><a href="../tr/legal.html" hreflang="tr" lang="tr">Türkçe</a><a href="../hi/legal.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/legal.html" hreflang="ar" lang="ar">العربية</a><a href="../ur/legal.html" hreflang="ur" lang="ur">اردو</a></div></div>
+      <a class="btn btn-primary btn-sm js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">下载</a>
+    </div>
+  </div>
+</header><main id="top">
+  <section class="l-hero">
+    <div class="wrap">
+      <h1>服务条款及政策</h1>
+      <p>介绍 KNEXM Co., Ltd. 提供的 DownKit 服务的服务条款及运营政策。（生效日期：2026 年 10 月 24 日）<br>本简体中文版本仅为方便阅读而提供，如与韩文版本有任何不一致，以韩文版本为准。</p>
+      <div class="ltabs" role="tablist">
+        <button type="button" class="on" data-doc="terms" role="tab">服务条款</button>
+        <button type="button" data-doc="privacy" role="tab">隐私政策</button>
+        <button type="button" data-doc="refund" role="tab">退款与取消政策</button>
+        <button type="button" data-doc="copyright" role="tab">版权保护政策</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="l-body">
+    <div class="wrap">
+            <article class="doc on" id="terms">
+        <nav class="toc" aria-label="目录">
+          <b>服务条款</b>
+          <a href="#t1">1. 目的</a><a href="#t2">2. 定义</a><a href="#t3">3. 条款的效力及变更</a><a href="#t4">4. 服务内容</a>
+          <a href="#t5">5. 账号</a><a href="#t6">6. 付费服务及付款</a><a href="#t7">7. 取消订阅及退款</a><a href="#t8">8. 用户的义务（版权）</a>
+          <a href="#t9">9. 服务的变更及中止</a><a href="#t10">10. 责任限制</a><a href="#t11">11. 知识产权</a><a href="#t12">12. 使用限制及合同解除</a><a href="#t13">13. 适用法律及争议解决</a>
+        </nav>
+        <div class="prose">
+          <h2 id="t1">第 1 条（目的）</h2>
+          <p>本条款旨在规定 KNEXM Co., Ltd.（以下简称"公司"）提供的 Windows 程序及 Android 应用 DownKit 以及相关网站、账号、付款服务（以下简称"服务"）的使用过程中，公司与用户之间的权利、义务及责任事项。</p>
+          <h2 id="t2">第 2 条（定义）</h2>
+          <p>本条款所使用术语的定义如下。</p>
+          <ol>
+            <li><b>用户</b>：根据本条款使用公司所提供服务的人</li>
+            <li><b>免费用户</b>：无需另行付款、使用免费功能的用户</li>
+            <li><b>Pro 用户</b>：已支付月度、年度订阅或永久许可证费用的用户</li>
+            <li><b>账号</b>：用户为使用服务而创建的 DownKit 会员信息（免费 · Pro 通用）</li>
+          </ol>
+          <h2 id="t3">第 3 条（条款的效力及变更）</h2>
+          <ol>
+            <li>本条款在服务网站上公示，用户在安装程序或应用、或创建账号的过程中同意本条款后即生效。</li>
+            <li>公司可在不违反相关法律法规的范围内变更本条款，变更时自生效日前 7 天起在网站及程序内公告。但对用户不利的变更，自生效日前 30 天起公告。</li>
+            <li>用户不同意变更后的条款时，可停止使用服务并注销账号。</li>
+          </ol>
+          <h2 id="t4">第 4 条（服务内容）</h2>
+          <ol>
+            <li>公司提供将用户输入链接中的视频、音乐保存到用户电脑或手机的功能，以及播放、GIF 制作、字幕保存、文件编辑（截取片段、压缩体积、提取音频、格式转换）、直播录制等附加功能。附加功能可能因 Windows 程序和 Android 应用而有所不同。</li>
+            <li>免费用户每周最多可下载 15 次，视频最高可下载 1080p 画质，并可同时保存字幕。付费用户（月度订阅 · Pro 1 年 · 永久许可证）可不受下载数量限制，使用 4K·8K 画质、播放列表、GIF、自动下载、网站登录功能。</li>
+            <li>服务依赖外部网站（YouTube 等）的结构运行，因此外部网站发生变更时，部分网站或内容的下载可能会暂时受到限制。</li>
+          </ol>
+          <h2 id="t5">第 5 条（账号）</h2>
+          <ol>
+            <li>使用服务（免费 · Pro）须创建账号。账号可通过 Google · Kakao · Naver 登录创建，免费用户可随时升级为 Pro。此外，用户也可输入公司发放的优惠码，无需另行登录即可使用服务，此时以优惠码和设备为基准授予使用权限。</li>
+            <li>一个账号最多可注册电脑和手机合计 3 台设备。用户可在设置菜单中解除已注册的设备后，注册新设备。</li>
+            <li>用户不得与他人共享账号，亦不得转让或出售账号。未满 14 周岁者不得创建账号。</li>
+          </ol>
+          <h2 id="t6">第 6 条（付费服务及付款）</h2>
+          <ol>
+            <li>使用费用以价格页面所示金额为准，海外用户可能以美元等当地货币显示。</li>
+            <li>月度、年度订阅在用户取消前将按相同周期<b>自动扣款</b>。用户在下一个扣款日前取消的，将不再进行下一次扣款。</li>
+            <li>永久许可证是一次付款即可持续使用 Pro 功能及此后提供的更新的许可证。但公司终止服务时，依照第 9 条处理。</li>
+            <li>付款通过公司指定的支付服务商进行，公司不直接保存用户的银行卡号。</li>
+          </ol>
+          <h2 id="t7">第 7 条（取消订阅及退款）</h2>
+          <p>有关取消订阅及退款的事项，依照另行制定的<a href="#refund" class="jump" data-doc="refund">退款与取消政策</a>。所有方案均可在付款日起 7 天内申请全额退款。</p>
+          <h2 id="t8">第 8 条（用户的义务 —— 版权）</h2>
+          <ol>
+            <li>用户只能下载<b>本人拥有权利的内容</b>或<b>权利人允许下载的内容</b>。</li>
+            <li>未经权利人许可，用户不得发布、传播或出售下载的文件。</li>
+            <li>用户不得以解除或规避 DRM 等复制保护技术为目的使用服务。</li>
+            <li>用户须遵守外部网站的服务条款。</li>
+            <li>因用户违反本条而产生的问题，由用户承担责任。</li>
+          </ol>
+          <h2 id="t9">第 9 条（服务的变更及中止）</h2>
+          <ol>
+            <li>公司可为改进服务而变更或新增功能。</li>
+            <li>公司可因维护检查、故障、外部网站变更、自然灾害等原因暂时中止服务。</li>
+            <li>公司终止服务时，将于终止日 30 天前进行公告，并对剩余订阅期限采取退款等适当措施。</li>
+          </ol>
+          <h2 id="t10">第 10 条（责任限制）</h2>
+          <ol>
+            <li>因外部网站的政策或结构变更导致无法下载特定内容的，公司不承担责任。</li>
+            <li>用户下载内容的内容本身及因使用该内容而产生的问题，由用户承担责任。</li>
+            <li>因公司故意或重大过失造成的损害，公司依照相关法律法规承担责任。</li>
+          </ol>
+          <h2 id="t11">第 11 条（知识产权）</h2>
+          <p>DownKit 程序、设计及商标的权利归公司所有。用户不得复制、修改、再分发程序，亦不得通过逆向工程等方式规避付费功能。DownKit 所包含的开源软件（yt-dlp、FFmpeg 等）遵循各自的许可证。</p>
+          <h2 id="t12">第 12 条（使用限制及合同解除）</h2>
+          <ol>
+            <li>用户可随时通过设置菜单或电子邮件申请注销账号。</li>
+            <li>用户严重违反本条款（特别是第 5 条、第 8 条、第 11 条）时，公司可在事先通知后限制其使用服务或解除合同。</li>
+          </ol>
+          <h2 id="t13">第 13 条（适用法律及争议解决）</h2>
+          <p>本条款受大韩民国法律管辖并依其解释。公司与用户之间因使用服务发生争议时，双方应通过电子邮件（info@knexm.com）等方式诚信协商、努力解决；协商不成而提起诉讼的，管辖法院依照大韩民国《民事诉讼法》确定。</p>
+        </div>
+      </article>
+
+            <article class="doc" id="privacy">
+        <nav class="toc" aria-label="目录">
+          <b>隐私政策</b>
+          <a href="#p1">要点摘要</a><a href="#p2">1. 收集的个人信息</a><a href="#p3">2. 不收集的信息</a><a href="#p4">3. 使用目的</a>
+          <a href="#p5">4. 保存及使用期限</a><a href="#p6">5. 委托处理·跨境传输</a><a href="#p7">6. 信息主体的权利</a><a href="#p8">7. 安全保障措施</a><a href="#p9">8. 个人信息保护负责人</a>
+        </nav>
+        <div class="prose">
+          <h2 id="p1">要点摘要</h2>
+          <div class="summary">
+            <div><b>网站登录信息</b><span>仅保存在用户的设备（电脑·手机）上，不会传送给公司</span></div>
+            <div><b>下载记录 · 剪贴板</b><span>仅在用户的设备（电脑·手机）内处理，不会传送</span></div>
+            <div><b>银行卡号</b><span>由支付服务商处理，公司不予保存</span></div>
+            <div><b>广告 · 追踪</b><span>不投放广告，也不追踪行为信息</span></div>
+          </div>
+          <h2 id="p2">1. 收集的个人信息</h2>
+          <table class="ltbl">
+            <thead><tr><th>收集时间</th><th>收集项目</th></tr></thead>
+            <tbody>
+              <tr><td>注册会员时（免费 · Pro）</td><td>登录方式、登录服务提供方提供的会员识别值<br>· Google 登录：电子邮箱、姓名、头像<br>· Kakao 登录：昵称（必填）、头像 · Kakao 账号电子邮箱（选填）<br>· Naver 登录：昵称（必填）、电子邮箱 · 头像（选填）、注销时用于解除 Naver 关联的认证令牌（加密保存）<br>即使不同意选填项目也可以注册。</td></tr>
+              <tr><td>使用优惠码开始时（无需登录）</td><td>输入的优惠码、由优惠码和设备识别值生成的用户识别值</td></tr>
+              <tr><td>付款时</td><td>付款记录（方案、付款金额、付款日期、订单号）。银行卡信息由支付服务商直接处理。</td></tr>
+              <tr><td>注册设备（电脑·手机）时</td><td>设备识别值（随机生成值）、设备名称（电脑名称或手机型号）、操作系统信息（例如：Android 版本）</td></tr>
+              <tr><td>确认免费使用次数时</td><td>每周下载次数（不收集所下载内容的信息）</td></tr>
+              <tr><td>检查更新时</td><td>为确认最新版本，会连接 GitHub 服务器和公司网站（downkit.net），在此过程中 IP 地址可能会传递给相应服务器。</td></tr>
+              <tr><td>咨询时</td><td>电子邮箱地址、咨询内容、用户附上的错误日志文件、在应用内咨询时自动写入邮件的应用版本 · 设备信息</td></tr>
+            </tbody>
+          </table>
+          <h2 id="p3">2. 不收集的信息</h2>
+          <ul>
+            <li><b>网站登录信息</b>：在 DownKit 中登录 YouTube 等网站的信息仅保存在用户的设备上，不会传送给公司。</li>
+            <li><b>下载记录及下载的文件</b>：下载记录和文件信息仅保存在用户的设备（电脑·手机）上。</li>
+            <li><b>编辑 · 录制的文件</b>：使用 Android 应用的工具编辑或录制直播的文件仅在手机内处理 · 保存，不会传送给公司。</li>
+            <li><b>剪贴板</b>：为识别复制的链接，仅在用户的设备（电脑·手机）内读取，不会将其内容传送到外部。</li>
+          </ul>
+          <h2 id="p4">3. 个人信息的使用目的</h2>
+          <ul>
+            <li>账号管理及身份确认、提供免费 · Pro 功能、设备注册管理</li>
+            <li>付款、订阅续费通知、退款处理</li>
+            <li>确认免费用户的每周使用次数</li>
+            <li>回复咨询及处理错误</li>
+            <li>通知服务及条款变更等重要事项</li>
+          </ul>
+          <h2 id="p5">4. 个人信息的保存及使用期限</h2>
+          <p>会员注销时，公司将立即销毁账号信息。但根据相关法律法规须保存的信息，将在下列期限内单独保存。</p>
+          <table class="ltbl">
+            <thead><tr><th>保存项目</th><th>保存期限</th><th>法律依据</th></tr></thead>
+            <tbody>
+              <tr><td>合同·撤回要约·付款记录</td><td>5 年</td><td>韩国《电子商务消费者保护法》</td></tr>
+              <tr><td>消费者投诉·争议处理记录</td><td>3 年</td><td>韩国《电子商务消费者保护法》</td></tr>
+              <tr><td>访问记录</td><td>3 个月</td><td>韩国《通信秘密保护法》</td></tr>
+            </tbody>
+          </table>
+          <h2 id="p6">5. 个人信息的委托处理及跨境传输</h2>
+          <table class="ltbl">
+            <thead><tr><th>受托方</th><th>委托业务</th></tr></thead>
+            <tbody>
+              <tr><td>支付服务商（签约后公布公司名称）</td><td>付款处理、订阅管理、税费计算</td></tr>
+              <tr><td>Google LLC (Firebase)</td><td>运营保存账号·付款信息的服务器</td></tr>
+              <tr><td>GitHub, Inc.（美国）</td><td>分发程序 · 应用的更新文件</td></tr>
+            </tbody>
+          </table>
+          <p class="small">发生个人信息跨境传输时，公司将及时在本政策中载明传输目的国、传输项目、传输时间及方式、保存及使用期限。</p>
+          <h2 id="p7">6. 信息主体的权利及行使方式</h2>
+          <p>用户可随时要求查阅、更正、删除自己的个人信息或停止处理。用户可在设置菜单中自行处理，或发送邮件至 info@knexm.com 提出请求，公司将在收到请求之日起 10 日内处理。</p>
+          <h2 id="p8">7. 个人信息的安全保障措施</h2>
+          <ul>
+            <li>传输个人信息时使用加密通信（HTTPS）。</li>
+            <li>如使用密码，将以不可解密的方式加密保存。</li>
+            <li>将个人信息访问权限限制在最少人员范围内，并保存访问记录。</li>
+          </ul>
+          <h2 id="p9">8. 个人信息保护负责人</h2>
+          <p>个人信息保护负责人：Yeoul Yoon（首席执行官）· 电子邮箱：info@knexm.com</p>
+          <p class="small">有关个人信息侵害的举报及咨询，可联系以下机构：个人信息侵害举报中心（privacy.kisa.or.kr，在韩国境内直拨 118）、个人信息纠纷调解委员会（kopico.go.kr，1833-6972）</p>
+        </div>
+      </article>
+
+            <article class="doc" id="refund">
+        <nav class="toc" aria-label="目录">
+          <b>退款与取消政策</b>
+          <a href="#r1">要点摘要</a><a href="#r2">1. 7 天内全额退款</a><a href="#r3">2. 超过 7 天后</a><a href="#r4">3. 因公司原因无法使用时</a><a href="#r5">4. 退款申请方式</a><a href="#r6">5. 退款受限的情形</a>
+        </nav>
+        <div class="prose">
+          <h2 id="r1">要点摘要</h2>
+          <div class="summary three">
+            <div><b>7 天内</b><span>月度 · 年度 · 永久许可证均可全额退款</span></div>
+            <div><b>超过 7 天后（订阅）</b><span>仅可取消，剩余期限内可继续使用</span></div>
+            <div><b>处理时间</b><span>自申请之日起 3 个工作日内</span></div>
+          </div>
+          <h2 id="r2">1. 付款后 7 天内全额退款</h2>
+          <p>月度订阅、年度订阅、永久许可证，凡在<b>付款日起 7 天内</b>申请的，无论原因均全额退款。退款完成后，付费使用权限即刻终止，并转为免费用户。</p>
+          <h2 id="r3">2. 付款后超过 7 天时</h2>
+          <ul>
+            <li><b>月度 · 年度订阅</b>：用户可随时取消订阅。取消后将不再进行下一次扣款，在已付费的使用期限结束前仍可使用 Pro 功能。剩余期限不提供部分退款。</li>
+            <li><b>永久许可证</b>：自付款日起超过 7 天的，不予退款。</li>
+            <li><b>自动续费扣款</b>：在订阅自动续费之日起 7 天内申请的，退还该次续费扣款金额。</li>
+          </ul>
+          <h2 id="r4">3. 因公司原因无法使用时</h2>
+          <p>因公司原因或服务故障导致用户长时间无法使用 Pro 功能的，即使自付款日起已超过 7 天，公司也将退还无法使用期间对应的金额，或延长使用期限。</p>
+          <h2 id="r5">4. 退款申请方式</h2>
+          <ol>
+            <li>希望退款的用户，请将<b>账号电子邮箱</b>和<b>订单号</b>（见付款确认邮件）发送至 info@knexm.com。</li>
+            <li>公司确认后将在 3 个工作日内处理，并原路退回至付款时使用的支付方式（银行卡等）。</li>
+            <li>根据支付方式及发卡机构的处理进度，退款金额实际到账可能需要额外时间。</li>
+          </ol>
+          <h2 id="r6">5. 退款受限的情形</h2>
+          <ul>
+            <li>因严重违反服务条款（特别是版权、禁止共享账号）而被限制使用的</li>
+            <li>同一人反复退款和重新付款等，被认定为滥用退款制度的</li>
+          </ul>
+          <p class="small">本政策的适用不会比韩国《电子商务等领域消费者保护法》等相关法律法规规定的标准更不利于用户。</p>
+        </div>
+      </article>
+
+            <article class="doc" id="copyright">
+        <nav class="toc" aria-label="目录">
+          <b>版权保护政策</b>
+          <a href="#c1">1. 基本原则</a><a href="#c2">2. 用户的责任</a><a href="#c3">3. 版权侵权举报方式</a><a href="#c4">4. 举报处理流程</a><a href="#c5">5. 针对重复侵权的措施</a>
+        </nav>
+        <div class="prose">
+          <h2 id="c1">1. 基本原则</h2>
+          <p>KNEXM Co., Ltd.（以下简称"公司"）尊重创作者的权益。DownKit 是仅针对用户<b>拥有合法权利</b>或<b>已获得使用许可的内容</b>提供下载支持的工具，不在服务器上直接保存或存储视频及音频文件。</p>
+          <h2 id="c2">2. 用户的责任</h2>
+          <ul>
+            <li>禁止未经版权所有者许可或对无权利的内容进行擅自下载、传播、出售的行为。</li>
+            <li>不得以规避或破解 DRM（数字版权管理）等复制保护技术为目的使用本服务。</li>
+            <li>遵守目标平台服务条款及政策的责任完全由用户本人承担。</li>
+          </ul>
+          <h2 id="c3">3. 版权侵权举报方式</h2>
+          <p>如发现服务中存在侵犯版权的情况，请备齐以下证明材料，通过电子邮件（<b>info@knexm.com</b>）进行举报。</p>
+          <ol>
+            <li>权利人（或代理人）的姓名及联系方式</li>
+            <li>对认为被侵权作品的说明</li>
+            <li>侵权相关链接或资料</li>
+            <li>可证明权利人身份的资料</li>
+            <li>确认举报内容属实的声明</li>
+          </ol>
+          <h2 id="c4">4. 举报处理流程</h2>
+          <p>收到的举报经审核后，将在 7 个工作日内回复处理结果，并可能视情况采取停止支持相关平台或限制账号使用等措施。</p>
+          <h2 id="c5">5. 针对重复侵权的措施</h2>
+          <p>确认存在反复侵犯版权行为的，可依照服务条款对其采取暂停账号使用或强制注销等措施。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="index.html"><svg><use href="#logo"/></svg>DownKit</a>
+      <div class="foot-links">
+        <a href="#terms" class="jump" data-doc="terms">服务条款</a>
+        <a class="strong jump" href="#privacy" data-doc="privacy">隐私政策</a>
+        <a href="#refund" class="jump" data-doc="refund">退款与取消政策</a>
+        <a href="#copyright" class="jump" data-doc="copyright">版权保护政策</a>
+        <a href="support.html#news">公告</a>
+        <a href="support.html#contact">一对一咨询</a>
+      </div>
+    </div>
+    <div class="biz">
+      <p><em><span>公司名称</span>KNEXM Co., Ltd.</em><em><span>首席执行官</span>Yeoul Yoon</em><em><span>营业登记号</span>878-88-03505</em></p>
+      <p><em><span>邮购销售业登记号</span>待登记</em><em><span>地址</span>5F #5830, Namgyeong Bldg., 35 Irwon-ro, Gangnam-gu, Seoul, Republic of Korea</em><em><span>电子邮箱</span><a href="mailto:info@knexm.com">info@knexm.com</a></em></p>
+      <p class="copy">© 2026 KNEXM Co., Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  function show(id) {
+    document.querySelectorAll(".doc").forEach(function (d) { d.classList.toggle("on", d.id === id); });
+    document.querySelectorAll(".ltabs button").forEach(function (b) { b.classList.toggle("on", b.dataset.doc === id); });
+  }
+  document.querySelectorAll(".ltabs button").forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.doc); }); });
+  document.querySelectorAll(".jump").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); show(a.dataset.doc); document.querySelector(".l-hero").scrollIntoView({ behavior: "smooth" }); });
+  });
+  var h = (location.hash || "").replace("#", "");
+  if (["terms", "privacy", "refund", "copyright"].indexOf(h) >= 0) show(h);
+})();
+</script>
+
+<script>
+(function () {
+  fetch("https://api.github.com/repos/yoonyeoul37/downkit-releases/releases/latest", { headers: { Accept: "application/vnd.github+json" } })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (rel) {
+      if (!rel || !rel.assets) return;
+      var setup = rel.assets.filter(function (a) { return /^downkit-setup.*\.exe$/i.test(a.name); })[0];
+      if (!setup) return;
+      document.querySelectorAll(".js-dl").forEach(function (a) { a.href = setup.browser_download_url; a.removeAttribute("target"); });
+      var ver = (rel.tag_name || "").replace(/^v/i, ""), mb = Math.round(setup.size / 1048576);
+      document.querySelectorAll(".js-ver").forEach(function (b) { b.textContent = "版本 " + ver + " (" + mb + " MB)"; });
+    }).catch(function () {});
+})();
+</script>
+<script>
+(function () {
+  var d = document.querySelector(".lang-dd"); if (!d) return;
+  var b = d.querySelector("button"), m = d.querySelector(".lang-menu");
+  function s(o) { m.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); }
+  b.addEventListener("click", function (e) { e.stopPropagation(); s(m.hidden); });
+  document.addEventListener("click", function (e) { if (!d.contains(e.target)) s(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") s(false); });
+})();
+</script>
+</body>
+</html>
