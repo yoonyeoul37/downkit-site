@@ -79,10 +79,12 @@ footer a { color: inherit; }
 .lang-dd { position: relative; }
 button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer; }
 .top .lang .cv { width: 14px; height: 14px; margin-inline-start: -2px; }
-.lang-menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 30; width: 300px; max-width: calc(100vw - 32px); max-height: 70vh; overflow: auto; padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.lang-menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 30; width: 500px; max-width: calc(100vw - 32px); max-height: 70vh; overflow: auto; padding: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
 .lang-menu[hidden] { display: none; }
 .lang-menu a { padding: 8px 10px; border-radius: 8px; font-size: 14px; color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .lang-menu a:hover { background: var(--field); }
+.lang-menu .ln-sub { font-size: 12.5px; color: var(--sub); font-weight: 400; }
+@media (max-width: 560px) { .lang-menu { grid-template-columns: minmax(0, 1fr); width: 260px; } }
 .lang-menu a[aria-current] { color: var(--accent-text); font-weight: 700; background: var(--accent-soft); }
 [dir="rtl"] .lang-menu { right: auto; left: 0; }
 .lang-foot { margin-top: 10px; }
@@ -125,7 +127,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <footer>
     케이넥스엠주식회사 (KNEXM Co., Ltd.) · <a href="mailto:info@knexm.com">info@knexm.com</a><br>
     <a href="legal.html#terms">이용약관</a> · <a href="legal.html#privacy">개인정보 처리방침</a>
-<p class="lang-foot"><select aria-label="Language" onchange="location.href=this.value"><option value="app.html" selected>한국어</option><option value="en/app.html">English</option><option value="ja/app.html">日本語</option><option value="zh-tw/app.html">繁體中文</option><option value="zh-cn/app.html">简体中文</option><option value="vi/app.html">Tiếng Việt</option><option value="id/app.html">Bahasa Indonesia</option><option value="th/app.html">ไทย</option><option value="es/app.html">Español</option><option value="pt/app.html">Português</option><option value="de/app.html">Deutsch</option><option value="fr/app.html">Français</option><option value="it/app.html">Italiano</option><option value="ru/app.html">Русский</option><option value="uk/app.html">Українська</option><option value="pl/app.html">Polski</option><option value="cs/app.html">Čeština</option><option value="hu/app.html">Magyar</option><option value="ro/app.html">Română</option><option value="tr/app.html">Türkçe</option><option value="hi/app.html">हिन्दी</option><option value="ar/app.html">العربية</option><option value="ur/app.html">اردو</option></select></p>
+<p class="lang-foot"><select aria-label="Language" onchange="location.href=this.value"><option value="app.html" selected>한국어</option><option value="en/app.html">English (영어)</option><option value="ja/app.html">日本語 (일본어)</option><option value="zh-tw/app.html">繁體中文 (중국어 번체)</option><option value="zh-cn/app.html">简体中文 (중국어 간체)</option><option value="vi/app.html">Tiếng Việt (베트남어)</option><option value="id/app.html">Bahasa Indonesia (인도네시아어)</option><option value="th/app.html">ไทย (태국어)</option><option value="es/app.html">Español (스페인어)</option><option value="pt/app.html">Português (포르투갈어)</option><option value="de/app.html">Deutsch (독일어)</option><option value="fr/app.html">Français (프랑스어)</option><option value="it/app.html">Italiano (이탈리아어)</option><option value="ru/app.html">Русский (러시아어)</option><option value="uk/app.html">Українська (우크라이나어)</option><option value="pl/app.html">Polski (폴란드어)</option><option value="cs/app.html">Čeština (체코어)</option><option value="hu/app.html">Magyar (헝가리어)</option><option value="ro/app.html">Română (루마니아어)</option><option value="tr/app.html">Türkçe (튀르키예어)</option><option value="hi/app.html">हिन्दी (힌디어)</option><option value="ar/app.html">العربية (아랍어)</option><option value="ur/app.html">اردو (우르두어)</option></select></p>
   </footer>
 </main>
 </body>
