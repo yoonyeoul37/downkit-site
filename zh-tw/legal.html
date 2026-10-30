@@ -330,6 +330,28 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 [dir="rtl"] .lang-menu { right: auto; left: 0; }
 .lang-foot { margin-top: 10px; }
 .lang-foot select { font: inherit; font-size: 13px; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
+
+.ft { background: var(--surface); border-top: 1px solid var(--line); color: var(--sub); padding-block: 64px 32px; font-size: 14px; }
+.ft .wrap { display: block; }
+.ft .brand { color: var(--ink); }
+.ft-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr)); gap: 40px; padding-bottom: 40px; }
+.ft-brand p { margin-top: 14px; max-width: 320px; line-height: 1.65; font-size: 14px; }
+.ft-dl { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.ft-btn { display: inline-flex; align-items: center; height: 40px; padding: 0 14px; border-radius: 10px; font-size: 13.5px; font-weight: 600; text-decoration: none; background: var(--ink); color: var(--bg); }
+.ft-btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.ft-col { display: grid; align-content: start; gap: 11px; }
+.ft-col h4 { font-size: 12px; font-weight: 700; letter-spacing: .08em; margin-bottom: 4px; color: var(--ink); }
+.ft-col a { text-decoration: none; font-size: 14px; width: fit-content; color: var(--sub); }
+.ft-col a:hover, .ft-col a.strong { color: var(--ink); }
+.ft-col a.strong { font-weight: 700; }
+.ft-biz { padding-block: 22px; font-size: 12.5px; line-height: 1.9; border-top: 1px solid var(--line); }
+.ft-biz p { margin: 0; } .ft-biz em { font-style: normal; }
+.ft-biz em + em::before { content: ""; display: inline-block; width: 1px; height: 11px; margin: 0 12px; vertical-align: -1px; background: var(--line); }
+.ft-biz span { margin-inline-end: 6px; color: var(--ink); opacity: .7; }
+.ft-biz a { color: inherit; text-decoration: none; } .ft-biz a:hover { text-decoration: underline; }
+.ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
+@media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
 </style>
 
 </head>
@@ -608,24 +630,23 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
     </div>
   </section>
 </main>
-<footer>
+<footer class="ft">
   <div class="wrap">
-    <div class="foot-top">
-      <a class="brand" href="index.html"><svg><use href="#logo"/></svg>DownKit</a>
-      <div class="foot-links">
-        <a href="#terms" class="jump" data-doc="terms">服務條款</a>
-        <a class="strong jump" href="#privacy" data-doc="privacy">隱私政策</a>
-        <a href="#refund" class="jump" data-doc="refund">退款與取消政策</a>
-        <a href="#copyright" class="jump" data-doc="copyright">版權保護政策</a>
-        <a href="support.html#news">公告</a>
-        <a href="support.html#contact">一對一諮詢</a>
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a class="brand" href="index.html"><svg><use href="#logo"/></svg>DownKit</a>
+        <p>複製連結即可儲存影片與音樂，並立即編輯的媒體下載工作室。</p>
+        <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">下載 Windows 版</a><a class="ft-btn ghost" href="app.html">Android App</a></div>
       </div>
+      <nav class="ft-col" aria-label="產品"><h4>產品</h4><a href="index.html#how">使用方法</a><a href="index.html#studio">工作室</a><a href="index.html#features">功能</a><a href="index.html#sites">支援的網站</a><a href="pricing.html">價格</a></nav>
+      <nav class="ft-col" aria-label="客戶支援"><h4>客戶支援</h4><a href="support.html#download">安裝指南</a><a href="support.html#help">FAQ 及問題解決</a><a href="support.html#news">公告</a><a href="support.html#contact">一對一諮詢</a></nav>
+      <nav class="ft-col" aria-label="條款與政策"><h4>條款與政策</h4><a href="#terms" class="jump" data-doc="terms">服務條款</a><a href="#privacy" class="jump strong" data-doc="privacy">隱私政策</a><a href="#refund" class="jump" data-doc="refund">退款與取消政策</a><a href="#copyright" class="jump" data-doc="copyright">版權保護政策</a></nav>
     </div>
-    <div class="biz">
+    <div class="ft-biz">
       <p><em><span>公司名稱</span>KNEXM Co., Ltd.</em><em><span>執行長</span>Yeoul Yoon</em><em><span>營業登記號碼</span>878-88-03505</em></p>
-      <p><em><span>通訊販賣業申報編號</span>申報中</em><em><span>地址</span>5F #5830, Namgyeong Bldg., 35 Irwon-ro, Gangnam-gu, Seoul, Republic of Korea</em><em><span>電子郵件</span><a href="mailto:info@knexm.com">info@knexm.com</a></em></p>
-      <p class="copy">© 2026 KNEXM Co., Ltd. All rights reserved.</p>
+      <p><em><span>地址</span>5F #5830, Namgyeong Bldg., 35 Irwon-ro, Gangnam-gu, Seoul, Republic of Korea</em><em><span>電子郵件</span><a href="mailto:info@knexm.com">info@knexm.com</a></em></p>
     </div>
+    <div class="ft-bottom"><span>© 2026 KNEXM Co., Ltd. All rights reserved.</span><span>DownKit</span></div>
   </div>
 </footer>
 <script>
