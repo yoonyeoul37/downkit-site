@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">Studio <em class="nw">NEW</em></a>
       <a href="#android">Aplikasi Android <em class="nw">NEW</em></a>
       <a href="#features">Fitur</a>
-      <a href="#sites">Situs Didukung</a>
+      <a href="#sites">Panduan penggunaan</a>
       <a href="pricing.html">Harga</a>
       <a href="support.html">Bantuan</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Studio pengunduh dan editor media untuk Windows · Android</span>
-        <h1><span style="white-space:nowrap">Cukup salin URL</span><br><span style="white-space:nowrap">untuk mulai <em>mengunduh media</em></span><br><span style="white-space:nowrap"><em>dengan mudah</em>,</span><br>DownKit</h1>
-        <p class="lead">Simpan video dan musik dari berbagai platform ke PC Anda dengan kualitas gambar dan suara tinggi. Mendukung hingga 8K dan audio asli tanpa iklan, dan file yang diunduh dapat langsung diedit di Studio.</p>
+        <span class="eyebrow"><span class="dot"></span>Studio penyimpan dan editor media untuk Windows · Android</span>
+        <h1>Simpan dan<br><em>langsung edit di</em><br><em>studio media</em>,<br>DownKit</h1>
+        <p class="lead">Simpan video dan musik buatan Anda sendiri atau yang sudah mendapat izin penggunaan ke PC dalam kualitas tinggi, lalu kompres, konversi, dan edit langsung di studio bawaan. Tanpa iklan, mendukung hingga 8K dan kualitas audio asli.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Unduh versi Windows</a>
           <div class="cta-meta"><b class="mono js-ver">Versi 0.1.4 (97 MB)</b><span>OS yang didukung: Windows 10 / 11 (64-bit)</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">Cukup salin URL untuk mulai <em>mengunduh media dengan mudah</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">Tempel tautan video</span>
             <span class="fmt"><span class="on">Video · Kualitas terbaik</span><span>MP3 · 320 kbps</span></span>
             <span class="go">Tempel</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">Vlog jalan malam</div>
-                <div class="who">Instagram</div>
+                <div class="who">Kanal saya</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · dengan subtitle</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>Selesai</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">APLIKASI ANDROID · NEW</div>
         <h2>DownKit juga di ponsel<br>Sekali bagikan, langsung tersimpan</h2>
-        <p>Di aplikasi seperti YouTube, ketuk [Bagikan] → DownKit dan file langsung tersimpan. Masuk dengan akun yang sama seperti di Windows, dan manfaat Pro tetap berlaku.</p>
+        <p>Di aplikasi lain, ketuk [Bagikan] → DownKit dan file langsung tersimpan. Masuk dengan akun yang sama seperti di Windows, dan manfaat Pro tetap berlaku.</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>Simpan langsung lewat Bagikan</h3><p>Pilih DownKit melalui tombol bagikan di aplikasi lain, tentukan kualitas, dan file langsung tersimpan. Jika Anda sudah menyalin tautan, tautan akan terisi otomatis saat aplikasi dibuka.</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Pilih lagu dari kompilasi <em>3 lagu gratis</em></h3><p>Membaca daftar lagu dari video kompilasi yang berisi banyak lagu berurutan, lalu menyimpan lagu favorit Anda satu per satu secara terpisah.</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Rekam siaran langsung · audio <em>10 menit gratis</em></h3><p>Rekam siaran langsung seperti SOOP sebagai video atau rekam audionya saja. Bisa dijeda dan dilanjutkan, dan tersimpan otomatis saat siaran berakhir.</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Hanya bagian yang Anda mau dari video panjang <em>3 bagian gratis</em></h3><p>Dari video panjang yang terbagi menjadi beberapa chapter (segmen), pilih hanya bagian yang Anda perlukan dan simpan secara terpisah.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Rekam siaran langsung · audio <em>10 menit gratis</em></h3><p>Rekam siaran langsung yang Anda bawakan atau yang sudah mendapat izin sebagai video, atau rekam audionya saja. Bisa dijeda dan dilanjutkan, dan tersimpan otomatis saat siaran berakhir.</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>Potong · Perkecil ukuran · Konversi <em>Gratis</em></h3><p>Tidak hanya file yang diunduh, video dan lagu yang ada di ponsel pun bisa langsung diedit.</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">Aplikasi Android segera hadir</span><div class="cta-meta"><b>Untuk ponsel Android</b><span>Instal langsung dari situs web (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">Unduh</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Kompilasi 30 lagu kenangan</div><div class="ph-s">30 lagu · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Vlog berkemah akhir pekan</div><div class="ph-s">5 chapter · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>Pilih lagu</b><span>&#10005;</span></div>
-            <p class="ph-sub">3 dari 30 lagu dipilih</p>
-            <div class="ph-row on"><i></i><span>01</span><b>Kenangan Musim Semi</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>Tempat Angin Singgah</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>Malam Musim Panas Itu</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>Di Balik Bukit Hijau</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>Sampai Jumpa Lagi</b><em>3:36</em></div>
-            <div class="ph-go">Unduh 3 lagu terpilih</div>
+            <div class="ph-sh"><b>Pilih bagian</b><span>&#10005;</span></div>
+            <p class="ph-sub">3 dari 5 dipilih</p>
+            <div class="ph-row on"><i></i><span>01</span><b>Berangkat &amp; belanja</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>Mendirikan tenda</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>Memasak makan malam</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>Api unggun malam</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>Berkemas pagi</b><em>3:36</em></div>
+            <div class="ph-go">Simpan 3 terpilih</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>Simpan subtitle</h3><p>Simpan juga file subtitle (<span class="spec">.srt</span>) bersama video untuk digunakan di sebagian besar pemutar.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>Buat GIF</h3><p>Pilih adegan yang diinginkan dari video untuk membuat GIF berdurasi hingga 15 detik.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>Putar langsung</h3><p>Tonton video dan dengarkan musik langsung di DownKit tanpa membuka pemutar lain.</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>Masuk ke situs</h3><p>Masuk ke situs yang Anda gunakan langsung di DownKit untuk mengunduh video yang dapat ditonton oleh akun Anda sendiri.</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>Dirancang untuk menghormati hak cipta</h3><p>Konten yang dilindungi DRM (perlindungan salinan) tidak akan disimpan, dan tidak ada fitur untuk mengakali teknologi perlindungan.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>Mendukung 23 bahasa</h3><p>Mendukung 23 bahasa, termasuk bahasa Korea, English, 日本語, 中文, Español, dan Deutsch. Bahasa berganti otomatis sesuai pengaturan bahasa komputer Anda.</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">Situs Didukung</div>
-        <h2>Mendukung berbagai platform eksternal</h2>
-        <p>Menganalisis tautan dari platform video dan audio populer untuk memberikan pengunduhan yang stabil.</p>
+        <div class="label">Panduan penggunaan</div>
+        <h2>Alat simpan &amp; edit<br>untuk konten yang diizinkan</h2>
+        <p>DownKit adalah program untuk menyimpan dan mengedit konten buatan Anda sendiri atau konten yang diizinkan oleh pemegang hak cipta.</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">Dan banyak situs video lainnya</span>
-        </div>
-        <p class="note">Video yang dilindungi DRM (perlindungan salinan) tidak dapat diunduh.</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>Konten buatan Anda</h3><p>Cadangkan video yang Anda unggah ke kanal atau media sosial Anda ke PC, lalu edit kembali.</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>Konten yang sudah diizinkan</h3><p>Simpan materi yang diizinkan untuk disimpan oleh pemegang hak cipta, atau yang dipublikasikan dengan lisensi seperti Creative Commons.</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>Konten yang tidak didukung</h3><p>Konten yang dilindungi DRM (perlindungan salinan) dan video dari layanan streaming berbayar tidak dapat disimpan.</p></div></div>
+        <p class="note">Mengunggah ulang atau menjual tanpa izin dapat melanggar hak cipta. Untuk detailnya, lihat <a href="legal.html#copyright">Kebijakan Hak Cipta</a> kami.</p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>Apakah ada iklan atau program pihak ketiga yang ikut terinstal?<svg><use href="#i-plus"/></svg></summary><p>Tidak. Hanya DownKit yang terinstal, tanpa iklan atau program pihak ketiga.</p></details>
         <details><summary>Apakah ada batas masa pakai setelah membeli?<svg><use href="#i-plus"/></svg></summary><p>Langganan bulanan dan Pro 1 Tahun memungkinkan penggunaan fitur Pro selama periode yang dibayar, sedangkan lisensi selamanya dapat digunakan tanpa batas waktu. Penggunaan gratis juga tidak memiliki batas waktu.</p></details>
         <details><summary>Bagaimana jika terjadi galat karena perubahan platform?<svg><use href="#i-plus"/></svg></summary><p>Jika struktur situs berubah, DownKit akan otomatis memperbarui mesin unduhannya ke versi terbaru. Jika masalah berlanjut, beri tahu kami melalui Hubungi Kami di halaman Bantuan.</p></details>
-        <details><summary>Di mana informasi login situs disimpan?<svg><use href="#i-plus"/></svg></summary><p>Informasi login hanya disimpan di PC Anda dan tidak dikirim ke server perusahaan. Anda dapat keluar kapan saja di Pengaturan.</p></details>
         <details><summary>Bagaimana program diperbarui?<svg><use href="#i-plus"/></svg></summary><p>Saat versi baru tersedia, DownKit akan memberi tahu Anda. Ketuk [Perbarui sekarang] untuk menginstal otomatis lalu memulai ulang program.</p></details>
         <details><summary>Apakah semua video boleh diunduh?<svg><use href="#i-plus"/></svg></summary><p>Harap unduh hanya konten buatan Anda sendiri atau konten yang diizinkan oleh pemegang hak cipta. Mengunggah ulang atau menjual tanpa izin dapat melanggar hak cipta.</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>Mulai gunakan DownKit sekarang</h2>
-          <p>Unduhan cerdas, cukup dengan sekali salin URL.</p>
+          <p>Dari menyimpan hingga mengedit, semua dalam satu program.</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Unduh versi Windows</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>Simpan video dan musik cukup dengan menyalin tautan, lalu langsung edit.</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Unduh versi Windows</a><a class="ft-btn ghost" href="app.html">Aplikasi Android</a></div>
       </div>
-      <nav class="ft-col" aria-label="Produk"><h4>Produk</h4><a href="index.html#how">Cara Pakai</a><a href="index.html#studio">Studio</a><a href="index.html#features">Fitur</a><a href="index.html#sites">Situs Didukung</a><a href="pricing.html">Harga</a></nav>
+      <nav class="ft-col" aria-label="Produk"><h4>Produk</h4><a href="index.html#how">Cara Pakai</a><a href="index.html#studio">Studio</a><a href="index.html#features">Fitur</a><a href="index.html#sites">Panduan penggunaan</a><a href="pricing.html">Harga</a></nav>
       <nav class="ft-col" aria-label="Dukungan"><h4>Dukungan</h4><a href="support.html#download">Panduan instalasi</a><a href="support.html#help">FAQ dan pemecahan masalah</a><a href="support.html#news">Pengumuman</a><a href="support.html#contact">Hubungi Kami</a></nav>
       <nav class="ft-col" aria-label="Ketentuan &amp; kebijakan"><h4>Ketentuan &amp; kebijakan</h4><a href="legal.html#terms">Ketentuan Layanan</a><a class="strong" href="legal.html#privacy">Kebijakan Privasi</a><a href="legal.html#refund">Kebijakan Pengembalian Dana dan Pembatalan</a><a href="legal.html#copyright">Kebijakan Hak Cipta</a></nav>
     </div>

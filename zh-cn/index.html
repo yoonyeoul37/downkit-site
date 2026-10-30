@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">工作室 <em class="nw">NEW</em></a>
       <a href="#android">Android 应用 <em class="nw">NEW</em></a>
       <a href="#features">功能</a>
-      <a href="#sites">支持的网站</a>
+      <a href="#sites">使用说明</a>
       <a href="pricing.html">价格</a>
       <a href="support.html">帮助</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Windows · Android 媒体下载与编辑工作室</span>
-        <h1><span style="white-space:nowrap">只需复制一次 URL</span><br><span style="white-space:nowrap">即可开启<em>轻松的</em></span><br><span style="white-space:nowrap"><em>媒体下载</em>，</span><br>DownKit</h1>
-        <p class="lead">将各大平台的视频和音乐以高画质、高音质保存到您的电脑。在无广告的清爽环境中支持最高 8K 画质和原始音频，下载的文件还可通过工作室立即编辑。</p>
+        <span class="eyebrow"><span class="dot"></span>Windows · Android 媒体保存与编辑工作室</span>
+        <h1><span style="white-space:nowrap">保存之后</span><br><span style="white-space:nowrap"><em>立即编辑的</em></span><br><span style="white-space:nowrap"><em>媒体工作室</em>，</span><br>DownKit</h1>
+        <p class="lead">将自己制作或已获授权使用的视频和音乐以高画质保存到您的电脑，并在内置工作室中立即压缩、转换和编辑。无广告，支持最高 8K 画质和原始音质。</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>下载 Windows 版</a>
           <div class="cta-meta"><b class="mono js-ver">版本 0.1.4 (97 MB)</b><span>支持系统：Windows 10 / 11（64 位）</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">只需复制一次 URL，即可开启<em>轻松的媒体下载</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">请粘贴视频链接</span>
             <span class="fmt"><span class="on">视频 · 最高画质</span><span>MP3 · 320 kbps</span></span>
             <span class="go">粘贴</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">夜间散步 Vlog</div>
-                <div class="who">Instagram</div>
+                <div class="who">我的频道</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · 含字幕</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>完成</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">ANDROID 应用 · NEW</div>
         <h2>手机上也能用 DownKit<br>分享一下即可保存</h2>
-        <p>在 YouTube 等应用中点按 [分享] → DownKit，即可直接保存。使用与 Windows 相同的账号登录，Pro 权益也将同步延续。</p>
+        <p>在其他应用中点按 [分享] → DownKit，即可直接保存。使用与 Windows 相同的账号登录，Pro 权益也将同步延续。</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>通过分享直接保存</h3><p>在其他应用中通过分享按钮选择 DownKit，只需选择画质即可直接保存。提前复制链接的话，打开应用时会自动填入。</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>从歌曲合集中只保存想要的歌曲 <em>免费 3 首</em></h3><p>读取多首歌曲串联而成的合集视频的曲目列表，将喜欢的歌曲逐首单独保存。</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>直播录制 · 录音 <em>免费 10 分钟</em></h3><p>可将 SOOP 等直播录制为视频，或仅录制音频。支持暂停和继续，直播结束后自动保存。</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>从长视频中只保存想要的部分 <em>免费 3 段</em></h3><p>从分为多个章节（片段）的长视频中，只选择需要的部分单独保存。</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>直播录制 · 录音 <em>免费 10 分钟</em></h3><p>将自己主持或已获授权的直播录制为视频，或仅录制音频。支持暂停和继续，直播结束后自动保存。</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>裁剪 · 压缩体积 · 格式转换 <em>免费</em></h3><p>不仅是下载的文件，手机中已有的视频和歌曲也能立即处理。</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">Android 应用即将推出</span><div class="cta-meta"><b>适用于 Android 手机</b><span>从官网直接安装 (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">获取</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">经典怀旧金曲合集 30 首</div><div class="ph-s">30 首曲目 · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">周末露营 Vlog</div><div class="ph-s">5 个章节 · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>选择想要的歌曲</b><span>&#10005;</span></div>
-            <p class="ph-sub">已从 30 首中选择 3 首</p>
-            <div class="ph-row on"><i></i><span>01</span><b>春日的记忆</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>风停留的地方</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>那个夏夜</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>越过青色山丘</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>直到再相见</b><em>3:36</em></div>
-            <div class="ph-go">获取所选的 3 首</div>
+            <div class="ph-sh"><b>选择想要的部分</b><span>&#10005;</span></div>
+            <p class="ph-sub">已从 5 段中选择 3 段</p>
+            <div class="ph-row on"><i></i><span>01</span><b>出发与采购</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>搭帐篷</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>准备晚餐</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>夜晚篝火</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>早晨收拾</b><em>3:36</em></div>
+            <div class="ph-go">获取所选的 3 段</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>保存字幕</h3><p>将字幕文件（<span class="spec">.srt</span>）与视频一同保存，可在大多数播放器中使用。</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>制作 GIF</h3><p>可从视频中选择想要的画面，制作最长 15 秒的 GIF。</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>直接播放</h3><p>无需启动其他播放器，即可在 DownKit 中直接观看视频、收听音乐。</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>网站登录关联</h3><p>在 DownKit 中登录您使用的网站后，即可下载您自己的账号可观看的视频。</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>尊重版权的设计</h3><p>不会保存受 DRM（复制保护）保护的内容，也没有任何规避保护技术的功能。</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>支持 23 种语言</h3><p>支持韩语、English、日本語、中文、Español、Deutsch 等 23 种语言，并会根据电脑的语言设置自动切换。</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">支持的网站</div>
-        <h2>支持多种外部平台</h2>
-        <p>解析知名视频及音频平台的链接，提供稳定的下载环境。</p>
+        <div class="label">使用说明</div>
+        <h2>专为授权内容打造的<br>保存 · 编辑工具</h2>
+        <p>DownKit 是用于保存和编辑自己制作的内容或经版权所有者授权之内容的程序。</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">以及其他众多视频网站</span>
-        </div>
-        <p class="note">无法下载受 DRM（复制保护）保护的视频。</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>自己制作的内容</h3><p>可将上传到自己频道或社交平台的视频备份到电脑，并重新编辑。</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>已获使用授权的内容</h3><p>可保存版权所有者允许保存的素材，或以 CC 许可等方式公开的素材。</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>不支持的内容</h3><p>无法保存受 DRM（复制保护）保护的内容及付费流媒体服务的视频。</p></div></div>
+        <p class="note">未经许可重新发布或销售，可能构成侵权。详情请查看 <a href="legal.html#copyright">版权保护政策</a>。</p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>会附带安装多余的广告或捆绑程序吗？<svg><use href="#i-plus"/></svg></summary><p>不会。仅安装 DownKit，不含任何广告或捆绑程序。</p></details>
         <details><summary>购买后的使用期限有限制吗？<svg><use href="#i-plus"/></svg></summary><p>月度订阅和 Pro 1 年可在已付费的使用期限内使用 Pro 功能，永久许可证则没有期限限制。免费使用也没有期限限制。</p></details>
         <details><summary>平台改版导致出错时如何应对？<svg><use href="#i-plus"/></svg></summary><p>网站结构发生变化时，DownKit 会自动将下载引擎更新到最新状态。如问题持续，请通过帮助中的一对一咨询告诉我们。</p></details>
-        <details><summary>网站登录信息保存在哪里？<svg><use href="#i-plus"/></svg></summary><p>登录信息仅保存在您的电脑上，不会传送到公司服务器。可随时在设置中退出登录。</p></details>
         <details><summary>程序如何更新？<svg><use href="#i-plus"/></svg></summary><p>有新版本时，DownKit 会通知您。点击 [立即更新] 即可自动安装并重新启动。</p></details>
         <details><summary>所有视频都可以下载吗？<svg><use href="#i-plus"/></svg></summary><p>请仅下载您自己制作的内容或经版权所有者许可的内容。未经许可重新发布或出售可能构成侵犯版权。</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>立即开始使用 DownKit</h2>
-          <p>只需复制一次 URL，开启智能下载。</p>
+          <p>从保存到编辑，一个程序全搞定。</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>下载 Windows 版</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>复制链接即可保存视频和音乐，并立即编辑的媒体下载工作室。</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">下载 Windows 版</a><a class="ft-btn ghost" href="app.html">Android 应用</a></div>
       </div>
-      <nav class="ft-col" aria-label="产品"><h4>产品</h4><a href="index.html#how">使用方法</a><a href="index.html#studio">工作室</a><a href="index.html#features">功能</a><a href="index.html#sites">支持的网站</a><a href="pricing.html">价格</a></nav>
+      <nav class="ft-col" aria-label="产品"><h4>产品</h4><a href="index.html#how">使用方法</a><a href="index.html#studio">工作室</a><a href="index.html#features">功能</a><a href="index.html#sites">使用说明</a><a href="pricing.html">价格</a></nav>
       <nav class="ft-col" aria-label="客户支持"><h4>客户支持</h4><a href="support.html#download">安装指南</a><a href="support.html#help">FAQ 及问题解决</a><a href="support.html#news">公告</a><a href="support.html#contact">一对一咨询</a></nav>
       <nav class="ft-col" aria-label="条款与政策"><h4>条款与政策</h4><a href="legal.html#terms">服务条款</a><a class="strong" href="legal.html#privacy">隐私政策</a><a href="legal.html#refund">退款与取消政策</a><a href="legal.html#copyright">版权保护政策</a></nav>
     </div>

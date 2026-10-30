@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">Studio <em class="nw">NEW</em></a>
       <a href="#android">Aplikace pro Android <em class="nw">NEW</em></a>
       <a href="#features">Funkce</a>
-      <a href="#sites">Podporované weby</a>
+      <a href="#sites">Pokyny k použití</a>
       <a href="pricing.html">Ceník</a>
       <a href="support.html">Nápověda</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Studio pro stahování a úpravu médií pro Windows a Android</span>
-        <h1><span style="white-space:nowrap">Stačí zkopírovat URL –</span><br><span style="white-space:nowrap"><em>snadné</em></span><br><span style="white-space:nowrap"><em>stahování médií</em>,</span><br>DownKit</h1>
-        <p class="lead">Ukládejte do počítače videa a hudbu z mnoha platforem ve vysoké kvalitě obrazu i zvuku. Bez reklam, s podporou kvality až 8K a původního zvuku – a stažené soubory hned upravíte ve Studiu.</p>
+        <span class="eyebrow"><span class="dot"></span>Studio pro ukládání a úpravu médií pro Windows · Android</span>
+        <h1>Uložte<br><em>a hned upravujte –</em><br><em>mediální studio</em>,<br>DownKit</h1>
+        <p class="lead">Ukládejte do počítače ve vysoké kvalitě videa a hudbu, které jste sami vytvořili nebo k jejichž použití máte svolení, a hned je komprimujte, převádějte a upravujte ve vestavěném studiu. Bez reklam, s kvalitou až 8K a původní kvalitou zvuku.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Stáhnout verzi pro Windows</a>
           <div class="cta-meta"><b class="mono js-ver">Verze 0.1.4 (97 MB)</b><span>Systém: Windows 10 / 11 (64bitový)</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">Stačí zkopírovat URL – <em>snadné stahování médií</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">Vložte odkaz na video</span>
             <span class="fmt"><span class="on">Video · nejvyšší kvalita</span><span>MP3 · 320 kbps</span></span>
             <span class="go">Vložit</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">Večerní procházka – vlog</div>
-                <div class="who">Instagram</div>
+                <div class="who">Můj kanál</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · s titulky</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>Hotovo</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">APLIKACE PRO ANDROID · NOVINKA</div>
         <h2>DownKit i v telefonu<br>Jedno sdílení a je uloženo</h2>
-        <p>V aplikaci, jako je YouTube, klepněte na [Sdílet] → DownKit a soubor se hned uloží. Po přihlášení ke stejnému účtu jako ve Windows zůstanou zachovány i výhody Pro.</p>
+        <p>V jiné aplikaci klepněte na [Sdílet] → DownKit a soubor se hned uloží. Po přihlášení ke stejnému účtu jako ve Windows zůstanou zachovány i výhody Pro.</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>Uložení sdílením</h3><p>Vyberte DownKit tlačítkem sdílení v jiné aplikaci, nastavte kvalitu a je hotovo. Zkopírovaný odkaz se po otevření aplikace vyplní automaticky.</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Jen vybrané skladby z kompilace <em>3 skladby zdarma</em></h3><p>Načte seznam skladeb z kompilace více písní a uloží zvlášť jen ty, které si vyberete.</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Záznam živého vysílání · zvuku <em>10 min zdarma</em></h3><p>Nahrávejte živé vysílání, například ze SOOP, jako video nebo jen zvuk. Nahrávání lze pozastavit a obnovit a po skončení vysílání se soubor uloží automaticky.</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Jen vybrané části dlouhých videí <em>3 části zdarma</em></h3><p>Z dlouhých videí rozdělených na kapitoly vyberete jen části, které potřebujete, a uložíte je zvlášť.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Záznam živého vysílání · zvuku <em>10 min zdarma</em></h3><p>Nahrávejte živá vysílání, která sami vedete nebo k jejichž nahrávání máte svolení, jako video nebo jen zvuk. Nahrávání lze pozastavit a obnovit a po skončení vysílání se soubor uloží automaticky.</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>Střih · zmenšení velikosti · převod <em>zdarma</em></h3><p>Upravit můžete nejen stažené soubory, ale i videa a skladby uložené v telefonu.</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">Aplikace pro Android již brzy</span><div class="cta-meta"><b>Pro telefony s Androidem</b><span>Instalace přímo z webu (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">Stáhnout</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Kompilace 30 nostalgických hitů</div><div class="ph-s">30 skladeb · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Víkendový vlog z kempování</div><div class="ph-s">5 kapitol · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>Vyberte skladby</b><span>&#10005;</span></div>
-            <p class="ph-sub">Vybrány 3 z 30 skladeb</p>
-            <div class="ph-row on"><i></i><span>01</span><b>Vzpomínka na jaro</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>Kde se zastaví vítr</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>Ta letní noc</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>Za zeleným kopcem</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>Až se znovu setkáme</b><em>3:36</em></div>
-            <div class="ph-go">Stáhnout 3 vybrané skladby</div>
+            <div class="ph-sh"><b>Vyberte části</b><span>&#10005;</span></div>
+            <p class="ph-sub">Vybrány 3 z 5</p>
+            <div class="ph-row on"><i></i><span>01</span><b>Odjezd a nákupy</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>Stavění stanu</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>Příprava večeře</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>Noc u ohně</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>Ranní balení</b><em>3:36</em></div>
+            <div class="ph-go">Uložit 3 vybrané</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>Ukládání titulků</h3><p>Spolu s videem uloží i soubor titulků (<span class="spec">.srt</span>), který funguje ve většině přehrávačů.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>Tvorba GIF</h3><p>Vyberte z videa scénu a vytvořte z ní GIF dlouhý až 15 sekund.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>Okamžité přehrávání</h3><p>Sledujte videa a poslouchejte hudbu přímo v DownKit, bez spouštění jiného přehrávače.</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>Přihlášení k webům</h3><p>Přihlaste se v DownKitu k webu, který používáte, a stahujte videa, která může sledovat váš vlastní účet.</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>Navrženo s ohledem na autorská práva</h3><p>Obsah chráněný proti kopírování (DRM) se neukládá a DownKit nemá žádné funkce k obcházení ochranných technologií.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>23 jazyků</h3><p>Podporuje 23 jazyků, mimo jiné korejštinu, English, 日本語, 中文, Español a Deutsch. Jazyk se automaticky přizpůsobí nastavení počítače.</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">Podporované weby</div>
-        <h2>Podpora mnoha externích platforem</h2>
-        <p>Analyzuje odkazy z oblíbených video a audio platforem a zajišťuje spolehlivé stahování.</p>
+        <div class="label">Pokyny k použití</div>
+        <h2>Nástroj pro ukládání a úpravy<br>povoleného obsahu</h2>
+        <p>DownKit je program pro ukládání a úpravy obsahu, který jste sami vytvořili nebo k jehož použití vám dal svolení držitel autorských práv.</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">a mnoho dalších video webů</span>
-        </div>
-        <p class="note">Videa chráněná DRM (ochranou proti kopírování) nelze stahovat.</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>Vlastní obsah</h3><p>Zálohujte do počítače videa nahraná na váš kanál nebo sociální sítě a znovu je upravujte.</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>Obsah se svolením</h3><p>Ukládat můžete materiály, jejichž uložení povolil držitel autorských práv, nebo materiály zveřejněné pod licencemi, jako je Creative Commons.</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>Nepodporovaný obsah</h3><p>Obsah chráněný proti kopírování (DRM) a videa z placených streamovacích služeb uložit nelze.</p></div></div>
+        <p class="note">Opětovné zveřejnění nebo prodej bez svolení může porušovat autorská práva. Podrobnosti najdete v dokumentu <a href="legal.html#copyright">Zásady ochrany autorských práv</a>.</p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>Instalují se spolu s programem reklamy nebo partnerské programy?<svg><use href="#i-plus"/></svg></summary><p>Ne. Nainstaluje se pouze DownKit, bez reklam a partnerských programů.</p></details>
         <details><summary>Je doba používání po zakoupení omezená?<svg><use href="#i-plus"/></svg></summary><p>Měsíční předplatné a Pro na 1 rok umožňují používat funkce Pro po zaplacené období, doživotní licence platí bez časového omezení. Bezplatné používání také není časově omezeno.</p></details>
         <details><summary>Co když změny na platformě způsobí chyby?<svg><use href="#i-plus"/></svg></summary><p>Když se struktura webu změní, DownKit automaticky aktualizuje jádro pro stahování. Pokud problém přetrvává, napište nám přes kontaktní formulář v Nápovědě.</p></details>
-        <details><summary>Kde se ukládají přihlašovací údaje k webům?<svg><use href="#i-plus"/></svg></summary><p>Přihlašovací údaje se ukládají pouze ve vašem počítači a neodesílají se na servery společnosti. V nastavení se můžete kdykoli odhlásit.</p></details>
         <details><summary>Jak probíhá aktualizace programu?<svg><use href="#i-plus"/></svg></summary><p>Když vyjde nová verze, DownKit vás upozorní. Po kliknutí na [Aktualizovat nyní] se automaticky nainstaluje a program se znovu spustí.</p></details>
         <details><summary>Mohu stahovat jakékoli video?<svg><use href="#i-plus"/></svg></summary><p>Stahujte pouze obsah, který jste sami vytvořili, nebo obsah, k jehož stažení dal souhlas držitel autorských práv. Opětovné zveřejnění nebo prodej bez souhlasu může porušovat autorská práva.</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>Začněte s DownKit hned teď</h2>
-          <p>Chytré stahování po jediném zkopírování URL.</p>
+          <p>Od uložení po úpravy – vše v jednom programu.</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Stáhnout verzi pro Windows</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>Ukládejte videa a hudbu zkopírováním jednoho odkazu a hned je upravujte.</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Stáhnout verzi pro Windows</a><a class="ft-btn ghost" href="app.html">Aplikace pro Android</a></div>
       </div>
-      <nav class="ft-col" aria-label="Produkt"><h4>Produkt</h4><a href="index.html#how">Jak to funguje</a><a href="index.html#studio">Studio</a><a href="index.html#features">Funkce</a><a href="index.html#sites">Podporované weby</a><a href="pricing.html">Ceník</a></nav>
+      <nav class="ft-col" aria-label="Produkt"><h4>Produkt</h4><a href="index.html#how">Jak to funguje</a><a href="index.html#studio">Studio</a><a href="index.html#features">Funkce</a><a href="index.html#sites">Pokyny k použití</a><a href="pricing.html">Ceník</a></nav>
       <nav class="ft-col" aria-label="Podpora"><h4>Podpora</h4><a href="support.html#download">Průvodce instalací</a><a href="support.html#help">FAQ a řešení problémů</a><a href="support.html#news">Oznámení</a><a href="support.html#contact">Kontakt</a></nav>
       <nav class="ft-col" aria-label="Podmínky a zásady"><h4>Podmínky a zásady</h4><a href="legal.html#terms">Podmínky použití</a><a class="strong" href="legal.html#privacy">Zásady ochrany osobních údajů</a><a href="legal.html#refund">Pravidla vrácení peněz a zrušení</a><a href="legal.html#copyright">Zásady ochrany autorských práv</a></nav>
     </div>

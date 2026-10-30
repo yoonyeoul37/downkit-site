@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">الاستوديو <em class="nw">NEW</em></a>
       <a href="#android">تطبيق Android <em class="nw">NEW</em></a>
       <a href="#features">الميزات</a>
-      <a href="#sites">المواقع المدعومة</a>
+      <a href="#sites">إرشادات الاستخدام</a>
       <a href="pricing.html">الأسعار</a>
       <a href="support.html">المساعدة</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>استوديو لتنزيل الوسائط وتحريرها على Windows وAndroid</span>
-        <h1><span style="white-space:nowrap">بنسخ عنوان URL مرة واحدة</span><br><span style="white-space:nowrap">يبدأ <em>تنزيل</em></span><br><span style="white-space:nowrap"><em>الوسائط بسهولة</em>،</span><br>DownKit</h1>
-        <p class="lead">احفظ الفيديو والموسيقى من منصات متعددة على جهاز الكمبيوتر بجودة صورة وصوت عالية. يدعم دقة تصل إلى 8K والصوت الأصلي في بيئة خالية من الإعلانات، ويمكنك تحرير الملفات التي نزّلتها فورًا عبر الاستوديو.</p>
+        <span class="eyebrow"><span class="dot"></span>استوديو لحفظ الوسائط وتحريرها على Windows · Android</span>
+        <h1>احفظ<br><em>وحرّر فورًا:</em><br><em>استوديو الوسائط</em>،<br>DownKit</h1>
+        <p class="lead">احفظ على جهاز الكمبيوتر بجودة عالية مقاطع الفيديو والموسيقى التي أنشأتها بنفسك أو حصلت على إذن باستخدامها، ثم اضغطها وحوّلها وحرّرها فورًا في الاستوديو المدمج. بلا إعلانات، وبجودة تصل إلى 8K وجودة صوت أصلية.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>تنزيل إصدار Windows</a>
           <div class="cta-meta"><b class="mono js-ver">الإصدار 0.1.4 (97 MB)</b><span>نظام التشغيل المدعوم: Windows 10 / 11 (64 بت)</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">بنسخ عنوان URL مرة واحدة يبدأ <em>تنزيل الوسائط بسهولة</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">الصق رابط الفيديو</span>
             <span class="fmt"><span class="on">فيديو · أعلى جودة</span><span>MP3 · 320 kbps</span></span>
             <span class="go">لصق</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">مدونة فيديو لنزهة ليلية</div>
-                <div class="who">Instagram</div>
+                <div class="who">قناتي</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · مع الترجمة</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>مكتمل</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">تطبيق ANDROID · جديد</div>
         <h2>DownKit على هاتفك أيضًا<br>مشاركة واحدة ويتم الحفظ</h2>
-        <p>في تطبيق مثل YouTube، اضغط [مشاركة] ← DownKit ليُحفظ المحتوى فورًا. وعند تسجيل الدخول بالحساب نفسه المستخدم على Windows، تنتقل مزايا Pro معك كما هي.</p>
+        <p>في تطبيق آخر، اضغط [مشاركة] ← DownKit ليُحفظ المحتوى فورًا. وعند تسجيل الدخول بالحساب نفسه المستخدم على Windows، تنتقل مزايا Pro معك كما هي.</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>الحفظ مباشرة عبر المشاركة</h3><p>اختر DownKit من زر المشاركة في تطبيق آخر، وحدّد الجودة فقط ليتم الحفظ فورًا. وإذا نسخت الرابط مسبقًا، فسيُملأ تلقائيًا عند فتح التطبيق.</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>الأغاني التي تريدها فقط من المجموعات <em>3 أغانٍ مجانًا</em></h3><p>يقرأ قائمة المقاطع في فيديو يجمع عدة أغانٍ متتالية، ويحفظ كل أغنية تعجبك على حدة.</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>تسجيل البث المباشر فيديو وصوتًا <em>10 دقائق مجانًا</em></h3><p>سجّل البث المباشر مثل SOOP بصيغة فيديو أو سجّل الصوت فقط. يمكنك الإيقاف المؤقت والاستئناف، ويُحفظ التسجيل تلقائيًا عند انتهاء البث.</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>الأجزاء التي تريدها فقط من الفيديوهات الطويلة <em>3 أجزاء مجانًا</em></h3><p>اختر من الفيديوهات الطويلة المقسّمة إلى فصول الأجزاء التي تحتاجها فقط، واحفظها كلًّا على حدة.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>تسجيل البث المباشر فيديو وصوتًا <em>10 دقائق مجانًا</em></h3><p>سجّل البث المباشر الذي تقدّمه أو حصلت على إذن بتسجيله بصيغة فيديو أو سجّل الصوت فقط. يمكنك الإيقاف المؤقت والاستئناف، ويُحفظ التسجيل تلقائيًا عند انتهاء البث.</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>القص · تقليل الحجم · التحويل <em>مجانًا</em></h3><p>يمكنك تعديل الملفات التي نزّلتها، وكذلك مقاطع الفيديو والأغاني الموجودة على هاتفك مباشرة.</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">تطبيق Android قريبًا</span><div class="cta-meta"><b>لهواتف Android</b><span>التثبيت مباشرة من الموقع (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">تنزيل</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">مجموعة 30 أغنية من الروائع القديمة</div><div class="ph-s">30 مقطعًا · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">مدونة فيديو لتخييم نهاية الأسبوع</div><div class="ph-s">5 فصول · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>اختر الأغاني التي تريدها</b><span>&#10005;</span></div>
-            <p class="ph-sub">تم اختيار 3 من 30 أغنية</p>
-            <div class="ph-row on"><i></i><span>01</span><b>ذكرى يوم ربيعي</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>حيث تستقر الرياح</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>تلك الليلة الصيفية</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>ما وراء التل الأخضر</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>حتى نلتقي مجددًا</b><em>3:36</em></div>
-            <div class="ph-go">تنزيل الأغاني الثلاث المختارة</div>
+            <div class="ph-sh"><b>اختر الأجزاء التي تريدها</b><span>&#10005;</span></div>
+            <p class="ph-sub">تم اختيار 3 من 5</p>
+            <div class="ph-row on"><i></i><span>01</span><b>الانطلاق والتسوّق</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>نصب الخيمة</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>تحضير العشاء</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>ليلة حول النار</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>ترتيب الصباح</b><em>3:36</em></div>
+            <div class="ph-go">حفظ الأجزاء الثلاثة المختارة</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>حفظ الترجمة</h3><p>يحفظ ملف الترجمة (<span class="spec">.srt</span>) مع الفيديو لاستخدامه في معظم المشغلات.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>إنشاء GIF</h3><p>اختر المشهد الذي تريده من الفيديو وحوّله إلى GIF بطول يصل إلى 15 ثانية.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>تشغيل فوري</h3><p>شاهد مقاطع الفيديو واستمع إلى الموسيقى مباشرة في DownKit دون تشغيل مشغل آخر.</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>تسجيل الدخول إلى المواقع</h3><p>سجّل الدخول داخل DownKit إلى موقع تستخدمه لتنزيل مقاطع الفيديو التي يمكن لحسابك الخاص مشاهدتها.</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>تصميم يحترم حقوق النشر</h3><p>لا يحفظ المحتوى المحمي بتقنيات منع النسخ (DRM)، ولا يتضمن أي ميزة للتحايل على تقنيات الحماية.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>دعم 23 لغة</h3><p>يدعم 23 لغة منها الكورية وEnglish و日本語 و中文 وEspañol وDeutsch. وتتغير اللغة تلقائيًا وفق إعدادات لغة الكمبيوتر.</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">المواقع المدعومة</div>
-        <h2>دعم منصات خارجية متنوعة</h2>
-        <p>يحلّل روابط منصات الفيديو والصوت الشهيرة لتوفير بيئة تنزيل مستقرة.</p>
+        <div class="label">إرشادات الاستخدام</div>
+        <h2>أداة حفظ وتحرير<br>للمحتوى المسموح به</h2>
+        <p>DownKit برنامج لحفظ وتحرير المحتوى الذي أنشأته بنفسك أو الذي أذن لك صاحب حقوق النشر باستخدامه.</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">ومواقع فيديو أخرى كثيرة</span>
-        </div>
-        <p class="note">لا يمكن تنزيل مقاطع الفيديو المحمية بتقنية DRM (منع النسخ).</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>محتوى أنشأته بنفسك</h3><p>احتفظ بنسخة احتياطية على جهاز الكمبيوتر من الفيديوهات التي نشرتها على قناتك أو على وسائل التواصل الاجتماعي، وحرّرها من جديد.</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>محتوى حصلت على إذن باستخدامه</h3><p>يمكنك حفظ المواد التي أذن صاحب حقوق النشر بحفظها، أو المنشورة بتراخيص مثل Creative Commons.</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>محتوى غير مدعوم</h3><p>لا يمكن حفظ المحتوى المحمي بتقنيات منع النسخ (DRM) ولا فيديوهات خدمات البث المدفوعة.</p></div></div>
+        <p class="note">قد تُعدّ إعادة النشر أو البيع دون إذن انتهاكًا لحقوق النشر. لمزيد من التفاصيل، راجع <a href="legal.html#copyright">سياسة حماية حقوق النشر</a>.</p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>هل تُثبَّت معه إعلانات أو برامج شريكة غير ضرورية؟<svg><use href="#i-plus"/></svg></summary><p>لا. يُثبَّت DownKit وحده دون أي إعلانات أو برامج شريكة.</p></details>
         <details><summary>هل توجد مدة محددة للاستخدام بعد الشراء؟<svg><use href="#i-plus"/></svg></summary><p>في الاشتراك الشهري وPro لمدة سنة، يمكنك استخدام ميزات Pro طوال المدة المدفوعة، أما الترخيص الدائم فيُستخدم دون حد زمني. والاستخدام المجاني بلا حد زمني أيضًا.</p></details>
         <details><summary>كيف تتعاملون مع الأخطاء الناتجة عن تغييرات المنصات؟<svg><use href="#i-plus"/></svg></summary><p>عندما يتغير هيكل الموقع، يحدّث DownKit محرك التنزيل تلقائيًا إلى أحدث إصدار. وإذا استمرت المشكلة، فأخبرنا عبر نموذج التواصل في صفحة المساعدة.</p></details>
-        <details><summary>أين تُحفظ بيانات تسجيل الدخول إلى المواقع؟<svg><use href="#i-plus"/></svg></summary><p>تُحفظ بيانات تسجيل الدخول على جهاز الكمبيوتر الخاص بك فقط ولا تُرسل إلى خوادم الشركة. ويمكنك تسجيل الخروج في أي وقت من الإعدادات.</p></details>
         <details><summary>كيف يتم تحديث البرنامج؟<svg><use href="#i-plus"/></svg></summary><p>عند صدور إصدار جديد، سيُعلمك DownKit بذلك. وعند الضغط على [التحديث الآن] يُثبَّت تلقائيًا ثم يُعاد تشغيل البرنامج.</p></details>
         <details><summary>هل يجوز تنزيل أي فيديو؟<svg><use href="#i-plus"/></svg></summary><p>يُرجى تنزيل المحتوى الذي أنشأته بنفسك أو الذي أذن به صاحب حقوق النشر فقط. فإعادة نشره أو بيعه دون إذن قد تُعد انتهاكًا لحقوق النشر.</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>ابدأ استخدام DownKit الآن</h2>
-          <p>تنزيل ذكي يبدأ بنسخ عنوان URL مرة واحدة.</p>
+          <p>من الحفظ إلى التحرير، في برنامج واحد.</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>تنزيل إصدار Windows</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>احفظ الفيديوهات والموسيقى بنسخ رابط واحد فقط، ثم حرّرها فورًا.</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">تنزيل إصدار Windows</a><a class="ft-btn ghost" href="app.html">تطبيق Android</a></div>
       </div>
-      <nav class="ft-col" aria-label="المنتج"><h4>المنتج</h4><a href="index.html#how">طريقة الاستخدام</a><a href="index.html#studio">الاستوديو</a><a href="index.html#features">الميزات</a><a href="index.html#sites">المواقع المدعومة</a><a href="pricing.html">الأسعار</a></nav>
+      <nav class="ft-col" aria-label="المنتج"><h4>المنتج</h4><a href="index.html#how">طريقة الاستخدام</a><a href="index.html#studio">الاستوديو</a><a href="index.html#features">الميزات</a><a href="index.html#sites">إرشادات الاستخدام</a><a href="pricing.html">الأسعار</a></nav>
       <nav class="ft-col" aria-label="الدعم"><h4>الدعم</h4><a href="support.html#download">دليل التثبيت</a><a href="support.html#help">الأسئلة الشائعة وحل المشكلات</a><a href="support.html#news">الإعلانات</a><a href="support.html#contact">تواصل معنا</a></nav>
       <nav class="ft-col" aria-label="الشروط والسياسات"><h4>الشروط والسياسات</h4><a href="legal.html#terms">شروط الاستخدام</a><a class="strong" href="legal.html#privacy">سياسة الخصوصية</a><a href="legal.html#refund">سياسة الاسترداد والإلغاء</a><a href="legal.html#copyright">سياسة حماية حقوق النشر</a></nav>
     </div>

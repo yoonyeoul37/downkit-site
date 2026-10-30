@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">สตูดิโอ <em class="nw">NEW</em></a>
       <a href="#android">แอป Android <em class="nw">NEW</em></a>
       <a href="#features">ฟีเจอร์</a>
-      <a href="#sites">เว็บไซต์ที่รองรับ</a>
+      <a href="#sites">แนวทางการใช้งาน</a>
       <a href="pricing.html">ราคา</a>
       <a href="support.html">ช่วยเหลือ</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>สตูดิโอดาวน์โหลดและแก้ไขสื่อสำหรับ Windows · Android</span>
-        <h1><span style="white-space:nowrap">คัดลอก URL เพียงครั้งเดียว</span><br><span style="white-space:nowrap">ก็เริ่ม<em>ดาวน์โหลดสื่อ</em></span><br><span style="white-space:nowrap"><em>ได้ง่ายๆ</em></span><br>DownKit</h1>
-        <p class="lead">บันทึกวิดีโอและเพลงจากหลากหลายแพลตฟอร์มลง PC ของคุณด้วยภาพและเสียงคุณภาพสูง รองรับความละเอียดสูงสุด 8K และเสียงต้นฉบับในสภาพแวดล้อมที่ไม่มีโฆษณา และนำไฟล์ที่ดาวน์โหลดไปแก้ไขในสตูดิโอได้ทันที</p>
+        <span class="eyebrow"><span class="dot"></span>สตูดิโอบันทึกและแก้ไขสื่อสำหรับ Windows · Android</span>
+        <h1>บันทึกแล้ว<br><em>แก้ไขได้ทันที</em><br><em>สตูดิโอสื่อ</em><br>DownKit</h1>
+        <p class="lead">บันทึกวิดีโอและเพลงที่คุณสร้างเองหรือได้รับอนุญาตให้ใช้ลง PC ด้วยคุณภาพสูง แล้วบีบอัด แปลงไฟล์ และแก้ไขได้ทันทีในสตูดิโอในตัว ไม่มีโฆษณา รองรับความละเอียดสูงสุด 8K และเสียงคุณภาพต้นฉบับ</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>ดาวน์โหลดเวอร์ชัน Windows</a>
           <div class="cta-meta"><b class="mono js-ver">เวอร์ชัน 0.1.4 (97 MB)</b><span>ระบบปฏิบัติการที่รองรับ: Windows 10 / 11 (64 บิต)</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">คัดลอก URL เพียงครั้งเดียว <em>ดาวน์โหลดสื่อได้ง่ายๆ</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">วางลิงก์วิดีโอ</span>
             <span class="fmt"><span class="on">วิดีโอ · คุณภาพสูงสุด</span><span>MP3 · 320 kbps</span></span>
             <span class="go">วาง</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">วล็อกเดินเล่นยามค่ำคืน</div>
-                <div class="who">Instagram</div>
+                <div class="who">ช่องของฉัน</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · มีคำบรรยาย</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>เสร็จสิ้น</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">แอป ANDROID · NEW</div>
         <h2>DownKit บนโทรศัพท์ก็มี<br>แชร์ครั้งเดียวก็บันทึกเสร็จ</h2>
-        <p>ในแอปอย่าง YouTube แตะ [แชร์] → DownKit ก็บันทึกได้ทันที เข้าสู่ระบบด้วยบัญชีเดียวกับบน Windows เพื่อใช้สิทธิ์ Pro ต่อได้เลย</p>
+        <p>ในแอปอื่น แตะ [แชร์] → DownKit ก็บันทึกได้ทันที เข้าสู่ระบบด้วยบัญชีเดียวกับบน Windows เพื่อใช้สิทธิ์ Pro ต่อได้เลย</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>บันทึกทันทีผ่านการแชร์</h3><p>เลือก DownKit จากปุ่มแชร์ในแอปอื่น แล้วเลือกเพียงคุณภาพก็บันทึกได้ทันที หากคัดลอกลิงก์ไว้ ลิงก์จะถูกกรอกให้อัตโนมัติเมื่อเปิดแอป</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>เลือกเฉพาะเพลงที่ต้องการจากคลิปรวมเพลง <em>ฟรี 3 เพลง</em></h3><p>อ่านรายการแทร็กของวิดีโอรวมเพลงที่มีหลายเพลงต่อกัน แล้วบันทึกเฉพาะเพลงที่ชอบแยกเป็นทีละเพลง</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>บันทึกวิดีโอ · เสียงจากไลฟ์สด <em>ฟรี 10 นาที</em></h3><p>บันทึกไลฟ์สดอย่าง SOOP เป็นวิดีโอ หรือบันทึกเฉพาะเสียง หยุดชั่วคราวและเริ่มต่อได้ และบันทึกอัตโนมัติเมื่อไลฟ์จบ</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>เลือกเฉพาะช่วงที่ต้องการจากวิดีโอยาว <em>ฟรี 3 ช่วง</em></h3><p>จากวิดีโอยาวที่แบ่งเป็นแชปเตอร์ (ช่วง) เลือกเฉพาะช่วงที่ต้องการแล้วบันทึกแยกกัน</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>บันทึกวิดีโอ · เสียงจากไลฟ์สด <em>ฟรี 10 นาที</em></h3><p>บันทึกไลฟ์สดที่คุณจัดเองหรือได้รับอนุญาตเป็นวิดีโอ หรือบันทึกเฉพาะเสียง หยุดชั่วคราวและเริ่มต่อได้ และบันทึกอัตโนมัติเมื่อไลฟ์จบ</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>ตัด · ลดขนาด · แปลงไฟล์ <em>ฟรี</em></h3><p>แก้ไขได้ทันที ทั้งไฟล์ที่ดาวน์โหลดมาและวิดีโอหรือเพลงที่มีอยู่ในโทรศัพท์</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">แอป Android กำลังจะเปิดตัว</span><div class="cta-meta"><b>สำหรับโทรศัพท์ Android</b><span>ติดตั้งได้ทันทีจากเว็บไซต์ (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">ดาวน์โหลด</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">รวม 30 เพลงฮิตในความทรงจำ</div><div class="ph-s">30 แทร็ก · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">วล็อกแคมป์ปิ้งวันหยุด</div><div class="ph-s">5 แชปเตอร์ · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>เลือกเพลงที่ต้องการ</b><span>&#10005;</span></div>
-            <p class="ph-sub">เลือกแล้ว 3 จาก 30 เพลง</p>
-            <div class="ph-row on"><i></i><span>01</span><b>ความทรงจำวันฤดูใบไม้ผลิ</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>ที่ซึ่งสายลมพักพิง</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>คืนฤดูร้อนนั้น</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>เลยเนินเขาสีคราม</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>จนกว่าจะพบกันอีก</b><em>3:36</em></div>
-            <div class="ph-go">ดาวน์โหลด 3 เพลงที่เลือก</div>
+            <div class="ph-sh"><b>เลือกช่วงที่ต้องการ</b><span>&#10005;</span></div>
+            <p class="ph-sub">เลือกแล้ว 3 จาก 5 ช่วง</p>
+            <div class="ph-row on"><i></i><span>01</span><b>ออกเดินทางและซื้อของ</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>กางเต็นท์</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>ทำอาหารเย็น</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>ก่อกองไฟยามค่ำ</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>เก็บของตอนเช้า</b><em>3:36</em></div>
+            <div class="ph-go">บันทึก 3 ช่วงที่เลือก</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>บันทึกคำบรรยาย</h3><p>บันทึกไฟล์คำบรรยาย (<span class="spec">.srt</span>) พร้อมวิดีโอ เพื่อใช้กับเครื่องเล่นส่วนใหญ่ได้</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>สร้าง GIF</h3><p>เลือกฉากที่ต้องการจากวิดีโอ แล้วสร้างเป็น GIF ยาวสูงสุด 15 วินาที</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>เล่นได้ทันที</h3><p>ดูวิดีโอและฟังเพลงได้ทันทีใน DownKit โดยไม่ต้องเปิดเครื่องเล่นอื่น</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>เชื่อมต่อการเข้าสู่ระบบเว็บไซต์</h3><p>เข้าสู่ระบบเว็บไซต์ที่คุณใช้ภายใน DownKit เพื่อดาวน์โหลดวิดีโอที่บัญชีของคุณเองสามารถดูได้</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>ออกแบบโดยเคารพลิขสิทธิ์</h3><p>ไม่บันทึกเนื้อหาที่มี DRM (การป้องกันการคัดลอก) และไม่มีฟีเจอร์สำหรับหลบเลี่ยงเทคโนโลยีการป้องกัน</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>รองรับ 23 ภาษา</h3><p>รองรับ 23 ภาษา เช่น ภาษาเกาหลี, English, 日本語, 中文, Español, Deutsch และจะเปลี่ยนให้อัตโนมัติตามการตั้งค่าภาษาของคอมพิวเตอร์</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">เว็บไซต์ที่รองรับ</div>
-        <h2>รองรับแพลตฟอร์มภายนอกหลากหลาย</h2>
-        <p>วิเคราะห์ลิงก์จากแพลตฟอร์มวิดีโอและเสียงชื่อดัง เพื่อการดาวน์โหลดที่เสถียร</p>
+        <div class="label">แนวทางการใช้งาน</div>
+        <h2>เครื่องมือบันทึก · แก้ไข<br>สำหรับเนื้อหาที่ได้รับอนุญาต</h2>
+        <p>DownKit เป็นโปรแกรมสำหรับบันทึกและแก้ไขเนื้อหาที่คุณสร้างเอง หรือเนื้อหาที่เจ้าของลิขสิทธิ์อนุญาต</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">และเว็บไซต์วิดีโออื่นๆ อีกมากมาย</span>
-        </div>
-        <p class="note">ไม่สามารถดาวน์โหลดวิดีโอที่มี DRM (การป้องกันการคัดลอก) ได้</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>เนื้อหาที่คุณสร้างเอง</h3><p>สำรองวิดีโอที่คุณโพสต์ในช่องหรือโซเชียลมีเดียของตัวเองไว้ใน PC และนำมาแก้ไขใหม่ได้</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>เนื้อหาที่ได้รับอนุญาตให้ใช้</h3><p>บันทึกสื่อที่เจ้าของลิขสิทธิ์อนุญาตให้บันทึก หรือสื่อที่เผยแพร่ภายใต้สัญญาอนุญาตอย่าง CC ได้</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>เนื้อหาที่ไม่รองรับ</h3><p>ไม่สามารถบันทึกเนื้อหาที่มี DRM (การป้องกันการคัดลอก) และวิดีโอจากบริการสตรีมมิงแบบเสียเงินได้</p></div></div>
+        <p class="note">การนำไปเผยแพร่ซ้ำหรือขายโดยไม่ได้รับอนุญาตอาจละเมิดลิขสิทธิ์ ดูรายละเอียดได้ที่ <a href="legal.html#copyright">นโยบายคุ้มครองลิขสิทธิ์</a></p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>มีการติดตั้งโฆษณาหรือโปรแกรมพันธมิตรที่ไม่จำเป็นมาด้วยไหม<svg><use href="#i-plus"/></svg></summary><p>ไม่มี จะติดตั้งเฉพาะ DownKit เท่านั้น โดยไม่มีโฆษณาหรือโปรแกรมพันธมิตร</p></details>
         <details><summary>หลังซื้อแล้วมีการจำกัดระยะเวลาใช้งานไหม<svg><use href="#i-plus"/></svg></summary><p>แพ็กเกจรายเดือนและ Pro 1 ปีใช้ฟีเจอร์ Pro ได้ตลอดระยะเวลาที่ชำระเงิน ส่วนไลเซนส์ถาวรใช้ได้โดยไม่จำกัดระยะเวลา การใช้งานฟรีก็ไม่มีการจำกัดระยะเวลา</p></details>
         <details><summary>หากเกิดข้อผิดพลาดเพราะแพลตฟอร์มมีการเปลี่ยนแปลง จะแก้ไขอย่างไร<svg><use href="#i-plus"/></svg></summary><p>เมื่อโครงสร้างเว็บไซต์เปลี่ยน DownKit จะอัปเดตเอนจินดาวน์โหลดให้เป็นเวอร์ชันล่าสุดโดยอัตโนมัติ หากยังมีปัญหา โปรดแจ้งเราผ่านช่องทางติดต่อสอบถามในหน้าช่วยเหลือ</p></details>
-        <details><summary>ข้อมูลการเข้าสู่ระบบเว็บไซต์ถูกเก็บไว้ที่ไหน<svg><use href="#i-plus"/></svg></summary><p>ข้อมูลการเข้าสู่ระบบจะถูกเก็บไว้ใน PC ของคุณเท่านั้น และไม่ถูกส่งไปยังเซิร์ฟเวอร์ของบริษัท คุณออกจากระบบได้ทุกเมื่อในการตั้งค่า</p></details>
         <details><summary>การอัปเดตโปรแกรมทำอย่างไร<svg><use href="#i-plus"/></svg></summary><p>เมื่อมีเวอร์ชันใหม่ DownKit จะแจ้งให้ทราบ แตะ [อัปเดตเดี๋ยวนี้] แล้วโปรแกรมจะติดตั้งให้อัตโนมัติและเปิดใหม่</p></details>
         <details><summary>ดาวน์โหลดวิดีโอใดก็ได้หรือไม่<svg><use href="#i-plus"/></svg></summary><p>โปรดดาวน์โหลดเฉพาะเนื้อหาที่คุณสร้างเองหรือได้รับอนุญาตจากเจ้าของลิขสิทธิ์ การนำไปเผยแพร่ซ้ำหรือขายโดยไม่ได้รับอนุญาตอาจเป็นการละเมิดลิขสิทธิ์</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>เริ่มใช้ DownKit ได้เลยตอนนี้</h2>
-          <p>ดาวน์โหลดอย่างชาญฉลาด เริ่มได้ด้วยการคัดลอก URL เพียงครั้งเดียว</p>
+          <p>ตั้งแต่บันทึกจนถึงแก้ไข ครบในโปรแกรมเดียว</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>ดาวน์โหลดเวอร์ชัน Windows</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>บันทึกวิดีโอและเพลงได้เพียงคัดลอกลิงก์ แล้วแก้ไขต่อได้ทันที</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">ดาวน์โหลดเวอร์ชัน Windows</a><a class="ft-btn ghost" href="app.html">แอป Android</a></div>
       </div>
-      <nav class="ft-col" aria-label="ผลิตภัณฑ์"><h4>ผลิตภัณฑ์</h4><a href="index.html#how">วิธีใช้</a><a href="index.html#studio">สตูดิโอ</a><a href="index.html#features">ฟีเจอร์</a><a href="index.html#sites">เว็บไซต์ที่รองรับ</a><a href="pricing.html">ราคา</a></nav>
+      <nav class="ft-col" aria-label="ผลิตภัณฑ์"><h4>ผลิตภัณฑ์</h4><a href="index.html#how">วิธีใช้</a><a href="index.html#studio">สตูดิโอ</a><a href="index.html#features">ฟีเจอร์</a><a href="index.html#sites">แนวทางการใช้งาน</a><a href="pricing.html">ราคา</a></nav>
       <nav class="ft-col" aria-label="ฝ่ายช่วยเหลือ"><h4>ฝ่ายช่วยเหลือ</h4><a href="support.html#download">คู่มือการติดตั้ง</a><a href="support.html#help">FAQ และการแก้ไขปัญหา</a><a href="support.html#news">ประกาศ</a><a href="support.html#contact">ติดต่อสอบถาม</a></nav>
       <nav class="ft-col" aria-label="ข้อกำหนดและนโยบาย"><h4>ข้อกำหนดและนโยบาย</h4><a href="legal.html#terms">ข้อกำหนดการใช้งาน</a><a class="strong" href="legal.html#privacy">นโยบายความเป็นส่วนตัว</a><a href="legal.html#refund">นโยบายการคืนเงินและการยกเลิก</a><a href="legal.html#copyright">นโยบายคุ้มครองลิขสิทธิ์</a></nav>
     </div>

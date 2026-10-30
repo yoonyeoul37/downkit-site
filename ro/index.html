@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">Studio <em class="nw">NEW</em></a>
       <a href="#android">Aplicația Android <em class="nw">NEW</em></a>
       <a href="#features">Funcții</a>
-      <a href="#sites">Site-uri acceptate</a>
+      <a href="#sites">Ghid de utilizare</a>
       <a href="pricing.html">Prețuri</a>
       <a href="support.html">Ajutor</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Descărcare media și studio de editare pentru Windows · Android</span>
-        <h1><span style="white-space:nowrap">Copiezi URL-ul și gata:</span><br><span style="white-space:nowrap"><em>descărcare</em></span><br><span style="white-space:nowrap"><em>media simplă</em>,</span><br>DownKit</h1>
-        <p class="lead">Salvează pe PC videoclipuri și muzică de pe numeroase platforme, la calitate video și audio ridicată. Într-un mediu curat, fără reclame, oferă până la 8K și audio original, iar fișierele descărcate pot fi editate imediat în Studio.</p>
+        <span class="eyebrow"><span class="dot"></span>Studio de salvare și editare media pentru Windows · Android</span>
+        <h1>Salvezi<br><em>și editezi imediat:</em><br><em>studioul media</em>,<br>DownKit</h1>
+        <p class="lead">Salvează pe PC, la calitate înaltă, videoclipurile și muzica create de tine sau pe care ai permisiunea să le folosești, apoi comprimă-le, convertește-le și editează-le imediat în studioul integrat. Fără reclame, până la 8K și calitate audio originală.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Descarcă versiunea pentru Windows</a>
           <div class="cta-meta"><b class="mono js-ver">Versiunea 0.1.4 (97 MB)</b><span>Sisteme acceptate: Windows 10 / 11 (64 de biți)</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">Copiezi URL-ul și gata: <em>descărcare media simplă</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">Lipește linkul videoclipului</span>
             <span class="fmt"><span class="on">Video · Calitate maximă</span><span>MP3 · 320 kbps</span></span>
             <span class="go">Lipește</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">Vlog de plimbare nocturnă</div>
-                <div class="who">Instagram</div>
+                <div class="who">Canalul meu</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · cu subtitrări</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>Finalizat</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">APLICAȚIA ANDROID · NEW</div>
         <h2>DownKit și pe telefon<br>O singură partajare și e salvat</h2>
-        <p>În aplicații precum YouTube, apasă [Distribuie] → DownKit și fișierul se salvează imediat. Conectându-te cu același cont ca pe Windows, păstrezi și beneficiile Pro.</p>
+        <p>Într-o altă aplicație, apasă [Distribuie] → DownKit și fișierul se salvează imediat. Conectându-te cu același cont ca pe Windows, păstrezi și beneficiile Pro.</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>Salvare directă prin Distribuie</h3><p>Selectează DownKit din butonul Distribuie al altei aplicații, alege calitatea și fișierul se salvează imediat. Dacă ai copiat un link, acesta este completat automat la deschiderea aplicației.</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Doar piesele dorite dintr-o compilație <em>3 piese gratuit</em></h3><p>Citește lista de piese a unui videoclip-compilație cu mai multe melodii și salvează separat doar piesele care îți plac.</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Înregistrare video · audio a transmisiunilor live <em>10 min gratuit</em></h3><p>Înregistrează transmisiuni live, de exemplu de pe SOOP, ca video sau doar audio. Poți pune pauză și relua, iar la finalul transmisiunii înregistrarea se salvează automat.</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Doar părțile dorite din videoclipurile lungi <em>3 părți gratuit</em></h3><p>Din videoclipurile lungi împărțite în capitole, alegi doar părțile de care ai nevoie și le salvezi separat.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Înregistrare video · audio a transmisiunilor live <em>10 min gratuit</em></h3><p>Înregistrează ca video sau doar audio transmisiunile live pe care le prezinți sau pe care ai permisiunea să le înregistrezi. Poți pune pauză și relua, iar la finalul transmisiunii înregistrarea se salvează automat.</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>Decupare · Reducere dimensiune · Conversie <em>Gratuit</em></h3><p>Poți edita imediat nu doar fișierele descărcate, ci și videoclipurile și melodiile aflate deja pe telefon.</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">Aplicația Android va fi lansată în curând</span><div class="cta-meta"><b>Pentru telefoane Android</b><span>Instalare direct de pe site (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">Descarcă</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Compilație de 30 de melodii nostalgice</div><div class="ph-s">30 de piese · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Vlog de camping la sfârșit de săptămână</div><div class="ph-s">5 capitole · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>Selectează piesele</b><span>&#10005;</span></div>
-            <p class="ph-sub">3 din 30 de piese selectate</p>
-            <div class="ph-row on"><i></i><span>01</span><b>Amintiri de primăvară</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>Unde se oprește vântul</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>Noaptea aceea de vară</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>Dincolo de dealul verde</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>Până ne vom revedea</b><em>3:36</em></div>
-            <div class="ph-go">Descarcă cele 3 piese selectate</div>
+            <div class="ph-sh"><b>Selectează părțile</b><span>&#10005;</span></div>
+            <p class="ph-sub">3 din 5 selectate</p>
+            <div class="ph-row on"><i></i><span>01</span><b>Plecarea și cumpărăturile</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>Montarea cortului</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>Pregătirea cinei</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>Seara la foc de tabără</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>Strânsul taberei</b><em>3:36</em></div>
+            <div class="ph-go">Salvează cele 3 selectate</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>Salvarea subtitrărilor</h3><p>Salvează împreună cu videoclipul și fișierul de subtitrare (<span class="spec">.srt</span>), compatibil cu majoritatea playerelor.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>Creare GIF</h3><p>Selectează scena preferată dintr-un videoclip și transform-o într-un GIF de până la 15 secunde.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>Redare imediată</h3><p>Urmărește videoclipuri și ascultă muzică direct în DownKit, fără a deschide alt player.</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>Conectare la site-uri</h3><p>Conectați-vă în DownKit la un site pe care îl folosiți pentru a descărca videoclipurile pe care propriul cont le poate vizualiza.</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>Conceput cu respect pentru drepturile de autor</h3><p>Conținutul protejat la copiere (DRM) nu este salvat, iar DownKit nu are funcții de ocolire a tehnologiilor de protecție.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>23 de limbi acceptate</h3><p>Acceptă 23 de limbi, printre care coreeană, English, 日本語, 中文, Español și Deutsch. Se adaptează automat la limba setată pe computer.</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">Site-uri acceptate</div>
-        <h2>Compatibil cu numeroase platforme</h2>
-        <p>Analizează linkurile celor mai cunoscute platforme video și audio pentru descărcări stabile.</p>
+        <div class="label">Ghid de utilizare</div>
+        <h2>Instrument de salvare și editare<br>pentru conținut permis</h2>
+        <p>DownKit este un program pentru salvarea și editarea conținutului creat de tine sau pe care titularul drepturilor de autor ți-a permis să-l folosești.</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">și multe alte site-uri video</span>
-        </div>
-        <p class="note">Videoclipurile protejate prin DRM (protecție la copiere) nu pot fi descărcate.</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>Conținut creat de tine</h3><p>Fă backup pe PC videoclipurilor publicate pe canalul tău sau pe rețelele sociale și editează-le din nou.</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>Conținut cu permisiune</h3><p>Poți salva materiale a căror salvare a fost permisă de titularul drepturilor de autor sau publicate sub licențe precum Creative Commons.</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>Conținut neacceptat</h3><p>Conținutul protejat la copiere (DRM) și videoclipurile din serviciile de streaming cu plată nu pot fi salvate.</p></div></div>
+        <p class="note">Republicarea sau vânzarea fără permisiune poate încălca drepturile de autor. Pentru detalii, consultă <a href="legal.html#copyright">Politica privind drepturile de autor</a>.</p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>Se instalează și reclame sau programe partenere nedorite?<svg><use href="#i-plus"/></svg></summary><p>Nu. Se instalează doar DownKit, fără reclame sau programe partenere.</p></details>
         <details><summary>După cumpărare există o limită a perioadei de utilizare?<svg><use href="#i-plus"/></svg></summary><p>Cu abonamentul lunar și Pro 1 an poți folosi funcțiile Pro pe durata perioadei plătite, iar licența pe viață nu are limită de timp. Nici utilizarea gratuită nu are limită de timp.</p></details>
         <details><summary>Ce se întâmplă dacă o platformă se schimbă și apar erori?<svg><use href="#i-plus"/></svg></summary><p>Când structura unui site se schimbă, DownKit actualizează automat motorul de descărcare. Dacă problema persistă, anunță-ne prin contactul direct din pagina Ajutor.</p></details>
-        <details><summary>Unde sunt salvate datele de autentificare pe site-uri?<svg><use href="#i-plus"/></svg></summary><p>Datele de autentificare sunt salvate doar pe PC-ul tău și nu sunt trimise către serverele companiei. Te poți deconecta oricând din setări.</p></details>
         <details><summary>Cum se fac actualizările programului?<svg><use href="#i-plus"/></svg></summary><p>Când apare o versiune nouă, DownKit te anunță. Apăsând [Actualizează acum], aceasta se instalează automat și programul repornește.</p></details>
         <details><summary>Pot descărca orice videoclip?<svg><use href="#i-plus"/></svg></summary><p>Descarcă doar conținut creat de tine sau autorizat de titularul drepturilor de autor. Republicarea sau vânzarea fără permisiune poate constitui o încălcare a drepturilor de autor.</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>Începe acum cu DownKit</h2>
-          <p>Descărcări inteligente cu o simplă copiere a URL-ului.</p>
+          <p>De la salvare la editare, într-un singur program.</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Descarcă versiunea pentru Windows</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>Salvează videoclipuri și muzică copiind un singur link și editează-le imediat.</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Descarcă versiunea pentru Windows</a><a class="ft-btn ghost" href="app.html">Aplicația Android</a></div>
       </div>
-      <nav class="ft-col" aria-label="Produs"><h4>Produs</h4><a href="index.html#how">Cum funcționează</a><a href="index.html#studio">Studio</a><a href="index.html#features">Funcții</a><a href="index.html#sites">Site-uri acceptate</a><a href="pricing.html">Prețuri</a></nav>
+      <nav class="ft-col" aria-label="Produs"><h4>Produs</h4><a href="index.html#how">Cum funcționează</a><a href="index.html#studio">Studio</a><a href="index.html#features">Funcții</a><a href="index.html#sites">Ghid de utilizare</a><a href="pricing.html">Prețuri</a></nav>
       <nav class="ft-col" aria-label="Asistență"><h4>Asistență</h4><a href="support.html#download">Ghid de instalare</a><a href="support.html#help">FAQ și depanare</a><a href="support.html#news">Anunțuri</a><a href="support.html#contact">Contact direct</a></nav>
       <nav class="ft-col" aria-label="Termeni și politici"><h4>Termeni și politici</h4><a href="legal.html#terms">Termeni și condiții</a><a class="strong" href="legal.html#privacy">Politica de confidențialitate</a><a href="legal.html#refund">Politica de rambursare și anulare</a><a href="legal.html#copyright">Politica privind drepturile de autor</a></nav>
     </div>

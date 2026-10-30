@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">स्टूडियो <em class="nw">NEW</em></a>
       <a href="#android">Android ऐप <em class="nw">NEW</em></a>
       <a href="#features">सुविधाएँ</a>
-      <a href="#sites">समर्थित साइटें</a>
+      <a href="#sites">उपयोग संबंधी जानकारी</a>
       <a href="pricing.html">मूल्य</a>
       <a href="support.html">सहायता</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Windows · Android के लिए मीडिया डाउनलोड और एडिटिंग स्टूडियो</span>
-        <h1><span style="white-space:nowrap">बस एक बार URL कॉपी करें</span><br><span style="white-space:nowrap">और शुरू करें <em>आसान</em></span><br><span style="white-space:nowrap"><em>मीडिया डाउनलोड</em>,</span><br>DownKit</h1>
-        <p class="lead">अनेक प्लेटफ़ॉर्म के वीडियो और संगीत को उच्च गुणवत्ता में अपने PC में सहेजें। विज्ञापन-मुक्त माहौल में 8K तक की वीडियो गुणवत्ता और मूल ऑडियो समर्थित है, और डाउनलोड की गई फ़ाइलों को स्टूडियो में तुरंत एडिट किया जा सकता है।</p>
+        <span class="eyebrow"><span class="dot"></span>Windows · Android मीडिया सहेजने और एडिट करने का स्टूडियो</span>
+        <h1>सहेजें<br><em>और तुरंत एडिट करें —</em><br><em>मीडिया स्टूडियो</em>,<br>DownKit</h1>
+        <p class="lead">खुद बनाए गए या उपयोग की अनुमति वाले वीडियो और संगीत को अपने PC पर उच्च गुणवत्ता में सहेजें, और बिल्ट-इन स्टूडियो में तुरंत कंप्रेस, कन्वर्ट और एडिट करें। बिना विज्ञापन, 8K तक की गुणवत्ता और मूल ऑडियो गुणवत्ता।</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows संस्करण डाउनलोड करें</a>
           <div class="cta-meta"><b class="mono js-ver">संस्करण 0.1.4 (97 MB)</b><span>समर्थित OS: Windows 10 / 11 (64-बिट)</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">बस एक बार URL कॉपी करें — <em>आसान मीडिया डाउनलोड</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">वीडियो लिंक पेस्ट करें</span>
             <span class="fmt"><span class="on">वीडियो · सर्वोत्तम गुणवत्ता</span><span>MP3 · 320 kbps</span></span>
             <span class="go">पेस्ट करें</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">रात की सैर व्लॉग</div>
-                <div class="who">Instagram</div>
+                <div class="who">मेरा चैनल</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · सबटाइटल सहित</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>पूरा</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">ANDROID ऐप · NEW</div>
         <h2>फ़ोन पर भी DownKit<br>एक बार शेयर करें, और सेव हो गया</h2>
-        <p>YouTube जैसे ऐप में [शेयर] → DownKit दबाएँ, और वीडियो तुरंत सहेज लिया जाएगा। Windows वाले ही खाते से लॉग इन करने पर Pro लाभ भी वैसे ही जारी रहते हैं।</p>
+        <p>किसी दूसरे ऐप में [शेयर] → DownKit दबाएँ, और वह तुरंत सहेज लिया जाएगा। Windows वाले ही खाते से लॉग इन करने पर Pro लाभ भी वैसे ही जारी रहते हैं।</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>शेयर से सीधे सहेजें</h3><p>दूसरे ऐप में शेयर बटन से DownKit चुनें, सिर्फ़ गुणवत्ता चुनें और तुरंत सहेजें। अगर आपने लिंक कॉपी किया है, तो ऐप खोलते ही वह अपने-आप भर जाता है।</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>गानों के संग्रह से सिर्फ़ पसंदीदा गाने <em>3 गाने मुफ़्त</em></h3><p>कई गानों वाले संग्रह वीडियो की ट्रैक सूची पढ़कर, सिर्फ़ पसंद के गानों को एक-एक करके अलग से सहेजता है।</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>लाइव स्ट्रीम रिकॉर्डिंग · ऑडियो रिकॉर्डिंग <em>10 मिनट मुफ़्त</em></h3><p>SOOP जैसी लाइव स्ट्रीम को वीडियो के रूप में रिकॉर्ड करें या सिर्फ़ ऑडियो रिकॉर्ड करें। रोकना और फिर से शुरू करना संभव है, और प्रसारण खत्म होते ही रिकॉर्डिंग अपने-आप सहेज ली जाती है।</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>लंबे वीडियो से सिर्फ़ मनचाहे हिस्से <em>3 हिस्से मुफ़्त</em></h3><p>चैप्टर में बँटे लंबे वीडियो से सिर्फ़ ज़रूरी हिस्से चुनकर उन्हें अलग-अलग सहेजता है।</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>लाइव स्ट्रीम रिकॉर्डिंग · ऑडियो रिकॉर्डिंग <em>10 मिनट मुफ़्त</em></h3><p>आप जिन लाइव स्ट्रीम को होस्ट करते हैं या जिन्हें रिकॉर्ड करने की अनुमति आपके पास है, उन्हें वीडियो के रूप में या सिर्फ़ ऑडियो के रूप में रिकॉर्ड करें। रोकना और फिर से शुरू करना संभव है, और प्रसारण खत्म होते ही रिकॉर्डिंग अपने-आप सहेज ली जाती है।</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>काटना · आकार घटाना · कन्वर्ट <em>मुफ़्त</em></h3><p>डाउनलोड की गई फ़ाइलों के साथ-साथ फ़ोन में मौजूद वीडियो और गानों को भी तुरंत एडिट करें।</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">Android ऐप जल्द आ रहा है</span><div class="cta-meta"><b>Android फ़ोन के लिए</b><span>वेबसाइट से सीधे इंस्टॉल करें (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">डाउनलोड</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">यादगार सदाबहार गीतों का संग्रह — 30 गाने</div><div class="ph-s">30 ट्रैक · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">वीकेंड कैंपिंग व्लॉग</div><div class="ph-s">5 चैप्टर · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>मनचाहे गाने चुनें</b><span>&#10005;</span></div>
-            <p class="ph-sub">30 में से 3 गाने चुने गए</p>
-            <div class="ph-row on"><i></i><span>01</span><b>बसंत के दिन की याद</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>जहाँ हवा ठहरती है</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>वो गर्मी की रात</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>नीली पहाड़ी के पार</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>फिर मिलने तक</b><em>3:36</em></div>
-            <div class="ph-go">चुने गए 3 गाने डाउनलोड करें</div>
+            <div class="ph-sh"><b>मनचाहे हिस्से चुनें</b><span>&#10005;</span></div>
+            <p class="ph-sub">5 में से 3 चुने गए</p>
+            <div class="ph-row on"><i></i><span>01</span><b>रवानगी और ख़रीदारी</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>टेंट लगाना</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>रात का खाना</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>रात में अलाव</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>सुबह की पैकिंग</b><em>3:36</em></div>
+            <div class="ph-go">चुने गए 3 सहेजें</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>सबटाइटल सहेजें</h3><p>वीडियो के साथ सबटाइटल फ़ाइल (<span class="spec">.srt</span>) भी सहेजें, जिसे ज़्यादातर प्लेयर में इस्तेमाल किया जा सकता है।</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>GIF बनाएँ</h3><p>वीडियो से मनचाहा दृश्य चुनकर अधिकतम 15 सेकंड का GIF बनाएँ।</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>तुरंत चलाएँ</h3><p>कोई दूसरा प्लेयर खोले बिना DownKit में ही वीडियो देखें और संगीत सुनें।</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>साइट साइन-इन</h3><p>DownKit के भीतर अपनी इस्तेमाल की जाने वाली साइट में साइन इन करें और वे वीडियो डाउनलोड करें जिन्हें आपका अपना खाता देख सकता है।</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>कॉपीराइट का सम्मान करने वाला डिज़ाइन</h3><p>कॉपी-सुरक्षा (DRM) वाली सामग्री सहेजी नहीं जाती, और सुरक्षा तकनीकों को दरकिनार करने की कोई सुविधा नहीं है।</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>23 भाषाओं का समर्थन</h3><p>कोरियाई, English, 日本語, 中文, Español, Deutsch सहित 23 भाषाएँ समर्थित हैं। भाषा कंप्यूटर की भाषा सेटिंग के अनुसार अपने-आप बदल जाती है।</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">समर्थित साइटें</div>
-        <h2>अनेक बाहरी प्लेटफ़ॉर्म का समर्थन</h2>
-        <p>लोकप्रिय वीडियो और ऑडियो प्लेटफ़ॉर्म के लिंक का विश्लेषण करके स्थिर डाउनलोड अनुभव देता है।</p>
+        <div class="label">उपयोग संबंधी जानकारी</div>
+        <h2>अनुमति वाली सामग्री के लिए<br>सहेजने और एडिट करने का टूल</h2>
+        <p>DownKit खुद बनाई गई सामग्री या कॉपीराइट धारक द्वारा अनुमति प्राप्त सामग्री को सहेजने और एडिट करने का प्रोग्राम है।</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">और भी कई वीडियो साइटें</span>
-        </div>
-        <p class="note">DRM (कॉपी सुरक्षा) वाले वीडियो डाउनलोड नहीं किए जा सकते।</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>खुद बनाई गई सामग्री</h3><p>अपने चैनल या सोशल मीडिया पर पोस्ट किए गए वीडियो का PC पर बैकअप लें और उन्हें फिर से एडिट करें।</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>अनुमति प्राप्त सामग्री</h3><p>कॉपीराइट धारक ने जिसे सहेजने की अनुमति दी है, या जो Creative Commons जैसे लाइसेंस के तहत प्रकाशित है, वह सामग्री सहेज सकते हैं।</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>असमर्थित सामग्री</h3><p>कॉपी-सुरक्षा (DRM) वाली सामग्री और सशुल्क स्ट्रीमिंग सेवाओं के वीडियो सहेजे नहीं जा सकते।</p></div></div>
+        <p class="note">बिना अनुमति दोबारा पोस्ट करना या बेचना कॉपीराइट का उल्लंघन हो सकता है। अधिक जानकारी के लिए <a href="legal.html#copyright">कॉपीराइट नीति</a> देखें।</p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>क्या साथ में अनचाहे विज्ञापन या पार्टनर प्रोग्राम इंस्टॉल होते हैं?<svg><use href="#i-plus"/></svg></summary><p>नहीं। बिना किसी विज्ञापन या पार्टनर प्रोग्राम के सिर्फ़ DownKit इंस्टॉल होता है।</p></details>
         <details><summary>क्या खरीदने के बाद उपयोग की अवधि सीमित होती है?<svg><use href="#i-plus"/></svg></summary><p>मासिक सदस्यता और Pro 1 वर्ष में भुगतान की गई अवधि तक Pro सुविधाएँ मिलती हैं, जबकि स्थायी लाइसेंस बिना किसी समय-सीमा के इस्तेमाल किया जा सकता है। मुफ़्त उपयोग की भी कोई समय-सीमा नहीं है।</p></details>
         <details><summary>प्लेटफ़ॉर्म में बदलाव से त्रुटि आए तो क्या होता है?<svg><use href="#i-plus"/></svg></summary><p>साइट की संरचना बदलने पर DownKit डाउनलोड इंजन को अपने-आप नवीनतम संस्करण में अपडेट कर देता है। समस्या बनी रहे तो सहायता पेज पर संपर्क करें के ज़रिए हमें बताएँ।</p></details>
-        <details><summary>साइट की लॉग इन जानकारी कहाँ सहेजी जाती है?<svg><use href="#i-plus"/></svg></summary><p>लॉग इन जानकारी सिर्फ़ आपके PC में सहेजी जाती है और कंपनी के सर्वर पर नहीं भेजी जाती। आप सेटिंग्स में कभी भी लॉग आउट कर सकते हैं।</p></details>
         <details><summary>प्रोग्राम अपडेट कैसे होता है?<svg><use href="#i-plus"/></svg></summary><p>नया संस्करण आने पर DownKit आपको सूचित करता है। [अभी अपडेट करें] दबाने पर यह अपने-आप इंस्टॉल होकर फिर से शुरू हो जाता है।</p></details>
         <details><summary>क्या कोई भी वीडियो डाउनलोड किया जा सकता है?<svg><use href="#i-plus"/></svg></summary><p>कृपया सिर्फ़ वही सामग्री डाउनलोड करें जो आपने खुद बनाई है या जिसकी अनुमति कॉपीराइट धारक ने दी है। बिना अनुमति दोबारा पोस्ट करना या बेचना कॉपीराइट उल्लंघन हो सकता है।</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>अभी DownKit शुरू करें</h2>
-          <p>बस एक बार URL कॉपी करें — स्मार्ट डाउनलोड शुरू।</p>
+          <p>सहेजने से एडिट करने तक, सब एक ही प्रोग्राम में।</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows संस्करण डाउनलोड करें</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>सिर्फ़ लिंक कॉपी करके वीडियो और संगीत सहेजें, और तुरंत संपादित करें।</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Windows संस्करण डाउनलोड करें</a><a class="ft-btn ghost" href="app.html">Android ऐप</a></div>
       </div>
-      <nav class="ft-col" aria-label="उत्पाद"><h4>उत्पाद</h4><a href="index.html#how">उपयोग कैसे करें</a><a href="index.html#studio">स्टूडियो</a><a href="index.html#features">सुविधाएँ</a><a href="index.html#sites">समर्थित साइटें</a><a href="pricing.html">मूल्य</a></nav>
+      <nav class="ft-col" aria-label="उत्पाद"><h4>उत्पाद</h4><a href="index.html#how">उपयोग कैसे करें</a><a href="index.html#studio">स्टूडियो</a><a href="index.html#features">सुविधाएँ</a><a href="index.html#sites">उपयोग संबंधी जानकारी</a><a href="pricing.html">मूल्य</a></nav>
       <nav class="ft-col" aria-label="सहायता"><h4>सहायता</h4><a href="support.html#download">इंस्टॉलेशन गाइड</a><a href="support.html#help">FAQ और समस्या समाधान</a><a href="support.html#news">सूचनाएँ</a><a href="support.html#contact">संपर्क करें</a></nav>
       <nav class="ft-col" aria-label="नियम और नीतियाँ"><h4>नियम और नीतियाँ</h4><a href="legal.html#terms">सेवा की शर्तें</a><a class="strong" href="legal.html#privacy">गोपनीयता नीति</a><a href="legal.html#refund">रिफ़ंड और रद्दीकरण नीति</a><a href="legal.html#copyright">कॉपीराइट नीति</a></nav>
     </div>

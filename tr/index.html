@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">Stüdyo <em class="nw">NEW</em></a>
       <a href="#android">Android uygulaması <em class="nw">NEW</em></a>
       <a href="#features">Özellikler</a>
-      <a href="#sites">Desteklenen siteler</a>
+      <a href="#sites">Kullanım bilgileri</a>
       <a href="pricing.html">Fiyatlar</a>
       <a href="support.html">Yardım</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Windows · Android için medya indirme ve düzenleme stüdyosu</span>
-        <h1><span style="white-space:nowrap">Tek bir URL kopyasıyla</span><br><span style="white-space:nowrap">başlayan <em>kolay</em></span><br><span style="white-space:nowrap"><em>medya indirme</em>:</span><br>DownKit</h1>
-        <p class="lead">Farklı platformlardaki videoları ve müzikleri yüksek görüntü ve ses kalitesiyle bilgisayarınıza kaydedin. Reklamsız, ferah bir ortamda 8K'ya kadar görüntü kalitesini ve orijinal sesi destekler; indirdiğiniz dosyaları Stüdyo ile hemen düzenleyebilirsiniz.</p>
+        <span class="eyebrow"><span class="dot"></span>Windows · Android medya kaydetme ve düzenleme stüdyosu</span>
+        <h1>Kaydedin,<br><em>hemen düzenleyin:</em><br><em>medya stüdyosu</em><br>DownKit</h1>
+        <p class="lead">Kendi oluşturduğunuz ya da kullanım izni aldığınız video ve müzikleri bilgisayarınıza yüksek kalitede kaydedin, ardından yerleşik stüdyoda hemen sıkıştırın, dönüştürün ve düzenleyin. Reklamsız, 8K'ya kadar görüntü ve orijinal ses kalitesi.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows sürümünü indir</a>
           <div class="cta-meta"><b class="mono js-ver">Sürüm 0.1.4 (97 MB)</b><span>Desteklenen işletim sistemleri: Windows 10 / 11 (64 bit)</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">Tek bir URL kopyasıyla başlayan <em>kolay medya indirme</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">Video bağlantısını yapıştırın</span>
             <span class="fmt"><span class="on">Video · En yüksek kalite</span><span>MP3 · 320 kbps</span></span>
             <span class="go">Yapıştır</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">Gece yürüyüşü vlogu</div>
-                <div class="who">Instagram</div>
+                <div class="who">Kanalım</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · Altyazı dahil</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>Tamamlandı</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">ANDROID UYGULAMASI · YENİ</div>
         <h2>Telefonda da DownKit<br>Tek paylaşımla kaydedin</h2>
-        <p>YouTube gibi bir uygulamada [Paylaş] → DownKit'e dokunduğunuzda hemen kaydedilir. Windows'takiyle aynı hesapla giriş yaparsanız Pro avantajlarınız da aynen devam eder.</p>
+        <p>Başka bir uygulamada [Paylaş] → DownKit'e dokunduğunuzda hemen kaydedilir. Windows'takiyle aynı hesapla giriş yaparsanız Pro avantajlarınız da aynen devam eder.</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>Paylaşarak hemen kaydedin</h3><p>Başka bir uygulamada paylaş düğmesiyle DownKit'i seçin, yalnızca kaliteyi belirleyin ve hemen kaydedin. Bir bağlantı kopyaladıysanız uygulamayı açtığınızda otomatik olarak doldurulur.</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Şarkı derlemelerinden istediğiniz şarkılar <em>3 şarkı ücretsiz</em></h3><p>Birden fazla şarkının art arda yer aldığı derleme videolarının parça listesini okur ve beğendiğiniz şarkıları tek tek ayrı olarak kaydeder.</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Canlı yayın video ve ses kaydı <em>10 dakika ücretsiz</em></h3><p>SOOP gibi canlı yayınları video olarak kaydeder veya yalnızca sesini kaydeder. Duraklatıp devam ettirebilirsiniz; yayın bittiğinde otomatik olarak kaydedilir.</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Uzun videolardan yalnızca istediğiniz bölümler <em>3 bölüm ücretsiz</em></h3><p>Bölümlere ayrılmış uzun videolardan yalnızca ihtiyacınız olan kısımları seçip ayrı ayrı kaydeder.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Canlı yayın video ve ses kaydı <em>10 dakika ücretsiz</em></h3><p>Kendi sunduğunuz veya kaydetme izni aldığınız canlı yayınları video olarak ya da yalnızca ses olarak kaydedin. Duraklatıp devam ettirebilirsiniz; yayın bittiğinde otomatik olarak kaydedilir.</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>Kırpma · Boyut küçültme · Dönüştürme <em>Ücretsiz</em></h3><p>İndirdiğiniz dosyaların yanı sıra telefonunuzdaki videoları ve şarkıları da hemen düzenleyebilirsiniz.</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">Android uygulaması yakında</span><div class="cta-meta"><b>Android telefonlar için</b><span>Doğrudan web sitesinden yükleyin (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">İndir</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Unutulmaz eski şarkılar derlemesi, 30 şarkı</div><div class="ph-s">30 parça · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Hafta sonu kamp vlogu</div><div class="ph-s">5 bölüm · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>İstediğiniz şarkıları seçin</b><span>&#10005;</span></div>
-            <p class="ph-sub">30 şarkıdan 3'ü seçildi</p>
-            <div class="ph-row on"><i></i><span>01</span><b>Bahar Günlerinin Anısı</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>Rüzgârın Durduğu Yer</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>O Yaz Gecesi</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>Yeşil Tepelerin Ardında</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>Yeniden Buluşana Dek</b><em>3:36</em></div>
-            <div class="ph-go">Seçilen 3 şarkıyı indir</div>
+            <div class="ph-sh"><b>İstediğiniz bölümleri seçin</b><span>&#10005;</span></div>
+            <p class="ph-sub">5 bölümden 3'ü seçildi</p>
+            <div class="ph-row on"><i></i><span>01</span><b>Yola çıkış ve alışveriş</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>Çadırı kurmak</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>Akşam yemeği</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>Gece kamp ateşi</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>Sabah toparlanma</b><em>3:36</em></div>
+            <div class="ph-go">Seçilen 3 bölümü kaydet</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>Altyazı kaydetme</h3><p>Videoyla birlikte altyazı dosyasını (<span class="spec">.srt</span>) da kaydeder; çoğu oynatıcıda kullanılabilir.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>GIF oluşturma</h3><p>Videodan istediğiniz sahneyi seçerek en fazla 15 saniyelik bir GIF oluşturabilirsiniz.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>Anında oynatma</h3><p>Başka bir oynatıcı açmadan videoları DownKit'te hemen izleyebilir, müzikleri dinleyebilirsiniz.</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>Site oturum açma</h3><p>Kullandığınız bir siteye DownKit içinden giriş yaparak kendi hesabınızın izleyebildiği videoları indirin.</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>Telif haklarına saygılı tasarım</h3><p>Kopya korumalı (DRM) içerikler kaydedilmez ve koruma teknolojilerini atlatan hiçbir özellik bulunmaz.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>23 dil desteği</h3><p>Türkçe, Korece, English, 日本語, 中文, Español, Deutsch gibi 23 dili destekler. Bilgisayarınızın dil ayarına göre otomatik olarak değişir.</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">Desteklenen siteler</div>
-        <h2>Pek çok harici platform desteği</h2>
-        <p>Popüler video ve ses platformlarının bağlantılarını analiz ederek kararlı bir indirme ortamı sunar.</p>
+        <div class="label">Kullanım bilgileri</div>
+        <h2>İzin verilen içerikler için<br>kaydetme ve düzenleme aracı</h2>
+        <p>DownKit, kendi oluşturduğunuz veya telif hakkı sahibinin izin verdiği içerikleri kaydetmek ve düzenlemek için tasarlanmış bir programdır.</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">ve daha pek çok video sitesi</span>
-        </div>
-        <p class="note">DRM (kopya koruması) uygulanmış videolar indirilemez.</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>Kendi oluşturduğunuz içerikler</h3><p>Kendi kanalınıza veya sosyal medyaya yüklediğiniz videoları bilgisayarınıza yedekleyip yeniden düzenleyebilirsiniz.</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>Kullanım izni alınmış içerikler</h3><p>Telif hakkı sahibinin kaydedilmesine izin verdiği veya Creative Commons gibi lisanslarla yayımlanmış materyalleri kaydedebilirsiniz.</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>Desteklenmeyen içerikler</h3><p>Kopya korumalı (DRM) içerikler ve ücretli yayın hizmetlerindeki videolar kaydedilemez.</p></div></div>
+        <p class="note">İzinsiz olarak yeniden yayımlamak veya satmak telif hakkı ihlali sayılabilir. Ayrıntılar için <a href="legal.html#copyright">Telif Hakkı Politikası</a>'nı inceleyin.</p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>Gereksiz reklam veya iş ortağı programları da yükleniyor mu?<svg><use href="#i-plus"/></svg></summary><p>Hayır. Reklam veya iş ortağı programı olmadan yalnızca DownKit yüklenir.</p></details>
         <details><summary>Satın aldıktan sonra kullanım süresi sınırlı mı?<svg><use href="#i-plus"/></svg></summary><p>Aylık abonelik ve Pro 1 Yıl planlarında Pro özelliklerini ödediğiniz süre boyunca kullanabilirsiniz; ömür boyu lisans ise süre sınırı olmadan kullanılabilir. Ücretsiz kullanımın süre sınırı yoktur.</p></details>
         <details><summary>Platform değişiklikleri nedeniyle hata oluşursa ne yapılıyor?<svg><use href="#i-plus"/></svg></summary><p>Site yapısı değiştiğinde DownKit indirme motorunu otomatik olarak güncel tutar. Sorun devam ederse Yardım sayfasındaki destek talebi üzerinden bize bildirin.</p></details>
-        <details><summary>Site giriş bilgileri nerede saklanıyor?<svg><use href="#i-plus"/></svg></summary><p>Giriş bilgileri yalnızca bilgisayarınızda saklanır ve şirket sunucularına gönderilmez. Ayarlar'dan istediğiniz zaman çıkış yapabilirsiniz.</p></details>
         <details><summary>Program güncellemeleri nasıl yapılıyor?<svg><use href="#i-plus"/></svg></summary><p>Yeni bir sürüm çıktığında DownKit sizi bilgilendirir. [Şimdi güncelle]'ye tıkladığınızda otomatik olarak yüklenir ve yeniden başlatılır.</p></details>
         <details><summary>Her videoyu indirebilir miyim?<svg><use href="#i-plus"/></svg></summary><p>Lütfen yalnızca kendi ürettiğiniz veya telif hakkı sahibinin izin verdiği içerikleri indirin. İzinsiz olarak yeniden yayınlamak veya satmak telif hakkı ihlali sayılabilir.</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>DownKit'i hemen kullanmaya başlayın</h2>
-          <p>Tek bir URL kopyasıyla başlayan akıllı indirme.</p>
+          <p>Kaydetmekten düzenlemeye, tek bir programda.</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows sürümünü indir</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>Tek bir bağlantıyı kopyalayarak video ve müzikleri kaydedin, hemen düzenleyin.</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Windows sürümünü indir</a><a class="ft-btn ghost" href="app.html">Android uygulaması</a></div>
       </div>
-      <nav class="ft-col" aria-label="Ürün"><h4>Ürün</h4><a href="index.html#how">Nasıl kullanılır</a><a href="index.html#studio">Stüdyo</a><a href="index.html#features">Özellikler</a><a href="index.html#sites">Desteklenen siteler</a><a href="pricing.html">Fiyatlar</a></nav>
+      <nav class="ft-col" aria-label="Ürün"><h4>Ürün</h4><a href="index.html#how">Nasıl kullanılır</a><a href="index.html#studio">Stüdyo</a><a href="index.html#features">Özellikler</a><a href="index.html#sites">Kullanım bilgileri</a><a href="pricing.html">Fiyatlar</a></nav>
       <nav class="ft-col" aria-label="Destek"><h4>Destek</h4><a href="support.html#download">Kurulum kılavuzu</a><a href="support.html#help">SSS ve sorun giderme</a><a href="support.html#news">Duyurular</a><a href="support.html#contact">Destek talebi</a></nav>
       <nav class="ft-col" aria-label="Koşullar ve politikalar"><h4>Koşullar ve politikalar</h4><a href="legal.html#terms">Kullanım Koşulları</a><a class="strong" href="legal.html#privacy">Gizlilik Politikası</a><a href="legal.html#refund">İade ve İptal Politikası</a><a href="legal.html#copyright">Telif Hakkı Politikası</a></nav>
     </div>

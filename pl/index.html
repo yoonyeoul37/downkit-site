@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">Studio <em class="nw">NEW</em></a>
       <a href="#android">Aplikacja Android <em class="nw">NEW</em></a>
       <a href="#features">Funkcje</a>
-      <a href="#sites">Obsługiwane serwisy</a>
+      <a href="#sites">Zasady korzystania</a>
       <a href="pricing.html">Cennik</a>
       <a href="support.html">Pomoc</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Studio do pobierania i edycji multimediów na Windows i Android</span>
-        <h1><span style="white-space:nowrap">Wystarczy skopiować URL –</span><br><span style="white-space:nowrap"><em>proste</em></span><br><span style="white-space:nowrap"><em>pobieranie multimediów</em>,</span><br>DownKit</h1>
-        <p class="lead">Zapisuj na swoim komputerze filmy i muzykę z wielu platform w wysokiej jakości obrazu i dźwięku. Bez reklam, z obsługą jakości do 8K i oryginalnego dźwięku, a pobrane pliki od razu edytujesz w Studiu.</p>
+        <span class="eyebrow"><span class="dot"></span>Studio do zapisu i edycji multimediów na Windows · Android</span>
+        <h1>Zapisuj<br><em>i od razu edytuj:</em><br><em>Twoje studio multimediów</em>,<br>DownKit</h1>
+        <p class="lead">Zapisuj na komputerze w wysokiej jakości własne filmy i muzykę lub materiały, na których użycie masz zgodę, a potem od razu kompresuj, konwertuj i edytuj je we wbudowanym studiu. Bez reklam, do 8K i w oryginalnej jakości dźwięku.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Pobierz wersję na Windows</a>
           <div class="cta-meta"><b class="mono js-ver">Wersja 0.1.4 (97 MB)</b><span>System: Windows 10 / 11 (64-bit)</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">Wystarczy skopiować URL – <em>proste pobieranie multimediów</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">Wklej link do filmu</span>
             <span class="fmt"><span class="on">Wideo · najwyższa jakość</span><span>MP3 · 320 kbps</span></span>
             <span class="go">Wklej</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">Wieczorny spacer – vlog</div>
-                <div class="who">Instagram</div>
+                <div class="who">Mój kanał</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · z napisami</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>Gotowe</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">APLIKACJA ANDROID · NOWOŚĆ</div>
         <h2>DownKit także na telefonie<br>Jedno udostępnienie i gotowe</h2>
-        <p>W aplikacji takiej jak YouTube dotknij [Udostępnij] → DownKit, a plik zapisze się od razu. Po zalogowaniu na to samo konto co w Windows korzyści Pro działają również tutaj.</p>
+        <p>W innej aplikacji dotknij [Udostępnij] → DownKit, a plik zapisze się od razu. Po zalogowaniu na to samo konto co w Windows korzyści Pro działają również tutaj.</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>Zapis przez udostępnienie</h3><p>Wybierz DownKit przyciskiem udostępniania w innej aplikacji, ustaw jakość i gotowe. Skopiowany link zostanie automatycznie wklejony po otwarciu aplikacji.</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Tylko wybrane utwory ze składanki <em>3 utwory za darmo</em></h3><p>Odczytuje listę utworów ze składanki wielu piosenek i zapisuje osobno tylko te, które wybierzesz.</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Nagrywanie transmisji na żywo · audio <em>10 min za darmo</em></h3><p>Nagrywaj transmisje na żywo, np. z SOOP, jako wideo lub sam dźwięk. Możesz wstrzymać i wznowić nagrywanie, a po zakończeniu transmisji plik zapisze się automatycznie.</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Tylko wybrane fragmenty długich filmów <em>3 fragmenty za darmo</em></h3><p>W długich filmach podzielonych na rozdziały wybierz tylko potrzebne fragmenty i zapisz je osobno.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Nagrywanie transmisji na żywo · audio <em>10 min za darmo</em></h3><p>Nagrywaj jako wideo lub sam dźwięk transmisje na żywo, które prowadzisz lub na których nagranie masz zgodę. Możesz wstrzymać i wznowić nagrywanie, a po zakończeniu transmisji plik zapisze się automatycznie.</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>Przycinanie · zmniejszanie rozmiaru · konwersja <em>za darmo</em></h3><p>Edytuj nie tylko pobrane pliki, ale też filmy i utwory zapisane w telefonie.</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">Aplikacja Android wkrótce</span><div class="cta-meta"><b>Na telefony z Androidem</b><span>Instalacja bezpośrednio ze strony (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">Pobierz</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Składanka 30 przebojów z dawnych lat</div><div class="ph-s">30 utworów · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Weekendowy vlog z kempingu</div><div class="ph-s">5 rozdziałów · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>Wybierz utwory</b><span>&#10005;</span></div>
-            <p class="ph-sub">Wybrano 3 z 30 utworów</p>
-            <div class="ph-row on"><i></i><span>01</span><b>Wspomnienie wiosny</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>Gdzie zatrzymuje się wiatr</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>Tamta letnia noc</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>Za zielonym wzgórzem</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>Do następnego spotkania</b><em>3:36</em></div>
-            <div class="ph-go">Pobierz 3 wybrane utwory</div>
+            <div class="ph-sh"><b>Wybierz fragmenty</b><span>&#10005;</span></div>
+            <p class="ph-sub">Wybrano 3 z 5 fragmentów</p>
+            <div class="ph-row on"><i></i><span>01</span><b>Wyjazd i zakupy</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>Rozbijanie namiotu</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>Gotowanie kolacji</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>Nocne ognisko</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>Poranne sprzątanie</b><em>3:36</em></div>
+            <div class="ph-go">Pobierz 3 wybrane fragmenty</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>Zapis napisów</h3><p>Razem z filmem zapisuje plik napisów (<span class="spec">.srt</span>), który działa w większości odtwarzaczy.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>Tworzenie GIF</h3><p>Wybierz scenę z filmu i utwórz z niej GIF o długości do 15 sekund.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>Natychmiastowe odtwarzanie</h3><p>Oglądaj filmy i słuchaj muzyki bezpośrednio w DownKit, bez uruchamiania innego odtwarzacza.</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>Logowanie do serwisów</h3><p>Zaloguj się w DownKit do serwisu, z którego korzystasz, aby pobierać filmy dostępne dla Twojego własnego konta.</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>Z poszanowaniem praw autorskich</h3><p>Treści z zabezpieczeniem przed kopiowaniem (DRM) nie są zapisywane, a DownKit nie ma żadnych funkcji do obchodzenia zabezpieczeń.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>23 języki</h3><p>Obsługuje 23 języki, w tym koreański, English, 日本語, 中文, Español i Deutsch. Język zmienia się automatycznie zgodnie z ustawieniami komputera.</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">Obsługiwane serwisy</div>
-        <h2>Obsługa wielu zewnętrznych platform</h2>
-        <p>Analizuje linki z popularnych platform wideo i audio, zapewniając stabilne pobieranie.</p>
+        <div class="label">Zasady korzystania</div>
+        <h2>Zapis i edycja<br>dozwolonych treści</h2>
+        <p>DownKit to program do zapisywania i edytowania treści stworzonych przez Ciebie lub takich, na których użycie zezwolił właściciel praw autorskich.</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">i wiele innych serwisów wideo</span>
-        </div>
-        <p class="note">Filmów zabezpieczonych DRM (ochroną przed kopiowaniem) nie można pobierać.</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>Twoje własne treści</h3><p>Twórz na komputerze kopie zapasowe filmów opublikowanych na Twoim kanale lub w mediach społecznościowych i edytuj je ponownie.</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>Treści, na które masz zgodę</h3><p>Zapisuj materiały, na których zapis zezwolił właściciel praw, lub udostępnione na licencjach takich jak Creative Commons (CC).</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>Nieobsługiwane treści</h3><p>Nie można zapisywać treści z zabezpieczeniem przed kopiowaniem (DRM) ani filmów z płatnych serwisów streamingowych.</p></div></div>
+        <p class="note">Ponowne publikowanie lub sprzedaż bez zgody może naruszać prawa autorskie. Szczegóły znajdziesz w dokumencie <a href="legal.html#copyright">Polityka ochrony praw autorskich</a>.</p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>Czy razem z programem instalują się reklamy lub programy partnerskie?<svg><use href="#i-plus"/></svg></summary><p>Nie. Instaluje się tylko DownKit, bez reklam i programów partnerskich.</p></details>
         <details><summary>Czy po zakupie okres korzystania jest ograniczony?<svg><use href="#i-plus"/></svg></summary><p>Subskrypcja miesięczna i Pro na rok dają dostęp do funkcji Pro przez opłacony okres, a licencja dożywotnia działa bez ograniczeń czasowych. Wersja bezpłatna również nie ma limitu czasu.</p></details>
         <details><summary>Co się stanie, gdy zmiany na platformie spowodują błędy?<svg><use href="#i-plus"/></svg></summary><p>Gdy struktura serwisu się zmieni, DownKit automatycznie zaktualizuje silnik pobierania. Jeśli problem nie ustąpi, napisz do nas przez formularz kontaktowy w Pomocy.</p></details>
-        <details><summary>Gdzie są przechowywane dane logowania do serwisów?<svg><use href="#i-plus"/></svg></summary><p>Dane logowania są zapisywane wyłącznie na Twoim komputerze i nie są wysyłane na serwery firmy. W ustawieniach możesz się w każdej chwili wylogować.</p></details>
         <details><summary>Jak przebiega aktualizacja programu?<svg><use href="#i-plus"/></svg></summary><p>Gdy pojawi się nowa wersja, DownKit Cię o tym powiadomi. Po kliknięciu [Aktualizuj teraz] program zainstaluje ją automatycznie i uruchomi się ponownie.</p></details>
         <details><summary>Czy mogę pobierać każdy film?<svg><use href="#i-plus"/></svg></summary><p>Pobieraj tylko treści stworzone przez siebie lub takie, na które zezwolił właściciel praw autorskich. Ponowne publikowanie lub sprzedaż bez zgody może naruszać prawa autorskie.</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>Zacznij korzystać z DownKit już teraz</h2>
-          <p>Inteligentne pobieranie po jednym skopiowaniu URL.</p>
+          <p>Od zapisu po edycję – wszystko w jednym programie.</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Pobierz wersję na Windows</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>Zapisuj filmy i muzykę, kopiując jeden link, i od razu je edytuj.</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Pobierz wersję na Windows</a><a class="ft-btn ghost" href="app.html">Aplikacja Android</a></div>
       </div>
-      <nav class="ft-col" aria-label="Produkt"><h4>Produkt</h4><a href="index.html#how">Jak to działa</a><a href="index.html#studio">Studio</a><a href="index.html#features">Funkcje</a><a href="index.html#sites">Obsługiwane serwisy</a><a href="pricing.html">Cennik</a></nav>
+      <nav class="ft-col" aria-label="Produkt"><h4>Produkt</h4><a href="index.html#how">Jak to działa</a><a href="index.html#studio">Studio</a><a href="index.html#features">Funkcje</a><a href="index.html#sites">Zasady korzystania</a><a href="pricing.html">Cennik</a></nav>
       <nav class="ft-col" aria-label="Pomoc"><h4>Pomoc</h4><a href="support.html#download">Instrukcja instalacji</a><a href="support.html#help">FAQ i rozwiązywanie problemów</a><a href="support.html#news">Ogłoszenia</a><a href="support.html#contact">Kontakt</a></nav>
       <nav class="ft-col" aria-label="Regulaminy i zasady"><h4>Regulaminy i zasady</h4><a href="legal.html#terms">Regulamin</a><a class="strong" href="legal.html#privacy">Polityka prywatności</a><a href="legal.html#refund">Zasady zwrotów i anulowania</a><a href="legal.html#copyright">Polityka ochrony praw autorskich</a></nav>
     </div>

@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">Stúdió <em class="nw">NEW</em></a>
       <a href="#android">Android-alkalmazás <em class="nw">NEW</em></a>
       <a href="#features">Funkciók</a>
-      <a href="#sites">Támogatott oldalak</a>
+      <a href="#sites">Használati tudnivalók</a>
       <a href="pricing.html">Árak</a>
       <a href="support.html">Súgó</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Médialetöltő és -szerkesztő stúdió Windowsra és Androidra</span>
-        <h1><span style="white-space:nowrap">Egyetlen URL-másolással</span><br><span style="white-space:nowrap">induló <em>egyszerű</em></span><br><span style="white-space:nowrap"><em>médialetöltés</em>:</span><br>DownKit</h1>
-        <p class="lead">Mentse számítógépére a különböző platformok videóit és zenéit kiváló kép- és hangminőségben. Reklámmentes, letisztult környezetben akár 8K képminőséget és eredeti hangot is támogat, a letöltött fájlokat pedig a Stúdióban azonnal szerkesztheti.</p>
+        <span class="eyebrow"><span class="dot"></span>Windows · Android médiamentő és -szerkesztő stúdió</span>
+        <h1>Mentse el,<br><em>és szerkessze azonnal:</em><br><em>médiastúdió</em><br>DownKit</h1>
+        <p class="lead">Mentse számítógépére kiváló minőségben a saját készítésű vagy engedéllyel használt videókat és zenéket, majd a beépített stúdióban azonnal tömörítse, alakítsa át és szerkessze őket. Reklámok nélkül, akár 8K képminőséggel és eredeti hangminőséggel.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows-verzió letöltése</a>
           <div class="cta-meta"><b class="mono js-ver">Verzió: 0.1.4 (97 MB)</b><span>Támogatott rendszerek: Windows 10 / 11 (64 bites)</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">Egyetlen URL-másolással induló <em>egyszerű médialetöltés</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">Illessze be a videó linkjét</span>
             <span class="fmt"><span class="on">Videó · Legjobb minőség</span><span>MP3 · 320 kbps</span></span>
             <span class="go">Beillesztés</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">Esti séta vlog</div>
-                <div class="who">Instagram</div>
+                <div class="who">Saját csatorna</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · Feliratokkal</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>Kész</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">ANDROID-ALKALMAZÁS · ÚJ</div>
         <h2>DownKit a telefonon is<br>Egy megosztás, és már mentve</h2>
-        <p>Egy olyan alkalmazásban, mint a YouTube, koppintson a [Megosztás] → DownKit lehetőségre, és a mentés azonnal elindul. Ha ugyanazzal a fiókkal jelentkezik be, mint Windowson, Pro előnyei is megmaradnak.</p>
+        <p>Egy másik alkalmazásban koppintson a [Megosztás] → DownKit lehetőségre, és a mentés azonnal elindul. Ha ugyanazzal a fiókkal jelentkezik be, mint Windowson, Pro előnyei is megmaradnak.</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>Azonnali mentés megosztással</h3><p>Válassza a DownKitet egy másik alkalmazás megosztás gombjával, adja meg a minőséget, és máris mentheti. Ha előtte kimásol egy linket, az alkalmazás megnyitásakor automatikusan kitöltődik.</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Csak a kívánt dalok a válogatásokból <em>3 dal ingyen</em></h3><p>Beolvassa a több dalt egymás után tartalmazó válogatásvideók számlistáját, és a kedvenc dalokat egyenként, külön menti.</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Élő adás rögzítése videóként vagy hangként <em>10 perc ingyen</em></h3><p>Élő adásokat, például a SOOP közvetítéseit rögzítheti videóként vagy csak a hangjukat. Szüneteltethető és folytatható, az adás végén pedig automatikusan mentésre kerül.</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Csak a kívánt részek a hosszú videókból <em>3 rész ingyen</em></h3><p>A fejezetekre bontott hosszú videókból csak a szükséges részeket választja ki, és külön menti őket.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Élő adás rögzítése videóként vagy hangként <em>10 perc ingyen</em></h3><p>A saját vagy engedéllyel rögzíthető élő adásokat videóként vagy csak hangként rögzítheti. Szüneteltethető és folytatható, az adás végén pedig automatikusan mentésre kerül.</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>Vágás · Méretcsökkentés · Átalakítás <em>Ingyenes</em></h3><p>A letöltött fájlokon túl a telefonon lévő videókat és dalokat is azonnal szerkesztheti.</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">Az Android-alkalmazás hamarosan érkezik</span><div class="cta-meta"><b>Android telefonokra</b><span>Telepítés közvetlenül a weboldalról (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">Letöltés</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Örökzöld slágerek válogatása – 30 dal</div><div class="ph-s">30 szám · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Hétvégi kempingvlog</div><div class="ph-s">5 fejezet · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>Válassza ki a kívánt dalokat</b><span>&#10005;</span></div>
-            <p class="ph-sub">30 dalból 3 kiválasztva</p>
-            <div class="ph-row on"><i></i><span>01</span><b>Tavaszi emlékek</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>Ahol a szél megpihen</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>Az a nyári éjszaka</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>A zöld dombokon túl</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>Amíg újra találkozunk</b><em>3:36</em></div>
-            <div class="ph-go">A kiválasztott 3 dal letöltése</div>
+            <div class="ph-sh"><b>Válassza ki a részeket</b><span>&#10005;</span></div>
+            <p class="ph-sub">5-ből 3 kiválasztva</p>
+            <div class="ph-row on"><i></i><span>01</span><b>Indulás és bevásárlás</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>Sátorállítás</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>Vacsorakészítés</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>Esti tábortűz</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>Reggeli pakolás</b><em>3:36</em></div>
+            <div class="ph-go">A kiválasztott 3 mentése</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>Feliratok mentése</h3><p>A videóval együtt a feliratfájlt (<span class="spec">.srt</span>) is menti, így a legtöbb lejátszóban használható.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>GIF készítése</h3><p>A videó kívánt jelenetét kiválasztva legfeljebb 15 másodperces GIF-et készíthet.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>Azonnali lejátszás</h3><p>Más lejátszó megnyitása nélkül nézhet videókat és hallgathat zenét közvetlenül a DownKitben.</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>Bejelentkezés oldalakra</h3><p>Jelentkezzen be a DownKitben egy használt oldalra, és töltse le azokat a videókat, amelyeket a saját fiókja megtekinthet.</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>Szerzői jogokat tiszteletben tartó kialakítás</h3><p>A másolásvédelemmel (DRM) ellátott tartalmakat nem menti, és nincs olyan funkciója, amely megkerülné a védelmi technológiákat.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>23 nyelv támogatása</h3><p>Magyar, koreai, English, 日本語, 中文, Español, Deutsch és további nyelvek – összesen 23 nyelv. Automatikusan a számítógép nyelvi beállításához igazodik.</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">Támogatott oldalak</div>
-        <h2>Számos külső platform támogatása</h2>
-        <p>Népszerű videó- és hangplatformok linkjeinek elemzésével stabil letöltési környezetet biztosít.</p>
+        <div class="label">Használati tudnivalók</div>
+        <h2>Mentő- és szerkesztőeszköz<br>engedélyezett tartalmakhoz</h2>
+        <p>A DownKit a saját készítésű vagy a szerzői jog tulajdonosa által engedélyezett tartalmak mentésére és szerkesztésére szolgáló program.</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">és sok más videóoldal</span>
-        </div>
-        <p class="note">DRM-mel (másolásvédelemmel) ellátott videók nem tölthetők le.</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>Saját készítésű tartalom</h3><p>A saját csatornájára vagy közösségi oldalaira feltöltött videókat biztonsági mentésként a számítógépére mentheti, és újra szerkesztheti.</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>Engedéllyel használt tartalom</h3><p>Mentheti azokat az anyagokat, amelyek mentését a szerzői jog tulajdonosa engedélyezte, vagy amelyeket például Creative Commons licenccel tettek közzé.</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>Nem támogatott tartalom</h3><p>A másolásvédelemmel (DRM) ellátott tartalmak és a fizetős streamingszolgáltatások videói nem menthetők.</p></div></div>
+        <p class="note">Az engedély nélküli újraközlés vagy értékesítés szerzői jogsértésnek minősülhet. Részletekért tekintse meg a <a href="legal.html#copyright">Szerzői jogi szabályzat</a>ot.</p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>Települnek mellé felesleges reklámok vagy partnerprogramok?<svg><use href="#i-plus"/></svg></summary><p>Nem. Reklámok és partnerprogramok nélkül, kizárólag a DownKit települ.</p></details>
         <details><summary>Korlátozott a használati idő a vásárlás után?<svg><use href="#i-plus"/></svg></summary><p>A havi előfizetés és a Pro 1 év esetén a Pro funkciók a kifizetett időszak alatt használhatók, az örökös licenc pedig időkorlát nélkül. Az ingyenes használatnak nincs időkorlátja.</p></details>
         <details><summary>Mi történik, ha egy platform átalakítása miatt hiba lép fel?<svg><use href="#i-plus"/></svg></summary><p>Ha egy oldal szerkezete megváltozik, a DownKit automatikusan frissíti a letöltőmotort. Ha a probléma továbbra is fennáll, jelezze nekünk a Súgó Kapcsolat menüpontjában.</p></details>
-        <details><summary>Hol tárolódnak az oldalakhoz tartozó bejelentkezési adatok?<svg><use href="#i-plus"/></svg></summary><p>A bejelentkezési adatok kizárólag az Ön számítógépén tárolódnak, a vállalat szervereire nem kerülnek. A Beállításokban bármikor kijelentkezhet.</p></details>
         <details><summary>Hogyan történik a program frissítése?<svg><use href="#i-plus"/></svg></summary><p>Új verzió megjelenésekor a DownKit értesíti Önt. A [Frissítés most] gombra kattintva automatikusan települ, majd újraindul.</p></details>
         <details><summary>Bármilyen videót letölthetek?<svg><use href="#i-plus"/></svg></summary><p>Kérjük, csak saját készítésű vagy a szerzői jog tulajdonosa által engedélyezett tartalmat töltsön le. Az engedély nélküli újraközzététel vagy értékesítés szerzői jogsértésnek minősülhet.</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>Kezdje el most a DownKit használatát</h2>
-          <p>Egyetlen URL-másolással induló okos letöltés.</p>
+          <p>A mentéstől a szerkesztésig, egyetlen programmal.</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Windows-verzió letöltése</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>Mentsen videókat és zenéket egyetlen bemásolt linkkel, és szerkessze őket azonnal.</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Windows-verzió letöltése</a><a class="ft-btn ghost" href="app.html">Android-alkalmazás</a></div>
       </div>
-      <nav class="ft-col" aria-label="Termék"><h4>Termék</h4><a href="index.html#how">Használat</a><a href="index.html#studio">Stúdió</a><a href="index.html#features">Funkciók</a><a href="index.html#sites">Támogatott oldalak</a><a href="pricing.html">Árak</a></nav>
+      <nav class="ft-col" aria-label="Termék"><h4>Termék</h4><a href="index.html#how">Használat</a><a href="index.html#studio">Stúdió</a><a href="index.html#features">Funkciók</a><a href="index.html#sites">Használati tudnivalók</a><a href="pricing.html">Árak</a></nav>
       <nav class="ft-col" aria-label="Támogatás"><h4>Támogatás</h4><a href="support.html#download">Telepítési útmutató</a><a href="support.html#help">GYIK és hibaelhárítás</a><a href="support.html#news">Közlemények</a><a href="support.html#contact">Kapcsolat</a></nav>
       <nav class="ft-col" aria-label="Feltételek és szabályzatok"><h4>Feltételek és szabályzatok</h4><a href="legal.html#terms">Felhasználási feltételek</a><a class="strong" href="legal.html#privacy">Adatvédelmi szabályzat</a><a href="legal.html#refund">Visszatérítési és lemondási szabályzat</a><a href="legal.html#copyright">Szerzői jogi szabályzat</a></nav>
     </div>

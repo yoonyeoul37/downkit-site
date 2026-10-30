@@ -380,6 +380,13 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 18px; font-size: 12px; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .ft-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ft-brand { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .ft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; } .ft-col:last-child { grid-column: 1 / -1; } .ft-biz em { display: block; } .ft-biz em + em::before { display: none; } }
+
+.use-list { display: grid; gap: 12px; }
+.use { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.use b { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; }
+.use.ok b { background: var(--accent-soft); color: var(--accent-text); } .use.no b { background: var(--field); color: var(--sub); }
+.use h3 { font-size: 16px; letter-spacing: -.015em; } .use p { color: var(--sub); font-size: 14.5px; margin-top: 2px; }
+.use-list .note a { color: var(--accent-text); }
 </style>
 
 </head>
@@ -413,7 +420,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <a href="#studio">Студія <em class="nw">NEW</em></a>
       <a href="#android">Android <em class="nw">NEW</em></a>
       <a href="#features">Можливості</a>
-      <a href="#sites">Сайти</a>
+      <a href="#sites">Правила використання</a>
       <a href="pricing.html">Тарифи</a>
       <a href="support.html">Довідка</a>
     </nav>
@@ -428,9 +435,9 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow"><span class="dot"></span>Завантаження й редагування медіа для Windows і Android</span>
-        <h1><span style="white-space:nowrap">Скопіюйте URL,</span><br><span style="white-space:nowrap">і почнеться <em>просте</em></span><br><span style="white-space:nowrap"><em>завантаження медіа</em> —</span><br>DownKit</h1>
-        <p class="lead">Зберігайте відео й музику з різних платформ на свій ПК у високій якості зображення та звуку. Без реклами, з якістю до 8K та оригінальним звуком, а завантажені файли можна одразу відредагувати в Студії.</p>
+        <span class="eyebrow"><span class="dot"></span>Студія збереження та редагування медіа для Windows · Android</span>
+        <h1>Зберігайте<br><em>і одразу редагуйте:</em><br><em>ваша медіастудія</em><br>DownKit</h1>
+        <p class="lead">Зберігайте на ПК у високій якості власні відео й музику або матеріали, на використання яких у вас є дозвіл, а потім одразу стискайте, конвертуйте й редагуйте їх у вбудованій студії. Без реклами, якість до 8K та оригінальний звук.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Завантажити для Windows</a>
           <div class="cta-meta"><b class="mono js-ver">Версія 0.1.4 (97 MB)</b><span>ОС: Windows 10 / 11 (64-біт)</span></div>
@@ -454,7 +461,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
           <div class="app-h">Скопіюйте URL — і почнеться <em>просте завантаження медіа</em></div>
           <div class="app-in">
             <svg class="lk" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span class="url">https://youtu.be/rT8hB2kW9qE</span>
+            <span class="url" style="color:var(--sub)">Вставте посилання на відео</span>
             <span class="fmt"><span class="on">Відео · найкраща якість</span><span>MP3 · 320 kbps</span></span>
             <span class="go">Вставити</span>
           </div>
@@ -473,7 +480,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
               <div class="thumb th2"><b>0:58</b></div>
               <div style="min-width:0">
                 <div class="name">Влог: вечірня прогулянка</div>
-                <div class="who">Instagram</div>
+                <div class="who">Мій канал</div>
                 <div class="meta"><i>MP4</i><i>1080p</i>24 MB · із субтитрами</div>
               </div>
               <div class="right"><span class="st"><svg><use href="#i-check"/></svg>Готово</span><span class="ib play"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" fill="currentColor"/></svg></span></div>
@@ -544,30 +551,30 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="sec-head">
         <div class="label">ЗАСТОСУНОК ANDROID · NEW</div>
         <h2>DownKit і на телефоні<br>Одне натискання «Поділитися» — і готово</h2>
-        <p>У застосунку на кшталт YouTube натисніть [Поділитися] → DownKit, і файл одразу збережеться. Увійдіть у той самий обліковий запис, що й у Windows, і переваги Pro збережуться.</p>
+        <p>В іншому застосунку натисніть [Поділитися] → DownKit, і файл одразу збережеться. Увійдіть у той самий обліковий запис, що й у Windows, і переваги Pro збережуться.</p>
       </div>
       <div class="st-grid">
         <div class="st-tools">
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span><div><h3>Збереження через «Поділитися»</h3><p>Виберіть DownKit кнопкою «Поділитися» в іншому застосунку, вкажіть якість — і файл збережеться. Якщо посилання скопійовано, воно підставиться автоматично під час відкриття застосунку.</p></div></div>
-          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Лише потрібні пісні зі збірки <em>3 пісні безкоштовно</em></h3><p>Зчитує список треків у відеозбірці з кількох пісень і зберігає вподобані пісні окремо.</p></div></div>
-          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Запис прямих ефірів · звуку <em>10 хвилин безкоштовно</em></h3><p>Записуйте прямі ефіри, наприклад SOOP, як відео або лише звук. Можна ставити на паузу й продовжувати, а після завершення ефіру запис зберігається автоматично.</p></div></div>
+          <div class="sto"><span class="ic"><svg><use href="#i-list"/></svg></span><div><h3>Лише потрібні частини довгих відео <em>3 частини безкоштовно</em></h3><p>Вибирайте в довгих відео з розділами лише потрібні частини та зберігайте їх окремо.</p></div></div>
+          <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></span><div><h3>Запис прямих ефірів · звуку <em>10 хвилин безкоштовно</em></h3><p>Записуйте прямі ефіри, які ведете самі або на запис яких маєте дозвіл, як відео або лише звук. Можна ставити на паузу й продовжувати, а після завершення ефіру запис зберігається автоматично.</p></div></div>
           <div class="sto"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8.6 7.8 20 18M8.6 16.2 20 6"/></svg></span><div><h3>Обрізання · стиснення · конвертація <em>безкоштовно</em></h3><p>Редагуйте не лише завантажені файли, а й відео та музику, які вже є на телефоні.</p></div></div>
           <div class="an-cta"><span class="btn btn-soon btn-lg js-apk" aria-disabled="true">Застосунок Android незабаром вийде</span><div class="cta-meta"><b>Для телефонів Android</b><span>Встановлення просто із сайту (APK)</span></div></div>
         </div>
         <div class="phone" aria-hidden="true"><div class="scr">
           <div class="ph-bar"><span>9:41</span><i></i></div>
           <div class="ph-head">Завантажити</div>
-          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Збірка улюблених хітів: 30 пісень</div><div class="ph-s">30 треків · MP3</div></div></div>
+          <div class="ph-card"><div class="ph-th"><b>1:58:20</b></div><div style="min-width:0"><div class="ph-t">Влог: кемпінг на вихідних</div><div class="ph-s">5 розділів · MP4</div></div></div>
           <div class="ph-sheet">
             <div class="ph-grab"></div>
-            <div class="ph-sh"><b>Виберіть пісні</b><span>&#10005;</span></div>
-            <p class="ph-sub">Вибрано 3 з 30 пісень</p>
-            <div class="ph-row on"><i></i><span>01</span><b>Весняні спогади</b><em>3:42</em></div>
-            <div class="ph-row"><i></i><span>02</span><b>Там, де живе вітер</b><em>4:05</em></div>
-            <div class="ph-row on"><i></i><span>03</span><b>Та літня ніч</b><em>3:58</em></div>
-            <div class="ph-row"><i></i><span>04</span><b>За зеленим пагорбом</b><em>4:21</em></div>
-            <div class="ph-row on"><i></i><span>05</span><b>До нової зустрічі</b><em>3:36</em></div>
-            <div class="ph-go">Завантажити 3 вибрані пісні</div>
+            <div class="ph-sh"><b>Виберіть частини</b><span>&#10005;</span></div>
+            <p class="ph-sub">Вибрано 3 з 5 частин</p>
+            <div class="ph-row on"><i></i><span>01</span><b>Виїзд і покупки</b><em>3:42</em></div>
+            <div class="ph-row"><i></i><span>02</span><b>Ставимо намет</b><em>4:05</em></div>
+            <div class="ph-row on"><i></i><span>03</span><b>Готуємо вечерю</b><em>3:58</em></div>
+            <div class="ph-row"><i></i><span>04</span><b>Нічне багаття</b><em>4:21</em></div>
+            <div class="ph-row on"><i></i><span>05</span><b>Збори вранці</b><em>3:36</em></div>
+            <div class="ph-go">Завантажити 3 вибрані частини</div>
           </div>
         </div></div>
       </div>
@@ -588,7 +595,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <div class="feat"><span class="ic"><svg><use href="#i-cc"/></svg></span><h3>Збереження субтитрів</h3><p>Разом із відео зберігається файл субтитрів (<span class="spec">.srt</span>), який підтримує більшість плеєрів.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-gif"/></svg></span><h3>Створення GIF</h3><p>Виберіть потрібний момент у відео та створіть GIF тривалістю до 15 секунд.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-play"/></svg></span><h3>Миттєве відтворення</h3><p>Дивіться відео й слухайте музику просто в DownKit, не відкриваючи інший плеєр.</p></div>
-        <div class="feat"><span class="ic"><svg><use href="#i-key"/></svg></span><h3>Вхід на сайти</h3><p>Увійдіть у DownKit на сайт, яким ви користуєтеся, щоб завантажувати відео, доступні для перегляду вашому власному обліковому запису.</p></div>
+        <div class="feat"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>З повагою до авторських прав</h3><p>Контент із захистом від копіювання (DRM) не зберігається, а функцій для обходу технологій захисту в DownKit немає.</p></div>
         <div class="feat"><span class="ic"><svg><use href="#i-globe"/></svg></span><h3>Підтримка 23 мов</h3><p>Підтримується 23 мови, зокрема корейська, English, 日本語, 中文, Español і Deutsch. Мова перемикається автоматично відповідно до налаштувань комп’ютера.</p></div>
       </div>
     </div>
@@ -597,17 +604,15 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
   <section id="sites" class="sites">
     <div class="wrap">
       <div class="sec-head">
-        <div class="label">Підтримувані сайти</div>
-        <h2>Підтримка багатьох платформ</h2>
-        <p>DownKit аналізує посилання популярних відео- та аудіоплатформ і забезпечує стабільне завантаження.</p>
+        <div class="label">Правила використання</div>
+        <h2>Збереження й редагування<br>дозволеного контенту</h2>
+        <p>DownKit — програма для збереження й редагування контенту, створеного вами або дозволеного до використання правовласником.</p>
       </div>
-      <div>
-        <div class="site-list">
-          <span><i style="background:#e5484d">▶<img src="https://www.google.com/s2/favicons?domain=youtube.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>YouTube</span><span><i style="background:#111614">♪<img src="https://www.google.com/s2/favicons?domain=tiktok.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>TikTok</span><span><i style="background:#c2408f">◎<img src="https://www.google.com/s2/favicons?domain=instagram.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Instagram</span><span><i style="background:#3b6fd6">f<img src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Facebook</span><span><i style="background:#111614">X<img src="https://www.google.com/s2/favicons?domain=x.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>X</span>
-          <span><i style="background:#1aa6c9">v<img src="https://www.google.com/s2/favicons?domain=vimeo.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Vimeo</span><span><i style="background:#f07a1c">☁<img src="https://www.google.com/s2/favicons?domain=soundcloud.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>SoundCloud</span><span><i style="background:#fb7299">b<img src="https://www.google.com/s2/favicons?domain=bilibili.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Bilibili</span><span><i style="background:#0a0a0a">d<img src="https://www.google.com/s2/favicons?domain=dailymotion.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Dailymotion</span><span><i style="background:#d7263d">p<img src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" loading="lazy" onerror="this.remove()"></i>Pinterest</span>
-          <span class="more">і багато інших відеосайтів</span>
-        </div>
-        <p class="note">Відео із захистом DRM (захистом від копіювання) завантажити неможливо.</p>
+      <div class="use-list">
+        <div class="use ok"><b>✓</b><div><h3>Ваш власний контент</h3><p>Зберігайте на ПК резервні копії відео, опублікованих на вашому каналі чи в соцмережах, і редагуйте їх знову.</p></div></div>
+        <div class="use ok"><b>✓</b><div><h3>Контент із дозволом</h3><p>Зберігайте матеріали, збереження яких дозволив правовласник, або опубліковані за ліцензіями на кшталт Creative Commons (CC).</p></div></div>
+        <div class="use no"><b>✕</b><div><h3>Непідтримуваний контент</h3><p>Контент із захистом від копіювання (DRM) і відео з платних стримінгових сервісів зберегти не можна.</p></div></div>
+        <p class="note">Повторна публікація чи продаж без дозволу може порушувати авторські права. Докладніше див. документ <a href="legal.html#copyright">Політика захисту авторських прав</a>.</p>
       </div>
     </div>
   </section>
@@ -623,7 +628,6 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <details><summary>Чи встановлюється разом із програмою реклама або партнерське ПЗ?<svg><use href="#i-plus"/></svg></summary><p>Ні. Встановлюється лише DownKit — без реклами та партнерських програм.</p></details>
         <details><summary>Чи обмежений строк користування після покупки?<svg><use href="#i-plus"/></svg></summary><p>З місячною підпискою та Pro на 1 рік функції Pro доступні протягом оплаченого періоду, а безстроковою ліцензією можна користуватися без обмеження строку. Безкоштовна версія також не обмежена в часі.</p></details>
         <details><summary>Що відбувається, якщо через зміни на платформі виникають помилки?<svg><use href="#i-plus"/></svg></summary><p>Якщо структура сайту змінюється, DownKit автоматично оновлює рушій завантаження до останньої версії. Якщо проблема не зникає, повідомте нам через розділ «Підтримка» в Довідці.</p></details>
-        <details><summary>Де зберігаються дані для входу на сайти?<svg><use href="#i-plus"/></svg></summary><p>Дані для входу зберігаються лише на вашому ПК і не передаються на сервери компанії. Вийти можна будь-коли в налаштуваннях.</p></details>
         <details><summary>Як оновлюється програма?<svg><use href="#i-plus"/></svg></summary><p>Коли виходить нова версія, DownKit повідомить про це. Натисніть [Оновити зараз] — оновлення встановиться автоматично, і програма перезапуститься.</p></details>
         <details><summary>Чи можна завантажувати будь-які відео?<svg><use href="#i-plus"/></svg></summary><p>Завантажуйте лише власний контент або контент, на який правовласник дав дозвіл. Повторна публікація чи продаж без дозволу можуть порушувати авторські права.</p></details>
       </div>
@@ -635,7 +639,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
       <div class="final-box">
         <div>
           <h2>Почніть користуватися DownKit просто зараз</h2>
-          <p>Розумне завантаження, яке починається з одного копіювання URL.</p>
+          <p>Від збереження до редагування — в одній програмі.</p>
         </div>
         <a class="btn btn-white btn-lg js-dl" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener"><svg><use href="#i-down"/></svg>Завантажити для Windows</a>
       </div>
@@ -651,7 +655,7 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <p>Зберігайте відео й музику за одним скопійованим посиланням і одразу редагуйте їх.</p>
         <div class="ft-dl"><a class="ft-btn" href="https://github.com/yoonyeoul37/downkit-releases/releases/latest" rel="noopener">Завантажити для Windows</a><a class="ft-btn ghost" href="app.html">Android</a></div>
       </div>
-      <nav class="ft-col" aria-label="Продукт"><h4>Продукт</h4><a href="index.html#how">Як працює</a><a href="index.html#studio">Студія</a><a href="index.html#features">Можливості</a><a href="index.html#sites">Сайти</a><a href="pricing.html">Тарифи</a></nav>
+      <nav class="ft-col" aria-label="Продукт"><h4>Продукт</h4><a href="index.html#how">Як працює</a><a href="index.html#studio">Студія</a><a href="index.html#features">Можливості</a><a href="index.html#sites">Правила використання</a><a href="pricing.html">Тарифи</a></nav>
       <nav class="ft-col" aria-label="Підтримка"><h4>Підтримка</h4><a href="support.html#download">Встановлення</a><a href="support.html#help">FAQ і розв’язання проблем</a><a href="support.html#news">Новини</a><a href="support.html#contact">Підтримка</a></nav>
       <nav class="ft-col" aria-label="Умови та політики"><h4>Умови та політики</h4><a href="legal.html#terms">Умови використання</a><a class="strong" href="legal.html#privacy">Політика конфіденційності</a><a href="legal.html#refund">Правила повернення та скасування</a><a href="legal.html#copyright">Політика захисту авторських прав</a></nav>
     </div>
