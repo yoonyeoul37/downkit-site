@@ -371,6 +371,20 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
 [dir="rtl"] .lang-menu { right: auto; left: 0; }
 .lang-foot { margin-top: 10px; }
 .lang-foot select { font: inherit; font-size: 13px; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
+
+.ss-guide { margin-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; max-width: 640px; }
+.ss-card { display: grid; gap: 10px; align-content: start; }
+.ss-cap { font-size: 14px; color: var(--ink); display: flex; gap: 8px; align-items: center; }
+.ss-cap i { font-style: normal; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 12px; font-family: var(--f-mono); flex: none; }
+.ss-win { background: #0063b1; color: #fff; border-radius: 10px; padding: 16px 16px 14px; font-family: "Segoe UI", system-ui, sans-serif; font-size: 11.5px; line-height: 1.5; display: grid; gap: 8px; min-height: 196px; align-content: start; }
+.ss-win h4 { font-size: 16px; font-weight: 600; margin: 0; letter-spacing: -.01em; color: #fff; }
+.ss-win p { margin: 0; color: #fff !important; opacity: .92; }
+.ss-win .meta { opacity: .92; }
+.ss-link { text-decoration: underline; justify-self: start; }
+.ss-btns { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.ss-btns span { border: 1px solid rgba(255,255,255,.75); padding: 4px 14px; border-radius: 3px; }
+.ss-hl { outline: 2.5px solid #ffd43b; outline-offset: 3px; border-radius: 3px; }
+@media (max-width: 640px) { .ss-guide { grid-template-columns: minmax(0, 1fr); } }
 </style>
 
 </head>
@@ -448,6 +462,12 @@ button.lang { font: inherit; font-size: 14px; background: none; cursor: pointer;
         <ol class="install">
           <li><span class="n">1</span><div><h3>설치 파일 다운로드</h3><p>상단의 [Windows 버전 다운로드] 버튼을 클릭하여 설치 파일을 내려받습니다.</p></div></li>
           <li><span class="n">2</span><div><h3>설치 파일 실행</h3><p>다운로드된 실행 파일을 열고, 스마트스크린 경고창(<b>'Windows의 PC 보호'</b>) 발생 시 <b>[추가 정보]</b> → <b>[실행]</b>을 진행해 주세요.</p>
+            <div class="ss-guide">
+              <div class="ss-card"><div class="ss-cap"><i>1</i>[추가 정보]를 클릭합니다</div>
+                <div class="ss-win" aria-hidden="true"><h4>Windows의 PC 보호</h4><p>Microsoft Defender SmartScreen에서 인식할 수 없는 앱의 시작을 차단했습니다. 이 앱을 실행하면 PC가 위험에 노출될 수 있습니다.</p><span class="ss-link ss-hl">추가 정보</span><div class="ss-btns"><span>실행 안 함</span></div></div></div>
+              <div class="ss-card"><div class="ss-cap"><i>2</i>[실행]을 클릭합니다</div>
+                <div class="ss-win" aria-hidden="true"><h4>Windows의 PC 보호</h4><p>Microsoft Defender SmartScreen에서 인식할 수 없는 앱의 시작을 차단했습니다.</p><div class="meta">앱: DownKit-Setup.exe<br>게시자: 알 수 없는 게시자</div><div class="ss-btns"><span class="ss-hl">실행</span><span>실행 안 함</span></div></div></div>
+            </div>
             <div class="smart"><b>이 창은 왜 나타나나요?</b><span>새 프로그램은 Microsoft의 평판 정보가 충분하지 않아 이 안내가 표시될 수 있습니다. DownKit은 광고나 다른 프로그램을 함께 설치하지 않습니다. 코드 서명 인증을 완료하면 이 안내가 표시되지 않을 수 있습니다.</span></div></div></li>
           <li><span class="n">3</span><div><h3>설치 진행</h3><p>마법사 안내에 따라 설치를 완료합니다. 바탕 화면 바로 가기 생성 여부를 선택할 수 있습니다.</p></div></li>
           <li><span class="n">4</span><div><h3>계정 연동 및 시작</h3><p>프로그램 실행 후 소셜 계정(Google, 네이버 등)으로 로그인하여 즉시 서비스를 이용하세요.</p></div></li>
